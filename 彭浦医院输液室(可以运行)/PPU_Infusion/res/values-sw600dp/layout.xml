@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="activity_seats" type="layout">@layout/activity_seats_tablet</item>
+    <item name="adapter_seats" type="layout">@layout/adapter_seats_tablet</item>
+<item name="activity_infusion" type="layout">@layout/activity_infusion_tablet</item>
+<item name="adapter_infusion" type="layout">@layout/adapter_infusion_tablet</item>
+<item name="activity_tuble" type="layout">@layout/activity_tuble_tablet</item>
+    <item name="adapter_tuble" type="layout">@layout/adapter_tuble_tablet</item>
+    <item name="activity_login" type="layout">@layout/activity_login_tablet</item>
+</resources>

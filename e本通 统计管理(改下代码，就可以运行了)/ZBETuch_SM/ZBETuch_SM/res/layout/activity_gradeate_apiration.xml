@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/gradeate_apiration_title"
+                android:text="期望入职企业类型：(多选，最多选三项)" />
+
+            <GridView
+                android:id="@+id/gvComproperty"
+                style="@style/gradeate_apiration_gridview"
+                android:layout_height="160dip" >
+            </GridView>
+
+            <TextView
+                style="@style/gradeate_apiration_title"
+                android:text="期望入职行业类别：(多选，最多选三项)" />
+
+            <GridView
+                android:id="@+id/gvIndustryCategory"
+                style="@style/gradeate_apiration_gridview"
+                android:layout_height="260dip" >
+            </GridView>
+
+            <TextView
+                style="@style/gradeate_apiration_title"
+                android:text="期望入职岗位类别：(多选，最多选三项)" />
+
+            <GridView
+                android:id="@+id/gvJobCategory"
+                style="@style/gradeate_apiration_gridview"
+                android:layout_height="wrap_content" >
+            </GridView>
+
+            <TextView
+                style="@style/gradeate_apiration_title"
+                android:text="期望月度税后薪资：" />
+
+            <GridView
+                android:id="@+id/gvSalary"
+                style="@style/gradeate_apiration_gridview"
+                android:layout_height="wrap_content" >
+            </GridView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:gravity="right"
+                android:paddingBottom="20dip" >
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="70dip"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/button_selector"
+                    android:text="保存" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

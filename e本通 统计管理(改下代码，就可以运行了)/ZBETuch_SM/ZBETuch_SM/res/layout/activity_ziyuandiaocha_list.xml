@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:background="@drawable/lt" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/resourcestitle" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/title2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/resources_main_title"
+                android:layout_width="80dp"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_horizontal"
+                android:text="序号" />
+
+            <TextView
+                style="@style/resources_main_title"
+                android:layout_width="180dp"
+                android:paddingLeft="40dip"
+                android:text="调查类型" />
+
+            <TextView
+                style="@style/resources_main_title"
+                android:layout_width="340dp"
+                android:gravity="center"
+                android:text="布置时间" />
+
+            <TextView
+                style="@style/resources_main_title"
+                android:layout_width="170dp"
+                android:gravity="center"
+                android:text="需查人数" />
+
+            <TextView
+                style="@style/resources_main_title"
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:text="已查人数" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff" >
+
+            <ListView
+                android:id="@+id/pu_downview_shiye"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

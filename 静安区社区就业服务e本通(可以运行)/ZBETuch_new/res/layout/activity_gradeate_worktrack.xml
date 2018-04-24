@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RadioGroup
+        android:id="@+id/rgpMain"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:background="@drawable/pendsecondback"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/rdbWorkMark"
+            style="@style/gradeate_left_tab"
+            android:text="调查走访情况" />
+
+        <RadioButton
+            android:id="@+id/rdbWorkGride"
+            style="@style/gradeate_left_tab"
+            android:text="职业指导情况" />
+    </RadioGroup>
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:background="@android:color/white">
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/invitedetailback"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="工作动态"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_workstatus_read"
+            android:layout_width="70dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/mybutton"
+            android:text="未读" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="950dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+
+         <LinearLayout
+            android:layout_width="930dip"
+            android:layout_height="390dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/invitedetailcontentback" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_meet_detail_title"
+                            android:layout_marginTop="20dip"
+                            android:text="发布题目：" />
+
+                        <TextView
+                            android:id="@+id/tv_workstatusname"
+                            style="@style/activity_meet_detail_content"
+                            android:layout_marginTop="20dip"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_meet_detail_title"
+                            android:text="工作类型：" />
+
+                        <TextView
+                            android:id="@+id/tv_workstatusmark"
+                            style="@style/activity_meet_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_meet_detail_title"
+                            android:text="动态时间：" />
+
+                        <TextView
+                            android:id="@+id/tv_workstatustime"
+                            style="@style/activity_meet_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_meet_detail_title"
+                            android:text="动态描述：" />
+
+                        <TextView
+                            android:id="@+id/tv_workstatus_time"
+                            style="@style/activity_meet_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dip"
+                        android:paddingRight="8dip"
+                        android:paddingTop="10dip" >
+
+                        <TextView
+                            style="@style/activity_meet_detail_title"
+                            android:text="附件：" />
+
+                        <ListView
+                            android:id="@+id/list_workstatus_appenddix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="125dip"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:divider="@null"
+                            android:paddingLeft="3dip"
+                            android:paddingRight="3dip" >
+                        </ListView>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="发布人："
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_workstatus_persons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="920dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/invitedetailline" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="发布时间："
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_workstatus_createtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="       " />
+
+            <Button
+                android:id="@+id/btn_liuyan"
+                android:layout_width="70dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:background="@drawable/mybutton"
+                android:text="留言" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" " />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,607 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.fc.baobiao.views.QueryFirstActivity:
+    public static final int REFRESH_LVRESOURCES
+com.fc.company.beans.CompanyItem:
+    private int compropertyid
+    private java.lang.String comscope
+    private java.lang.String agreeno
+    private java.lang.String agreestartdate
+    private java.lang.String agreeenddate
+    private java.lang.String zipcode
+    private java.lang.String email
+    private java.lang.String traffic
+    private java.lang.String createtime
+    private java.lang.String createuser
+    26:49:public CompanyItem(int,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    54:55:public void setComid(int)
+    60:61:public void setComcode(java.lang.String)
+    66:67:public void setComname(java.lang.String)
+    69:69:public int getCompropertyid()
+    72:73:public void setCompropertyid(int)
+    75:75:public java.lang.String getComscope()
+    78:79:public void setComscope(java.lang.String)
+    81:81:public java.lang.String getAgreeno()
+    84:85:public void setAgreeno(java.lang.String)
+    87:87:public java.lang.String getAgreestartdate()
+    90:91:public void setAgreestartdate(java.lang.String)
+    93:93:public java.lang.String getAgreeenddate()
+    96:97:public void setAgreeenddate(java.lang.String)
+    102:103:public void setContactor(java.lang.String)
+    108:109:public void setTelephone(java.lang.String)
+    114:115:public void setAddress(java.lang.String)
+    117:117:public java.lang.String getZipcode()
+    120:121:public void setZipcode(java.lang.String)
+    123:123:public java.lang.String getEmail()
+    126:127:public void setEmail(java.lang.String)
+    129:129:public java.lang.String getTraffic()
+    132:133:public void setTraffic(java.lang.String)
+    138:139:public void setComintroduction(java.lang.String)
+    141:141:public java.lang.String getCreatetime()
+    144:145:public void setCreatetime(java.lang.String)
+    147:147:public java.lang.String getCreateuser()
+    150:151:public void setCreateuser(java.lang.String)
+com.fc.company.beans.CompanyItemAdapter:
+    21:24:public CompanyItemAdapter(android.content.Context,java.util.List)
+com.fc.company.beans.CompanyTask:
+    public static final int INVITEJOBLIST_BYPAGE
+    public static final int INVITEJOB_DETAIL
+    public static final int INVITEJOS_DETAIL_LINKMAN
+    public static final int MAINPOLICYACTIVITY_GET_POLICY
+    public static final int POLICYASKACTIVITY_SET_ASK
+    public static final int FILEDOWNLOADACTIVITY_GET_DOWNLOADITEMS
+    public static final int FILEDOWNLOADACTIVITY_DOWNLOADFILE
+    public static final int COMPANYQUERYACTIVITY_GET_COMPANYITEMS
+    public static final int INVITEJOBLISTACTIVITY_GET_JOBLIST_BY_COMPANY
+    public static final int INVITEJOBLISTACTIVITY_GET_JOBLIST_BY_PARAMS
+    public static final int INVITEJOBLISTACTIVITY_GET_JOBLIST_BY_SFZ
+    public static final int RESOURCESMAINACTIVITY_GET_RESOURCELIST
+    public static final int QUERYFIRSTACTIVITY_GET_RESOURCELIST
+    public static final int GETPERSONACTIVITY_GET_LINELEVEL
+    public static final int GETPERSONACTIVITY_GET_PERSONBYLEVEL
+    public static final int FIRSTPAGEACTIVITY_GET_PENDWORK
+    public static final int FIRSTPAGEACTIVITY_GET_NEWSINFO
+    public static final int FIRSTPAGEACTIVITY_GET_MSGBOARD
+    public static final int FIRSTPAGEACTIVITY_GET_JOBS
+    public static final int FIRSTPAGEACTIVITY_GET_STAFF
+    public static final int FIRSTPAGEACTIVITY_GET_STAFFIMG
+    public static final int PENDWORKACTIVITY_GET_PENDWORK
+    public static final int PENDWORKACTIVITY_UPDATE_PENDWORK
+    121:122:public void setTaskId(int)
+    127:128:public void setParams(java.util.Map)
+com.fc.company.beans.JobItem:
+    21:22:public void setMax_row(java.lang.String)
+    33:46:public JobItem(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    51:52:public void setJobid(int)
+    57:58:public void setComname(java.lang.String)
+    63:64:public void setJobname(java.lang.String)
+    69:70:public void setJobno(java.lang.String)
+    75:76:public void setEduname(java.lang.String)
+    81:82:public void setStartage(java.lang.String)
+    87:88:public void setEndage(java.lang.String)
+    93:94:public void setRecruitnums(java.lang.String)
+    99:100:public void setModifydate(java.lang.String)
+    105:106:public void setStartsalary(java.lang.String)
+    111:112:public void setEndsalary(java.lang.String)
+com.fc.company.beans.JobListdAdapter:
+    88:91:private int getbackground(int)
+com.fc.company.views.CompanyQueryActivity:
+    private com.fc.main.beans.PullDownView lvCompany
+    private android.widget.ListView mListView
+    public static final int REFRESH_CBOCOMPANYTYPE
+    public static final int REFRESH_CBOLINKMAN
+    public static final int REFRESH_LVCOMPANY
+com.fc.download.beans.DownLoadItem:
+    13:17:public DownLoadItem(int,java.lang.String,java.lang.String)
+com.fc.download.views.FileDownloadActivity:
+    public static final int REFRESH_FILE
+    public static final int REFRESH_CBOSTYLE
+    public static final int SHOW_FILE
+    222:227:private boolean checkFrm()
+com.fc.first.beans.Base_Static_Data:
+    public abstract java.lang.Boolean Check_This(java.lang.String)
+com.fc.first.beans.CardTypeInfomation
+com.fc.first.beans.Center:
+    37:57:public Center(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    71:71:public java.lang.String getQxuHao()
+    74:75:public void setQxuHao(java.lang.String)
+    77:77:public java.lang.String getQname()
+    80:81:public void setQname(java.lang.String)
+    83:83:public java.lang.String getQsex()
+    86:87:public void setQsex(java.lang.String)
+    89:89:public java.lang.String getQcardtype()
+    95:95:public java.lang.String getQcardnum()
+    101:101:public java.lang.String getQnational()
+    104:105:public void setQnational(java.lang.String)
+    107:107:public java.lang.String getQborn()
+    110:111:public void setQborn(java.lang.String)
+    113:113:public java.lang.String getQeducation()
+    116:117:public void setQeducation(java.lang.String)
+    125:125:public java.lang.String getQcurretnStatus()
+    131:131:public java.lang.String getQcurrentintention()
+    137:137:public java.lang.String getQcanjiren()
+    140:141:public void setQcanjiren(java.lang.String)
+    143:143:public java.lang.String getQischeck()
+    146:147:public void setQischeck(java.lang.String)
+    161:161:public java.lang.String getQpersontype()
+    164:165:public void setQpersontype(java.lang.String)
+    167:167:public java.lang.String getQcreatdate()
+    170:171:public void setQcreatdate(java.lang.String)
+    173:173:public java.lang.String getQcreatperson()
+    176:177:public void setQcreatperson(java.lang.String)
+com.fc.first.beans.CommitteeInformation:
+    41:41:public java.lang.String getStreetId()
+    56:56:public java.lang.Boolean Check_This(java.lang.String)
+    60:117:public java.util.List getCommitteeList()
+com.fc.first.beans.GetJobs:
+    28:41:public GetJobs(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    44:44:public java.lang.String getJobid()
+    52:52:public java.lang.String getComname()
+    76:76:public java.lang.String getEduname()
+    84:84:public java.lang.String getStartage()
+    92:92:public java.lang.String getEndage()
+    100:100:public java.lang.String getRecruitnums()
+    116:116:public java.lang.String getStartsalary()
+    124:124:public java.lang.String getEndsalary()
+    132:132:public java.lang.String getMax_row()
+com.fc.first.beans.GetMsgBoardDetile:
+    20:27:public GetMsgBoardDetile(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    30:30:public java.lang.String getId()
+    38:38:public java.lang.String getMaster_id()
+    46:46:public java.lang.String getCreate_staff()
+com.fc.first.beans.GetMsgBoardMaster:
+    22:30:public GetMsgBoardMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    57:57:public java.lang.String getCreate_staff()
+    65:65:public java.lang.String getUpdate_time()
+    73:73:public java.lang.String getUpdate_staff()
+    81:81:public java.lang.String getStaff()
+com.fc.first.beans.GetNews:
+    20:27:public GetNews(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    30:30:public java.lang.String getId()
+    62:62:public java.lang.String getCreate_Staff()
+    70:70:public java.lang.String getRecordCount()
+com.fc.first.beans.GetNewsAdapter:
+    25:25:public android.content.Context getContext()
+    29:30:public void setContext(android.content.Context)
+    33:33:public java.util.ArrayList getGetnewslist()
+    37:38:public void setGetnewslist(java.util.ArrayList)
+    90:91:public void addPersonItem(java.util.ArrayList)
+com.fc.first.beans.GetUsrInformation:
+    29:43:public GetUsrInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    46:46:public java.lang.String getId()
+    70:70:public java.lang.String getPwd()
+    78:78:public java.lang.String getPhone()
+    86:86:public java.lang.String getEmail()
+    94:94:public java.lang.String getPhoto()
+    102:102:public java.lang.String getCreate_Date()
+    110:110:public java.lang.String getCreate_Staff()
+    118:118:public java.lang.String getUpdate_Date()
+    126:126:public java.lang.String getUpdate_Staff()
+    134:134:public java.lang.String getStop()
+    142:142:public java.lang.String getEnable()
+com.fc.first.beans.Help232
+com.fc.first.beans.JobsAdapter:
+    26:26:public android.content.Context getContext()
+    30:31:public void setContext(android.content.Context)
+    34:34:public java.util.ArrayList getGetjobslist()
+    38:39:public void setGetjobslist(java.util.ArrayList)
+    89:90:public void addPersonItem(java.util.ArrayList)
+com.fc.first.beans.LocationInformation:
+    21:29:public LocationInformation(java.lang.String,java.lang.String,java.lang.String,double,double,double,java.lang.String)
+    32:32:public java.lang.String getId()
+    36:37:public void setId(java.lang.String)
+    40:40:public java.lang.String getStaff()
+    44:45:public void setStaff(java.lang.String)
+    48:48:public java.lang.String getMark()
+    52:53:public void setMark(java.lang.String)
+    56:56:public double getLongitude()
+    64:64:public double getLatitude()
+    72:72:public double getHeight()
+    80:80:public java.lang.String getCreate_date()
+    84:85:public void setCreate_date(java.lang.String)
+com.fc.first.beans.LostJobInformation
+com.fc.first.beans.MsgBoardDetileAdapter:
+    28:28:public android.content.Context getContext()
+    33:34:public void setContext(android.content.Context)
+    38:38:public java.util.ArrayList getMsgboarddetile_list()
+    44:45:public void setMsgboarddetile_list(java.util.ArrayList)
+    103:104:public void addPersonItem(java.util.ArrayList)
+com.fc.first.beans.MsgBoardMasterAdapter:
+    27:27:public android.content.Context getContext()
+    31:32:public void setContext(android.content.Context)
+    35:35:public java.util.ArrayList getMsgboardmasterlist()
+    40:41:public void setMsgboardmasterlist(java.util.ArrayList)
+    92:93:public void addPersonItem(java.util.ArrayList)
+com.fc.first.beans.PendingWorkInformation:
+    27:39:public PendingWorkInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+com.fc.first.beans.UpdateManager:
+    private static final int DOWNLOAD
+    private static final int DOWNLOAD_FINISH
+com.fc.first.views.FirstPageActivity:
+    android.location.Location location
+    android.widget.TextView tv_nowlocation
+    private com.fc.first.beans.MsgBoardDetileAdapter msgboarddetileadapter
+    android.graphics.Bitmap adminpic
+    private java.util.ArrayList lostjob_list
+    private java.util.ArrayList msgboarddetile_list
+    private com.fc.first.beans.GetUsrInformation userinfo_list
+    public static final int REFRESH_PENDWORK
+    public static final int REFRESH_NEWSINFO
+    public static final int REFRESH_MSGBOARD
+    public static final int REFRESH_JOBS
+    public static final int REFRESH_STAFF
+    public static final int REFRESH_STAFFIMG
+com.fc.first.views.LoadActivity:
+    91:99:public void showDialog(java.lang.String)
+com.fc.first.views.LoadActivity$3
+com.fc.first.views.MsgBoardDetitle_MoreActivity:
+    int refurbish
+com.fc.first.views.PendWorkActivity_:
+    public static final int REFRESH_PENDWORK
+    public static final int REFRESH_UPDATE_PENDWORK
+com.fc.first.views.TrendsActivity:
+    java.lang.String pendworkid
+com.fc.invite.views.InviteJobDetailActivity:
+    android.widget.TextView lblEduLimitName
+    public static final int REFRESHFRM
+    public static final int REFRESH_LINKMAN
+com.fc.invite.views.InviteJobListActivity:
+    public static final int GETMOREITEM
+    public static final int GET_ITEMS_ALL
+    public static final int GET_ITEMS_BY_COMPANY
+    public static final int GET_ITEMS_BY_PARAMS
+    public static final int GET_ITEM_BY_SFZ
+com.fc.invite.views.ZaoPinQueryActivity:
+    public static final int REFRESH_CBOCOMPROPERTY
+    public static final int REFRESH_CBOTYPEOFWORK
+    public static final int REFRESH_CBOCALTURELEVEL
+    public static final int REFRESH_CBOINDUSTRYBIGSTYLE
+    public static final int REFRESH_CBOINDUSTRYSMALLSTYLE
+    public static final int REFRESH_CBOJOBBIGSTYLE
+    public static final int REFRESH_CBOJOBSMALLSTYLE
+    public static final int REFRESH_CBOCBOJOBKIND
+    public static final int REFRESH_CBOWORKTIME
+    public static final int REFRESH_CBOWORKAREA
+com.fc.main.beans.GridInfo:
+    25:26:public void setImgId(int)
+com.fc.main.beans.IActivity:
+    public abstract void init()
+com.fc.main.beans.IService
+com.fc.main.beans.LineLevelItem:
+    11:15:public LineLevelItem(int,java.lang.String,int)
+com.fc.main.beans.MainTask:
+    public static final int ZAOPINQUERYACTIVITY_GETCBOCOMPROPERTY
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOEDU
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOZYFL
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOINDUSTRYCLASS
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOGZXZ
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOGZBS
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOAREAINFO
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOZYFLCHILD
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOTYPEOFWORK
+    public static final int ZAOPINQUERYACTIVITY_GET_CBOINDUSTRYSMALL
+    public static final int MAINPOLICYACTIVITY_GET_POLICYTYPE
+    public static final int POLICYASKACTIVITY_GET_POLICYTYPE
+    public static final int FILEDOWNLOADACTIVITY_GET_POLICYTYPE
+    public static final int COMPANYQUERYACTIVITY_GET_COMPANYPROPERTY
+    public static final int COMPANYQUERYACTIVITY_GET_CBOLINKMAN
+    90:91:public void setTaskId(int)
+    96:97:public void setParams(java.util.Map)
+com.fc.main.beans.MyViewPage:
+    13:15:public MyViewPage(java.util.ArrayList)
+com.fc.main.beans.My_ExpandableListView:
+    private static final java.lang.String TAG
+    private static final int RELEASE_To_REFRESH
+    private static final int PULL_To_REFRESH
+    private static final int REFRESHING
+    private static final int DONE
+    private static final int LOADING
+    private static final int RATIO
+    38:40:public My_ExpandableListView(android.content.Context,android.util.AttributeSet,int)
+    43:45:public My_ExpandableListView(android.content.Context,android.util.AttributeSet)
+    373:378:public void setTopPosition(int)
+com.fc.main.beans.My_ExpandableListView$1:
+    341:341:public boolean onListViewTopAndPullDown(int)
+com.fc.main.beans.My_ExpandableListView$MYOnScrollOverListener:
+    public abstract boolean onListViewTopAndPullDown(int)
+com.fc.main.beans.PersonItem:
+    13:17:public PersonItem(int,java.lang.String,int)
+    19:19:public int getStaff_id()
+    22:23:public void setStaff_id(int)
+    28:29:public void setName(java.lang.String)
+    31:31:public int getLine_id()
+    34:35:public void setLine_id(int)
+com.fc.main.beans.PullDownExpandView:
+    private static final int START_PULL_DEVIATION
+    private static final int WHAT_DID_MORE
+    private static final int WHAT_DID_REFRESH
+    220:220:public boolean onListViewTopAndPullDown(int)
+    276:277:public void setShowHeader()
+    281:285:public void setHideFooter()
+com.fc.main.beans.PullDownView:
+    private static final int START_PULL_DEVIATION
+    private static final int WHAT_DID_MORE
+    private static final int WHAT_DID_REFRESH
+    223:223:public boolean onListViewTopAndPullDown(int)
+    279:280:public void setShowHeader()
+    284:288:public void setHideFooter()
+com.fc.main.beans.ScrollOverListView:
+    private static final java.lang.String TAG
+    private static final int RELEASE_To_REFRESH
+    private static final int PULL_To_REFRESH
+    private static final int REFRESHING
+    private static final int DONE
+    private static final int LOADING
+    private static final int RATIO
+    90:92:public ScrollOverListView(android.content.Context,android.util.AttributeSet,int)
+    95:97:public ScrollOverListView(android.content.Context,android.util.AttributeSet)
+    374:379:public void setTopPosition(int)
+com.fc.main.beans.ScrollOverListView$1:
+    342:342:public boolean onListViewTopAndPullDown(int)
+com.fc.main.beans.ScrollOverListView$OnScrollOverListener:
+    public abstract boolean onListViewTopAndPullDown(int)
+com.fc.main.beans.SpinnerItem:
+    8:12:public SpinnerItem(int,java.lang.String,java.lang.String)
+com.fc.main.myviews.GetPersonActivity:
+    public static final int REFRESH_LINELEVEL
+    public static final int REFRESH_PERSON
+com.fc.main.service.MainService:
+    274:277:public static void closeAllServices(android.content.Context)
+com.fc.main.tools.CheckNet:
+    19:19:public CheckNet()
+    23:26:public static synchronized com.fc.main.tools.CheckNet getInstance()
+com.fc.main.tools.Fc_Helper:
+    10:10:public Fc_Helper()
+    45:61:public static java.lang.String DecryptDES(java.lang.String,java.lang.String)
+com.fc.main.tools.HttpUrls_:
+    public static final java.lang.String HttpURL
+    55:55:public HttpUrls_()
+    93:96:public static synchronized com.fc.main.tools.HttpUrls_ getInstance()
+    215:254:public static java.util.ArrayList getPolicyJson(android.content.Context)
+    320:377:public static java.lang.String postJson(java.util.ArrayList)
+    590:601:public static void showDialog(java.lang.String,android.content.Context)
+    657:702:public static java.util.ArrayList getJson(com.fc.first.views.FirstPageActivity)
+    708:770:public static com.fc.first.beans.GetUsrInformation getUserInfoJson(com.fc.first.views.FirstPageActivity)
+    1012:1036:public static org.apache.http.HttpResponse GetHttpResponse(java.lang.String,java.util.List)
+    1292:1354:public static java.util.ArrayList getjobsJson(android.content.Context,int,int)
+    1358:1393:public static java.lang.String CheckPersoninfo(java.lang.String)
+    1550:1571:public static android.graphics.Bitmap getadminImage(android.content.Context)
+com.fc.main.tools.HttpUrls_$1
+com.fc.main.tools.HttpUtil:
+    27:27:public HttpUtil()
+com.fc.main.tools.IOUtil:
+    8:8:public IOUtil()
+com.fc.main.tools.MainTools:
+    23:23:public MainTools()
+    86:107:public static void fetchSpinner(android.content.Context,android.widget.Spinner,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    194:200:public static android.content.Intent getVideoFileIntent(java.lang.String)
+    218:221:public static android.content.Intent getHtmlFileIntent(java.lang.String)
+    323:328:public static int getSpinnerIndex(java.lang.String,java.util.ArrayList)
+com.fc.person.beans.AutoFocusCallback:
+    private static final long AUTOFOCUS_INTERVAL_MS
+com.fc.person.beans.Base_Static_Data
+com.fc.person.beans.CameraConfigurationManager:
+    private static final int TEN_DESIRED_ZOOM
+    private static final int DESIRED_SHARPNESS
+com.fc.person.beans.CameraManager:
+    private static final int MIN_FRAME_WIDTH
+    private static final int MIN_FRAME_HEIGHT
+    private static final int MAX_FRAME_WIDTH
+    private static final int MAX_FRAME_HEIGHT
+com.fc.person.beans.DecodeFormatManager:
+    55:55:private DecodeFormatManager()
+    58:63:static java.util.Vector parseDecodeFormats(android.content.Intent)
+    67:71:static java.util.Vector parseDecodeFormats(android.net.Uri)
+    76:101:private static java.util.Vector parseDecodeFormats(java.lang.Iterable,java.lang.String)
+com.fc.person.beans.DecodeThread:
+    public static final java.lang.String BARCODE_BITMAP
+com.fc.person.beans.FamilyInfo:
+    16:24:public FamilyInfo(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,byte[])
+com.fc.person.beans.Help232
+com.fc.person.beans.InactivityTimer:
+    private static final int INACTIVITY_DELAY_SECONDS
+com.fc.person.beans.Intents
+com.fc.person.beans.Intents$Encode
+com.fc.person.beans.Intents$Scan
+com.fc.person.beans.Intents$SearchBookContents
+com.fc.person.beans.Intents$Share
+com.fc.person.beans.Intents$WifiConnect
+com.fc.person.beans.Layout4_listAdapter
+com.fc.person.beans.PersonInfoList:
+    24:33:public PersonInfoList(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    70:70:public java.lang.String getPersonlistCurrentStatus()
+    76:76:public java.lang.String getPersonlistEducation()
+com.fc.person.beans.PersonMark:
+    18:24:public PersonMark(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+com.fc.person.beans.PersonResume:
+    private java.lang.String personExpectedSalary
+    53:77:public PersonResume(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    81:81:public java.lang.String getPersonExpectedSalary()
+    86:87:public void setPersonExpectedSalary(java.lang.String)
+com.fc.person.beans.PersonTask:
+    public static final int PERSONINFO_GETREGION
+    public static final int PERSONINFO_GETSTREET
+    public static final int PERSONINFO_GETJUWEIHUI
+    public static final int FAMILY_GETFAMILY
+    public static final int FAMILY_GETFAMILY_IMAGE
+    public static final int FAMILY_GETHOUSES
+    public static final int FAMILY_GETHOUSE_IMAGE
+    public static final int PERSONQUERYLISTACTIVITY_GETPERSONS_BY_PARAMS
+    public static final int PERSONQUERYLISTACTIVITY_GETPERSONS_BY_COMPANY
+    public static final int PERSONQUERYLISTACTIVITY_GETPERSONS_BY_RESOURCES
+    public static final int PERSONINFOMAINACTIVITY_GETPERSONBASE
+    public static final int PERSONINFOMAINACTIVITY_GETPERSONIMG
+    public static final int PERSONINFOMAINACTIVITY_GETPERSONLEVEL
+    public static final int WORKINFOACTIVITY_GET_WORKINFOLIST
+    public static final int MODIFYWORKINFOACTIVITY_GET_WORKINFOLIST
+    public static final int MODIFYWORKINFOACTIVITY_UPDATE_WORKINFO
+    78:79:public void setTaskId(int)
+    84:85:public void setParams(java.util.Map)
+com.fc.person.beans.PersonUpdataImg:
+    14:17:public PersonUpdataImg(java.lang.String,byte[])
+    19:19:public java.lang.String getPersonSfz()
+    25:25:public byte[] getPersonheadImg()
+com.fc.person.beans.PersonalBaseInformation:
+    66:93:public PersonalBaseInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,byte[],java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.fc.first.beans.Center,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    229:229:public byte[] getPersonHead()
+    233:234:public void setPersonHead(byte[])
+    269:269:public java.lang.String getPersonCurrentAddress()
+    273:274:public void setPersonCurrentAddress(java.lang.String)
+    277:277:public java.lang.String getPersonStreet()
+    285:285:public java.lang.String getPersonjuweihui()
+    309:309:public java.lang.String getPersonLevelmsg()
+com.fc.person.beans.PersonalInformation
+com.fc.person.beans.PersonqueryAdapter:
+    27:27:public java.util.ArrayList getPersoninfo_list()
+    31:32:public void setPersoninfo_list(java.util.ArrayList)
+    109:112:private int getbackground(int)
+    123:124:public void addPersonItem(java.util.ArrayList)
+com.fc.person.beans.PersonqueryAdapter$QueryItemHodler:
+    android.widget.TextView tv_personqueryEdu
+    android.widget.TextView tv_personNational
+    android.widget.TextView tv_currentStatus
+com.fc.person.beans.PersonqueryItem
+com.fc.person.beans.PlanarYUVLuminanceSource:
+    106:106:public int getDataWidth()
+    110:110:public int getDataHeight()
+com.fc.person.beans.RegionInformation:
+    29:29:public java.lang.String getRegionName()
+    37:37:public java.lang.String getCityId()
+com.fc.person.beans.StreetInformation:
+    46:46:public java.lang.String getRegionId()
+com.fc.person.beans.WorkInfo:
+    23:41:public WorkInfo(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    52:52:public java.lang.String getSfz()
+    116:116:public java.lang.String getCreate_date()
+    124:124:public java.lang.String getCreate_staff()
+    132:132:public java.lang.String getUpdate_date()
+    140:140:public java.lang.String getUpdate_staff()
+    148:148:public java.lang.String getType()
+com.fc.person.beans.Zihangye:
+    24:25:public void setZihangename(java.lang.String)
+    27:27:public java.lang.String getZihangyeCode()
+    30:31:public void setZihangyeCode(java.lang.String)
+    36:37:public void setHangyeCode(java.lang.String)
+com.fc.person.beans.hangye:
+    82:83:public void setName(java.lang.String)
+    88:89:public void setCode(java.lang.String)
+com.fc.person.views.AddPersonInfoActivity:
+    public static final java.lang.String SAVE_PATH_IN_SDCARD
+    public static final java.lang.String IMAGE_CAPTURE_NAME
+    private android.app.ProgressDialog progressDialog
+    300:306:public void DismissDialog()
+com.fc.person.views.CaptureActivity:
+    private static final float BEEP_VOLUME
+    private static final long VIBRATE_DURATION
+com.fc.person.views.FamilyActivity2:
+    public static final int REFRESH_FAMILY
+    public static final int REFRESH_IMAGE
+    public static final int REFRESH_HOUSES
+    public static final int REFRESH_HOUSE_IMAGE
+com.fc.person.views.ModifyPersonInfoActivity:
+    private static final int REQUEST_CODE_TAKE_PICTURE
+    public static final java.lang.String SAVE_PATH_IN_SDCARD
+    public static final java.lang.String IMAGE_CAPTURE_NAME
+    789:810:private void getImage(java.lang.String)
+    820:840:public byte[] drawableToByte(android.graphics.drawable.Drawable)
+    888:892:public void DismissDialog()
+com.fc.person.views.ModifyPersonResumeActivity:
+    private android.widget.CheckBox ck_istuijian
+    private java.lang.String checktuijian
+com.fc.person.views.ModifyWorkInfoActivity:
+    public static final int REFRESH_WORKINFO
+    public static final int REFRESH_UPDATE_WORKINFO
+com.fc.person.views.PersonResumeActivity:
+    private java.lang.String computerSkills
+    private java.lang.String computerzhengshu
+    private java.lang.String language1
+    private java.lang.String chendu1
+    private java.lang.String language2
+    private java.lang.String chendu2
+    private java.lang.String languagezhengshu
+    private java.lang.String otherzhengshu
+    private java.lang.String ziwopingjia
+    private java.lang.String xinzi
+    private java.lang.String workxingz
+    private java.lang.String workshijian
+    private java.lang.String workdidian1
+    private java.lang.String workdidian2
+    private java.lang.String workdidian3
+    private java.lang.String fugangwei1
+    private java.lang.String fugangwei2
+    private java.lang.String zigangwei1
+    private java.lang.String zigangwei2
+    private java.lang.String othergangwei
+    private java.lang.String checktuijian
+    private java.util.ArrayList list_resume
+com.fc.person.views.PersoninfoActivity2:
+    private android.widget.EditText et_ceshi
+    private android.view.View keyview
+    private android.inputmethodservice.KeyboardView keyboardView
+    public static final int REFRESH_REGION_SPINNER
+    public static final int REFRESH_STREET_SPINNER
+    public static final int REFRESH_JUWEIHUI_SPINNER
+com.fc.person.views.PersoninfoMainActivity:
+    private android.graphics.Bitmap personImage
+    private java.lang.String personLevelMsg
+    public static final int REFRESH_PERSONBASE
+    public static final int REFRESH_PERSONIMG
+    public static final int REFRESH_PERSONLEVEL
+com.fc.person.views.PersonqueryListActivity2:
+    public static final int REFRESH_PERSON
+    public static final int FLAG_FROM_PERSONINFO
+    public static final int FLAG_FROM_COMPANY
+    public static final int FLAG_FROM_RESOURCES
+com.fc.person.views.ThreeActivity:
+    47:50:private int getbackground(int)
+    46:46:static synthetic int access$0(com.fc.person.views.ThreeActivity,int)
+com.fc.person.views.ThreeActivity$MyOnItemClickListener
+com.fc.person.views.ViewfinderView:
+    private static final long ANIMATION_DELAY
+    private static final int OPAQUE
+com.fc.person.views.WorkInfoActivity:
+    public static final int REFRESH_WORKINFO
+com.fc.policy.views.MainPolicyActivity:
+    public static final int REFRESH_CBOTYPE
+    public static final int REFRESH_LVPOLICY
+    133:138:private boolean CheckFrm()
+com.fc.policy.views.PolicyAskActivity:
+    public static final int REFRESH_CBOSTYLE
+    public static final int REFRESH_SUCESS
+com.fc.resources.beans.ResourcesItem:
+    14:23:public ResourcesItem(int,int,java.lang.String,java.lang.String,java.lang.String,int,int)
+    28:29:public void setSum_value_man(int)
+    34:35:public void setSum_value_woman(int)
+    40:41:public void setType(java.lang.String)
+    46:47:public void setCommittee_id(java.lang.String)
+    52:53:public void setName(java.lang.String)
+    58:59:public void setOrder_id(int)
+    64:65:public void setAll(int)
+com.fc.resources.views.ResourcesMainActivity:
+    public static final int REFRESH_LVRESOURCES
+com.fc.resources.views.ResourcesMainActivity$MyOnItemClickListener
+com.fc.summary.beans.MyWorkSummaryFile:
+    public java.lang.String filetime
+    25:32:public MyWorkSummaryFile(java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,java.lang.String,java.lang.String)
+    35:35:public java.lang.String getFiletime()
+    39:40:public void setFiletime(java.lang.String)
+    67:67:public java.lang.String getFileFormat()
+    71:72:public void setFileFormat(java.lang.String)
+com.fc.summary.beans.WorkSummaryAdapter$WorkSummaryHodler:
+    android.widget.TextView tv_worktime
+com.fc.summary.views.WorkSummaryActivity:
+    private android.database.Cursor cursor
+    239:269:public static java.lang.String calculatTime(int)
+com.test.zbetuch_new.BuildConfig
+com.test.zbetuch_new.R
+com.test.zbetuch_new.R$anim
+com.test.zbetuch_new.R$array
+com.test.zbetuch_new.R$attr
+com.test.zbetuch_new.R$color
+com.test.zbetuch_new.R$dimen
+com.test.zbetuch_new.R$drawable
+com.test.zbetuch_new.R$id
+com.test.zbetuch_new.R$layout
+com.test.zbetuch_new.R$raw
+com.test.zbetuch_new.R$string
+com.test.zbetuch_new.R$style

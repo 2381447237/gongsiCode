@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imgDj"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="15dip"
+        android:src="@drawable/isdengji" />
+
+    <TextView
+        android:id="@+id/lblName"
+        style="@style/resources_main_item"
+        android:layout_width="350dp"
+        android:paddingLeft="10dip"
+        android:text="名称" />
+
+    <TextView
+        android:id="@+id/lblManNum"
+        style="@style/resources_main_item"
+        android:layout_width="150dp"
+        android:text="人数（男）" />
+
+    <TextView
+        android:id="@+id/lblWomanNum"
+        style="@style/resources_main_item"
+        android:layout_width="150dp"
+        android:text="人数（女）" />
+
+    <TextView
+        android:id="@+id/lblAllNum"
+        style="@style/resources_main_item"
+        android:layout_width="150dp"
+        android:text="人数（总）" />
+
+</LinearLayout>

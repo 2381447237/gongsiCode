@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4" 
+    android:orientation="vertical">  
+
+        <LinearLayout
+            android:id="@+id/ll_new_nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_bg"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/jia" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="新增问卷"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <View 
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/xian"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        
+        <LinearLayout
+            android:id="@+id/ll_old_nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_bg"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/s" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="本地记录"
+                android:textSize="25sp" />
+        </LinearLayout>
+        
+        <View 
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/xian"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        
+         <LinearLayout
+            android:id="@+id/ll_record_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_bg"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/s" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="网络记录"
+                android:textSize="25sp" />
+        </LinearLayout>
+        
+    </LinearLayout>
+

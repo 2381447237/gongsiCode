@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home3"
+    android:orientation="vertical" >
+    
+<LinearLayout
+        android:id="@+id/kuang_jiben_peiyao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:background="@drawable/kuang_jiben"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.33dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="座位号:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_seatno_peiyao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="姓名:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_name_peiyao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="卡号:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_cardno_peiyao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+           
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.33dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+             
+             <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="性别:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_sex_peiyao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+             <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="年龄:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_age_peiyao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="出生日期:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_birth_peiyao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+            </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.33dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+           
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="科室:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_orderdapename_peiyao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="医生:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_ordername_peiyao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.33dp"
+                    android:text="诊断:"
+                    android:textSize="12sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/hsv_peiyao"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="3.33dp"
+                    android:layout_marginRight="3.33dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none" >
+
+                    <TextView
+                        android:id="@+id/tv_diagindo_peiyao"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:ellipsize="marquee"
+                        android:text=""
+                        android:textSize="12sp" />
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+ <LinearLayout
+        android:id="@+id/kuang_peiyao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@drawable/kuang_drugs"
+        android:orientation="vertical" >
+        <ListView
+            android:id="@+id/list_peiyao"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="6.67dp"
+            android:layout_marginTop="6.67dp"
+            android:layout_weight="3"
+            android:divider="@null"
+            android:dividerHeight="3.33dp"
+            android:listSelector="@android:color/transparent" >
+        </ListView>
+    </LinearLayout>    
+ <LinearLayout
+     android:orientation="horizontal"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content">
+ <LinearLayout 
+        android:id="@+id/kuang_btn"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+         >
+        
+        <Button
+            android:id="@+id/btn_scan_peiyao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sm_selector" />
+
+        <TextView 
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+        
+        <Button
+        android:id="@+id/btn_back_peiyao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_selector" />
+        
+        
+</LinearLayout>
+
+ </LinearLayout>
+ 
+</LinearLayout>

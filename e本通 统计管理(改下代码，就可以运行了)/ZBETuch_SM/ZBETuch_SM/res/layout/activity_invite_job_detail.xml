@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/invitedetailback"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip" >
+
+        <TextView
+            android:id="@+id/lblComName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="单位名称"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/button_selector"
+            android:text="查询" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="950dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/invitedetailborder"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="930dip"
+            android:layout_height="390dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/invitedetailcontentback" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="岗位名称：" /> 
+
+                        <TextView
+                            android:id="@+id/lblJobName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="岗位编号：" />
+
+                        <TextView
+                            android:id="@+id/lblJobNo"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="单位类型：" />
+
+                        <TextView
+                             android:id="@+id/lblComPropertyName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="经营范围：" />
+
+                        <TextView
+                             android:id="@+id/lblComScope"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="单位简介：" />
+
+                        <TextView
+                             android:id="@+id/lblComIntroduction"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="月收入：" />
+
+                        <TextView
+                             android:id="@+id/lblSalary"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="员工福利：" />
+
+                        <TextView
+                             android:id="@+id/lblWelfare"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="试用期收入：" />
+
+                        <TextView
+                             android:id="@+id/lblProbSalary"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="试用期月数：" />
+
+                        <TextView
+                             android:id="@+id/lblProbMonth"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="招聘人数：" />
+
+                        <TextView
+                             android:id="@+id/lblRecruitNums"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                     <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="年龄范围：" />
+
+                        <TextView
+                             android:id="@+id/lblAge"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="工作地区：" />
+
+                        <TextView
+                             android:id="@+id/lblAreaName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/svRight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/invitedetailcontentback" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="文化程度：" />
+
+                        <TextView
+                             android:id="@+id/lblEduName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="工作班时：" />
+
+                        <TextView
+                             android:id="@+id/lblGZBSName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="工作性质：" />
+
+                        <TextView
+                             android:id="@+id/lblGZXZName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="劳务派遣：" />
+
+                        <TextView
+                             android:id="@+id/lblDispatched"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="外语要求：" />
+
+                        <TextView
+                             android:id="@+id/lblLanguageName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="熟练程度：" />
+
+                        <TextView
+                             android:id="@+id/lblLanguageProficiencyName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="职称名称：" />
+
+                        <TextView
+                             android:id="@+id/lblProfessionalRequirementName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="职称要求：" />
+
+                        <TextView
+                             android:id="@+id/lblProfessionalLevelName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="职业证书：" />
+
+                        <TextView
+                             android:id="@+id/lblQualifiedCertId"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="资格等级：" />
+
+                        <TextView
+                             android:id="@+id/lblQualifiedLevelName"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout 
+						android:layout_width="450dip"
+						android:layout_height="wrap_content"
+						android:paddingTop="10dip"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="岗位描述" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="①工作内容：" />
+
+                        <TextView
+                             android:id="@+id/lblResponsibilities"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                     <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="②任职要求：" />
+
+                        <TextView
+                             android:id="@+id/lblQualifications"
+                          	 style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                     <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="③其它补充：" />
+
+                        <TextView
+                             android:id="@+id/lblOthers"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/activity_invite_detail_line" >
+
+                        <TextView
+                            style="@style/activity_invite_detail_title"
+                            android:text="同时可招：" />
+
+                        <TextView
+                             android:id="@+id/lblIsOther"
+                            style="@style/activity_invite_detail_content"
+                            android:text="" />
+                    </LinearLayout>
+                    
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lblLinkMan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="3dip"
+            android:paddingTop="5dip"
+            android:text="联系人："
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="920dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/invitedetailline" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lblTimeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="3dip"
+            android:paddingTop="5dip"
+            android:text="发布时间："
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

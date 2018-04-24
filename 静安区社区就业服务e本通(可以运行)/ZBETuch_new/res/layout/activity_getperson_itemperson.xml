@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <TextView 
+        android:layout_width="160dip"
+        android:layout_height="wrap_content"
+        android:textSize="30dip"
+        android:layout_marginLeft="10dip"
+        android:id="@+id/person_name"
+        />
+    
+    <Button 
+        android:layout_width="40dip"
+        android:layout_height="30dip"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/person_del"
+        android:background="@drawable/dex"
+        android:text=" "
+        />
+    
+
+</LinearLayout>

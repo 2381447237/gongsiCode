@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingLeft="20dip"
+        android:text="张三李四" />
+
+    <TextView
+        android:id="@+id/lblIdCard"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="TextView" 
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:background="@drawable/button_selector"
+        android:text="查看详情" />
+
+    <Button
+        android:id="@+id/btnCancle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/button_selector"
+        android:text="取消关注" />
+
+</LinearLayout>

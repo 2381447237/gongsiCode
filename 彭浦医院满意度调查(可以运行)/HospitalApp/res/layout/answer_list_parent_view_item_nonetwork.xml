@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="#f4f4f4" >
+ <View 
+     android:layout_marginTop="5dp"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="#26cfff"
+    android:layout_marginLeft="20dp"
+   android:layout_marginRight="20dp"
+    />
+  <RelativeLayout 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      >
+ 
+    <TextView
+        android:id="@+id/tv_answer_list_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大标题"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:layout_margin="10dp" />
+    
+     <RelativeLayout
+        android:layout_toRightOf="@id/tv_answer_list_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp">
+        
+         <EditText 
+        android:id="@+id/et_answer_list_parent"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="center"/>
+         
+    </RelativeLayout>
+     </RelativeLayout>
+
+    <View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="#26cfff"
+    android:layout_marginLeft="10dp"
+   android:layout_marginRight="10dp"
+   android:visibility="gone"
+    />
+    
+</LinearLayout>

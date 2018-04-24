@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dip" >
+
+        <TextView
+            android:id="@+id/lblNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:text=" "
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="失业调查"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/my_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/btn_weicha3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_item"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:text="未查" />
+
+                <RadioButton
+                    android:id="@+id/btn_yicha3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_item"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:layout_marginLeft="5dip"
+                    android:text="已查" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dip"
+                android:text="身份证："
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/shiye_IdCard"
+                android:layout_width="400dip"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/login_textbg"
+                android:ems="9"
+                android:gravity="center_vertical"
+                android:paddingBottom="1.0dip"
+                android:paddingLeft="10dp"
+                android:paddingRight="1.0dip"
+                android:paddingTop="1.0dip"
+                android:textSize="17.0sp" >
+            </EditText>
+
+            <Button
+                android:id="@+id/btnQuery_shiye"
+                style="@style/gradeate_list_button"
+                android:text="查询" />
+
+            <Button
+                android:id="@+id/btn_yicha23"
+                style="@style/gradeate_list_button"
+                android:text="已查"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_weicha23"
+                style="@style/gradeate_list_button"
+                android:text="未查"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/title2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_bianhao"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="60dp"
+                android:gravity="center"
+                android:text="编号" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:text="姓　名" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:text="身份证号" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="300dp"
+                android:gravity="center"
+                android:text="户籍地址" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="居委" />
+        </LinearLayout>
+
+        <com.fc.main.beans.PullDownView2
+            android:id="@+id/my_detail_pulldownview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/listitem_selector" >
+        </com.fc.main.beans.PullDownView2>
+    </LinearLayout>
+
+</LinearLayout>

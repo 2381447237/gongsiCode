@@ -1,0 +1,552 @@
+package com.fc.has.views;
+
+
+//import java.text.SimpleDateFormat;
+//import java.util.ArrayList;
+//import java.util.HashMap;
+//import java.util.LinkedList;
+//import java.util.List;
+//import java.util.Map;
+//
+//import org.json.JSONArray;
+//import org.json.JSONException;
+//import org.json.JSONObject;
+//
+//import com.example.companytask.CompanyTask;
+//import com.example.hospital.R;
+//import com.example.service.MainService;
+//import com.fc.has.beans.HomeVisitAdapter;
+//import com.fc.helper.BaseActivity;
+//import com.fc.helper.IActivity;
+//import com.fc.unidentified.beans.RTPullListView;
+//import com.fc.unidentified.beans.UnideInfo;
+//import com.fc.unidentified.beans.UnidentifiedAdapter;
+//import com.fc.unidentified.beans.RTPullListView.OnRefreshListener;
+//
+//import android.app.Activity;
+//import android.app.ProgressDialog;
+//import android.content.Context;
+//import android.content.Intent;
+//import android.graphics.Color;
+//import android.os.Bundle;
+//import android.os.Handler;
+//import android.os.Message;
+//import android.os.SystemClock;
+//import android.util.Log;
+//import android.view.KeyEvent;
+//import android.view.LayoutInflater;
+//import android.view.View;
+//import android.view.ViewGroup;
+//import android.view.View.OnClickListener;
+//import android.widget.AdapterView;
+//import android.widget.AdapterView.OnItemClickListener;
+//import android.widget.BaseAdapter;
+//import android.widget.ProgressBar;
+//import android.widget.RelativeLayout;
+//import android.widget.TextView;
+//import android.widget.Toast;
+//
+//public class HomeVisitActivity extends BaseActivity implements IActivity,
+//		OnItemClickListener {
+//
+//	// Handler handler=new Handler();
+//	private HomeVisitAdapter adapter;
+//	// private ArrayList<UnideInfo> list;
+//	private List<UnideInfo> list = new ArrayList<UnideInfo>();
+//	private SimpleDateFormat mDateFormat = new SimpleDateFormat("MM-dd HH:mm");
+//	// private static final int mLoadDataCount = 5;
+//	public static final int VISITED_REFRESH = 1;
+//	private ProgressDialog dialog;
+//	private Context context = this;
+//	// private String data;
+//	// private int row=5;
+//	private static final int INTERNET_FAILURE = -1;
+//	private static final int LOAD_SUCCESS = 1;
+//	private static final int LOAD_MORE_SUCCESS = 3;
+//	private static final int NO_MORE_INFO = 4;
+//	private static final int LOAD_NEW_INFO = 5;
+//	private RTPullListView pullListView;
+//	private ProgressBar moreProgressBar;
+//	private int index = 0;
+//
+//	@Override
+//	public void onCreate(Bundle savedInstanceState) {
+//		super.onCreate(savedInstanceState);
+//		setContentView(R.layout.list);
+//		init();
+//		// lv=(MyListViewPullDownAndUp) findViewById(R.id.lv);
+//		getPageList(index);
+//
+//		// pullListView=(RTPullListView) findViewById(R.id.lv);  
+//		// list=new ArrayList<UnideInfo>();
+//		// adapter=new UnidentifiedAdapter(this, list);
+//		// lv.setAdapter(adapter);
+//		// lv.setRefreshListener(new MyRefreshListener());
+//		// lv.setOnItemClickListener(this);
+//		initview();
+//		showDialog();
+//	}
+//
+//	
+//	public void initview() {
+//		// listView=(ListView) findViewById(R.id.lsview_unident);
+//		// listView=(MyListViewPullDownAndUp) findViewById(R.id.lsview_unident);
+//		pullListView = (RTPullListView) findViewById(R.id.lv_has);
+//		pullListView.setOnItemClickListener(this);
+//		LayoutInflater inflater = LayoutInflater.from(this);
+//		View view = inflater.inflate(R.layout.list_footview, null);
+//		RelativeLayout footerView = (RelativeLayout) view
+//				.findViewById(R.id.list_footview);
+//		moreProgressBar = (ProgressBar) view.findViewById(R.id.footer_progress);
+//		pullListView.addFooterView(footerView);
+//
+//		// 下拉刷新监听器
+//		pullListView.setonRefreshListener(new OnRefreshListener() {
+//
+//			@Override
+//			public void onRefresh() {
+//				new Thread(new Runnable() {
+//
+//					@Override
+//					public void run() {
+//						try {
+//
+//							Thread.sleep(2000);
+//							// dataList.clear();
+//							/*
+//							 * for (int i = 0; i < 5; i++) {
+//							 * dataList.add("Item data "+i); }
+//							 */
+//							index = 0;
+//							getPageList(index);
+//
+//							Log.i("qwj", "===index===" + index);
+//							myHandler.sendEmptyMessage(LOAD_NEW_INFO);
+//						} catch (InterruptedException e) {
+//							e.printStackTrace();
+//						}
+//					}
+//				}).start();
+//			}
+//		});
+//		// 获取跟多监听器
+//		footerView.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//
+//				moreProgressBar.setVisibility(View.VISIBLE);
+//
+//				new Thread(new Runnable() {
+//
+//					@Override
+//					public void run() {
+//						try {
+//							Thread.sleep(500);
+//							/*
+//							 * for (int i = 0; i < 5; i++) {
+//							 * dataList.add("New item data "+i); }
+//							 */
+//							/*
+//							 * int end = row + mLoadDataCount; if (end >= 1000)
+//							 * { end = 1000; }
+//							 * 
+//							 * getPageList(end); row = end;
+//							 */
+//							index++;
+//							getPageList(index);
+//							Log.i("qwj", "index===" + index);
+//							myHandler.sendEmptyMessage(LOAD_MORE_SUCCESS);
+//
+//						} catch (InterruptedException e) {
+//							e.printStackTrace();
+//						}
+//					}
+//				}).start();
+//			}
+//		});
+//	}
+//
+//	@Override
+//	public void onItemClick(AdapterView<?> parent, View view, int position,
+//			long id) {
+//		// TODO Auto-generated method stub
+//		Intent intent = new Intent(HomeVisitActivity.this,
+//				HomeVisitPrescribeInfoActivity.class);
+//		intent.putExtra("visit_info", list.get(position - 1).getRegId());
+//		intent.putExtra("PatientName", list.get(position - 1).getName());
+//		Log.i("PatientName", list.get(position - 1).getName());
+//		Log.i("bb", "oiiiiiiiiiiiiiiiiiiiiii==" + position);
+//		startActivity(intent);
+//	}
+//
+//	// 结果处理
+//	private Handler myHandler = new Handler() {
+//
+//		@Override
+//		public void handleMessage(Message msg) {
+//			super.handleMessage(msg);
+//			switch (msg.what) {
+//			case LOAD_MORE_SUCCESS:
+//				moreProgressBar.setVisibility(View.GONE);
+//				
+//				break;
+//
+//			case LOAD_NEW_INFO:
+//				pullListView.onRefreshComplete();
+//				// list.clear();
+//				break;
+//			default:
+//				break;
+//			}
+//		}
+//
+//	};
+//
+//	@Override
+//	public void init() {
+//		MainService.addActivity(this);
+//	}
+//
+//	@Override
+//	public void refresh(Object... params) {
+//		switch (Integer.valueOf(params[0].toString().trim())) {
+//		case HomeVisitActivity.VISITED_REFRESH:
+//			if (dialog != null && dialog.isShowing()) {
+//				dialog.dismiss();
+//			}
+//			if (params[1] != null) {
+//				String data = params[1].toString().trim();
+//				parseHasJsonList(data);
+//				// showListView(list);
+//			}
+//		}
+//	}
+//
+//	private void parseHasJsonList(String value) {
+//		if (index == 0) {
+//			list.clear();
+//		}
+//		
+//		try {
+//			JSONArray array = new JSONArray(value);
+//			for (int i = 0; i < array.length(); i++) {
+//				JSONObject object = array.getJSONObject(i);
+//				UnideInfo info = new UnideInfo();
+//				info.setCard(object.getString("CardNo"));
+//				info.setName(object.getString("PatientName"));
+//				info.setSex(object.getString("Gender"));
+//				info.setAge(object.getString("Age"));
+//				info.setAddress(object.getString("VisitAddr"));
+//				info.setBirthDate(object.getString("BirthDate"));
+//				info.setRCName(object.getString("RCName"));
+//				info.setAppointVisitDate(object.getString("AppointVisitDate"));
+//				info.setContactor(object.getString("Contactor"));
+//				info.setContactPhone(object.getString("ContactPhone"));
+//				info.setRegRemark(object.getString("RegRemark"));
+//				info.setRegId(object.getInt("RegId"));
+//				info.setPatientId(object.getInt("PatientId"));
+//
+//				list.add(info);
+//
+//			}
+//
+//			adapter = new HomeVisitAdapter(this, list);
+//			pullListView.setAdapter(adapter);
+//			pullListView.setSelection(list.size()-array.length());
+//			adapter.notifyDataSetChanged();
+//		} catch (JSONException e) {
+//			e.printStackTrace();
+//		}
+//	}
+//
+//	private void getPageList(int index) {
+//		Map<String, String> data = new HashMap<String, String>();
+//		Map<String, Object> params = new HashMap<String, Object>();
+//		data.put("page", index + "");
+//		data.put("rows", "20");
+//		params.put("data", data);
+//		CompanyTask task = new CompanyTask(CompanyTask.VISITEDINFO, params);
+//		MainService.newTask(task);
+//	}
+//
+//	private void showDialog() {
+//		dialog = new ProgressDialog(context);
+//		dialog.setCanceledOnTouchOutside(false);
+//		dialog.setMessage("正在查询，请稍等...");
+//		dialog.show();
+//
+//	}
+//
+//	@Override
+//	protected void onDestroy() {
+//		// TODO Auto-generated method stub
+//		super.onDestroy();
+//	}
+//
+//	@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//		// TODO Auto-generated method stub
+//		if (keyCode == KeyEvent.KEYCODE_BACK) {
+//			exit();
+//
+//			return true;
+//		}
+//		return super.onKeyDown(keyCode, event);
+//	}
+//
+//}
+
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.views.refresh.Base_Refresh;
+import com.views.refresh.Base_Refresh.OnRefreshListener;
+import com.example.companytask.CompanyTask;
+import com.example.hospital.R;
+import com.example.service.MainService;
+import com.fc.has.beans.RefreshListView;
+import com.fc.helper.BaseActivity;
+import com.fc.helper.IActivity;
+import com.fc.unidentified.beans.UnideInfo;
+import com.fc.unidentified.beans.UnidentifiedAdapter;
+
+public class HomeVisitActivity extends BaseActivity implements IActivity{
+	/**ListView控件**/
+  private ListView mListView;
+  private RefreshListView mPullListView;
+  private UnidentifiedAdapter adapter;
+  private ArrayList<UnideInfo> list;
+  private SimpleDateFormat mDateFormat = new SimpleDateFormat("MM-dd HH:mm");
+  private boolean mIsStart = true;
+  private static final int mLoadDataCount = 20;
+  public static final int VISITED_REFRESH = 1;
+  private String data;
+  private int row=0;
+  private Context context = this;
+	private ProgressDialog dialog;
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.list);
+      showDialog();
+      init();
+     // list=(LinearLayout)findViewById(R.id.list);
+     // mPullListView = new RefreshListView(this);
+      mPullListView =(RefreshListView) findViewById(R.id.list);
+      mPullListView.setPullLoadEnabled(false);
+      mPullListView.setScrollLoadEnabled(true);
+      
+      list = new ArrayList<UnideInfo>();
+      getPageList(row);
+      mListView = mPullListView.getRefreshableView();
+      
+      mListView.setOnItemClickListener(new OnItemClickListener() {
+          @Override
+          public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
+        	  Intent intent = new Intent(HomeVisitActivity.this,
+      				HomeVisitNumInfoActivity.class);
+      		intent.putExtra("visit_info", list.get(position).getRegId());
+      		intent.putExtra("PatientName", list.get(position).getName());
+      		
+      		Log.i("PatientName", list.get(position).getName());
+      		Log.i("bb", "oiiiiiiiiiiiiiiiiiiiiii==" + position);
+      		startActivity(intent);
+          }
+      });
+      
+      mPullListView.setOnRefreshListener(new OnRefreshListener<ListView>() {
+          @Override
+          public void onPullDownToRefresh(Base_Refresh<ListView> refreshView) {
+              mIsStart = true;
+              new GetDataTask().execute();
+          }
+
+          @Override
+          public void onPullUpToRefresh(Base_Refresh<ListView> refreshView) {
+              mIsStart = false;
+              new GetDataTask().execute();
+             
+          }
+      });
+      setLastUpdateTime();
+      mPullListView.doPullRefreshing(true, 500);
+     // list.addView(mPullListView);
+      
+  }
+  
+  
+  private class GetDataTask extends AsyncTask<Void, Void, String> {
+
+      @Override
+      protected String doInBackground(Void... params) {
+          // Simulates a background job.
+          try {
+              Thread.sleep(1000);
+          } catch (InterruptedException e) {
+          }
+          return row+"";
+      }
+
+      @Override
+      protected void onPostExecute(String result) {
+          boolean hasMoreData = true;
+          if (mIsStart) {
+        	  row=0;
+        	  getPageList(row);
+          } else {
+//              int end = row + mLoadDataCount;
+//              if (end >= 1000) {
+//                  end = 1000;
+//                  hasMoreData = false;
+//              }
+              row++;
+              getPageList(row);
+             // row = end;
+          }
+          
+          //adapter.notifyDataSetChanged();
+          mPullListView.onPullDownRefreshComplete();
+          mPullListView.onPullUpRefreshComplete();
+          mPullListView.setHasMoreData(hasMoreData);
+          setLastUpdateTime();
+
+          super.onPostExecute(result);
+      }
+  }
+  
+  private void setLastUpdateTime() {
+      String text = formatDateTime(System.currentTimeMillis());
+      mPullListView.setLastUpdatedLabel(text);
+  }
+
+  private String formatDateTime(long time) {
+      if (0 == time) {
+          return "";
+      }
+      
+      return mDateFormat.format(new Date(time));
+  }
+  
+  @Override
+	public void init() {
+		MainService.addActivity(this);
+	}
+
+	@Override
+	public void refresh(Object... params) {
+		switch (Integer.valueOf(params[0].toString().trim())) {
+		case HomeVisitActivity.VISITED_REFRESH:
+			if (dialog != null && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			if (params[1] != null) {
+				data = params[1].toString().trim();
+				Log.i("aaaa", "" + data);
+				if(!data.contains("id")){
+					
+					Toast.makeText(this, "已经到底啦", 1000).show();
+				}else{
+					parseJsonList(data);
+				}
+				// showListView(list);
+			}
+		}
+	}
+
+	private void parseJsonList(String value) {
+		if(row==0){
+			list.clear();
+		}
+		try {
+			JSONArray array = new JSONArray(value);
+			for (int i = 0; i < array.length(); i++) {
+				JSONObject object = array.getJSONObject(i);
+				UnideInfo info = new UnideInfo();
+				info.setCard(object.getString("CardNo"));
+				info.setName(object.getString("PatientName"));
+				info.setSex(object.getString("Gender"));
+				info.setAge(object.getString("Age"));
+				info.setAddress(object.getString("VisitAddr"));
+				info.setBirthDate(object.getString("BirthDate"));
+				info.setRCName(object.getString("RCName"));
+				info.setAppointVisitDate(object.getString("AppointVisitDate"));
+				info.setContactor(object.getString("Contactor"));
+				info.setContactPhone(object.getString("ContactPhone"));
+				info.setRegRemark(object.getString("RegRemark"));
+				info.setRegId(object.getInt("RegId"));
+				info.setPatientId(object.getInt("PatientId"));
+				
+					list.add(info);
+				
+
+			}
+			adapter=new UnidentifiedAdapter(this, list);
+		    mListView.setAdapter(adapter);
+		    mListView.setSelection(list.size()-array.length());
+			// adapter=new UnidentifiedAdapter(this, list);
+			// listView.setAdapter(adapter);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private void getPageList(int row) {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("page", row+"");
+		data.put("rows", "20");
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.VISITEDINFO, params);
+		MainService.newTask(task);
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			exit();
+
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	private void showDialog() {
+		dialog = new ProgressDialog(context);
+		dialog.setCanceledOnTouchOutside(false);
+		dialog.setMessage("正在查询，请稍等...");
+		dialog.show();
+
+	}
+
+}
+
+

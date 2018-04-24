@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/bt"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:text="会议通知管理"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+    </LinearLayout>
+    
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            
+            <LinearLayout 
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                
+                <LinearLayout 
+                    android:id="@+id/tableRow1"
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+                    
+                    <TextView 
+                        android:id="@+id/tv_meetsjr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="收件人：    "
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp">
+                    </TextView>
+                    
+                    <EditText 
+                        android:id="@+id/meet_sjr"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:textSize="25sp">
+                    </EditText>
+                    
+                    <Button 
+                        android:id="@+id/meetsjr_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/button_selector"
+                        android:text="选择"
+                        android:textSize="25sp">
+                    </Button>
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/tableRow2"
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+                    
+                    <TextView 
+                        android:id="@+id/tv_meetname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="会议名称："
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp">
+                    </TextView>
+                    
+                    <EditText 
+                        android:id="@+id/meet_name"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:textSize="25sp">
+                    </EditText>
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/tableRow3"
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+                    
+                    <TextView 
+                        android:id="@+id/tv_meettime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="会议时间："
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp">
+                    </TextView>
+                    
+                    <EditText 
+                        android:id="@+id/meet_data"
+                        android:layout_width="195dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:textSize="25sp"
+                        android:inputType="date"
+                        android:ems="10"
+                        android:hint="年/月/日">
+                    </EditText>
+                    
+                    <EditText 
+                        android:id="@+id/meet_time"
+                        android:layout_width="195dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:textSize="25sp"
+                        android:inputType="time"
+                        android:ems="10"
+                        android:hint="09:00">
+                    </EditText>
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/tableRow4"
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+                    
+                    <TextView 
+                        android:id="@+id/tv_meetaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="会议地点："
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp">
+                    </TextView>
+                    
+                    <EditText 
+                        android:id="@+id/meet_address"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:textSize="25sp">
+                    </EditText>
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/tableRow5"
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+                    
+                    <TextView 
+                        android:id="@+id/tv_meetdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="会议内容："
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp">
+                    </TextView>
+                    
+                    <EditText 
+                        android:id="@+id/meet_neirong"
+                        android:layout_width="400dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:textSize="25sp">
+                    </EditText>
+                    
+                    <Button 
+                        android:id="@+id/meetfujian_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/button_selector"
+                        android:text="上传附件"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/tableRow6"
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    
+                    <Button 
+                        android:id="@+id/meettj_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_selector"
+                        android:text="提交"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

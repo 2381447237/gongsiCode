@@ -1,0 +1,617 @@
+package com.example.Seats.views;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.example.Seats.beans.GetStartInfo;
+import com.example.Seats.beans.InfusionAdapter;
+import com.example.Seats.beans.InfusionInfo;
+import com.example.Seats.beans.SeatsAdapter;
+import com.example.Seats.beans.SeatsInfo;
+import com.example.Seats.beans.TubesInfo;
+import com.example.Seats.beans.TubleAdapter;
+import com.example.companytask.CompanyTask;
+import com.example.helper.IActivity;
+import com.example.ppu_infusion.R;
+import com.example.ppu_infusion.R.id;
+import com.example.ppu_infusion.R.layout;
+import com.example.ppu_infusion.R.menu;
+import com.example.services.MainServices;
+
+import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.app.AlertDialog.Builder;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class InfusionActivity extends Activity implements IActivity,
+		OnClickListener {
+	public static final int INFUSIONORDERSINFO = 1;
+	public static final int INFUSIONRESTART = 2;
+	public static final int INFUSIONPAUSE = 3;
+	public static final int INFUSIONFINISH = 4;
+	public static final int DRIPSPEED = 5;
+	public static final int TUBES = 6;
+	public static final int GETSTART = 7;
+	private int StaffID;
+	private List<InfusionInfo> infusionInfos = new ArrayList<InfusionInfo>();
+	private SeatsInfo infos;
+	private TextView tv_seatno, tv_name, tv_cardno, tv_sex, tv_age, tv_birth,
+			tv_orderdapename, tv_ordername, tv_diagindo;
+	private Button btn_start, btn_restart,btn_pause, btn_finish;
+	private String tubes, speed,infusion;
+	private InfusionAdapter adapter;
+	private ListView list_drug;
+	private List<GetStartInfo> getStartInfos = new ArrayList<GetStartInfo>();
+	private ArrayList<TubesInfo> tubesInfos = new ArrayList<TubesInfo>();
+	 private ProgressDialog dialog;
+	 private Context context = this;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// 设置屏幕无标题
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		// 设置屏幕全屏
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		setContentView(R.layout.activity_infusion);
+		Intent intent = getIntent();
+		StaffID = intent.getIntExtra("StaffID", -1);
+		infos = (SeatsInfo) intent.getSerializableExtra("SeatsInfo");
+		init();
+		initview();
+		showDialog();
+		postOrdersInfo();
+		postTubs();
+		postDripseed();
+		postgetstart();
+	}
+
+	public void initview() {
+		list_drug=(ListView) findViewById(R.id.list_drug);
+		tv_seatno = (TextView) findViewById(R.id.tv_seatno);
+		btn_start = (Button) findViewById(R.id.btn_start);
+		btn_restart = (Button) findViewById(R.id.btn_restart);
+		btn_pause=(Button) findViewById(R.id.btn_pause);
+		btn_finish = (Button) findViewById(R.id.btn_finish);
+		tv_name = (TextView) findViewById(R.id.tv_name);
+		tv_cardno = (TextView) findViewById(R.id.tv_cardno);
+		tv_sex = (TextView) findViewById(R.id.tv_sex);
+		tv_age = (TextView) findViewById(R.id.tv_age);
+		tv_birth = (TextView) findViewById(R.id.tv_birth);
+		tv_orderdapename = (TextView) findViewById(R.id.tv_orderdapename);
+		tv_ordername = (TextView) findViewById(R.id.tv_ordername);
+		tv_diagindo = (TextView) findViewById(R.id.tv_diagindo);
+		
+		
+		if (infos.getInfusionStatusName().equals("正在输液")) {
+			btn_restart.setVisibility(View.GONE);
+			btn_pause.setVisibility(View.VISIBLE);
+		} else if (infos.getInfusionStatusName().equals("暂停输液")) {
+			btn_restart.setVisibility(View.VISIBLE);
+			btn_pause.setVisibility(View.GONE);
+		}
+		tv_seatno.setText(infos.getSeatNo());
+		btn_start.setOnClickListener(this);
+		btn_restart.setOnClickListener(this);
+		btn_pause.setOnClickListener(this);
+		btn_finish.setOnClickListener(this);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.btn_start:
+			if (infos.getInfusionStatus().equals("1")||infos.getInfusionStatus().equals("2")) {
+					AlertDialog.Builder builder = new Builder(InfusionActivity.this);
+					builder.setTitle("提示")
+							.setMessage("有药品正在输液或暂停输液")
+							.setIcon(android.R.drawable.ic_dialog_info)
+							.setCancelable(true)
+							.setPositiveButton("确定",null).show();
+				}else{
+					
+					AlertDialog.Builder builder = new Builder(InfusionActivity.this);
+					builder.setTitle("提示")
+							.setMessage("您确定开始吗?")
+							.setIcon(android.R.drawable.ic_dialog_info)
+							.setCancelable(true)
+							.setPositiveButton("确定",
+									new DialogInterface.OnClickListener() {
+
+										@Override
+										public void onClick(DialogInterface dialog,
+												int which) {
+
+											// poststart();
+											Intent intent = new Intent();
+											intent.putExtra("StaffID", StaffID);
+											intent.putExtra("infos", infos);
+											intent.putExtra("tubes", tubes);
+											intent.putExtra("speed", speed);
+											intent.putExtra("infusion", infusion);
+											intent.setClass(InfusionActivity.this,
+													TubleActivity.class);
+											startActivityForResult(intent, 100);
+										}
+									}).setNegativeButton("取消", null).show();
+				}
+
+			
+			break;
+		case R.id.btn_restart:
+			if (infos.getInfusionStatus().equals("1")||infos.getInfusionStatus().equals("2")) {
+				AlertDialog.Builder builder3 = new Builder(
+						InfusionActivity.this);
+				builder3.setTitle("提示")
+						.setMessage("您确定继续吗?")
+						.setIcon(android.R.drawable.ic_dialog_info)
+						.setCancelable(true)
+						.setPositiveButton("确定",
+								new DialogInterface.OnClickListener() {
+
+									@Override
+									public void onClick(DialogInterface dialog,
+											int which) {
+
+										postrestart();
+										postgetstart();
+										btn_restart.setVisibility(View.GONE);
+										btn_pause.setVisibility(View.VISIBLE);
+									}
+								}).setNegativeButton("取消", null).show();
+
+			}else{
+				AlertDialog.Builder builder = new Builder(InfusionActivity.this);
+				builder.setTitle("提示")
+				.setMessage("没有药品在输液")
+				.setIcon(android.R.drawable.ic_dialog_info)
+				.setCancelable(true)
+				.setPositiveButton("确定",null).show();
+			}
+			
+			break;
+		case R.id.btn_pause:
+			if (infos.getInfusionStatus().equals("1")||infos.getInfusionStatus().equals("2")) {
+				AlertDialog.Builder builder2 = new Builder(
+						InfusionActivity.this);
+				builder2.setTitle("提示")
+						.setMessage("您确定暂停吗?")
+						.setIcon(android.R.drawable.ic_dialog_info)
+						.setCancelable(true)
+						.setPositiveButton("确定",
+								new DialogInterface.OnClickListener() {
+
+									@Override
+									public void onClick(DialogInterface dialog,
+											int which) {
+
+										postpause();
+										postgetstart();
+										btn_restart.setVisibility(View.VISIBLE);
+										btn_pause.setVisibility(View.GONE);
+									}
+								}).setNegativeButton("取消", null).show();
+			
+
+			
+			}else{
+				AlertDialog.Builder builder = new Builder(InfusionActivity.this);
+				builder.setTitle("提示")
+				.setMessage("没有药品在输液")
+				.setIcon(android.R.drawable.ic_dialog_info)
+				.setCancelable(true)
+				.setPositiveButton("确定",null).show();
+			}
+			
+			break;
+		case R.id.btn_finish:
+			if (infos.getInfusionStatus().equals("1")||infos.getInfusionStatus().equals("2")) {
+			AlertDialog.Builder builder4 = new Builder(InfusionActivity.this);
+			builder4.setTitle("提示")
+					.setMessage("您确定结束吗?")
+					.setIcon(android.R.drawable.ic_dialog_info)
+					.setCancelable(true)
+					.setPositiveButton("确定",
+							new DialogInterface.OnClickListener() {
+
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
+
+									postfinish();
+									postgetstart();
+								}
+							}).setNegativeButton("取消", null).show();
+			}
+			else{
+				AlertDialog.Builder builder = new Builder(InfusionActivity.this);
+				builder.setTitle("提示")
+				.setMessage("没有药品在输液")
+				.setIcon(android.R.drawable.ic_dialog_info)
+				.setCancelable(true)
+				.setPositiveButton("确定",null).show();
+			}
+			break;
+		default:
+			break;
+		}
+	}
+
+	public void postOrdersInfo() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		data.put("CardNo", infos.getCardNo());
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.INFUSIONORDERSINFO,
+				params);
+		MainServices.newTask(task);
+
+	}
+
+	public void postrestart() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		data.put("PatientID", infos.getPatientID());
+		data.put("InfusionDetailID", infos.getInfusionDetailID());
+		data.put("mTubeID", infos.getTubeID());
+		data.put("mdripCntsPerminute", infos.getDripCntsPerminute());
+		params.put("data", data);
+		Log.i("qwj", "data2==" + data);
+		CompanyTask task = new CompanyTask(CompanyTask.INFUSIONRESTART, params);
+		MainServices.newTask(task);
+
+	}
+
+	public void postpause() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		data.put("PatientID", infos.getPatientID());
+		data.put("InfusionDetailID", infos.getInfusionDetailID());
+		params.put("data", data);
+		Log.i("qwj", "data3==" + data);
+		CompanyTask task = new CompanyTask(CompanyTask.INFUSIONPAUSE, params);
+		MainServices.newTask(task);
+
+	}
+
+	public void postfinish() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		data.put("PatientID", infos.getPatientID());
+		data.put("InfusionDetailID", infos.getInfusionDetailID());
+		params.put("data", data);
+		Log.i("qwj", "data4==" + data);
+		CompanyTask task = new CompanyTask(CompanyTask.INFUSIONFINISH, params);
+		MainServices.newTask(task);
+
+	}
+
+	public void postTubs() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.TUBES, params);
+		MainServices.newTask(task);
+
+	}
+
+	public void postDripseed() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.DRIPSPEED, params);
+		MainServices.newTask(task);
+
+	}
+	public void postgetstart() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		data.put("PatientID", infos.getPatientID());
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.GETSTART, params);
+		MainServices.newTask(task);
+
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		MainServices.addActivity(this);
+	}
+
+	@Override
+	public void refresh(Object... params) {
+		// TODO Auto-generated method stub
+		switch (Integer.valueOf(params[0].toString().trim())) {
+		case InfusionActivity.GETSTART:
+			if (dialog != null && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			if (params[1] != null) {
+				infusion= params[1].toString().trim();
+				parsegetStart(infusion);
+			}
+			break;
+		case InfusionActivity.INFUSIONORDERSINFO:
+			if (dialog != null && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			if (params[1] != null) {
+				String value = params[1].toString().trim();
+				infusionInfoList(value);
+			}
+			break;
+
+		case InfusionActivity.INFUSIONRESTART:
+			if (params[1] != null) {
+				String str;
+				String value = params[1].toString().trim();
+				if (value.equals("True")) {
+					str = "完成";
+				} else {
+					str = value;
+				}
+				AlertDialog.Builder builder4 = new Builder(
+						InfusionActivity.this);
+				builder4.setTitle("提示").setMessage(str)
+						.setIcon(android.R.drawable.ic_dialog_info)
+						.setCancelable(true).setPositiveButton("确定", 
+								new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+
+								postgetstart();
+								btn_restart.setVisibility(View.GONE);
+								btn_pause.setVisibility(View.VISIBLE);
+							}
+						}).show();
+
+			}
+			break;
+		case InfusionActivity.INFUSIONPAUSE:
+			if (params[1] != null) {
+				String str;
+				String value = params[1].toString().trim();
+				if (value.equals("True")) {
+					str = "完成";
+				} else {
+					str = value;
+				}
+				AlertDialog.Builder builder4 = new Builder(
+						InfusionActivity.this);
+				builder4.setTitle("提示").setMessage(str)
+						.setIcon(android.R.drawable.ic_dialog_info)
+						.setCancelable(true).setPositiveButton("确定",
+								new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+
+								postgetstart();
+								btn_restart.setVisibility(View.VISIBLE);
+								btn_pause.setVisibility(View.GONE);
+							}
+						}).show();
+			}
+			break;
+		case InfusionActivity.INFUSIONFINISH:
+			if (params[1] != null) {
+				String str;
+				String value = params[1].toString().trim();
+				if (value.equals("True")) {
+					str = "完成";
+				} else {
+					str = value;
+				}
+				AlertDialog.Builder builder4 = new Builder(
+						InfusionActivity.this);
+				builder4.setTitle("提示").setMessage(str)
+						.setIcon(android.R.drawable.ic_dialog_info)
+						.setCancelable(true).setPositiveButton("确定",
+								new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+
+								postgetstart();
+
+							}
+						}).show();
+			}
+			break;
+		case InfusionActivity.DRIPSPEED:
+			// String speed = "";
+			if (dialog != null && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			if (params[1] != null) {
+				speed = params[1].toString().trim();
+
+			}
+
+			break;
+		case InfusionActivity.TUBES:
+			// String tubes = "";
+			if (dialog != null && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			if (params[1] != null) {
+				tubes = params[1].toString().trim();
+				TubesList(tubes);
+			}
+
+			break;
+		
+		default:
+			break;
+		}
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == 100) {
+			if (resultCode == RESULT_OK) {
+				postgetstart();
+				
+			}
+		}
+
+	}
+	private void infusionInfoList(String mtStr) {
+		// infusionInfos.clear();
+		// List<UnideInfo> list=new ArrayList<UnideInfo>();
+		try {
+			JSONArray jsonArray = new JSONArray(mtStr);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject object = jsonArray.getJSONObject(i);
+				InfusionInfo info = new InfusionInfo();
+				info.setHISOrderID(object.getString("HISOrderID"));
+				info.setCardNo(object.getString("CardNo"));
+				info.setPatientName(object.getString("PatientName"));
+				info.setGender(object.getString("Gender"));
+				info.setBirthDate(object.getString("BirthDate"));
+				info.setOrderDate(object.getString("OrderDate"));
+				info.setOrderDoctorName(object.getString("OrderDoctorName"));
+				info.setOrderDeptName(object.getString("OrderDeptName"));
+				info.setDiagInfo(object.getString("DiagInfo"));
+				info.setHISClinicNo(object.getString("HISClinicNo"));
+
+				infusionInfos.add(info);
+				tv_name.setText(info.getPatientName());
+				tv_cardno.setText(info.getCardNo());
+				if (info.getGender().endsWith("1")) {
+					tv_sex.setText("男");
+				} else {
+					tv_sex.setText("女");
+				}
+				Calendar c = Calendar.getInstance();
+				int year = c.get(Calendar.YEAR);
+				int age = Integer.parseInt(info.getBirthDate().substring(0, 4));
+				Log.i("qwj", "age=" + age);
+				Log.i("qwj", "year=" + year);
+				int age2 = year - age;
+				Log.i("qwj", "age2=" + age2);
+				tv_age.setText(age2 + "");
+				tv_birth.setText(info.getBirthDate().substring(0, 10));
+				tv_orderdapename.setText(info.getOrderDeptName());
+				tv_ordername.setText(info.getOrderDoctorName());
+				tv_diagindo.setText(info.getDiagInfo());
+				
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+	}
+	private void TubesList(String mtStr) {
+		tubesInfos.clear();
+		try {
+			JSONArray jsonArray = new JSONArray(mtStr);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject object = jsonArray.getJSONObject(i);
+				TubesInfo info = new TubesInfo();
+				info.setTubeID(object.getString("TubeID"));
+				info.setTubeName(object.getString("TubeName"));
+				info.setDripCntsPerml(object.getString("dripCntsPerml"));
+				tubesInfos.add(info);
+
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+
+	}
+	private void parsegetStart(String mtStr) {
+		getStartInfos.clear();
+		// List<UnideInfo> list=new ArrayList<UnideInfo>();
+		try {
+			JSONArray jsonArray = new JSONArray(mtStr);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject object = jsonArray.getJSONObject(i);
+				GetStartInfo info = new GetStartInfo();
+				info.setInfusionDetailID(object.getString("InfusionDetailID"));
+				info.setInfusionID(object.getString("InfusionID"));
+				info.setDrugName(object.getString("DrugName"));
+				info.setDrugSpec(object.getString("DrugSpec"));
+				info.setDrugTradeName(object.getString("DrugTradeName"));
+				info.setDrugManufacturer(object.getString("DrugManufacturer"));
+				info.setDrugYBCode(object.getString("DrugYBCode"));
+				info.setInfusiongroupno(object.getString("Infusiongroupno"));
+				info.setBagItemName(object.getString("BagItemName"));
+				info.setBagItemYBCode(object.getString("BagItemYBCode"));
+				info.setBagVolume(object.getString("BagVolume"));
+				info.setRemainderVolume(object.getString("RemainderVolume"));
+				info.setDripCntsPerminute(object.getString("dripCntsPerminute"));
+				info.setTubeID(object.getString("TubeID"));
+				info.setDripCntsPerml(object.getString("dripCntsPerml"));
+				info.setDripStartTime(object.getString("dripStartTime"));
+				info.setDripLastStartTime(object.getString("dripLastStartTime"));
+				info.setDripFinishTime(object.getString("dripFinishTime"));
+				info.setInfusionStatus(object.getString("InfusionStatus"));
+				info.setDuration(object.getString("Duration"));
+				info.setTbl_Infusions_Info(object
+						.getString("tbl_Infusions_Info"));
+				if (info.getTubeID() != null) {
+					for (int k = 0; k < tubesInfos.size(); k++) {
+						if (tubesInfos.get(k).getTubeID().equals(info.getTubeID())) {
+							info.setTubeName(tubesInfos.get(k).getTubeName());
+							Log.i("qwj", "===tubesInfos.get(i).getTubeID()==="
+									+ tubesInfos.get(k).getTubeID());
+						}
+					}
+				}
+				
+				getStartInfos.add(info);
+
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		adapter = new InfusionAdapter(this, getStartInfos);
+		list_drug.setAdapter(adapter);
+	}
+	private void showDialog() {
+		dialog = new ProgressDialog(context);
+		dialog.setCanceledOnTouchOutside(false);
+		dialog.setMessage("正在查询，请稍等...");
+		dialog.show();
+
+	}
+}

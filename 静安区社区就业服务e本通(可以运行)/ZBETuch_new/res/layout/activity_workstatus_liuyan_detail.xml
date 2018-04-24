@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/firstpage_more_docbackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.2"
+        android:background="@drawable/firstpage_more_title" >
+
+        <TextView
+            android:id="@+id/workstatus_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="留言板"
+            android:textSize="25dip" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="8.8"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:background="@drawable/firstpage_more_whitebackgroud"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/lsview_msg_workstatus_detitle"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:divider="@android:color/black"
+                android:dividerHeight="1dip" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:height="40dp"
+                android:text="回复:"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:background="@drawable/firstpage_more_whitebackgroud2"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/tv_msgboard_workstatus_detilecallback_doc"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text=" "
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_msgboard_workstatus_detitle_callback"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+               	android:layout_marginRight="5dip"
+                android:background="@drawable/firstpage_btnmain1"
+                android:text="发 表"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

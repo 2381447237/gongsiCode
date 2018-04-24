@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/main_radio"
+            android:layout_alignParentTop="true" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="fill" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@android:id/tabcontent"
+            android:background="#cccccc" />
+
+        <!-- <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <RadioButton
+                android:id="@+id/unident_button"
+                style="@style/main_tab_bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/change_unident"
+                android:checked="true"
+                android:tag="radio_button0" />
+
+            <RadioButton
+                android:id="@+id/has_button"
+                style="@style/main_tab_bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/change_has"
+                android:tag="radio_button1" />
+
+            <RadioButton
+                android:id="@+id/homebed_button"
+                style="@style/main_tab_bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/change_homebed"
+                android:tag="radio_button2" />
+
+            <RadioButton
+                android:id="@+id/statistics_button"
+                style="@style/main_tab_bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/change_statistics"
+                android:tag="radio_button3" />
+        </RadioGroup> -->
+        <LinearLayout
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/unident_button"
+                style="@style/main_tab_bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/change_unident"
+                android:checked="true"
+                android:tag="radio_button0" />
+
+            <Button
+                android:id="@+id/has_button"
+                style="@style/main_tab_bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/change_has"
+                android:tag="radio_button1" />
+
+            <Button
+                android:id="@+id/homebed_button"
+                style="@style/main_tab_bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/change_homebed"
+                android:tag="radio_button2" />
+
+            <Button
+                android:id="@+id/statistics_button"
+                style="@style/main_tab_bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/change_statistics"
+                android:tag="radio_button3" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</TabHost>

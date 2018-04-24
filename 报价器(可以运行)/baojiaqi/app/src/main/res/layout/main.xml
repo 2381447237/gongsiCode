@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/imgShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+
+    <!--android:visibility="gone"-->
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <SurfaceView
+        android:id="@+id/mysurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_vertical"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btnVaryGood"
+            style="@style/buttonStyle"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/btnvarygoodselect"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnGood"
+            style="@style/buttonStyle"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/btngoodselect"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnCommon"
+            style="@style/buttonStyle"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/btncommonselect"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnNo"
+            style="@style/buttonStyle"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btnnoselect"
+            android:text="" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:text="测试"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnTest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:text="测试"
+        android:visibility="gone" />
+
+    <myviews.AutoScrollTextView
+        android:id="@+id/autoScrollTextView"
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="50dip"
+        android:background="#00000000"
+        android:clickable="false"
+        android:focusable="false"
+        android:inputType="none"
+        android:text="AutoScrollTextView"
+        android:textSize="20px"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#00000000"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_gravity="top|right">
+
+        <ImageView
+            android:id="@+id/ivSetTime"
+            android:layout_width="200dip"
+            android:layout_height="200dip"
+            />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/ivSetVolume"
+            android:layout_width="200dip"
+            android:layout_height="200dip"
+            />
+
+    </RelativeLayout>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/ivSetVolume"-->
+        <!--android:layout_width="100dip"-->
+        <!--android:layout_height="100dip"-->
+        <!--android:layout_gravity="top|right" />-->
+
+
+    <RelativeLayout
+        android:background="#000000"
+        android:id="@+id/rlPb"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:id="@+id/ivPb"
+            android:src="@drawable/pb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <com.example.fc_android_bj_new.FullScreenVideoView
+            android:visibility="gone"
+            android:id="@+id/fvv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

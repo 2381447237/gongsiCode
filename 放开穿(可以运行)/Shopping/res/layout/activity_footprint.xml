@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+ 
+     <RelativeLayout
+        android:id="@+id/rl_footprint_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+     >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="我的足迹"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_footprint_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+             android:background="@drawable/line"  />
+        
+        <ImageView 
+            android:id="@+id/img_footprint_alldelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+             android:src="@drawable/addressmanage_delete"
+             android:paddingRight="8dp"
+            />
+        
+    </RelativeLayout>
+    
+     <ListView 
+         android:id="@+id/lv_footprint"
+         android:layout_below="@id/rl_footprint_title"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:scrollbars="none" ></ListView>
+     
+     <LinearLayout 
+         android:layout_below="@id/lv_footprint"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:background="#dfdfdf"
+         >
+     
+     <LinearLayout 
+        android:id="@+id/layout_noFps"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+       android:layout_marginTop="90dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imageview_noFps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/white_logo" />
+
+        <TextView
+            android:id="@+id/textview_noFps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+            android:text="足迹是空的，赶紧逛逛吧~"
+            android:textColor="#808080" />
+
+    </LinearLayout>
+     </LinearLayout>
+</RelativeLayout>

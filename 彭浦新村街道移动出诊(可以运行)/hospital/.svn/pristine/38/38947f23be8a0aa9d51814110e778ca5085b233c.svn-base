@@ -1,0 +1,559 @@
+package com.fc.has.views;
+
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.example.companytask.CompanyTask;
+import com.example.hospital.HomePageActivity;
+import com.example.hospital.R;
+import com.example.service.MainService;
+import com.fc.has.beans.HomeVisitPrescribeActivityAdapter;
+import com.fc.has.beans.HomeVisitPrescribeInfo;
+import com.fc.helper.BaseActivity;
+import com.fc.helper.CustomApplication;
+import com.fc.helper.IActivity;
+import com.fc.unidentified.beans.DiagInfo;
+import com.fc.unidentified.beans.ItemsInfo;
+import com.fc.unidentified.beans.PrescriptionAdapter;
+import com.fc.unidentified.views.DiagnosisActivity;
+import com.fc.unidentified.views.ItemsDialogActivity;
+import com.fc.unidentified.views.ItemsInfoActivity;
+import com.fc.unidentified.views.PrescriptionActivity;
+import com.fc.unidentified.views.PrescriptionActivity.MyReceiver;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class HomeVisitSearchActivity extends BaseActivity implements IActivity,
+		OnClickListener {
+	public static final int HOMEVISIT_REFRESH = 1;
+	public static final int DIAGNOSIS = 2;
+	public static final int PRESCRIBE = 3;
+	private EditText ed_input;
+	private Button btn_query, btn_keep;
+	private TextView tv_price1, tv_price2, tv_price3;
+	public ListView listView;
+	private HomeVisitPrescribeActivityAdapter adapter;
+	private ArrayList<ItemsInfo> itemsInfos = new ArrayList<ItemsInfo>();
+	private Context context = this;
+	private ProgressDialog dialog;
+	private ItemsInfo itemsInfo;
+	private String freque, usage;
+	private String much, num;
+	private String freque1, usage1;
+	private String much1, num1;
+	private MyReceiver receiver = null;
+	private double price2, price3, price4;
+	private List<DiagInfo> DiagInfo = new ArrayList<DiagInfo>();
+	private CustomApplication app;
+	private int mRegId;
+	private String DiagCode, DiagName;
+	private String mDiagInfo;
+	private int mPrescribeId;
+	private String ItemName2;
+	private String PatientName;
+	private String iteminfo;
+	private ArrayList<HomeVisitPrescribeInfo> homeVisitPrescribeInfos;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_home_visit_prescription);
+		init();
+		initView();
+
+	}
+
+	public void initView() {
+		app = (CustomApplication) getApplication();
+		ed_input = (EditText) findViewById(R.id.ed_input2);
+		btn_query = (Button) findViewById(R.id.btn_query2);
+		btn_keep = (Button) findViewById(R.id.btn_keep);
+		listView = (ListView) findViewById(R.id.lsview_presc);
+		tv_price1 = (TextView) findViewById(R.id.tv_price1);
+		tv_price2 = (TextView) findViewById(R.id.tv_price2);
+		tv_price3 = (TextView) findViewById(R.id.tv_price3);
+
+		Intent intent = getIntent();
+		mRegId = intent.getIntExtra("mResId", -1);
+		itemsInfos = (ArrayList<ItemsInfo>) intent
+				.getSerializableExtra("itemsInfos");
+		ItemName2 = intent.getStringExtra("ItemName2");
+		PatientName = intent.getStringExtra("PatientName");
+		mPrescribeId = intent.getIntExtra("mPrescribeId", -1);
+		adapter = new HomeVisitPrescribeActivityAdapter(this, itemsInfos);
+		listView.setAdapter(adapter);
+		sumje();
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(HomeVisitSearchActivity.this,
+						HomeItemDialogActivity.class);
+				intent.putExtra("freque", app.getFreque());
+				intent.putExtra("usage", app.getUsage());
+				intent.putExtra("position", position);
+				intent.putExtra("itemsInfos", itemsInfos.get(position));
+				if (itemsInfos.get(position).getItemAmount() != 0) {
+					if (itemsInfos.get(position).getIsDrug()) {
+						boolean aa = itemsInfos.get(position).getIsDrug();
+						intent.putExtra("frequ_id", itemsInfos.get(position)
+								.getItemFrequency());
+						intent.putExtra("usage_id", itemsInfos.get(position)
+								.getItemUsage());
+						intent.putExtra("much2", String.valueOf(itemsInfos.get(
+								position).getItemDosage()));
+						intent.putExtra("num2", itemsInfos.get(position)
+								.getItemAmount() + "");
+					} else {
+						intent.putExtra("num2", itemsInfos.get(position)
+								.getItemAmount() + "");
+						intent.putExtra("frequ_id", "");
+						intent.putExtra("usage_id", "");
+						intent.putExtra("much2", "");
+					}
+				} else {
+					intent.putExtra("frequ_id", itemsInfos.get(position)
+							.getFreque());
+					intent.putExtra("usage_id", itemsInfos.get(position)
+							.getUsage());
+					intent.putExtra("much2", itemsInfos.get(position).getMuch());
+					intent.putExtra("num2", itemsInfos.get(position).getNum());
+				}
+				intent.putExtra("ItemName", "");
+				startActivity(intent);
+
+			}
+		});
+
+		receiver = new MyReceiver();
+		IntentFilter filter = new IntentFilter();
+		filter.addAction("com.example.service.MainService");
+		HomeVisitSearchActivity.this.registerReceiver(receiver, filter);
+
+		btn_query.setOnClickListener(this);
+
+		btn_keep.setOnClickListener(this);
+		// if (app.getItemsinfo() != null) {
+		// itemsInfos = app.getItemsinfo();
+		// adapter = new
+		// HomeVisitPrescribeActivityAdapter(HomeVisitSearchActivity.this,
+		// itemsInfos);
+		// listView.setAdapter(adapter);
+		// sumje();
+		//
+		// }
+	}
+
+	@Override
+	protected void onDestroy() {
+		HomeVisitSearchActivity.this.unregisterReceiver(receiver);
+		super.onDestroy();
+	}
+
+	public class MyReceiver extends BroadcastReceiver {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			Bundle bundle = intent.getExtras();
+
+			itemsInfo = (ItemsInfo) bundle.getSerializable("itemsInfos");
+			boolean bb = itemsInfo.getIsDrug();
+			String str = "";
+			int info = bundle.getInt("position");
+			if (itemsInfo.getItemAmount() != 0) {
+
+				freque1 = bundle.getString("spinner_frequ1");
+				usage1 = bundle.getString("spinner_usage1");
+				much1 = bundle.getString("much1");
+				num1 = bundle.getString("num1");
+				if (bb) {
+					str = itemsInfo.getItemDosageUnit();
+				}
+				if (itemsInfo != null) {
+
+					if (info != -1) {
+						itemsInfos.remove(info);
+
+					}
+					parseItemsList1(info, bb, str);
+				}
+
+			} else {
+
+				freque = bundle.getString("spinner_frequ");
+				usage = bundle.getString("spinner_usage");
+				much = bundle.getString("much");
+				num = bundle.getString("num");
+				if (itemsInfo != null) {
+
+					// int info = bundle.getInt("position");
+					if (info != -1) {
+						itemsInfos.remove(info);
+
+					}
+					parseItemsList();
+
+				}
+			}
+
+			Log.i("qwj", "==itemsInfos===" + itemsInfo);
+			Log.i("qwj", "==much===" + much);
+			Log.i("qwj", "==ItemAmount===" + num);
+			Log.i("qwj", "==freque===" + freque);
+			Log.i("qwj", "==usage===" + usage);
+
+		}
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.btn_query2:
+			if (!ed_input.getText().toString().trim().equals("")) {
+				postDrug();
+				showDialog();
+				DecorView();
+			} else {
+				Toast.makeText(getApplicationContext(), "请输入输入码查询",
+						Toast.LENGTH_SHORT).show();
+			}
+
+			break;
+		case R.id.btn_keep:
+			if (itemsInfos.size() > 0) {
+				final AlertDialog dialog = new AlertDialog.Builder(
+						HomeVisitSearchActivity.this).create();
+				View view = LayoutInflater.from(HomeVisitSearchActivity.this)
+						.inflate(R.layout.dialog_layout, null);
+				dialog.setView(view);
+				dialog.show();
+				Window window = dialog.getWindow();
+				window.setContentView(R.layout.dialog_layout);
+				TextView tv_dialog = (TextView) window
+						.findViewById(R.id.tv_dialog);
+				tv_dialog.setText("确定保存么？");
+				Button btnOk = (Button) window.findViewById(R.id.btn_ok);
+				Button btnUndo = (Button) window.findViewById(R.id.btn_undo);
+				btnOk.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						// postDiagnosis();
+						postPrescribe();
+						dialog.cancel();
+						finish();
+						// DiagnosisActivity._instance.finish();
+						// HomePageActivity._instance.finish();
+						HomeVisitNumInfoActivity._instance.finish();
+						HomeVisitPrescribeInfoActivity._instance.finish();
+						Intent intent = new Intent(
+								HomeVisitSearchActivity.this,
+								HomeVisitNumInfoActivity.class);
+						intent.putExtra("visit_info", mRegId);
+						intent.putExtra("PatientName", PatientName);
+						startActivity(intent);
+
+					}
+				});
+				btnUndo.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						dialog.cancel();
+					}
+				});
+			} else {
+				Toast.makeText(getApplicationContext(), "处方不能为空",
+						Toast.LENGTH_SHORT).show();
+			}
+			break;
+		default:
+			break;
+		}
+	}
+
+	public void showInfo(final int info) {
+
+		final AlertDialog dialog = new AlertDialog.Builder(
+				HomeVisitSearchActivity.this).create();
+		View view = LayoutInflater.from(HomeVisitSearchActivity.this).inflate(
+				R.layout.dialog_layout, null);
+		dialog.setView(view);
+		dialog.show();
+		Window window = dialog.getWindow();
+		window.setContentView(R.layout.dialog_layout);
+		TextView tv_dialog = (TextView) window.findViewById(R.id.tv_dialog);
+		tv_dialog.setText("确定删除么？");
+		Button btnOk = (Button) window.findViewById(R.id.btn_ok);
+		Button btnUndo = (Button) window.findViewById(R.id.btn_undo);
+		btnOk.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+
+				itemsInfos.remove(info);
+				adapter.notifyDataSetChanged();
+				dialog.cancel();
+				sumje();
+			}
+		});
+		btnUndo.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				dialog.cancel();
+			}
+		});
+
+	}
+
+	public void postDrug() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("InputCode", ed_input.getText().toString().trim());
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(
+				CompanyTask.HOMEVISITPRESCRIPTIONACTIVITY, params);
+		MainService.newTask(task);
+	}
+
+	public void postDiagnosis() {
+
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("mRegId", mRegId + "");
+		data.put("mDiagInfo", mDiagInfo);
+		params.put("data", data);
+		Log.i("qwj", "===data===" + data);
+		CompanyTask task = new CompanyTask(CompanyTask.HOMEDIAGNOSIS, params);
+		MainService.newTask(task);
+	}
+
+	public void postPrescribe() {
+
+		String iteminfo = "";
+		for (int i = 0; i < itemsInfos.size(); i++) {
+			ItemsInfo item = itemsInfos.get(i);
+			if (item.getItemAmount() != 0) {
+				iteminfo += item.getItemId() + "" + ":" + item.getItemAmount()
+						+ ":" + item.getItemFrequency() + ":"
+						+ item.getItemDosage() + ":" + item.getItemUsage()
+						+ "|";
+			} else {
+
+				iteminfo += item.getItemId() + "" + ":" + item.getNum() + ":"
+						+ item.getFreque() + ":" + item.getMuch() + ":"
+						+ item.getUsage() + "|";
+			}
+		}
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		// data.put("mPrescribeId","-1");
+		data.put("mPrescribeId", mPrescribeId + "");
+		int str = mPrescribeId;
+		data.put("mRegId", mRegId + "");
+		data.put("mPrescribeDoctorId", app.getStaffId() + "");
+		data.put("mPrescribeRemark", "备注");
+		data.put("mItemInfo", iteminfo);
+		params.put("data", data);
+		Log.i("qwj", "===data=33==" + data);
+		CompanyTask task = new CompanyTask(CompanyTask.HOMEPRESCRIBE, params);
+		MainService.newTask(task);
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		MainService.addActivity(this);
+	}
+
+	@Override
+	public void refresh(Object... params) {
+		// TODO Auto-generated method stub
+		switch (Integer.valueOf(params[0].toString().trim())) {
+		case HomeVisitSearchActivity.HOMEVISIT_REFRESH:
+			if (dialog != null && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			if (params[1] != null) {
+				String value = params[1].toString().trim();
+				// parseItemsList(value);
+				if (value.equals("")) {
+					Toast.makeText(getApplicationContext(), "您查询的输入码有误",
+							Toast.LENGTH_LONG).show();
+				} else {
+					Intent intent = new Intent();
+					String itemName = "";
+					for (int j = 0; j < itemsInfos.size(); j++) {
+
+						ItemsInfo item = itemsInfos.get(j);
+						itemName += item.getItemName().trim() + ",";
+						Log.i("qwj", "==ItemName===" + itemName);
+					}
+					intent.putExtra("value", value);
+					intent.putExtra("ItemName2", itemName);
+					Log.i("qwj", "===value===" + value);
+					intent.setClass(HomeVisitSearchActivity.this,
+							HomeItemsInfoActivity.class);
+					startActivity(intent);
+				}
+			}
+			break;
+		case HomeVisitSearchActivity.DIAGNOSIS:
+			if (params[1] != null) {
+				String value = params[1].toString().trim();
+
+			}
+			break;
+
+		case HomeVisitSearchActivity.PRESCRIBE:
+			if (params[1] != null) {
+				String value = params[1].toString().trim();
+				Log.i("wocao", value);
+			}
+			break;
+		}
+	}
+
+	private void parseItemsList1(int position, boolean bb, String str) {
+		try {
+			ItemsInfo info = new ItemsInfo();
+			info.setItemName(itemsInfo.getItemName());
+			info.setItemOutpSpec(itemsInfo.getItemOutpSpec());
+			info.setItemClassName(itemsInfo.getItemClassName());
+			info.setItemId(itemsInfo.getItemId());
+			info.setItemPrice1(itemsInfo.getItemPrice1());
+			info.setIsDrug(bb);
+			info.setItemName(itemsInfo.getItemName());
+			info.setItemAmount(Integer.valueOf(num1));
+			info.setItemFrequency(freque1);
+			info.setItemDosage(much1);
+			info.setItemUsage(usage1);
+			info.setItemDosageUnit(str);
+			itemsInfos.add(position, info);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		adapter = new HomeVisitPrescribeActivityAdapter(this, itemsInfos);
+		listView.setAdapter(adapter);
+		sumje();
+	}
+
+	private void parseItemsList() {
+		try {
+			ItemsInfo info = new ItemsInfo();
+			info.setItemId(itemsInfo.getItemId());
+			info.setItemName(itemsInfo.getItemName());
+			info.setInputCode(itemsInfo.getInputCode());
+			info.setInputCode1(itemsInfo.getInputCode1());
+			info.setInputCode2(itemsInfo.getInputCode2());
+			info.setItemOutpSpec(itemsInfo.getItemOutpSpec());
+			info.setItemOutpUnits(itemsInfo.getItemOutpUnits());
+			info.setItemBasicUnits(itemsInfo.getItemBasicUnits());
+			info.setItemPrice1(itemsInfo.getItemPrice1());
+			info.setItemPropertyIndicator(itemsInfo.getItemPropertyIndicator());
+			info.setItemPropertyName(itemsInfo.getItemPropertyIndicator());
+			info.setDrugOrItemIndicator(itemsInfo.getDrugOrItemIndicator());
+			info.setDrugOrItemIndicatorName(itemsInfo
+					.getDrugOrItemIndicatorName());
+			info.setQuantity(itemsInfo.getQuantity());
+			info.setItemClass(itemsInfo.getItemClass());
+			info.setItemClassName(itemsInfo.getItemClassName());
+			info.setCdname(itemsInfo.getCdname());
+			info.setItemtradename(itemsInfo.getItemtradename());
+			info.setNum(num);
+			info.setFreque(freque);
+			info.setUsage(usage);
+			info.setMuch(much);
+
+			itemsInfos.add(info);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		adapter = new HomeVisitPrescribeActivityAdapter(this, itemsInfos);
+		listView.setAdapter(adapter);
+		sumje();
+	}
+
+	public void sumje() {
+		double hj = 0.00, yp = 0.00, fy = 0.00;
+		if (itemsInfos.size() == 0) {
+			tv_price1.setText("0.00");
+			tv_price2.setText("0.00");
+			tv_price3.setText("0.00");
+		}
+		double je = 0.00;
+		for (int j = 0; j < itemsInfos.size(); j++) {
+
+			ItemsInfo item = itemsInfos.get(j);
+			if (item.getItemAmount() != 0 && item.getIsDrug() == true) {
+
+				je = item.getItemPrice1() * item.getItemAmount();
+				yp += je;
+			} else if (item.getItemAmount() != 0 && item.getIsDrug() == false) {
+				je = item.getItemPrice1() * item.getItemAmount();
+				fy += je;
+			} else if (item.getDrugOrItemIndicatorName().equals("药品类")) {
+				je = item.getItemPrice1() * Double.parseDouble(item.getNum());
+				yp += je;
+			} else if (item.getDrugOrItemIndicatorName().equals("非药品类")) {
+				je = item.getItemPrice1() * Double.parseDouble(item.getNum());
+				fy += je;
+			}
+			hj += je;
+			DecimalFormat format = new DecimalFormat("0.00");
+			String a = format.format(new BigDecimal(yp));
+			tv_price1.setText(a);
+			String b = format.format(new BigDecimal(fy));
+			tv_price2.setText(b);
+			String c = format.format(new BigDecimal(hj));
+			tv_price3.setText(c);
+
+		}
+
+	}
+
+	private void showDialog() {
+		dialog = new ProgressDialog(context);
+		dialog.setCanceledOnTouchOutside(false);
+		dialog.setMessage("正在查询，请稍等...");
+		dialog.show();
+
+	}
+
+}

@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_login">25dp</dimen>
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="activity_vertical_margin">40dp</dimen>
+    
+    <dimen name="activity_vertical_margin_login">30dp</dimen>
+    <dimen name="activity_horizontal_margin_login">16dp</dimen>
+    <dimen name="activity_horizontal1">3dp</dimen>
+    <dimen name="group_item_height">40dp</dimen>
+    <dimen name="rdo1">0dp</dimen>
+    <dimen name="rdo2">150dp</dimen>
+    <dimen name="rdo3">300dp</dimen>
+    <dimen name="rdo4">450dp</dimen>
+    <dimen name="rdo5">600dp</dimen>
+    <dimen name="rdo6">750dp</dimen>
+    <dimen name="rdo7">160dp</dimen>
+    <dimen name="quiz_dialog_vertical">30dp</dimen>
+    <dimen name="popmenu_width">900.0dip</dimen>
+    <dimen name="popmenu_yoff">0dip</dimen>
+    <dimen name="activity_horizontal">20dp</dimen>
+    
+    <dimen name="activity_horizontal_firstpage">10dp</dimen>
+    <dimen name="activity_horizontal_a">30dp</dimen>
+    
+    <!-- 今天6月5号，下面是添加了政策问答界面的设计  -->
+    <dimen name="activity_vertical_policy">90dp</dimen>
+    <dimen name="activity_horizontal_policy">10dp</dimen>
+    <dimen name="activity_horizontal_tiwen">100dp</dimen>
+    <dimen name="activity_vertical_tiwen">50dp</dimen>
+    
+    <!-- 今天6月5号，下午做的九宫格界面 -->
+    <dimen name="activity_vertical_9grid">10dp</dimen>
+     <dimen name="activity_horizontal_9grid">10dp</dimen>
+
+</resources>

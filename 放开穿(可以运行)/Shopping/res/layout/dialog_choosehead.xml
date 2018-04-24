@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        
+        <LinearLayout 
+            android:id="@+id/ll_paizhao"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/paizhao_shape"
+            >
+            
+            <TextView 
+                android:text="拍照"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="19sp"
+                android:textColor="#0000ff"
+                android:padding="12dp"
+                />
+            
+        </LinearLayout>
+        
+        <View 
+            android:layout_below="@id/ll_paizhao"
+            android:id="@+id/myView"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#999999"
+            />
+        
+        <LinearLayout 
+            android:layout_below="@id/myView"
+            android:id="@+id/ll_xiangce"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/xiangce_shape"
+            >
+            
+            <TextView 
+                android:text="相册中获取"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:gravity="center_horizontal"
+                android:textColor="#0000ff"
+                android:padding="12dp"
+                />
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ll_xiangce"
+            android:id="@+id/ll_quxiao"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/quxiao_shape"
+            android:layout_marginBottom="10dp"
+            >
+            
+            <TextView 
+                android:text="取消"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:gravity="center_horizontal"
+                android:textColor="#0000ff"
+                android:padding="12dp"
+                />
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

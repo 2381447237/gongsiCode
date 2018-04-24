@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dip"
+    android:layout_height="match_parent"
+    android:background="@drawable/modifyworkinfodetail01"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/gradeate_editjobgride_mainline" >
+
+        <TextView
+            style="@style/gradeate_editjobgride_title"
+            android:text="是否职业指导：" />
+
+        <Spinner
+            android:id="@+id/cboCheckGride"
+            style="@style/gradeate_editjobgride_spinner"
+            android:entries="@array/gradeate_idChecked" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gradeate_editjobgride_mainline"
+        android:background="@drawable/modifyworkinfodetail02" >
+
+        <TextView
+            style="@style/gradeate_editjobgride_title"
+            android:text="职业指导日期：" />
+
+        <EditText
+            android:id="@+id/txtGrideDate"
+            style="@style/gradeate_editjobgride_text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/gradeate_editjobgride_mainline" >
+
+        <TextView
+            style="@style/gradeate_editjobgride_title"
+            android:text="职业指导员：" />
+
+        <EditText
+            android:id="@+id/txtGrideName"
+            style="@style/gradeate_editjobgride_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:background="@drawable/modifyworkinfodetail02"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="200dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:text="职业指导内容："
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txtGridDoc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/txtbg"
+            android:gravity="top|left"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="5dip"
+            android:paddingTop="5dip"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/gradeate_editjobgride_mainline" >
+
+        <TextView
+            style="@style/gradeate_editjobgride_title"
+            android:text="是否推荐就业岗位：" />
+
+        <Spinner
+            android:id="@+id/cboCheckRecommend"
+            style="@style/gradeate_editjobgride_spinner"
+            android:entries="@array/gradeate_idChecked" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gradeate_editjobgride_mainline"
+        android:background="@drawable/modifyworkinfodetail02" >
+
+        <TextView
+            style="@style/gradeate_editjobgride_title"
+            android:text="推荐面试日期：" />
+
+        <EditText
+            android:id="@+id/txtRecommendDate"
+            style="@style/gradeate_editjobgride_text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/gradeate_editjobgride_mainline" >
+
+        <TextView
+            style="@style/gradeate_editjobgride_title"
+            android:text="推荐面试单位名称：" />
+
+        <EditText
+            android:id="@+id/txtRecommendCom"
+            style="@style/gradeate_editjobgride_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gradeate_editjobgride_mainline"
+        android:background="@drawable/modifyworkinfodetail02" >
+
+        <TextView
+            style="@style/gradeate_editjobgride_title"
+            android:text="推荐面试岗位名称：" />
+
+        <EditText
+            android:id="@+id/txtRecommendJob"
+            style="@style/gradeate_editjobgride_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnOk"
+            style="@style/gradeate_editjobgride_button"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/btnCancle"
+            style="@style/gradeate_editjobgride_button"
+            android:layout_marginLeft="30dip"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

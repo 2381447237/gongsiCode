@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#f4f4f4" >
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_answer_child_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="选项标题"-->
+        <!--android:textColor="#000"-->
+        <!--android:textSize="20sp" />-->
+
+    <include layout="@layout/answer_detail_view"/>
+     
+  <!--   <View 
+        android:id="@+id/child_view"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="#26cfff"
+    /> -->
+    
+</LinearLayout>

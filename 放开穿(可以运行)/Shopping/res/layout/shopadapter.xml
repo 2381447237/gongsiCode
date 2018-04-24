@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  android:background="@drawable/boeder" 
+>
+    <ImageView
+        android:id="@+id/img_collect1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/collect" />
+
+   <!--  <com.example.cusview.CusviewViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="175dp"  
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+         android:layout_marginTop="20dp" 
+         android:paddingTop="5dp"
+        /> -->
+    <com.example.cusview.CusviewViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"  
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+         android:layout_marginTop="20dp" 
+         android:paddingTop="5dp"
+         android:paddingLeft="1dp"
+         android:paddingRight="1dp"
+        />
+       
+    <ImageView 
+        android:id="@+id/shopadapter_ivAndVp"
+         android:layout_width="175dp"  
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+         android:layout_marginTop="20dp" 
+         android:paddingTop="5dp"
+         android:src="@drawable/defaultpicture"
+         android:visibility="gone"
+        />
+    
+    <!--
+        android:layout_width="120dp"  
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+         android:layout_marginTop="30dp" 
+    -->
+
+    <TextView
+        android:id="@+id/tv_ItemName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPager"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="xxx" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPager"
+         android:layout_marginTop="20dp" 
+        layout="@layout/pricelayout" />
+
+</RelativeLayout>

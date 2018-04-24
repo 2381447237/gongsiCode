@@ -1,0 +1,208 @@
+package com.example.Seats.beans;
+
+import java.io.Serializable;
+
+public class GetStartInfo implements Serializable{
+	private String InfusionDetailID;
+	private String InfusionID;
+	private String DrugName;
+	private String DrugSpec;
+	private String DrugTradeName;
+	private String DrugManufacturer;
+	private String DrugYBCode;
+	private String Infusiongroupno;
+	private String BagItemName;
+	private String BagItemYBCode;
+	private String BagVolume;
+	private String RemainderVolume;
+	private String dripCntsPerminute;
+	private String TubeID;
+	private String dripCntsPerml;
+	private String dripStartTime;
+	private String dripLastStartTime;
+	private String dripFinishTime;
+	private String InfusionStatus;
+	private String Duration;
+	private String tbl_Infusions_Info;
+	
+	private String TubeName;
+	
+	public String getTubeName() {
+		return TubeName;
+	}
+	public void setTubeName(String tubeName) {
+		TubeName = tubeName;
+	}
+	public String getInfusionDetailID() {
+		return InfusionDetailID;
+	}
+	public void setInfusionDetailID(String infusionDetailID) {
+		InfusionDetailID = infusionDetailID;
+	}
+	public String getInfusionID() {
+		return InfusionID;
+	}
+	public void setInfusionID(String infusionID) {
+		InfusionID = infusionID;
+	}
+	public String getDrugName() {
+		return DrugName;
+	}
+	public void setDrugName(String drugName) {
+		DrugName = drugName;
+	}
+	public String getDrugSpec() {
+		return DrugSpec;
+	}
+	public void setDrugSpec(String drugSpec) {
+		DrugSpec = drugSpec;
+	}
+	public String getDrugTradeName() {
+		return DrugTradeName;
+	}
+	public void setDrugTradeName(String drugTradeName) {
+		DrugTradeName = drugTradeName;
+	}
+	public String getDrugManufacturer() {
+		return DrugManufacturer;
+	}
+	public void setDrugManufacturer(String drugManufacturer) {
+		DrugManufacturer = drugManufacturer;
+	}
+	public String getDrugYBCode() {
+		return DrugYBCode;
+	}
+	public void setDrugYBCode(String drugYBCode) {
+		DrugYBCode = drugYBCode;
+	}
+	public String getInfusiongroupno() {
+		return Infusiongroupno;
+	}
+	public void setInfusiongroupno(String infusiongroupno) {
+		Infusiongroupno = infusiongroupno;
+	}
+	public String getBagItemName() {
+		return BagItemName;
+	}
+	public void setBagItemName(String bagItemName) {
+		BagItemName = bagItemName;
+	}
+	public String getBagItemYBCode() {
+		return BagItemYBCode;
+	}
+	public void setBagItemYBCode(String bagItemYBCode) {
+		BagItemYBCode = bagItemYBCode;
+	}
+	public String getBagVolume() {
+		return BagVolume;
+	}
+	public void setBagVolume(String bagVolume) {
+		BagVolume = bagVolume;
+	}
+	public String getRemainderVolume() {
+		return RemainderVolume;
+	}
+	public void setRemainderVolume(String remainderVolume) {
+		RemainderVolume = remainderVolume;
+	}
+	public String getDripCntsPerminute() {
+		return dripCntsPerminute;
+	}
+	public void setDripCntsPerminute(String dripCntsPerminute) {
+		this.dripCntsPerminute = dripCntsPerminute;
+	}
+	public String getTubeID() {
+		return TubeID;
+	}
+	public void setTubeID(String tubeID) {
+		TubeID = tubeID;
+	}
+	public String getDripCntsPerml() {
+		return dripCntsPerml;
+	}
+	public void setDripCntsPerml(String dripCntsPerml) {
+		this.dripCntsPerml = dripCntsPerml;
+	}
+	public String getDripStartTime() {
+		return dripStartTime;
+	}
+	public void setDripStartTime(String dripStartTime) {
+		this.dripStartTime = dripStartTime;
+	}
+	public String getDripLastStartTime() {
+		return dripLastStartTime;
+	}
+	public void setDripLastStartTime(String dripLastStartTime) {
+		this.dripLastStartTime = dripLastStartTime;
+	}
+	public String getDripFinishTime() {
+		return dripFinishTime;
+	}
+	public void setDripFinishTime(String dripFinishTime) {
+		this.dripFinishTime = dripFinishTime;
+	}
+	public String getInfusionStatus() {
+		return InfusionStatus;
+	}
+	public void setInfusionStatus(String infusionStatus) {
+		InfusionStatus = infusionStatus;
+	}
+	public String getDuration() {
+		return Duration;
+	}
+	public void setDuration(String duration) {
+		Duration = duration;
+	}
+	public String getTbl_Infusions_Info() {
+		return tbl_Infusions_Info;
+	}
+	public void setTbl_Infusions_Info(String tbl_Infusions_Info) {
+		this.tbl_Infusions_Info = tbl_Infusions_Info;
+	}
+	
+	public GetStartInfo(String InfusionDetailID, String InfusionID,String DrugName
+			,String DrugSpec, String DrugTradeName,String DrugManufacturer,String DrugYBCode
+			,String Infusiongroupno, String BagItemName,String BagItemYBCode, String BagVolume
+			,String RemainderVolume, String dripCntsPerminute, String TubeID,String dripCntsPerml
+			, String dripStartTime, String dripLastStartTime, String dripFinishTime,String InfusionStatus
+			,String Duration, String tbl_Infusions_Info){
+		super();
+		this.InfusionDetailID=InfusionDetailID;
+		this.InfusionID=InfusionID;
+		this.DrugName=DrugName;
+		this.DrugSpec=DrugSpec;
+		this.DrugTradeName=DrugTradeName;
+		this.DrugManufacturer=DrugManufacturer;
+		this.DrugYBCode=DrugYBCode;
+		this.Infusiongroupno=Infusiongroupno;
+		this.BagItemName=BagItemName;
+		this.BagItemYBCode=BagItemYBCode;
+		this.BagVolume=BagVolume;
+		this.RemainderVolume=RemainderVolume;
+		this.dripCntsPerminute=dripCntsPerminute;
+		this.TubeID=TubeID;
+		this.dripCntsPerml=dripCntsPerml;
+		this.dripStartTime=dripStartTime;
+		this.dripLastStartTime=dripLastStartTime;
+		this.dripFinishTime=dripFinishTime;
+		this.InfusionStatus=InfusionStatus;
+		this.Duration=Duration;
+		this.tbl_Infusions_Info=tbl_Infusions_Info;
+	}
+	public GetStartInfo(){
+		super();
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "GetStartInfo [InfusionDetailID=" + InfusionDetailID +", InfusionID=" + InfusionID +", DrugName=" + DrugName 
+				 +", DrugSpec=" + DrugSpec +", DrugTradeName=" + DrugTradeName+", DrugManufacturer=" + DrugManufacturer 
+				 +", DrugYBCode=" + DrugYBCode +", Infusiongroupno=" +Infusiongroupno +", BagItemName=" + BagItemName
+				 +", BagItemYBCode=" + BagItemYBCode +", BagVolume=" + BagVolume 
+				 +", RemainderVolume=" + RemainderVolume +", dripCntsPerminute=" 
+				 + dripCntsPerminute+", TubeID=" + TubeID +", dripCntsPerml=" + dripCntsPerml 
+				 +", dripStartTime=" + dripStartTime +", dripLastStartTime=" + dripLastStartTime 
+				 +", dripFinishTime=" + dripFinishTime +", InfusionStatus=" + InfusionStatus
+				 +", Duration=" + Duration +", tbl_Infusions_Info=" + tbl_Infusions_Info+"]";
+	}
+}

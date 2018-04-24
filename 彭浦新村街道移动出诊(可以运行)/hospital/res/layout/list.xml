@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_on" >
+
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="已诊病人"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+    
+    <com.fc.has.beans.RefreshListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#19000000"  
+        android:dividerHeight="4dp"
+        android:orientation="vertical" >
+    </com.fc.has.beans.RefreshListView>
+  <!--   <com.fc.has.views.MyListViewPullDownAndUp
+        android:id="@+id/lv"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/grey"  
+        android:dividerHeight="5dp"
+        android:background="#ffffff"/> -->
+ <!-- <com.fc.unidentified.beans.RTPullListView
+   		  android:id="@+id/lv_has"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/grey"  
+        android:dividerHeight="5dp"
+        android:background="#ffffff" /> -->
+</LinearLayout>

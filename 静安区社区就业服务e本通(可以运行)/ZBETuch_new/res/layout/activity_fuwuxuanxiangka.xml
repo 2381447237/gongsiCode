@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dip"
+    android:paddingTop="5dip"
+    android:paddingRight="10dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="25dip"
+            android:text="服务选项卡"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnNew_fuwu"
+            style="@style/gradeate_item_workmark_button"
+            android:layout_marginRight="20dip"
+            android:text="新建"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvFuWuXuanXiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_view" 
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:layout_marginBottom="5dip"
+        >
+    </ListView>
+
+</LinearLayout>

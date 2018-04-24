@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="70dip"
+        android:background="@drawable/tree_path" 
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/llPath"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/re_rightcontentback"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpMenu"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/re_rightcontentback" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/re_rightcontentback"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/rgpPolicy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/maintab_toolbar_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rdoMenu"
+                style="@style/personpolicy_tab"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/icon_1_n"
+                android:tag="radio_button1"
+                android:text="列表" />
+
+            <RadioButton
+                android:id="@+id/rdoAnswer"
+                style="@style/personpolicy_tab"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/icon_2_n"
+                android:tag="radio_button1"
+                android:text="问答" />
+
+            <RadioButton
+                android:id="@+id/rdoFile"
+                style="@style/personpolicy_tab"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/icon_3_n"
+                android:tag="radio_button2"
+                android:text="政策" />
+
+            <RadioButton
+                android:id="@+id/rdoCase"
+                style="@style/personpolicy_tab"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/icon_4_n"
+                android:tag="radio_button3"
+                android:text="案例" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

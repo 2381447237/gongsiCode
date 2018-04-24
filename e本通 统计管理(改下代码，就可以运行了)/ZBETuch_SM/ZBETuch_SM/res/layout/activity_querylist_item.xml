@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+         要在根元素下，加入 descendantFocusability属性，使listview的item响应事件能够监听
+		beforeDescendants在子控件之前   afterDescendants 在子控件之后-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+       >
+
+        <TextView
+            android:id="@+id/tv_personquerynum"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_queryname"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_querysex"
+             android:layout_width="100dp"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="50dp"
+             android:layout_gravity="center"
+             android:gravity="center"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_queryborn"
+            android:layout_width="0dp"
+                android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:layout_gravity="center"
+                android:gravity="center_horizontal"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_currentStatus"
+            android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:layout_gravity="center"
+            android:text=""
+            android:textSize="20sp" />
+
+        <!--
+                 <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right"
+                android:focusable="false"
+                android:layout_gravity="center"
+                android:background="@color/beijing_color"
+                android:layout_marginLeft="50dp" /> -->
+
+        <TextView
+            android:id="@+id/tv_modizk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text=""
+            android:layout_gravity="center"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!--
+            imagebutton 必须加focusable属性，不加会导致listview的点击事件无法响应
+			（button的click事件会屏蔽掉listview的onitemClick事件）
+    -->
+</LinearLayout>

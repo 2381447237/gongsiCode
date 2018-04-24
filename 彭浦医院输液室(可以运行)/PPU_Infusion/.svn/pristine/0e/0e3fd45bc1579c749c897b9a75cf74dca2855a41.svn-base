@@ -1,0 +1,131 @@
+package com.main.tools;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
+
+
+
+import android.content.SharedPreferences;
+import android.util.Log;
+
+
+public class HttpUrls_ {
+	//public static final String HttpURL = "http://192.168.11.11:88";
+	//public static final String HttpURL="http://www.youli.pw:8088";
+	//public static final String HttpURL="http://192.168.0.230:83";//彭浦，账号密码：103，103
+	//public static final String HttpURL = "http://192.168.11.11:89";
+	public static final String HttpURL = "http://192.168.11.11:8088";//服务器
+	/*private static HttpUrls_ instance = null;
+	public static String staffName="";
+
+	public static HttpURLConnection GetConnection(String urllogin)
+	{
+		HttpURLConnection conn=null;
+		try
+		{
+			URL url = new URL(urllogin);
+			conn = (HttpURLConnection) url.openConnection();
+			conn.setConnectTimeout(5000);
+			if(staffName!="")
+				conn.setRequestProperty("cookie", staffName);
+			Log.i("staffName----12321321",staffName);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		return conn;
+	}
+
+	public static synchronized HttpUrls_ getInstance() {
+		if (instance == null) {
+			instance = new HttpUrls_();
+		}
+		return instance;
+	}
+	*//**
+	 * 
+	 * @param context
+	 * @param userName
+	 * @param userPwd
+	 * @return 瑕佸彂閫佸鏍哥殑淇℃伅
+	 *//*
+	public static String login(final LoginActivity context, String userName,
+			String userPwd) {
+		String urllogin = HttpURL + "/Login.aspx";
+		String msgLogin = "";
+		//SharedPreferences preferences = context.getSharedPreferences("msg", 0);
+		//String msgkey = preferences.getString("key", null);
+		// Log.i("key********", msgkey);
+		// Log.i("url-----------", urllogin);
+		// 鍏堣幏鍙栫閽�
+		String query;
+		try {
+			
+
+			// url涓殑鈥�鈥濅細鑷姩杞崲涓衡�%2B鈥濆湪瀵嗙爜涓細鏈夐棶棰橈紝蹇呴』杞寲涓哄叏瑙掔殑鈥�鈥�
+			//
+			query = "?StaffNo=" + userName
+					+ "&Pwd=" + userPwd;
+			urllogin += query;
+
+			Log.i("url+++++++++++++", urllogin);
+			URL url = new URL(urllogin);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			
+			String cookieval = conn.getHeaderField("set-cookie");
+			Log.i("cookieval=======>", cookieval + "");
+			if (cookieval != null) {
+				cookieval = cookieval.substring(0, cookieval.indexOf(";"));
+				Log.i("cook----3232rerere323", cookieval);
+			} else {
+				cookieval = "null";
+			}
+
+			staffName = cookieval;
+			Log.i("cook----3232323", cookieval);
+			conn.setConnectTimeout(10000);
+			System.out.println("code=====" + conn.getResponseCode());
+			// if (conn.getResponseCode() == 200) {
+			InputStream in = conn.getInputStream();
+
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(in));
+			StringBuffer sb = new StringBuffer();
+			String line = null;
+			while ((line = reader.readLine()) != null) {
+
+				sb.append(line);
+
+			}
+			// byte[] buffer = new byte[in.available()];
+			// in.read(buffer);
+			msgLogin = sb.toString();// new String(buffer, "utf-8");
+			Log.i("鍙戦�鐨勪俊鎭�銆傘�銆�..", msgLogin);
+			reader.close();
+			in.close();
+			conn.disconnect();
+			// }
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		return msgLogin;
+
+	}
+*/
+}

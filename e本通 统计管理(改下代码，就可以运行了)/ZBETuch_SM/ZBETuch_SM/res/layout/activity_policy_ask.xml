@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="650dip"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+     >
+
+    <LinearLayout
+        style="@style/activity_policyask_linear"
+        android:orientation="horizontal"
+        android:background="@drawable/bgt_repater"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/activity_policyask_titlestyle"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="标题" />
+
+        <EditText
+            android:id="@+id/txtQuestionName"
+            style="@style/activity_policyask_text"
+            android:layout_width="200dip"           
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/textView2"           
+            style="@style/activity_policyask_titlestyle"
+            android:layout_width="80dip"
+            android:text="类别" />
+
+        <Spinner
+            android:id="@+id/cboType"
+            style="@style/activity_policyask_spinner"
+             android:layout_width="200dip"
+             />
+    </LinearLayout>
+	<LinearLayout 
+	    style="@style/activity_policyask_linear">
+    <EditText
+        android:id="@+id/txtQuestionValue"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:textSize="17sp"
+        android:gravity="top"
+        android:layout_margin="5dp"
+        android:background="@drawable/textview_background"
+        android:inputType="textMultiLine"
+        android:lines="8" />
+    </LinearLayout>
+	<LinearLayout
+	    style="@style/activity_policyask_linear" 
+	    android:gravity="right">
+    <Button
+        android:id="@+id/btnAsk"
+        style="@style/activity_policyask_button"
+        android:layout_width="wrap_content" 
+        android:text="发送" />
+    </LinearLayout>
+
+</LinearLayout>

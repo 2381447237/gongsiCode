@@ -1,0 +1,33 @@
+会议通知/Json/Get_Meeting_Master.aspx
+工作通知/Json/Get_Work_Notice.aspx
+岗位信息
+近期热点
+
+
+招聘信息->按条件查询
+单位性质(spinner):/Json/Get_CompanyProperty.aspx
+或（常见工种）:本地的<string-array name="cboWorkType">
+文化程度(spinner):/Json/Get_Edu.aspx
+行业分类大类(spinner):/Json/Get_Industry_Class_Child.aspx?parent_code="+ parentid
+行业分类小类(spinner):
+职业分类大类(spinner):/Json/Get_Zyfl_Child.aspx?parent_id=" + parent_id
+职业分类小类(spinner):
+工作性质(spinner):/Json/Get_Gzxz.aspx
+工作班时(spinner):/Json/Get_Gzbs.aspx
+工作地区(spinner):/Json/Get_Area_Info.aspx
+
+
+重要:
+http://192.168.11.11:89/Json/Get_Qa_Master.aspx?page=0&rows=15
+
+
+从登陆页面到答题页面：
+
+LoginActivity-->FirstPageActivity-->MainPageActivity-->MainPageThreeActivity-->ShowWenJuanActivity-->
+WenJuanPersonActivity-->ShowPersionDetailInfo-->WenJuanDetailActivity
+
+
+问卷信息：
+http://192.168.11.11:89/Json/Get_Qa_Master.aspx?page=0&rows=15
+
+

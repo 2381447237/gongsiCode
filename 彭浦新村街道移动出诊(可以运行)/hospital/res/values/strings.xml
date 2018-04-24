@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">彭浦新村街道移动出诊</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_unidentified">UnidentifiedActivity</string>
+    <string name="title_activity_unidentified_adapter">UnidentifiedAdapter</string>
+    <string name="title_activity_has_diagnosis">HasDiagnosisActivity</string>
+    <string name="title_activity_has_diagnosis_adapter">HasDiagnosisAdapter</string>
+    <string name="title_activity_homebed">HomebedActivity</string>
+    <string name="title_activity_homebed_adapter">HomebedAdapter</string>
+    <string name="title_activity_data_statistics">DataStatisticsActivity</string>
+    <string name="title_activity_home_p">HomePActivity</string>
+    <string name="title_activity_diagnosis">DiagnosisActivity</string>
+    <string name="title_activity_drug_selection">DrugSelectionActivity</string>
+    <string name="title_activity_drug_selection_adapter">DrugSelectionAdapter</string>
+    <string name="title_activity_prescription">PrescriptionActivity</string>
+    <string name="title_activity_prescription_adapter">PrescriptionAdapter</string>
+    <string name="title_activity_drug_dialog">DrugDialogActivity</string>
+    <string name="title_activity_pres_dialog">PresDialogActivity</string>
+    <string name="title_activity_unidentified_activity2">UnidentifiedActivity2</string>
+    <string name="title_activity_diagnosis_adapter">DiagnosisAdapter</string>
+    <string name="spinner_name">请选择</string>
+    <string name="title_activity_num">NumActivity</string>
+    <string name="get_more">获取更多</string>
+    <string name="release_to_refresh">松开刷新</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="updating">最近更新：</string>
+    <string name="title_activity_home_visit_search">HomeVisitPrescriptionActivity</string>
+    <string name="title_activity_home_visit_prescribe_info">HomeVisitPrescribeInfoActivity</string>
+    <string name="title_activity_home_items_info">HomeItemsInfoActivity</string>
+    <string name="title_activity_home_items_dialog">HomeItemDialogActivity</string>
+    <string name="title_activity_home_visit_num_info">HomeVisitNumInfoActivity</string>
+
+</resources>

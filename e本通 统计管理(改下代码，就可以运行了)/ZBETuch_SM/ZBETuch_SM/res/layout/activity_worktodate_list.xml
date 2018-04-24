@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/firstpage_more_docbackground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.2"
+        android:background="@drawable/firstpage_more_title"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="工作日志"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:text=" "
+            android:textSize="22sp" />
+
+        <Button 
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/addpendwork"
+            android:layout_marginRight="25dip"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.8"
+        android:orientation="vertical" >
+
+        <com.fc.main.beans.PullDownView2
+            android:id="@+id/pdvWorkToDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:background="@drawable/firstpage_more_whitebackgroud"  >
+        </com.fc.main.beans.PullDownView2>
+
+    </LinearLayout>
+
+</LinearLayout>

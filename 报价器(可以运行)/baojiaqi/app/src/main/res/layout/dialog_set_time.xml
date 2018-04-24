@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:textColor="#000000"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="设置等待时间"/>
+
+
+    <NumberPicker
+        android:descendantFocusability="blocksDescendants"
+        android:id="@+id/dialog_np"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></NumberPicker>
+
+    <TextView
+        android:textColor="#000000"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="分钟"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置屏保内容"/>
+
+        <Button
+            android:id="@+id/dialog_choose_tupian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择图片"/>
+
+        <Button
+            android:id="@+id/dialog_choose_shipin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择视频"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+    android:id="@+id/dialog_wait_time_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="确定"/>
+
+        <Button
+            android:id="@+id/dialog_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"/>
+
+</LinearLayout>
+
+</LinearLayout>

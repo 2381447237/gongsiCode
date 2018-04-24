@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@drawable/lt" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="3" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="待 办 事 宜"
+            android:textSize="25dip" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:background="@drawable/firstpage_detile_whitebackgroud"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_pendwork_title"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="abccccc"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_pendwork_starttime"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dip"
+                android:text="开始时间：2012-01-10 9"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="4" />
+
+            <TextView
+                android:id="@+id/tv_pendwork_endtime"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dip"
+                android:text="结束时间：2013-07-10 21"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="6.5" >
+
+
+            <WebView 
+                android:id="@+id/tv_pendwork_doc"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" 
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="8" />
+
+            <TextView
+                android:id="@+id/tv_pendwork_currentlytime"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right"
+                android:paddingRight="20dip"
+                android:text="2013-05-23"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

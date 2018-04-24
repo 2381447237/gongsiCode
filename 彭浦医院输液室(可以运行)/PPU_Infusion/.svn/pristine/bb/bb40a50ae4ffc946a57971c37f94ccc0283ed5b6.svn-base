@@ -1,0 +1,117 @@
+package com.example.Seats.beans;
+
+import java.util.List;
+
+import com.example.Seats.beans.TubleAdapter.ItemHodler;
+import com.example.Seats.views.TubleActivity;
+import com.example.ppu_infusion.R;
+
+import android.R.color;
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class InfusionAdapter extends BaseAdapter{
+	private Context context;
+	private List<GetStartInfo> getStartInfos;
+	
+	public InfusionAdapter(Context context,List<GetStartInfo> getStartInfos){
+		super();
+		this.context=context;
+		this.getStartInfos=getStartInfos;
+	}
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return getStartInfos.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return getStartInfos.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		ItemHodler hodler;
+		if (convertView == null) {
+			convertView = LayoutInflater.from(context).inflate(
+					R.layout.adapter_infusion, null);
+			hodler = new ItemHodler();
+			hodler.tv_infus =  (TextView) convertView.findViewById(R.id.tv_infus);
+			hodler.tv_tub =  (TextView) convertView.findViewById(R.id.tv_tub);
+			hodler.tv_seep =  (TextView) convertView.findViewById(R.id.tv_seep);
+			hodler.lin_infu=(LinearLayout) convertView.findViewById(R.id.lin_infu);
+			hodler.img_start=(ImageView) convertView.findViewById(R.id.img_start);
+			convertView.setTag(hodler);
+		} else {
+			hodler = (ItemHodler) convertView.getTag();
+		}
+		final GetStartInfo info = getStartInfos.get(position);
+		Resources resources=context.getResources();
+		 if(info.getINFUSIONSTATUS().equals("3")){
+			hodler.tv_infus.setText(info.getDRUGNAME());
+			hodler.tv_infus.setTextColor(resources.getColor(R.color.item_hong));
+			hodler.tv_tub.setVisibility(View.GONE);
+			hodler.tv_seep.setVisibility(View.GONE);
+			hodler.img_start.setBackgroundResource(R.drawable.item_hong);
+		}
+	    else if (info.getINFUSIONSTATUS().equals("2")) {
+			hodler.tv_infus.setText(info.getDRUGNAME());
+			hodler.tv_tub.setText("管型："+info.getTUBENAME());
+			hodler.tv_seep.setText("滴速："+info.getDRIPCNTSPERMINUTE());
+			hodler.img_start.setBackgroundResource(R.drawable.item_huang);
+			hodler.tv_infus.setTextColor(resources.getColor(R.color.item_huang));
+			hodler.tv_tub.setTextColor(resources.getColor(R.color.item_huang));
+			hodler.tv_seep.setTextColor(resources.getColor(R.color.item_huang));
+		}
+	    else if (info.getINFUSIONSTATUS().equals("1")) {
+			hodler.tv_infus.setText(info.getDRUGNAME());
+			hodler.tv_tub.setText("管型："+info.getTUBENAME());
+			hodler.tv_seep.setText("滴速："+info.getDRIPCNTSPERMINUTE());
+			hodler.img_start.setBackgroundResource(R.drawable.item_lv);
+			hodler.tv_infus.setTextColor(resources.getColor(R.color.item_lv));
+			hodler.tv_tub.setTextColor(resources.getColor(R.color.item_lv));
+			hodler.tv_seep.setTextColor(resources.getColor(R.color.item_lv));
+		}
+		else if (info.getINFUSIONSTATUS().equals("0")){
+			hodler.tv_infus.setText(info.getDRUGNAME());
+			hodler.tv_tub.setVisibility(View.GONE);
+			hodler.tv_seep.setVisibility(View.GONE);
+			hodler.img_start.setBackgroundResource(R.drawable.item_lan);
+			hodler.tv_infus.setTextColor(resources.getColor(R.color.item_lan));
+		}
+
+		
+		return convertView;
+	}
+
+	private Object getResources() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	class ItemHodler {
+		TextView tv_infus,tv_tub,tv_seep;
+		LinearLayout lin_infu;
+		ImageView img_start;
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.example.Seats.beans;
+
+import java.io.Serializable;
+
+public class DripSpeedInfo implements Serializable{
+	private String SPEEDNAME;
+	private String DRIPCNTSPERMINUTE;
+	
+	
+	public String getSPEEDNAME() {
+		return SPEEDNAME;
+	}
+	public void setSPEEDNAME(String sPEEDNAME) {
+		SPEEDNAME = sPEEDNAME;
+	}
+	public String getDRIPCNTSPERMINUTE() {
+		return DRIPCNTSPERMINUTE;
+	}
+	public void setDRIPCNTSPERMINUTE(String dRIPCNTSPERMINUTE) {
+		DRIPCNTSPERMINUTE = dRIPCNTSPERMINUTE;
+	}
+	public DripSpeedInfo(String SpeedName,String dripCntsPerminute){
+		super();
+		this.SPEEDNAME=SpeedName;
+		this.DRIPCNTSPERMINUTE=dripCntsPerminute;
+	}
+	public DripSpeedInfo(){
+		super();
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return SPEEDNAME;
+	}
+}

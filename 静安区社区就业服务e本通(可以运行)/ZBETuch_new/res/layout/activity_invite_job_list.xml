@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/lt" >
+
+        <TextView 
+            android:id="@+id/lblAllnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="10dip"
+            android:text="共有条数据"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/job_list_title" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/title2"
+             >
+
+            <TextView
+                android:id="@+id/tv_bianhao"
+                style="@style/activity_invite_job_title"
+		        android:layout_width="0dp"
+		        android:layout_weight="1"
+                android:text="单位名称" />
+
+            <TextView
+                android:id="@+id/textView1"
+                 style="@style/activity_invite_job_title"
+                android:layout_width="0dp"
+        		android:layout_weight="1"
+                android:text="岗位名称" />
+            <TextView
+                android:id="@+id/textView1"
+                 style="@style/activity_invite_job_title"
+                android:layout_width="0dp"
+        		android:layout_weight="0.8"
+                android:text="岗位编码" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/activity_invite_job_title"
+                android:layout_width="0dp"
+        		android:layout_weight="1"
+                android:text="学 历"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                 style="@style/activity_invite_job_title"
+                android:layout_width="0dp"
+        		android:layout_weight="0.6"
+                android:text="年 龄"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/activity_invite_job_title"
+                android:layout_width="0dp"
+        		android:layout_weight="0.6"
+                android:text="招聘人数"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                 style="@style/activity_invite_job_title"
+                 android:layout_width="0dp"
+                 android:gravity="center"
+        		android:layout_weight="0.8"
+                android:text="月 薪" />
+            
+             <TextView
+                android:id="@+id/textView8"
+                 style="@style/activity_invite_job_title"
+                android:layout_width="0dp"
+        		android:layout_weight="0.8"
+                android:text="更新时间" />
+
+        </LinearLayout>
+        <!-- 设置分割线 -->
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:background="@drawable/fengexian_sharpe" />
+
+        <com.fc.main.beans.PullDownView
+            android:id="@+id/pull_down_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/listitem_selector" >
+        </com.fc.main.beans.PullDownView>
+    </LinearLayout>
+
+</LinearLayout>

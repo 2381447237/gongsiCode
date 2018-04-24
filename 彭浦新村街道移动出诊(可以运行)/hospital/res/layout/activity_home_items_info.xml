@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_on"
+        android:gravity="center"
+        android:text="收费项目选择"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+  <!--   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="输入码"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ed_input2"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/userbox"
+            android:paddingLeft="5dp"
+            android:inputType="textVisiblePassword"
+            android:text=""
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_query2"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|right"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/change_login"
+            android:gravity="center"
+            android:text="查询"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/grey" /> -->
+<ListView
+            android:id="@+id/lsview_drug"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:divider="@drawable/grey"
+            android:dividerHeight="20dp" >
+        </ListView>
+
+
+</LinearLayout>

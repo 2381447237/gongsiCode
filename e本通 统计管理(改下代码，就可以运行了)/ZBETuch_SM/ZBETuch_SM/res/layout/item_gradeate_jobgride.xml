@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="3dip"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gridebg"
+        android:orientation="vertical" >
+
+        <LinearLayout style="@style/gradeate_item_jobgride_mainline" >
+
+            <LinearLayout style="@style/gradeate_item_jobgride_subline" >
+
+                <TextView
+                    style="@style/gradeate_item_jobgride_title"
+                    android:text="是否职业指导：" />
+
+                <TextView
+                    android:id="@+id/lblCheckGride"
+                    style="@style/gradeate_item_jobgride_content" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/gradeate_item_jobgride_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llgrid1"
+            style="@style/gradeate_item_jobgride_mainline" >
+
+            <LinearLayout style="@style/gradeate_item_jobgride_subline" >
+
+                <LinearLayout style="@style/gradeate_item_jobgride_thirdline" >
+
+                    <TextView
+                        style="@style/gradeate_item_jobgride_title"
+                        android:text="职业指导日期：" />
+
+                    <TextView
+                        android:id="@+id/lblGrideDate"
+                        style="@style/gradeate_item_jobgride_content" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/gradeate_item_jobgride_thirdline" >
+
+                    <TextView
+                        style="@style/gradeate_item_jobgride_title"
+                        android:text="职业指导员：" />
+
+                    <TextView
+                        android:id="@+id/lblGrideName"
+                        style="@style/gradeate_item_jobgride_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/gradeate_item_jobgride_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llgrid2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/gradeate_item_jobgride_subline" >
+
+                <TextView
+                    android:layout_width="200dip"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="15dip"
+                    android:gravity="center_vertical"
+                    android:text="职业指导内容："
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/lblGrideDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dip"
+                    android:lineSpacingExtra="15dip"
+                    android:paddingTop="15dip"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/gradeate_item_jobgride_line" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/gradeate_item_jobgride_mainline" >
+
+            <LinearLayout style="@style/gradeate_item_jobgride_subline" >
+
+                <TextView
+                    style="@style/gradeate_item_jobgride_title"
+                    android:text="是否推荐就业岗位：" />
+
+                <TextView
+                    android:id="@+id/lblCheckRecommend"
+                    style="@style/gradeate_item_jobgride_content" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/gradeate_item_jobgride_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRecommend"
+            style="@style/gradeate_item_jobgride_mainline" >
+
+            <LinearLayout style="@style/gradeate_item_jobgride_subline" >
+
+                <LinearLayout style="@style/gradeate_item_jobgride_thirdline" >
+
+                    <TextView
+                        style="@style/gradeate_item_jobgride_title"
+                        android:text="推荐面试单位名称：" />
+
+                    <TextView
+                        android:id="@+id/lblRecommendCom"
+                        style="@style/gradeate_item_jobgride_content" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/gradeate_item_jobgride_thirdline" >
+
+                    <TextView
+                        style="@style/gradeate_item_jobgride_title"
+                        android:text="推荐面试岗位名称：" />
+
+                    <TextView
+                        android:id="@+id/lblRecommendJob"
+                        style="@style/gradeate_item_jobgride_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/gradeate_item_jobgride_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRecommend2"
+            style="@style/gradeate_item_jobgride_mainline" >
+
+            <LinearLayout style="@style/gradeate_item_jobgride_subline" >
+
+                <LinearLayout style="@style/gradeate_item_jobgride_thirdline" >
+
+                    <TextView
+                        style="@style/gradeate_item_jobgride_title"
+                        android:text="推荐面试时间：" />
+
+                    <TextView
+                        android:id="@+id/lblRecommendDate"
+                        style="@style/gradeate_item_jobgride_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/gradeate_item_jobgride_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="right|center_vertical" >
+
+            <Button
+                android:id="@+id/btnEdit"
+                style="@style/gradeate_item_jobgride_button"
+                android:text="修改" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                style="@style/gradeate_item_jobgride_button"
+                android:text="删除" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

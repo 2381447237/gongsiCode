@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="900dip"
+            android:layout_height="120dip"
+            android:background="@drawable/bk1"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="889dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/lt" >
+
+                <ImageView
+                    android:layout_width="90dip"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dip"
+                    android:background="@drawable/cx" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dip"
+                    android:text="身份证："
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_identity"
+                    android:layout_width="400dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginLeft="40dip"
+                    android:background="@drawable/login_textbg"
+                    android:ems="9"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="1.0dip"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="1.0dip"
+                    android:paddingTop="1.0dip"
+                    android:textSize="17.0sp" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/bt_scanning"
+                    android:layout_width="70dip"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="80dip"
+                    android:background="@drawable/yellow_btn"
+                    android:text="扫描" />
+
+                <Button
+                    android:id="@+id/bt_query"
+                    android:layout_width="70dip"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="50dip"
+                    android:background="@drawable/button_selector"
+                    android:text="查询" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="900dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:background="@drawable/bk1"
+            android:orientation="vertical"
+            android:paddingBottom="10dip" >
+
+            <FrameLayout
+                android:layout_width="889dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/lt" >
+
+                <ImageView
+                    android:layout_width="150dip"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/at" />
+            </FrameLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="姓    名："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/et_personmingzi"
+                            android:layout_width="250dip"
+                            android:layout_height="40.0dip"
+                            android:layout_marginLeft="40dip"
+                            android:background="@drawable/login_textbg"
+                            android:ems="9"
+                            android:gravity="center_vertical"
+                            android:inputType="text"
+                            android:paddingBottom="1.0dip"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="1.0dip"
+                            android:paddingTop="1.0dip"
+                            android:singleLine="true"
+                            android:textSize="17.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="性    别："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_sex"
+                            android:layout_width="150dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dip"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:prompt="@string/spinner_name"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/bt_query2"
+                            android:layout_width="70dip"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="30dip"
+                            android:background="@drawable/button_selector"
+                            android:text="查询" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="区    县："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_country"
+                            android:layout_width="250dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dip"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:prompt="@string/spinner_name"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="街    道："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_street"
+                            android:layout_width="250dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dip"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:prompt="@string/spinner_name"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="居    委："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_jiuweihui"
+                            android:layout_width="250dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dip"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:prompt="@string/spinner_name"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="年龄段："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/et_agelow"
+                            android:layout_width="100dip"
+                            android:layout_height="40.0dip"
+                            android:layout_marginLeft="40dip"
+                            android:background="@drawable/login_textbg"
+                            android:ems="9"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:paddingBottom="1.0dip"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="1.0dip"
+                            android:paddingTop="1.0dip"
+                            android:singleLine="true"
+                            android:textSize="17.0sp" />
+
+                        <EditText
+                            android:id="@+id/et_ageup"
+                            android:layout_width="100dip"
+                            android:layout_height="40.0dip"
+                            android:layout_marginLeft="50dip"
+                            android:background="@drawable/login_textbg"
+                            android:ems="9"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:paddingBottom="1.0dip"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="1.0dip"
+                            android:paddingTop="1.0dip"
+                            android:singleLine="true"
+                            android:textSize="17.0sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="标    识："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_PersonMark"
+                            android:layout_width="250dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dip"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:prompt="@string/spinner_name"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="状    态："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_type"
+                            android:layout_width="250dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dip"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:prompt="@string/spinner_name"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="当前意向："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_current_intent"
+                            android:layout_width="250dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dip"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:prompt="@string/spinner_name"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="摸底情况："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_current_situation"
+                            android:layout_width="250dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dip"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:prompt="@string/spinner_name"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:text="已过期："
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <CheckBox
+                            android:id="@+id/cb_resources"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="50dip" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dip" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="950dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dhk" >
+
+    <RelativeLayout 
+        android:id="@+id/doctor_introduce_rl1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        >
+    
+    <TextView
+        android:id="@+id/doctor_introduce_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:text="医生介绍"
+        android:textColor="#ffffff"
+        android:textSize="27sp" />
+
+    </RelativeLayout>
+    
+   
+    
+    <LinearLayout 
+        android:id="@+id/doctor_introduce_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doctor_introduce_rl1"
+        android:orientation="vertical"
+        >
+        
+        <ImageView 
+             android:id="@+id/doctor_introduce_zhaopiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zp"
+            android:layout_gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            />
+        
+    <TextView
+         android:textColor="#dc8454"
+        android:textSize="27sp" 
+        android:id="@+id/doctor_introduce_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+         android:textColor="#ffffff"
+        android:textSize="27sp" 
+        android:id="@+id/doctor_introduce_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        />
+    
+    </LinearLayout>
+    
+    <ScrollView 
+        android:id="@+id/doctor_introduce_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"
+        android:layout_below="@id/doctor_introduce_rl1"
+        android:layout_toRightOf="@id/doctor_introduce_ll"
+         android:paddingTop="35dp"
+         android:paddingRight="30dp"
+        android:overScrollMode="never">
+    
+    <com.youli.bedinfo.custom.AutoSplitTextView
+         android:textColor="#ffffff"
+        android:textSize="27sp" 
+        android:id="@+id/doctor_introduce_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+           android:paddingBottom="50dp"
+           android:layout_marginRight="10dp"
+        />
+
+</ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_policy"
+    tools:context=".MainPolicyActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/radiogroup"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_policy"
+            android:paddingRight="@dimen/activity_horizontal_policy" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="政策类别："
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
+
+                <Spinner
+                    android:layout_marginLeft="-5dp"
+                    android:id="@+id/cbopolicytype"
+                    style="@style/activity_policymain_spinner" 
+                    android:layout_width="200dip"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="关键字："
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:layout_marginLeft="-5dp"
+                    android:id="@+id/txtpolicykeywords"
+                    style="@style/activity_policymain_text"
+                    android:layout_width="200dip"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnquery"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:text="查询"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnask"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_selector"
+                android:text="提问"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="350dip"
+            android:layout_marginTop="20dp"
+            android:background="#00000000">
+
+           	<ExpandableListView 
+           	    android:groupIndicator="@null"    			
+           	    android:id="@+id/lvPolicy"
+           	    android:layout_width="match_parent"
+           	    android:layout_height="wrap_content"></ExpandableListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

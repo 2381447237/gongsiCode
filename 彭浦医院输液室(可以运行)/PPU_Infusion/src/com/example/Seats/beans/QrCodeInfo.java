@@ -1,0 +1,34 @@
+package com.example.Seats.beans;
+//¶ÔÓ¦µÄurl:http://192.168.11.11:8088/json/GetQrCode.aspx?QRCODE=20170103000008
+
+//[{"INFUSIONDETAILID":1178,"INFUSIONID":1119,"DRUGNAME":"ÆÏÌÑÌÇ×¢ÉäÒº","DRUGSPEC":"10%¡Á250ml*1Æ¿/Æ¿","DRUGTRADENAME":"","DRUGMANUFACTURER":"",
+//"DRUGYBCODE":"X00987650020040","DOSAGE":1.0,"DOSAGEUNIT":"Æ¿","INFUSIONGROUPNO":1,"BAGVOLUME":250,"REMAINDERVOLUME":250,"DRIPCNTSPERMINUTE":60,"TUBEID":24,
+//"DRIPCNTSPERML":7,"DRIPSTARTTIME":"2017-01-03T14:50:13.027","DRIPLASTSTARTTIME":"2017-01-03T14:50:13.027","DRIPFINISHTIME":null,"INFUSIONSTATUS":1,"DURATION":0,
+//"QRCODE":"20170103000008","RecordCount":0}]
+
+public class QrCodeInfo {
+
+	public int INFUSIONDETAILID;
+	public int INFUSIONID;
+	public String DRUGNAME;
+	public String DRUGSPEC;
+	public String DRUGTRADENAME;
+	public String DRUGMANUFACTURER;
+	public String DRUGYBCODE;
+	public float DOSAGE;
+	public String DOSAGEUNIT;
+	public int INFUSIONGROUPNO;
+	public int BAGVOLUME;
+	public int REMAINDERVOLUME;
+	public int DRIPCNTSPERMINUTE;
+	public int TUBEID;
+	public int DRIPCNTSPERML;
+	public String DRIPSTARTTIME;
+	public String DRIPLASTSTARTTIME;
+	public String DRIPFINISHTIME;
+	public String INFUSIONSTATUS;
+	public int DURATION;
+	public String QRCODE;
+	public int RecordCount;
+	
+}

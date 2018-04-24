@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="5dp"
+	    >
+	    
+    <TextView  
+        android:id="@+id/tv_text"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:text="sc"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:textSize="21sp"/>
+    <Button 
+        android:id="@+id/btn_up"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@drawable/login"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:textSize="21sp"
+        android:text="添加"/>
+
+   </RelativeLayout>
+</LinearLayout>

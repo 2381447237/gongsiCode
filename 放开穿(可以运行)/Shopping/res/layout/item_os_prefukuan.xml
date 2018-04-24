@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfdfdf" >
+    
+   <RelativeLayout 
+        android:id="@+id/rl_os_fukuan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingBottom="15dp">
+           
+    <ImageView
+        android:id="@+id/iv_os_fukuan_content1" 
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/empty_photo"
+        android:paddingLeft="20dp"/>
+    <ImageView
+        android:id="@+id/iv_os_fukuan_content2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@id/iv_os_fukuan_content1" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/empty_photo"
+        android:paddingLeft="10dp"/>
+    <ImageView
+        android:id="@+id/iv_os_fukuan_content3" 
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@id/iv_os_fukuan_content2" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/empty_photo"
+        android:paddingLeft="10dp"/>
+        
+    <View
+        android:layout_below="@id/iv_os_fukuan_content1"
+        android:id="@+id/iv_os_fukuan_view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"
+        />
+    
+    
+    <TextView 
+        android:id="@+id/tv_os_fukuan1"
+        android:paddingTop="15dp"
+       android:paddingLeft="22dp"
+        android:layout_below="@id/iv_os_fukuan_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商品价格：  ￥"
+        />
+    
+    <TextView 
+        android:id="@+id/tv_os_fukuan_price"
+        android:paddingTop="15dp"
+        android:layout_below="@id/iv_os_fukuan_view"
+        android:layout_toRightOf="@id/tv_os_fukuan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="697.00"
+        />
+    <Button 
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_os_fukuan_pay"
+        android:layout_below="@id/iv_os_fukuan_view"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支付"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/identity_selector_btnbg"
+        android:textColor="@drawable/identity_selector_textcolor"/>
+    
+    <Button 
+       android:padding="5dp"
+        android:id="@+id/btn_os_fukuan_cancal"
+        android:layout_toLeftOf="@id/btn_os_fukuan_pay"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/iv_os_fukuan_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="撤销订单"
+        android:layout_marginRight="15dp"
+       android:background="@drawable/identity_selector_btnbg"
+        android:textColor="@drawable/identity_selector_textcolor" />
+    
+    
+    </RelativeLayout>
+
+</RelativeLayout>

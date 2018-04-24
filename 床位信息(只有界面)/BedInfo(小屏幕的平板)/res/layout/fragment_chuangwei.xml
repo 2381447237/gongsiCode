@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/chuangwei_rl1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/chuangwei_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingTop="40dp"
+            android:src="@drawable/xm" />
+
+        <TextView
+            android:id="@+id/chuangwei_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_iv1"
+            android:paddingLeft="2dp"
+            android:paddingTop="42dp"
+            android:text="姓名:"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_info1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_tv3"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="4dp"
+            android:paddingTop="42dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="任宁"
+            android:textColor="#dc8454"
+             android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/chuangwei_iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="200dp"
+            android:paddingTop="40dp"
+            android:src="@drawable/bq" />
+
+        <TextView
+            android:id="@+id/chuangwei_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_iv2"
+            android:paddingLeft="2dp"
+            android:paddingTop="42dp"
+            android:text="病区:"
+            android:textColor="#ffffff"
+             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_info2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_tv4"
+            android:paddingLeft="4dp"
+            android:paddingTop="42dp"
+            android:text="12345"
+            android:textColor="#dc8454"
+             android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/chuangwei_iv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="370dp"
+            android:paddingTop="40dp"
+            android:src="@drawable/ch" />
+
+        <TextView
+            android:id="@+id/chuangwei_tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_iv3"
+            android:paddingLeft="2dp"
+            android:paddingTop="42dp"
+            android:text="床号:"
+            android:textColor="#ffffff"
+             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_info3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_tv5"
+            android:paddingLeft="4dp"
+            android:paddingTop="42dp"
+            android:text="12345"
+            android:textColor="#dc8454"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/chuangwei_iv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="550dp"
+            android:paddingTop="40dp"
+            android:src="@drawable/zyh" />
+
+        <TextView
+            android:id="@+id/chuangwei_tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_iv4"
+            android:paddingLeft="2dp"
+            android:paddingTop="42dp"
+            android:text="住院号:"
+            android:textColor="#ffffff"
+             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_info4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_tv6"
+            android:paddingLeft="4dp"
+            android:paddingTop="42dp"
+            android:text="12345"
+            android:textColor="#dc8454"
+             android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:id="@+id/chuangwei_rl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chuangwei_tv3"
+            android:paddingLeft="25dp"
+            android:paddingTop="120dp" >
+
+            <ImageView
+                android:id="@+id/chuangwei_iv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zrys" />
+
+            <TextView
+                android:id="@+id/chuangwei_tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/chuangwei_iv5"
+                android:paddingLeft="2dp"
+                 android:paddingTop="2dp"
+                android:text="主任医生:"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_info5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/chuangwei_tv7"
+                android:paddingLeft="4dp"
+                android:text="李鹏飞"
+                android:paddingTop="2dp"
+                android:textColor="#dc8454"
+                 android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chuangwei_rl3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chuangwei_tv3"
+            android:paddingLeft="60dp"
+            android:paddingTop="120dp"
+            android:layout_toRightOf="@id/chuangwei_rl2" >
+
+            <ImageView
+                android:id="@+id/chuangwei_iv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zzys" />
+
+            <TextView
+                android:id="@+id/chuangwei_tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/chuangwei_iv6"
+                android:paddingLeft="2dp"
+                android:text="主治医生:"
+                android:paddingTop="2dp"
+                android:textColor="#ffffff"
+                 android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_info6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/chuangwei_tv8"
+                android:paddingLeft="4dp"
+                android:text="张宇哲"
+                android:paddingTop="2dp"
+                android:textColor="#dc8454"
+                 android:textSize="18sp"/>
+        </RelativeLayout>
+
+         <RelativeLayout
+            android:id="@+id/chuangwei_rl4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_below="@id/chuangwei_tv6"
+            android:paddingLeft="60dp"
+            android:paddingTop="120dp"
+             android:layout_toRightOf="@id/chuangwei_rl3" >
+        
+        <ImageView
+            android:id="@+id/chuangwei_iv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cwys" />
+
+        <TextView
+            android:id="@+id/chuangwei_tv9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_iv7"
+            android:paddingLeft="2dp"
+            android:text="床位医生:"
+            android:paddingTop="2dp"
+            android:textColor="#ffffff"
+             android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_info7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chuangwei_tv9"
+            android:paddingLeft="4dp"
+            android:text="李茂"
+            android:paddingTop="2dp"
+            android:textColor="#dc8454"
+             android:textSize="18sp" />
+
+         </RelativeLayout>
+        
+        <ImageView
+            android:id="@+id/chuangwei_iv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chuangwei_rl2"
+            android:paddingLeft="25dp"
+            android:paddingTop="130dp"
+            android:src="@drawable/ys" />
+
+        <TextView
+            android:id="@+id/chuangwei_tv10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chuangwei_rl2"
+            android:layout_toRightOf="@id/chuangwei_iv8"
+            android:paddingLeft="2dp"
+            android:paddingTop="135dp"
+            android:text="饮食:"
+            android:textColor="#ffffff"
+             android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_info8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chuangwei_rl2"
+            android:layout_toRightOf="@id/chuangwei_tv10"
+            android:orientation="vertical"
+            android:paddingLeft="4dp"
+            android:paddingTop="135dp"
+            android:text="普通"
+            android:textColor="#dc8454"
+             android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/chuangwei_iv9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chuangwei_rl2"
+            android:layout_alignLeft="@id/chuangwei_rl3"
+            android:paddingLeft="60dp"
+            android:paddingTop="130dp"
+            android:src="@drawable/hljb" />
+
+        <TextView
+            android:id="@+id/chuangwei_tv11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chuangwei_rl2"
+            android:layout_toRightOf="@id/chuangwei_iv9"
+            android:paddingLeft="2dp"
+            android:paddingRight="5dp"
+            android:paddingTop="135dp"
+            android:text="护理级别:"
+            android:textColor="#ffffff"
+             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_info9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chuangwei_rl2"
+            android:layout_toRightOf="@id/chuangwei_tv11"
+            android:paddingRight="100dp"
+            android:paddingTop="135dp"
+            android:text="一级护理"
+            android:textColor="#dc8454"
+             android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/chuangwei_tv13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:text="滚动提示区"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_info10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/chuangwei_tv13"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="10dp"
+        android:paddingLeft="50dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="尊敬的患者朋友，感谢您选择301医院就诊，为方便您就医，我院推出了银医“一卡通”挂号就诊业务"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+</RelativeLayout>

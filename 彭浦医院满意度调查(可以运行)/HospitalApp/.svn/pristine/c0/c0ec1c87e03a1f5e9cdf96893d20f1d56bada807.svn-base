@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp" >
+
+        <RadioButton
+            android:id="@+id/rb_answer_child_view_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/pingjia_selector"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/cb_answer_child_view_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/many_selector" />
+    </FrameLayout>
+
+    <!-- <TextView
+        android:id="@+id/tv_answer_detail_child_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选项"
+        android:textColor="#000"
+        android:textSize="18sp" /> -->
+
+    <EditText
+        android:id="@+id/et_answer_detail_child_1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#000" 
+        android:background="@drawable/bg_edittext"/>
+
+    <TextView
+        android:id="@+id/tv_answer_detail_child_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        />
+    
+</LinearLayout>

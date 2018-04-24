@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/invitedetailback"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip" >
+
+        <TextView
+            android:id="@+id/lblComName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30sp"
+            android:gravity="left"
+            android:text="职务"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="150dip"
+            android:text="会议人员"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="950dip"
+        android:layout_height="390dip"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/invitedetailborder"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="930dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:background="@drawable/invitedetailcontentback" >
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dip"
+                    android:paddingRight="3dip" >
+
+                    <LinearLayout
+                        android:id="@+id/llDuty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/svRight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/invitedetailcontentback"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/allpeople"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dip"
+                    android:paddingRight="3dip" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ywclbtn_selector"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnCancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/ywclbtn_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

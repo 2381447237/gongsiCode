@@ -1,0 +1,150 @@
+<com.example.layout.BidirSlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bidir_sliding_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/left_menu"
+        android:layout_width="200dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#303030"
+        android:visibility="invisible" >
+
+        <ListView
+            android:id="@+id/tree_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000"
+            android:scrollbars="none"
+             android:listSelector="#00000000"
+	        android:cacheColorHint="#00000000" >
+        </ListView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/right_menu"
+        android:layout_width="200dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="#303030"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/rightmenu_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:divider="#00000000"
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myllcontent"
+        android:layout_width="320dip"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <ImageView
+                android:id="@+id/show_left_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/leftbutton" />
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/show_left_button"
+                android:text="更多"
+                android:textColor="#ff6600" />
+
+            <TextView
+                android:id="@+id/tv_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/show_right_button"
+                android:text="筛选"
+                android:textColor="#ff6600" />
+
+            <ImageView
+                android:id="@+id/show_right_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/rightbutton" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1.5dp"
+            android:background="@drawable/line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <com.example.cusview.PullToRefreshLayout
+                android:id="@+id/Refreshview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <include layout="@layout/refresh_head" />
+
+                <com.example.cusview.PullableGridView
+                    android:id="@+id/contentList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:horizontalSpacing="2.0px"
+                    android:listSelector="@null"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:verticalSpacing="2.0px"
+                   >
+                </com.example.cusview.PullableGridView>
+
+                <include layout="@layout/load_more" />
+            </com.example.cusview.PullToRefreshLayout>
+            <!--
+ <ImageView
+        android:id="@+id/NoDataIv"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white_logo"
+       android:visibility="invisible"
+ />
+            -->
+
+            <TextView
+                android:id="@+id/NoDataTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="当前页面没有数据"
+                android:textColor="#808080"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/zhidingIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:src="@drawable/zhiding" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.example.layout.BidirSlidingLayout>

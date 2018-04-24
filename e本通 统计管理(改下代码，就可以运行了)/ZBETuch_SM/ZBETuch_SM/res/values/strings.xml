@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">社区统计管理e本通</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello">Hello World, UpdateActivity!</string>
+    <string name="person">个人信息</string>
+    <string name="appname">社区就业服务e本通</string>
+    <string name="appbanquan">版权所有：静安区人力资源和社会保障局</string>
+    <string name="username">账     户：</string>
+    <string name="userpwd">	密     码：</string>
+    <string name="login">登  陆</string>
+    <string name="textCard">证件类型：</string>
+    <string name="cardnum">证件号码：</string>
+    <string name="btn_scan">扫描</string>
+    <string name="btn_query">查询</string>
+    <string name="hint_user">请输入用户名</string>
+    <string name="hint_pwd">请输入密码</string>
+    <string name="tv_name">姓　　名：</string>
+    <string name="tv_lexing">人员类型：</string>
+    <string name="tv_register">户籍类型：</string>
+    <string name="tv_wenhuan">文化程度：</string>
+    <string name="tv_agelow">年龄下限：</string>
+    <string name="tv_ageup">年龄上限：</string>
+    <string name="tv_check">是否核实：</string>
+    <string name="tv_province">省：</string>
+    <string name="tv_city">市：</string>
+    <string name="tv_district">区、县：</string>
+    <string name="tv_street">街　　道：</string>
+    <string name="tv_committees">居委会　：</string>
+    <string name="tv_road">路：</string>
+    <string name="tv_lane">弄：</string>
+    <string name="tv_num">号：</string>
+    <string name="tv_room">室：</string>
+    <string name="tv_zuzhhicode">组织结构代码：</string>
+    <string name="tv_hangyeleibie">行业类别：</string>
+    <string name="tv_entname">企业名称：</string>
+    <string name="tv_iszhaopin">是否有有效招聘信息：</string>
+    <string name="tv_hangye">行　　业：</string>
+    <string name="tv_jobadress">工作地点：</string>
+    <string name="tv_gangwei">岗　　位：</string>
+    <string name="tv_jobneirong">工作内容：</string>
+    <string name="tv_jobyaoqiu">工作要求：</string>
+    <string name="tv_zhineng">职　　能：</string>
+    <string name="tv_leixing">类型：</string>
+    <string name="tv_mingchen">名称：</string>
+    <string name="tv_key">关键字：</string>
+    <string name="tv_neirong">内容：</string>
+    <string name="tv_datestart"> 起始时间：</string>
+    <string name="tv_dateend">终止时间：</string>
+    <string name="tv_rizhizhuti">日志主题：</string>
+    <string name="tv_jobnum">员工编号：</string>
+    <string name="tv_rizhineirong">日志内容：</string>
+    <string name="btn_tijiao">提交</string>
+    <string name="btn_paizhao">拍照</string>
+    <string name="btn_shangchuan">上传图库文件</string>
+    <string name="spinner_name">请选择</string>
+    <string name="tv_reports_name">报表名称</string>
+    <string name="tv_reports_note">报表备注</string>
+    <string name="tv_peoplecount">目前所属街道人员统计信息</string>
+    <string name="tv_nowlocation">当前位置</string>
+    <string name="btn_load">查看更多</string>
+    <string name="btn_loadmainactivity">进入工作菜单</string>
+    <string name="quanxian">*</string>
+    <string name="soft_update_no">已是最新版本</string>
+    <string name="soft_update_title">版本更新</string>
+    <string name="soft_update_info">有最新版本，是否更新</string>
+    <string name="soft_update_updatebtn">现在更新</string>
+    <string name="soft_update_later">以后更新</string>
+    <string name="soft_updating">版本更新</string>
+    <string name="soft_update_cancel">取消</string>
+
+    <string-array name="spinner_policyleixingItem">
+        <item>失业保险</item>
+        <item>就业补贴</item>
+        <item>职业介绍</item>
+        <item>职业指导</item>
+        <item>职业培训</item>
+        <item>职业见习</item>
+        <item>劳动力资源</item>
+        <item>开业指导</item>
+    </string-array>
+    <string-array name="spinner_card">
+        <item>居民身份证</item>
+        <item>居民户口薄</item>
+        <item>护照</item>
+        <item>军官证（士兵证）</item>
+        <item>驾驶执照</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="spinner_renyuanleixing">
+        <item>就业</item>
+        <item>登记失业</item>
+        <item>未登记失业</item>
+        <item>养老</item>
+        <item>死亡</item>
+        <item>在校生</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="spinner_huji">
+        <item>农村户口</item>
+        <item>非农村户口</item>
+        <item>不详</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="spinner_wenhua">
+        <item>初中以下</item>
+        <item>大学本科(简称大学)</item>
+        <item>职业高中毕业</item>
+        <item>农业初中毕业</item>
+        <item>研究生</item>
+        <item>中等专科或专业毕业</item>
+        <item>专科毕业</item>
+        <item>初中毕业</item>
+        <item>技工学校肄业</item>
+        <item>大学毕业</item>
+        <item>小学毕业</item>
+        <item>大学专科和专科学校</item>
+        <item>研究生毕业</item>
+        <item>相当专科毕业</item>
+        <item>相当初中毕业</item>
+        <item>研究生肄业</item>
+        <item>高中毕业</item>
+        <item>大学肄业</item>
+        <item>中专毕业</item>
+        <item>小学</item>
+        <item>相当高中毕业</item>
+        <item>相当小学毕业</item>
+        <item>小学肄业</item>
+        <item>初中肄业</item>
+        <item>高中肄业</item>
+        <item>高中</item>
+        <item>不明</item>
+        <item>相当中专或中技毕业</item>
+        <item>初中</item>
+        <item>中技毕业</item>
+        <item>中专或中技肄业</item>
+        <item>技工学校毕业</item>
+        <item>相当大学毕业</item>
+        <item>文盲或半文盲</item>
+        <item>技工学校</item>
+        <item>专科肄业</item>
+        <item>职业初中毕业</item>
+    </string-array>
+    <string-array name="spinner_ischeck">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+    <string-array name="sppiner_shi">
+        <item>市辖区</item>
+        <item>县</item>
+    </string-array>
+    <string-array name="spinner_qiyeleibie">
+        <item>计算机软件</item>
+        <item>计算机硬件</item>
+        <item>计算机服务（系统、数据服务、维修）</item>
+        <item>通信/电信/网络设备</item>
+        <item>通信/电信运营、增值服务</item>
+        <item>互联网/电子商务</item>
+        <item>网络游戏</item>
+        <item>电子技术/半导体/集成电路</item>
+        <item>仪器仪表/工业自动化</item>
+        <item>会计/审计</item>
+        <item>金融/投资/证券</item>
+        <item>银行</item>
+        <item>保险</item>
+        <item>贸易/进出口</item>
+        <item>批发/零售</item>
+        <item> 快速消费品（食物、饮料、化妆品） </item>
+        <item>服装/纺织/皮革</item>
+        <item>家具/家电/工艺品/玩具/珠宝</item>
+        <item>奢侈品/收藏品</item>
+        <item>办公用品及设备</item>
+        <item>机械/设备/重工</item>
+        <item>汽车及零配件</item>
+        <item>制药/生物工程</item>
+        <item>医疗/护理/卫生</item>
+        <item>医疗设备/器械</item>
+        <item>广告</item>
+        <item>公关/市场推广/会展</item>
+        <item>影视/媒体艺术/文化传播</item>
+        <item>文字媒体/出版</item>
+        <item>印刷/包装/造纸</item>
+        <item>房地产开发</item>
+        <item>建筑/建材/工程</item>
+        <item>家居/室内设计/装潢</item>
+        <item>物业管理/商业中心</item>
+        <item>中介服务</item>
+        <item>专业服务（咨询、人力资源、财会）</item>
+        <item>外包服务</item>
+        <item>检测、认证</item>
+        <item>法律</item>
+        <item>教育/培训/院校</item>
+        <item>学术/科研</item>
+        <item>餐饮业</item>
+        <item>酒店/旅游</item>
+        <item>娱乐/休闲/体育</item>
+        <item>美容/保健</item>
+        <item>生活服务</item>
+        <item>交通/运输/物流</item>
+        <item>航空/航天</item>
+        <item>石油/化工/矿产/地质</item>
+        <item>采掘业/冶炼 </item>
+        <item>电力/水利</item>
+        <item>新能源</item>
+        <item>原材料加工</item>
+        <item>政府/公共事业</item>
+        <item>非盈利机构</item>
+        <item>环保</item>
+        <item>农/林/牧/渔</item>
+        <item>多元化业务集团</item>
+        <item>其他行业</item>
+    </string-array>
+
+    <string name="education_school">学　　校：</string>
+    <string name="education_xueli"> 学　　历：</string>
+    <string name="education_major">专　　业：</string>
+    <string name="education_majors">专业描述：</string>
+    <string name="educations">海外求学：</string>
+    <string name="educationbeizhu">此选项为必填项</string>
+    <string name="trainname">培训机构：</string>
+    <string name="zhengshu">  获得证书：</string>
+    <string name="trainlesson">培训课程：</string>
+    <string name="trains">详细描述：</string>
+    <string name="workname">工作单位：</string>
+    <string name="worknature">单位性质：</string>
+    <string name="workbumen">部　　门：</string>
+    <string name="workposition">职　　位：</string>
+    <string name="works">工作描述：</string>
+    <string name="workoversea">海外工作经历：</string>
+    <string name="militarydatestart">参军日期：</string>
+    <string name="militarydateend">退伍转业日期：</string>
+    <string name="isshangcan">是否伤残：</string>
+    <string name="militarys">兵役情况：</string>
+    <string name="jobsituation">目前情况：</string>
+    <string name="jobcurrentintention">当前意向：</string>
+    <string name="jobtime">工作班时：</string>
+    <string name="jobsalary">期望薪资：</string>
+    <string name="selfdescription">自我评价：</string>
+    <string name="guidesituation">指导情况：</string>
+    <string name="other">其　　他：</string>
+    <string name="policysituation">政策情况：</string>
+    <string name="ispolicyguarantee">市级保障对象：</string>
+    <string name="iscanbao">是否参保：</string>
+    <string name="onechildfee">独生子女费用：</string>
+    <string name="homesize">家庭面积：</string>
+    <string name="baozhanghouse">保障性住房　：</string>
+    <string name="add_personinfo">基本信息</string>
+    <string name="add_educationinfo">教育信息</string>
+    <string name="add_traininfo">培训信息</string>
+    <string name="add_familyinfo">家庭情况</string>
+    <string name="add_jiuyeinfo">就业信息</string>
+    <string name="add_wrokinfo">工作经验</string>
+    <string name="add_bingyi">兵役情况</string>
+    <string name="add_currentintention">目前意向</string>
+    <string name="add_policyshare">政策享受</string>
+    <string name="tv_gender">性　　别：</string>
+    <string name="tv_born">出生年月：</string>
+    <string name="tv_national">民　　族：</string>
+    <string name="tv_politicsstatus">政治面貌：</string>
+    <string name="tv_maritalstatus">婚姻状况：</string>
+    <string name="tv_Leveledu">文化程度：</string>
+    <string name="tv_major">专       业：</string>
+    <string name="tv_currentstatus">目前状况：</string>
+    <string name="tv_mobilephone">手机电话：</string>
+    <string name="tv_homephone">家庭电话：</string>
+    <string name="tv_registerstatus">户籍状况：</string>
+    <string name="tv_registeraddress">户籍地址：</string>
+    <string name="tv_currentadress">居住地址：</string>
+    <string name="tv_sourceinfo">信息来源：</string>
+    <string name="tv_infoischeck">信息核实：</string>
+    <string name="tv_man">男</string>
+    <string name="tv_femal">女</string>
+    <string name="btn_personshangchuan">上传</string>
+    <string name="btn_personsave">保存</string>
+    <string name="btn_personpreview">预览</string>
+    <string name="title_activity_first_page">FirstPageActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tv_querytitle">人员 - 信息</string>
+    <string name="title_activity_update_page">UpdatePageActivity</string>
+    <string name="tv_modi">摸底情况：</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_web_view_activity1">WebViewActivity1</string>
+    <string name="title_activity_web_view_activity2">WebViewActivity2</string>
+    <string name="title_activity_web_view_activity3">WebViewActivity3</string>
+    <string name="title_activity_new_main">NewMainActivity</string>
+    <string name="btn_mark">标　　识：</string>
+    <string name="qihang_age">年龄：</string>
+
+    <string-array name="spinner_sex">
+        <item>全部</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="spinnersex">
+        <item>男</item>
+        <item>女</item>
+        <item>不详 </item>
+    </string-array>
+
+    <string name="login_about">关于</string>
+    <string name="login_aoutname">社区就业服务E本通</string>
+    <string name="login_banben">软件版本:</string>
+    <string name="login_aboutversion">Version　1.0</string>
+    <string name="login_aboutguishu">软件归属:</string>
+    <string name="login_aboutguishus">闸北就业促进中心</string>
+    <string name="login_aboutgongneng">软件功能:</string>
+    <string name="login_aboutgongnengs">社区人员信息实时采集处理，提高社区工作人员的办事效率。</string>
+    <string name="title_activity_pend_work">PendWorkActivity</string>
+    <string name="title_activity_pend_work_list">PendWorkListActivity</string>
+    <string name="tv_native">籍　　贯：</string>
+    <string name="tv_status">状　　态：</string>
+    <string name="tv_phonenum">联系电话：</string>
+    <string name="title_activity_add__pendwork">Add_PendworkActivity</string>
+    <string name="title_activity_policy">MainPolicyActivity</string>
+    <string name="title_activity_get_news_list">GetNewsListActivity</string>
+
+    <string-array name="person_national">
+        <item>请选择</item>
+        <item>汉族</item>
+        <item>壮族</item>
+        <item>满族</item>
+        <item>回族</item>
+        <item>苗族</item>
+        <item>维吾尔族</item>
+        <item>土家族</item>
+        <item>彝族</item>
+        <item>蒙古族</item>
+        <item>藏族</item>
+        <item>布依族</item>
+        <item>侗族</item>
+        <item>瑶族</item>
+        <item>朝鲜族</item>
+        <item>白族</item>
+        <item>哈尼族</item>
+        <item>哈萨克族</item>
+        <item>黎族</item>
+        <item>傣族</item>
+        <item>畲族</item>
+        <item>傈僳族</item>
+        <item>仡佬族</item>
+        <item>东乡族</item>
+        <item>高山族</item>
+        <item>拉祜族</item>
+        <item>水族</item>
+        <item>佤族</item>
+        <item>纳西族</item>
+        <item>羌族</item>
+        <item>土族</item>
+        <item>仫佬族</item>
+        <item>锡伯族</item>
+        <item>柯尔克孜族</item>
+        <item>达斡尔族</item>
+        <item>景颇族</item>
+        <item>毛南族</item>
+        <item>撒拉族</item>
+        <item>布朗族</item>
+        <item>塔吉克族</item>
+        <item>阿昌族</item>
+        <item>普米族</item>
+        <item>鄂温克族</item>
+        <item>怒族</item>
+        <item>京族</item>
+        <item>基诺族</item>
+        <item>德昂族</item>
+        <item>保安族</item>
+        <item>俄罗斯族</item>
+        <item>裕固族</item>
+        <item>乌孜别克族</item>
+        <item>门巴族</item>
+        <item>鄂伦春族</item>
+        <item>独龙族</item>
+        <item>塔塔尔族</item>
+        <item>赫哲族</item>
+        <item>珞巴族</item>
+        <item>请选择</item>
+        <item>汉族</item>
+        <item>壮族</item>
+        <item>满族</item>
+        <item>回族</item>
+        <item>苗族</item>
+        <item>维吾尔族</item>
+        <item>土家族</item>
+        <item>彝族</item>
+        <item>蒙古族</item>
+        <item>藏族</item>
+        <item>布依族</item>
+        <item>侗族</item>
+        <item>瑶族</item>
+        <item>朝鲜族</item>
+        <item>白族</item>
+        <item>哈尼族</item>
+        <item>哈萨克族</item>
+        <item>黎族</item>
+        <item>傣族</item>
+        <item>畲族</item>
+        <item>傈僳族</item>
+        <item>仡佬族</item>
+        <item>东乡族</item>
+        <item>高山族</item>
+        <item>拉祜族</item>
+        <item>水族</item>
+        <item>佤族</item>
+        <item>纳西族</item>
+        <item>羌族</item>
+        <item>土族</item>
+        <item>仫佬族</item>
+        <item>锡伯族</item>
+        <item>柯尔克孜族</item>
+        <item>达斡尔族</item>
+        <item>景颇族</item>
+        <item>毛南族</item>
+        <item>撒拉族</item>
+        <item>布朗族</item>
+        <item>塔吉克族</item>
+        <item>阿昌族</item>
+        <item>普米族</item>
+        <item>鄂温克族</item>
+        <item>怒族</item>
+        <item>京族</item>
+        <item>基诺族</item>
+        <item>德昂族</item>
+        <item>保安族</item>
+        <item>俄罗斯族</item>
+        <item>裕固族</item>
+        <item>乌孜别克族</item>
+        <item>门巴族</item>
+        <item>鄂伦春族</item>
+        <item>独龙族</item>
+        <item>塔塔尔族</item>
+        <item>赫哲族</item>
+        <item>珞巴族</item>
+    </string-array>
+    <string-array name="personprovince">
+        <item>北京</item>
+        <item>天津</item>
+        <item>河北省</item>
+        <item>山西省</item>
+        <item>内蒙古自治区</item>
+        <item>辽宁省</item>
+        <item>吉林省</item>
+        <item>黑龙江省</item>
+        <item>上海</item>
+        <item>江苏省</item>
+        <item>浙江省</item>
+        <item>安徽省</item>
+        <item>福建省</item>
+        <item>江西省</item>
+        <item>山东省</item>
+        <item>河南省</item>
+        <item>湖北省</item>
+        <item>湖南省</item>
+        <item>广东省</item>
+        <item>广西壮族自治区</item>
+        <item>海南省</item>
+        <item>重庆市</item>
+        <item>四川省</item>
+        <item>贵州省</item>
+        <item>云南省</item>
+        <item>西藏自治区</item>
+        <item>陕西省</item>
+        <item>甘肃省</item>
+        <item>青海省</item>
+        <item>宁夏回族自治区</item>
+        <item>新疆维吾尔自治区</item>
+        <item>新疆生产建设兵团</item>
+        <item>待审核</item>
+        <item>请选择</item>
+        <item>北京</item>
+        <item>天津</item>
+        <item>河北省</item>
+        <item>山西省</item>
+        <item>内蒙古自治区</item>
+        <item>辽宁省</item>
+        <item>吉林省</item>
+        <item>黑龙江省</item>
+        <item>上海</item>
+        <item>江苏省</item>
+        <item>浙江省</item>
+        <item>安徽省</item>
+        <item>福建省</item>
+        <item>江西省</item>
+        <item>山东省</item>
+        <item>河南省</item>
+        <item>湖北省</item>
+        <item>湖南省</item>
+        <item>广东省</item>
+        <item>广西壮族自治区</item>
+        <item>海南省</item>
+        <item>重庆市</item>
+        <item>四川省</item>
+        <item>贵州省</item>
+        <item>云南省</item>
+        <item>西藏自治区</item>
+        <item>陕西省</item>
+        <item>甘肃省</item>
+        <item>青海省</item>
+        <item>宁夏回族自治区</item>
+        <item>新疆维吾尔自治区</item>
+        <item>新疆生产建设兵团</item>
+        <item>待审核</item>
+    </string-array>
+    <string-array name="personstreet">
+        <item>天目西路街道</item>
+        <item>北站街道</item>
+        <item>宝山路街道</item>
+        <item>共和新路街道</item>
+        <item>大宁路街道</item>
+        <item>彭浦新村街道</item>
+        <item>临汾路街道</item>
+        <item>芷江西路街道</item>
+        <item>芷江西路街道</item>
+        <item>彭浦镇街道</item>
+        <item>请选择</item>
+        <item>天目西路街道</item>
+        <item>北站街道</item>
+        <item>宝山路街道</item>
+        <item>共和新路街道</item>
+        <item>大宁路街道</item>
+        <item>彭浦新村街道</item>
+        <item>临汾路街道</item>
+        <item>芷江西路街道</item>
+        <item>芷江西路街道</item>
+        <item>彭浦镇街道</item>
+    </string-array>
+    <string-array name="personmodi">
+        <item>请选择</item>
+        <item>残疾</item>
+        <item>完全丧劳</item>
+        <item>临时商贩和修配摊</item>
+        <item>未调查</item>
+        <item>患严重疾病</item>
+        <item>人户分离</item>
+        <item>无地址、查无此人</item>
+        <item>积极求职</item>
+        <item>失踪</item>
+        <item>其他</item>
+        <item>正在求职</item>
+        <item>延长领取失保金</item>
+        <item>正在培训</item>
+        <item>照顾家属</item>
+        <item>移居境外</item>
+        <item>丧劳</item>
+        <item>有投资收入</item>
+        <item>集体户口</item>
+        <item>精神类疾病</item>
+        <item>各类帮工</item>
+        <item>申领失业保险金</item>
+        <item>判刑、劳动教养</item>
+        <item>有劳动收入</item>
+        <item>就业条件一般</item>
+        <item>超龄</item>
+        <item>出国出境</item>
+        <item>移居市外</item>
+        <item>闲散在家</item>
+        <item>死亡</item>
+        <item>领取证照</item>
+        <item>各类保险及业务代理人</item>
+        <item>服兵役</item>
+        <item>入学</item>
+    </string-array>
+
+    <!-- 当前意向 -->
+    <string-array name="personintention">
+        <item>请选择</item>
+        <item>无意向分类</item>
+        <item>有创业意向</item>
+        <item>就业条件较好</item>
+        <item>就业条件一般</item>
+    </string-array>
+    <!-- 失业调查下的摸底情况 -->
+    <string-array name="personmodishiye">
+        <item>请选择</item>
+        <item>有劳动收入</item>
+        <item>移居境外</item>
+        <item>死亡</item>
+        <item>移居市外</item>
+        <item>入学</item>
+        <item>服兵役</item>
+        <item>判刑、劳动教养</item>
+        <item>正在培训</item>
+        <item>积极求职</item>
+    </string-array>
+    <!-- 无业调查下的摸底情况 -->
+    <string-array name="personmodiwuye">
+        <item>请选择</item>
+        <item>有劳动收入</item>
+        <item>领取证照</item>
+        <item>临时商贩和修配摊</item>
+        <item>各类帮工</item>
+        <item>家庭手工业</item>
+        <item>各类保险及业务代理人</item>
+        <item>有投资收入</item>
+        <item>患严重疾病</item>
+        <item>死亡</item>
+        <item>入学</item>
+        <item>出国出境</item>
+        <item>正在培训</item>
+        <item>正在求职</item>
+        <item>集体户口</item>
+        <item>移居境外</item>
+        <item>移居市外</item>
+        <item>照顾家属</item>
+        <item>闲散在家</item>
+        <item>人户分离</item>
+        <item>无地址、查无此人</item>
+        <item>服兵役</item>
+        <item>判刑、劳动教养</item>
+        <item>失踪</item>
+        <item>居住证A（包括居留证）</item>
+        <item>超龄</item>
+        <item>其他</item>
+        <item>农业耕作</item>
+        <item>从事农林牧副渔业</item>
+    </string-array>
+    <string-array name="personstatus">
+        <item>请选择</item>
+        <item>登记失业</item>
+        <item>未登记失业</item>
+        <item>学龄前儿童</item>
+    </string-array>
+    <string-array name="cboWorkType">
+        <item>请选择</item>
+        <item>技术</item>
+        <item>业务</item>
+        <item>操作</item>
+        <item>辅助</item>
+        <item>装配</item>
+        <item>钣金</item>
+        <item>插</item>
+        <item>车</item>
+        <item>镗</item>
+        <item>齿轮</item>
+        <item>电焊</item>
+        <item>锻</item>
+        <item>管道</item>
+        <item>锅炉</item>
+        <item>机修</item>
+        <item>磨</item>
+        <item>刨</item>
+        <item>铣</item>
+        <item>钻</item>
+        <item>冲床</item>
+        <item>铸</item>
+        <item>钳</item>
+        <item>模具</item>
+        <item>数控机床</item>
+        <item>驾驶</item>
+        <item>司机</item>
+        <item>裱花</item>
+        <item>整理</item>
+        <item>绿化</item>
+        <item>排水</item>
+        <item>化</item>
+        <item>电</item>
+        <item>木</item>
+        <item>泥</item>
+        <item>报关</item>
+        <item>单证</item>
+        <item>制单</item>
+        <item>跟单</item>
+        <item>跑单</item>
+        <item>缝纫</item>
+        <item>勤杂</item>
+        <item>清洁</item>
+        <item>收银</item>
+        <item>营业</item>
+        <item>切配</item>
+        <item>洗碗</item>
+        <item>洗衣</item>
+        <item>运输</item>
+        <item>制冷</item>
+        <item>架子</item>
+        <item>CAD制图</item>
+        <item>搬运</item>
+        <item>包装</item>
+        <item>保安</item>
+        <item>保洁</item>
+        <item>保姆</item>
+        <item>保育</item>
+        <item>报递</item>
+        <item>报核</item>
+        <item>报检</item>
+        <item>报刊发行</item>
+        <item>采购</item>
+        <item>餐厅服务</item>
+        <item>仓库</item>
+        <item>叉车</item>
+        <item>铲车</item>
+        <item>出纳</item>
+        <item>厨师</item>
+        <item>传菜</item>
+        <item>船</item>
+        <item>促销</item>
+        <item>打单</item>
+        <item>打票</item>
+        <item>打字</item>
+        <item>导购</item>
+        <item>导游</item>
+        <item>点心师</item>
+        <item>电话访问</item>
+        <item>电话接线</item>
+        <item>电气技术人</item>
+        <item>电梯安装维修</item>
+        <item>电子技术</item>
+        <item>电子商务</item>
+        <item>电子自动控制程师</item>
+        <item>调度</item>
+        <item>房产经纪</item>
+        <item>服装</item>
+        <item>跟车送货</item>
+        <item>公关</item>
+        <item>国际贸易业务人</item>
+        <item>护理</item>
+        <item>化学分析</item>
+        <item>化验</item>
+        <item>话务</item>
+        <item>会计</item>
+        <item>会务接待</item>
+        <item>会展文</item>
+        <item>机电</item>
+        <item>机械制图</item>
+        <item>计算机操作</item>
+        <item>加油</item>
+        <item>家政</item>
+        <item>监理师</item>
+        <item>检验</item>
+        <item>客户服务</item>
+        <item>空调维修</item>
+        <item>快递</item>
+        <item>理货</item>
+        <item>领位</item>
+        <item>美发师</item>
+        <item>美</item>
+        <item>美容师</item>
+        <item>门卫</item>
+        <item>面料采购</item>
+        <item>汽车修理</item>
+        <item>前台服务</item>
+        <item>前台接待</item>
+        <item>弱电程师</item>
+        <item>生产主管</item>
+        <item>调查人</item>
+        <item>市场信息</item>
+        <item>收银</item>
+        <item>手机维修</item>
+        <item>售后服务</item>
+        <item>送货</item>
+        <item>外勤人</item>
+        <item>万能</item>
+        <item>文秘</item>
+        <item>文</item>
+        <item>物流</item>
+        <item>物业管理</item>
+        <item>洗衣烫体</item>
+        <item>线路板焊接</item>
+        <item>线切割</item>
+        <item>销售</item>
+        <item>校对</item>
+        <item>信息采编</item>
+        <item>行政办公</item>
+        <item>驯养</item>
+        <item>液压</item>
+        <item>印刷</item>
+        <item>迎宾</item>
+        <item>营销</item>
+        <item>油漆</item>
+        <item>预决算</item>
+        <item>园艺</item>
+        <item>质检</item>
+        <item>质量检验</item>
+        <item>面点师</item>
+        <item>注塑</item>
+    </string-array>
+    <string-array name="personSkills">
+        <item>请选择</item>
+        <item>精通</item>
+        <item>熟练</item>
+        <item>良好</item>
+        <item>一般</item>
+    </string-array>
+    <string-array name="personLanguage">
+        <item>请选择</item>
+        <item>英语</item>
+        <item>日语</item>
+        <item>法语</item>
+        <item>德语</item>
+        <item>西班牙语</item>
+        <item>俄语</item>
+        <item>意大利语</item>
+    </string-array>
+    <string-array name="personxinzi">
+        <item>请选择</item>
+        <item>1620-2000</item>
+        <item>2001-3000</item>
+        <item>3001-5000</item>
+        <item>5100-8000</item>
+        <item>8001-10000</item>
+        <item>10001-20000</item>
+        <item>20001以上</item>
+    </string-array>
+    <string-array name="personyonggongxingzi">
+        <item>请选择</item>
+        <item>全日制劳动合同</item>
+        <item>事业单位聘用合同</item>
+        <item>保险代理人</item>
+        <item>青年职业见习计划</item>
+        <item>非正规就业劳动组织用工</item>
+    </string-array>
+    <string-array name="personworktime">
+        <item>请选择</item>
+        <item>常日班</item>
+        <item>常夜班</item>
+        <item>常早班</item>
+        <item>常中班</item>
+        <item>三班制</item>
+        <item>两头班</item>
+        <item>两两制</item>
+        <item>早中班</item>
+        <item>中晚班</item>
+        <item>隔天班</item>
+    </string-array>
+    <string-array name="personaddress">
+        <item>请选择</item>
+        <item>全市</item>
+        <item>黄浦</item>
+        <item>徐汇</item>
+        <item>长宁</item>
+        <item>静安</item>
+        <item>普陀</item>
+        <item>闸北</item>
+        <item>虹口</item>
+        <item>杨浦</item>
+        <item>闵行</item>
+        <item>宝山</item>
+        <item>嘉定</item>
+        <item>浦东</item>
+        <item>金山</item>
+        <item>松江</item>
+        <item>青浦</item>
+        <item>奉贤</item>
+        <item>崇明</item>
+        <item>外省市</item>
+    </string-array>
+
+    <string name="title_activity_add__msg_board_detile">Add_MsgBoardDetileActivity</string>
+    <string name="title_activity_msg_board_detitle">MsgBoardDetitleActivity</string>
+
+    <string-array name="personmark">
+        <item>请选择</item>
+        <item>应届毕业生</item>
+        <item>启航人员</item>
+        <item>就业困难人员</item>
+        <item>刑解人员</item>
+        <item>戒毒人员</item>
+        <item>零就业家庭</item>
+    </string-array>
+    <string-array name="gradeate_sex">
+        <item>请选择</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="gradeate_nation">
+        <item>请选择</item>
+        <item>汉族</item>
+        <item>少数民族</item>
+    </string-array>
+    <string-array name="gradeate_polityStyle">
+        <item>请选择</item>
+        <item>群众</item>
+        <item>共青团员</item>
+        <item>共产党员</item>
+        <item>民主党派</item>
+    </string-array>
+    <string-array name="gradeate_educationLevel">
+        <item>请选择</item>
+        <item>硕士研究生及以上学历</item>
+        <item>大学本科</item>
+        <item>大学专科/高职</item>
+        <item>高中/中专/技校</item>
+         <item>初中或以下</item>
+    </string-array>
+    <string-array name="gradeate_jobStyle">
+        <item>管理类</item>
+        <item>技术类</item>
+        <item>服务类</item>
+    </string-array>
+    <string-array name="gradeate_salaryStyle">
+        <item>3,000元(含)以下</item>
+        <item>3,000元至5,000元(含)</item>
+        <item>5,000元至10,000元(含)</item>
+        <item>10,000元以上</item>
+    </string-array>
+    <string-array name="gradeate_empty">
+        <item>请选择</item>
+    </string-array>
+    <string-array name="gradeate_baseSituation">
+        <item>请选择</item>
+        <item>已就业</item>
+        <item>未就业</item>
+        <item>暂不要求就业</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="gradeate_detailSituation_yjy">
+        <item>请选择</item>
+        <item>企业就业已办录用</item>
+        <item>企业就业未办录用</item>
+        <item>自主创业已领证照</item>
+        <item>青年职业创业见习</item>
+        <item>已办用工现已退工</item>
+    </string-array>
+    <string-array name="gradeate_detailSituation_wjy">
+        <item>请选择</item>
+        <item>有就业意愿</item>
+        <item>有见习意愿</item>
+        <item>有培训意愿或正在培训</item>
+        <item>有创业意愿或正在创业</item>
+        <item>主观原因</item>
+    </string-array>
+    <string-array name="gradeate_detailSituation_zbjy">
+        <item>请选择</item>
+        <item>继续入学</item>
+        <item>身体原因</item>
+        <item>出国出境</item>
+        <item>应征入伍</item>
+    </string-array>
+    <string-array name="gradeate_detailSituation_qt">
+        <item>请选择</item>
+        <item>拒绝调查</item>
+        <item>无法联系</item>
+    </string-array>
+    <string-array name="gradeate_idChecked">
+        <item>请选择</item>
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+    <string-array name="gradeate_ParamQuery_jobStyle">
+        <item>请选择</item>
+        <item>管理类</item>
+        <item>技术类</item>
+        <item>服务类</item>
+    </string-array>
+    <string-array name="gradeate_ParamQuery_salaryStyle">
+        <item>请选择</item>
+        <item>3,000元(含)以下</item>
+        <item>3,000元至5,000元(含)</item>
+        <item>5,000元至10,000元(含)</item>
+        <item>10,000元以上</item>
+    </string-array>
+    <string-array name="gradeate_ParamQuery_qingkuangStyle">
+        <item>请选择</item>
+        <item>低保家庭成员</item>
+        <item>零就业家庭成员</item>
+        <item>残疾</item>
+    </string-array>
+    
+     <string-array name="resources_shiye_status">
+        <item>请选择</item>
+        <item>有劳动收入</item>
+        <item>移居境外</item>
+        <item>死亡</item>
+        <item>移居市外</item>
+        <item>入学</item>
+        <item>服兵役</item>
+        <item>判刑，劳动教养</item>
+        <item>正在培训</item>
+        <item>积极求职</item>
+        
+    </string-array>
+    
+      <string-array name="resources_shiye_yixiang">
+        <item>请选择</item>
+        <item>无需意向分类</item>
+        <item>有创业意向</item>
+        <item>就业条件较好</item>
+        <item>就业条件一般</item>
+    </string-array>
+    
+      <string-array name="resources_wuye_status">
+        <item>请选择</item>
+        <item>有劳动收入</item>
+        <item>领取证照</item>
+        <item>临时商贩和修配摊</item>
+        <item>各类帮工</item>
+        <item>家庭手工业</item>
+        <item>各类保险及业务代理人</item>
+        <item>有投资收入</item>
+        <item>患严重疾病</item>
+        <item>残疾</item>
+        <item>精神类疾病</item>
+        <item>死亡</item>
+        <item>入学</item>
+        <item>出国出境</item>
+        <item>正在培训</item>
+        <item>正在求职</item>
+        <item>集体户口</item>
+        <item>移居境外</item>
+        <item>移居市外</item>
+        <item>照顾家属</item>
+        <item>闲散在家</item>
+        <item>人户分离</item>
+        <item>无地址，查无此人</item>
+        <item>服兵役</item>
+        <item>判刑，劳动教养</item>
+        <item>失踪</item>
+        <item>居住证A(包括居留证)</item>
+        <item>超龄</item>
+        <item>其他</item>
+        <item>农业耕作</item>
+        <item>从事农林牧副渔业</item>
+    </string-array>
+    
+    <string-array name="resources_wuye_yixiang">
+        <item>请选择</item>
+        <item>无需意向分类</item>
+        <item>有创业意向</item>
+        <item>就业条件较好</item>
+        <item>就业条件一般</item>
+    </string-array>
+
+</resources>

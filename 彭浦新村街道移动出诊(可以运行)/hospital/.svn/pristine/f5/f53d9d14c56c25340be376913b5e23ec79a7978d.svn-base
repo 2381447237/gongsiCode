@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hospital.HomeVisitNumInfoActivity" >
+
+    <TextView
+        android:id="@+id/btn_chufangliebiao"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_on"
+        android:gravity="center"
+        android:text="处方列表"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+    <ListView
+        android:id="@+id/lv_liebiao"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/btn_chufangliebiao"
+        android:background="#ffffff" >
+    </ListView>
+    
+    <!-- <com.fc.has.beans.RefreshListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#19000000"  
+        android:dividerHeight="4dp"
+        android:orientation="vertical" >
+    </com.fc.has.beans.RefreshListView> -->
+
+</RelativeLayout>

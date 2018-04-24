@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+    
+
+    <ImageView
+            android:id="@+id/img_footprint_item"
+            android:src="@drawable/ic_launcher"
+            android:layout_width="63dp"
+            android:layout_height="110dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:layout_marginRight="5dp"/>
+    
+    <TextView
+            android:id="@+id/tv_itemname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_alignTop="@id/img_footprint_item"
+            android:layout_toRightOf="@id/img_footprint_item"
+            android:text="xx"
+            android:textSize="14sp"
+            android:singleLine="true" />
+    
+     <LinearLayout 
+         android:id="@+id/ll_retail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@id/img_footprint_item"
+            android:layout_alignBottom="@id/img_footprint_item"
+            android:orientation="horizontal">
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:text="零售价￥"/>
+            <TextView 
+                android:id="@+id/tv_retail_item"
+                android:text="XX"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"/>        
+        </LinearLayout>
+     <LinearLayout 
+         android:layout_above="@id/ll_retail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@id/img_footprint_item"
+            android:orientation="horizontal">
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:text="租赁价￥"/>
+            <TextView 
+                android:id="@+id/tv_lease_item"
+                android:text="XX"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"/>        
+        </LinearLayout>
+    
+     <ImageView 
+         android:id="@+id/iv_footprint_delete"
+         android:src="@drawable/cha"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@id/ll_retail"
+         android:layout_alignParentRight="true"
+         android:paddingRight="8dp"
+         />
+     
+</RelativeLayout>

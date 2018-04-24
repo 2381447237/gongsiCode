@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/ipSet"
+        android:title="设置ip"/>
+    <item
+        android:id="@+id/ipSend"
+        android:title="发送ip"/>
+    <item
+        android:id="@+id/exist"
+        android:title="退出"/>
+
+</menu>

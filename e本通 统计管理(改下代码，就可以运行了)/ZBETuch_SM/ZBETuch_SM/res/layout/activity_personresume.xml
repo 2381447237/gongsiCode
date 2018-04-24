@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/mainbasebj" >
+ 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            >
+            <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp">
+            <LinearLayout
+                android:id="@+id/tableRow6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+               
+                android:background="@drawable/biaoshilan">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:text="用工性质："
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_workxingzi"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="工作班时："
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_worktime"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" 
+               >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:text="工作地区："
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_workadress1"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:ems="10" />
+
+                <Spinner
+                    android:id="@+id/sp_workadress2"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:layout_marginLeft="20dp"
+                    android:ems="10" />
+
+                <Spinner
+                    android:id="@+id/sp_workadress3"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/spinner_btn1"
+                    android:prompt="@string/spinner_name"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/biaoshilan"
+                android:layout_marginTop="10dp" 
+                >
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:text="欲从事岗位1："
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_fugangwei1"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/sp_zigangwei1"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:layout_marginLeft="20dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" 
+                >
+
+                <TextView
+                    android:id="@+id/editText14"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="20sp"
+                    android:text="欲从事岗位2：" />
+
+                <Spinner
+                    android:id="@+id/sp_fugangwei2"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/sp_zigangwei2"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center" />
+          
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/biaoshilan"
+                android:layout_marginTop="10dp" 
+                >
+  				 <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:text="欲从事岗位3："
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_othergangwei"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="10dp"
+                    android:ems="10" />
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="工作年限："
+                    android:layout_marginLeft="50dp"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_workyear"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:gravity="center" />
+                 <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="期望薪资："
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_xingzi"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+            </LinearLayout>
+            </LinearLayout>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                 >
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="计算机应用能力："
+                    android:layout_marginLeft="50dp"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_computerSkills"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" >
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="计算机证书："
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_computerzhengshu"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/biaoshilan"
+                android:layout_marginTop="10dp" 
+                >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="外语语种1："
+                    android:layout_marginLeft="50dp"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_language1"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:prompt="@string/spinner_name"
+                    android:paddingLeft="10dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="熟练程度："
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_chendu1"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                 >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="外语语种2："
+                    android:layout_marginLeft="50dp"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_language2"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="熟练程度："
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_chendu2"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/spinner_name"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/biaoshilan"
+                android:layout_marginTop="10dp"
+                 >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="外语类证书："
+                    android:layout_marginLeft="50dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_languagezhengshu"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:ems="10" />
+            </LinearLayout>
+                        <LinearLayout
+                android:id="@+id/tableRow4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                 >
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="其他职业技能证书："
+                    android:layout_marginLeft="50dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_otherzhengshu"
+                    android:layout_width="200dp"
+                    android:paddingLeft="20dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/biaoshilan"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="自我评价："
+                    android:layout_marginLeft="50dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_ziwopingjia"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:ems="10"
+                    android:hint="请输入自己的评价,（最多可输入1000字）"
+                    android:paddingLeft="10dp" />
+               
+            </LinearLayout>
+</LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/tableRow10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" 
+                android:layout_marginBottom="10dp"
+                >
+
+             	<Button android:id="@+id/btn_tijiaojianli"
+             	    android:layout_width="80dp"
+             	    android:layout_height="40dp"
+             	    android:text="提交"
+             	    android:layout_alignParentRight="true"
+             	    android:layout_marginRight="50dp"
+             	    android:background="@drawable/btn_selector"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

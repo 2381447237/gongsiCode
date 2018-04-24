@@ -1,0 +1,58 @@
+package com.example.ppu_infusion;
+
+import java.io.Serializable;
+
+public class AdminInfo implements Serializable{
+	private int StaffId;
+	private String StaffNo;
+	private String Pwd;
+	private String StaffName;
+	private String Status;
+	public int getStaffId() {
+		return StaffId;
+	}
+	public void setStaffId(int staffId) {
+		StaffId = staffId;
+	}
+	public String getStaffNo() {
+		return StaffNo;
+	}
+	public void setStaffNo(String staffNo) {
+		StaffNo = staffNo;
+	}
+	public String getPwd() {
+		return Pwd;
+	}
+	public void setPwd(String pwd) {
+		Pwd = pwd;
+	}
+	public String getStaffName() {
+		return StaffName;
+	}
+	public void setStaffName(String staffName) {
+		StaffName = staffName;
+	}
+	public String getStatus() {
+		return Status;
+	}
+	public void setStatus(String status) {
+		Status = status;
+	}
+	public AdminInfo(int staffId, String staffNo, String password,
+			String staffName, String Status) {
+		super();
+		this.StaffId = staffId;
+		this.StaffNo = staffNo;
+		this.Pwd = password;
+		this.StaffName = staffName;
+		this.Status=Status;
+	}
+	public AdminInfo(){
+		super();
+	}
+	@Override
+	public String toString() {
+		return "AdminInfo [StaffId=" + StaffId +", StaffNo=" + StaffNo +", Pwd=" + Pwd 
+				 +", StaffName=" + StaffName +", Status=" + Status +"]";
+	}
+}

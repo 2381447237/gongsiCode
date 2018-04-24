@@ -1,0 +1,248 @@
+package com.example.Seats.beans;
+
+import java.io.Serializable;
+
+public class SeatsInfo implements Serializable{
+	private String SeatNo;
+	private String SeatStatus;
+	private String InfusionID;
+	private String PatientID;
+	private String CardNo;
+	private String PatientName;
+	private String Gender;
+	private String Age;
+	private String BagCnts;
+	private String CompletedBagCnts;
+	private String TotalDuration;
+	private String TotalVolume;
+	private String InfusionDetailID;
+	private String RemainderRate;
+	private String dripCntsPerminute;
+	private String TubeID;
+	private String dripCntsPerml;
+	private String TubeName;
+	private String InfusionStatus;
+	private String InfusionStatusName;
+	private String RemainderVolume;
+	private String RemainderTime;
+	public String getSeatNo() {
+		return SeatNo;
+	}
+
+	public void setSeatNo(String seatNo) {
+		SeatNo = seatNo;
+	}
+
+	public String getSeatStatus() {
+		return SeatStatus;
+	}
+
+	public void setSeatStatus(String seatStatus) {
+		SeatStatus = seatStatus;
+	}
+
+	public String getInfusionID() {
+		return InfusionID;
+	}
+
+	public void setInfusionID(String infusionID) {
+		InfusionID = infusionID;
+	}
+
+	public String getPatientID() {
+		return PatientID;
+	}
+
+	public void setPatientID(String patientID) {
+		PatientID = patientID;
+	}
+
+	public String getCardNo() {
+		return CardNo;
+	}
+
+	public void setCardNo(String cardNo) {
+		CardNo = cardNo;
+	}
+
+	public String getPatientName() {
+		return PatientName;
+	}
+
+	public void setPatientName(String patientName) {
+		PatientName = patientName;
+	}
+
+	public String getGender() {
+		return Gender;
+	}
+
+	public void setGender(String gender) {
+		Gender = gender;
+	}
+
+	public String getAge() {
+		return Age;
+	}
+
+	public void setAge(String age) {
+		Age = age;
+	}
+
+	public String getBagCnts() {
+		return BagCnts;
+	}
+
+	public void setBagCnts(String bagCnts) {
+		BagCnts = bagCnts;
+	}
+
+	public String getCompletedBagCnts() {
+		return CompletedBagCnts;
+	}
+
+	public void setCompletedBagCnts(String completedBagCnts) {
+		CompletedBagCnts = completedBagCnts;
+	}
+
+	public String getTotalDuration() {
+		return TotalDuration;
+	}
+
+	public void setTotalDuration(String totalDuration) {
+		TotalDuration = totalDuration;
+	}
+
+	public String getTotalVolume() {
+		return TotalVolume;
+	}
+
+	public void setTotalVolume(String totalVolume) {
+		TotalVolume = totalVolume;
+	}
+
+	public String getInfusionDetailID() {
+		return InfusionDetailID;
+	}
+
+	public void setInfusionDetailID(String infusionDetailID) {
+		InfusionDetailID = infusionDetailID;
+	}
+
+	public String getRemainderRate() {
+		return RemainderRate;
+	}
+
+	public void setRemainderRate(String remainderRate) {
+		RemainderRate = remainderRate;
+	}
+
+	public String getDripCntsPerminute() {
+		return dripCntsPerminute;
+	}
+
+	public void setDripCntsPerminute(String dripCntsPerminute) {
+		this.dripCntsPerminute = dripCntsPerminute;
+	}
+
+	public String getTubeID() {
+		return TubeID;
+	}
+
+	public void setTubeID(String tubeID) {
+		TubeID = tubeID;
+	}
+
+	public String getDripCntsPerml() {
+		return dripCntsPerml;
+	}
+
+	public void setDripCntsPerml(String dripCntsPerml) {
+		this.dripCntsPerml = dripCntsPerml;
+	}
+
+	public String getTubeName() {
+		return TubeName;
+	}
+
+	public void setTubeName(String tubeName) {
+		TubeName = tubeName;
+	}
+
+	public String getInfusionStatus() {
+		return InfusionStatus;
+	}
+
+	public void setInfusionStatus(String infusionStatus) {
+		InfusionStatus = infusionStatus;
+	}
+
+	public String getInfusionStatusName() {
+		return InfusionStatusName;
+	}
+
+	public void setInfusionStatusName(String infusionStatusName) {
+		InfusionStatusName = infusionStatusName;
+	}
+	
+	public String getRemainderVolume() {
+		return RemainderVolume;
+	}
+
+	public void setRemainderVolume(String remainderVolume) {
+		RemainderVolume = remainderVolume;
+	}
+
+	public String getRemainderTime() {
+		return RemainderTime;
+	}
+
+	public void setRemainderTime(String remainderTime) {
+		RemainderTime = remainderTime;
+	}
+
+	public SeatsInfo (String SeatNo,String SeatStatus,String InfusionID,String PatientID
+			,String CardNo,String PatientName,String Gender,String Age,String BagCnts
+			,String CompletedBagCnts,String TotalDuration,String TotalVolume,String InfusionDetailID
+			,String RemainderRate,String dripCntsPerminute,String TubeID,String dripCntsPerml
+			,String TubeName,String InfusionStatus,String InfusionStatusName
+			,String RemainderVolume,String RemainderTime) {
+		super();
+		this.SeatNo=SeatNo;
+		this.SeatStatus=SeatStatus;
+		this.InfusionID=InfusionID;
+		this.PatientID=PatientID;
+		this.CardNo=CardNo;
+		this.PatientName=PatientName;
+		this.Age=Age;
+		this.BagCnts=BagCnts;
+		this.CompletedBagCnts=CompletedBagCnts;
+		this.TotalDuration=TotalDuration;
+		this.TotalVolume=TotalVolume;
+		this.InfusionDetailID=InfusionDetailID;
+		this.RemainderRate=RemainderRate;
+		this.dripCntsPerminute=dripCntsPerminute;
+		this.TubeID=TubeID;
+		this.dripCntsPerml=dripCntsPerml;
+		this.TubeName=TubeName;
+		this.InfusionStatus=InfusionStatus;
+		this.InfusionStatusName=InfusionStatusName;
+		this.RemainderVolume=RemainderVolume;
+		this.RemainderTime=RemainderTime;
+	}
+	public SeatsInfo(){
+		super();
+	}
+	@Override
+	public String toString() {
+		return "SeatsInfo [SeatNo=" + SeatNo +", SeatStatus=" + SeatStatus +", InfusionID=" + InfusionID 
+				 +", PatientID=" + PatientID +", CardNo=" + CardNo+", PatientName=" + PatientName 
+				 +", Age=" + Age +", BagCnts=" + BagCnts +", CompletedBagCnts=" + CompletedBagCnts
+				 +", TotalDuration=" + TotalDuration +", TotalVolume=" + TotalVolume 
+				 +", InfusionDetailID=" + InfusionDetailID +", RemainderRate=" 
+				 + RemainderRate+", dripCntsPerminute=" + dripCntsPerminute +", TubeID=" + TubeID 
+				 +", dripCntsPerml=" + dripCntsPerml +", TubeName=" + TubeName 
+				 +", InfusionStatus=" + InfusionStatus +", InfusionStatusName=" + InfusionStatusName
+				 +", RemainderVolume=" + RemainderVolume +", RemainderTime=" + RemainderTime+"]";
+	}
+}

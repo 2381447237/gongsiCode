@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/item_ll">
+
+    <RelativeLayout
+         android:background="@drawable/list_item_bg"        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+          >
+
+        <ImageView
+            android:id="@+id/item_iv" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:paddingLeft="160dp"
+            android:layout_centerVertical="true"
+            />
+        
+        <TextView
+            android:id="@+id/item_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="调查表一"
+            android:textColor="#565555"
+            android:textSize="30sp" 
+            android:padding="12dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

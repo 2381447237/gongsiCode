@@ -1,0 +1,324 @@
+package com.fc.unidentified.views;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.example.companytask.CompanyTask;
+import com.example.hospital.R;
+import com.example.hospital.R.layout;
+import com.example.service.MainDaos;
+import com.example.service.MainService;
+import com.fc.helper.BaseActivity;
+import com.fc.helper.CustomApplication;
+import com.fc.helper.IActivity;
+import com.fc.unidentified.beans.RTPullListView;
+import com.fc.unidentified.beans.RTPullListView.OnRefreshListener;
+import com.fc.unidentified.beans.UnideInfo;
+import com.fc.unidentified.beans.UnidentifiedAdapter;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.SystemClock;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+public class UnidentifiedActivity extends BaseActivity implements IActivity,
+		OnItemClickListener {
+	public static final int REFRESH_INFO = 1;
+	public static final int FREQUENCY_INFO = 2;
+	public static final int USAGE_INFO = 3;
+	private static final int LOAD_MORE_SUCCESS = 4;
+	private static final int LOAD_NEW_INFO = 5;
+	Handler handler = new Handler();
+	// private ListView listView;
+	private UnidentifiedAdapter adapter;
+	private List<UnideInfo> infos = new ArrayList<UnideInfo>();
+	MainDaos mainDaos = new MainDaos();
+	private ProgressDialog dialog;
+	private Context context = this;
+	// private MyListViewPullDownAndUp listView;
+	private RTPullListView pullListView;
+	private ProgressBar moreProgressBar;
+
+	private String freque, usage;
+	private CustomApplication app;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_unidentified);
+
+		init();
+		postMsg();
+		Frequency();// 频率
+		Usage();// 用法
+		initview();
+		showDialog();
+	}
+
+	public void initview() {
+		/*
+		 * mListView=(XListView) findViewById(R.id.lsview_unident);
+		 * mListView.setPullLoadEnable(true); adapter= new
+		 * UnidentifiedAdapter(this, infos); mListView.setAdapter(adapter);
+		 * mListView.setXListViewListener(this); mHandler = new Handler();
+		 */
+		// listView=(ListView) findViewById(R.id.lsview_unident);
+		// listView=(MyListViewPullDownAndUp) findViewById(R.id.lsview_unident);
+		pullListView = (RTPullListView) findViewById(R.id.lsview_unident);
+		pullListView.setOnItemClickListener(this);
+		// listView.setRefreshListener(new MyRefreshListener());
+		// 添加listview底部获取更多按钮（可自定义）
+		/*
+		 * LayoutInflater inflater = LayoutInflater.from(this); View view =
+		 * inflater.inflate(R.layout.list_footview, null); RelativeLayout
+		 * footerView =(RelativeLayout) view.findViewById(R.id.list_footview);
+		 * moreProgressBar = (ProgressBar)
+		 * view.findViewById(R.id.footer_progress);
+		 * pullListView.addFooterView(footerView);
+		 */
+
+		// 下拉刷新监听器
+		pullListView.setonRefreshListener(new OnRefreshListener() {
+
+			@Override
+			public void onRefresh() {
+				new Thread(new Runnable() {
+
+					@Override
+					public void run() {
+						try {
+							Thread.sleep(2000);
+							postMsg();
+							myHandler.sendEmptyMessage(LOAD_NEW_INFO);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+				}).start();
+			}
+		});
+
+		/*
+		 * //获取跟多监听器 footerView.setOnClickListener(new OnClickListener() {
+		 * 
+		 * @Override public void onClick(View v) {
+		 * 
+		 * moreProgressBar.setVisibility(View.VISIBLE);
+		 * 
+		 * new Thread(new Runnable() {
+		 * 
+		 * @Override public void run() { try { Thread.sleep(2000);
+		 * 
+		 * postMsg(); myHandler.sendEmptyMessage(LOAD_MORE_SUCCESS); } catch
+		 * (InterruptedException e) { e.printStackTrace(); } } }).start(); } });
+		 */
+	}
+
+	// 结果处理
+	private Handler myHandler = new Handler() {
+
+		@Override
+		public void handleMessage(Message msg) {
+			super.handleMessage(msg);
+			switch (msg.what) {
+			case LOAD_MORE_SUCCESS:
+				moreProgressBar.setVisibility(View.GONE);
+				adapter.notifyDataSetChanged();
+				pullListView.setSelectionfoot();
+				break;
+
+			case LOAD_NEW_INFO:
+				adapter.notifyDataSetChanged();
+				pullListView.onRefreshComplete();
+				break;
+			default:
+				break;
+			}
+		}
+
+	};
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent(UnidentifiedActivity.this,
+				UnidentifiedActivity2.class);
+		intent.putExtra("unitinfo", infos.get(position - 1));
+		startActivity(intent);
+	}
+
+	public void postMsg() {
+		Map<String, Object> params = new HashMap<String, Object>();
+
+		CompanyTask task = new CompanyTask(CompanyTask.UNVISITEDINFO, params);
+		MainService.newTask(task);
+
+	}
+
+	public void Frequency() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.FREQUENCYINFO, params);
+		MainService.newTask(task);
+	}
+
+	public void Usage() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.USAGEINFO, params);
+		MainService.newTask(task);
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		MainService.addActivity(this);
+	}
+
+	@Override
+	public void refresh(Object... params) {
+		// TODO Auto-generated method stub
+		switch (Integer.valueOf(params[0].toString().trim())) {
+		case UnidentifiedActivity.REFRESH_INFO:
+			if (dialog != null && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			if (params[1] != null) {
+				String value = params[1].toString().trim();
+				// if(!value.equals("")){
+				parseJsonList(value);
+				// }
+
+			}
+			break;
+		case UnidentifiedActivity.FREQUENCY_INFO:
+			if (params[1] != null) {
+				freque = params[1].toString().trim();
+				app = (CustomApplication) getApplication();
+				Log.i("qwj", "初始值=====" + app.getFreque()); // 获取进程中的全局变量值，看是否是初始化值
+
+				app.setFreque(freque);
+
+				Log.i("qwj", "修改后=====" + app.getFreque());
+
+			}
+			break;
+		case UnidentifiedActivity.USAGE_INFO:
+			if (params[1] != null) {
+				usage = params[1].toString().trim();
+				app = (CustomApplication) getApplication();
+				Log.i("qwj", "初始值=====" + app.getUsage()); // 获取进程中的全局变量值，看是否是初始化值
+
+				app.setUsage(usage);
+
+				Log.i("qwj", "修改后=====" + app.getUsage());
+
+			}
+			break;
+		}
+	}
+
+	private void parseJsonList(String mtStr) {
+		infos.clear();
+		// List<UnideInfo> list=new ArrayList<UnideInfo>();
+		try {
+			JSONArray jsonArray = new JSONArray(mtStr);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject object = jsonArray.getJSONObject(i);
+				UnideInfo info = new UnideInfo();
+				info.setCard(object.getString("CardNo"));
+				info.setName(object.getString("PatientName"));
+				info.setSex(object.getString("Gender"));
+				info.setAge(object.getString("Age"));
+				info.setAddress(object.getString("VisitAddr"));
+				info.setBirthDate(object.getString("BirthDate"));
+				info.setRCName(object.getString("RCName"));
+				info.setAppointVisitDate(object.getString("AppointVisitDate"));
+				info.setContactor(object.getString("Contactor"));
+				info.setContactPhone(object.getString("ContactPhone"));
+				info.setRegRemark(object.getString("RegRemark"));
+				info.setRegId(object.getInt("RegId"));
+				info.setPatientId(object.getInt("PatientId"));
+
+				infos.add(info);
+
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		adapter = new UnidentifiedAdapter(this, infos);
+		pullListView.setAdapter(adapter);
+	}
+
+	private void showDialog() {
+		dialog = new ProgressDialog(context);
+		dialog.setCanceledOnTouchOutside(false);
+		dialog.setMessage("正在查询，请稍等...");
+		dialog.show();
+
+	}
+
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			exit();
+
+			return true;
+		}
+
+		return super.onKeyDown(keyCode, event);
+
+	}
+	/*
+	 * private void onLoad() { mListView.stopRefresh();
+	 * mListView.stopLoadMore(); mListView.setRefreshTime("刚刚"); }
+	 * 
+	 * @Override public void onRefresh() { // TODO Auto-generated method stub
+	 * mHandler.postDelayed(new Runnable() {
+	 * 
+	 * @Override public void run() { postMsg(); adapter.notifyDataSetChanged();
+	 * onLoad(); } }, 2000); }
+	 * 
+	 * @Override public void onLoadMore() { // TODO Auto-generated method stub
+	 * mHandler.postDelayed(new Runnable() {
+	 * 
+	 * @Override public void run() { postMsg(); adapter.notifyDataSetChanged();
+	 * onLoad(); } }, 2000); }
+	 */
+
+}

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/firstpage_more_title">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@drawable/lt" >
+
+                <ImageView
+                    android:layout_width="150dip"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="20dip"
+                    android:background="@drawable/at" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="30dip" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:text="人员："
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtPeople"
+                        android:layout_width="250dip"
+                        android:layout_height="40dip"
+                        android:ems="20"
+                        android:singleLine="true" 
+                        />
+
+                    <Button
+                        android:id="@+id/btnPeople"
+                        android:layout_width="70dip"
+                        android:layout_height="40dip"
+                        android:layout_marginLeft="15dip"
+                        android:background="@drawable/button_selector"
+                        android:text="选择人员" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:text=" 类型："
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rgpType"
+                        android:layout_width="250dip"
+                        android:layout_height="40dip"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rdbNot"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="未完成"
+                            android:textSize="20dip" />
+
+                        <RadioButton
+                            android:id="@+id/rdbOver"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="已完成"
+                            android:textSize="20dip" />
+                    </RadioGroup>
+
+                    <Button
+                        android:id="@+id/btnCheck"
+                        android:layout_width="70dip"
+                        android:layout_height="40dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/button_selector"
+                        android:text="查询" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:text="开始时间："
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtStartTime"
+                        android:layout_width="250dip"
+                        android:layout_height="40dip"
+                        android:ems="20"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:text="结束时间："
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtEndTime"
+                        android:layout_width="250dip"
+                        android:layout_height="40dip"
+                        android:ems="20"
+                        android:singleLine="true" />
+                     <Button
+                        android:id="@+id/btnAdd"
+                        android:layout_width="70dip"
+                        android:layout_height="40dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/button_selector"
+                        android:text="添加" />
+                    
+                    
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.fc.main.beans.PullDownView
+            android:id="@+id/pdvPendWork"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/firstpage_more_whitebackgroud" 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.fc.main.beans.PullDownView>
+        
+    </LinearLayout>
+
+</LinearLayout>

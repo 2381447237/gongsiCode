@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView 
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="音量设置"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"
+            android:paddingTop="10dip"
+            android:textSize="20sp"
+            />
+        <ImageView 
+            android:id="@+id/ivClose"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:src="@drawable/close"
+            android:scaleType="centerInside"/>       
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:layout_marginBottom="30dip"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/volume"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"/>
+        <SeekBar 
+            android:id="@+id/sbVolume"
+            android:layout_width="500dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dip"
+            android:layout_marginLeft="10dip"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/thumb"
+           	android:maxHeight="1dip"
+            />
+    </LinearLayout>
+    
+</LinearLayout>

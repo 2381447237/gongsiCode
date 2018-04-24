@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/lblNo"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="60dp"
+        android:gravity="center"
+        android:text="编号" />
+
+    <TextView
+        android:id="@+id/lblName"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:text="姓　名" />
+
+    <TextView
+        android:id="@+id/lblSex"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="250dp"
+        android:gravity="center"
+        android:text="性　别" />
+
+    <TextView
+        android:id="@+id/lblIdCard3"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="280dp"
+        android:gravity="center"
+        android:text="身份证" />
+
+    <TextView
+        android:id="@+id/lblPhone"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="联系电话" />
+
+</LinearLayout>

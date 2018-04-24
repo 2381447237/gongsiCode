@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   android:layout_centerInParent="true" >
+    
+    <LinearLayout 
+       android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       android:background="@drawable/paizhao_shape" >
+        
+        <TextView 
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请传入身份证照片"
+            android:textSize="19sp"
+            android:padding="12dp"
+            android:textColor="#000000"
+            />
+        
+    </LinearLayout>
+    <View 
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#999999"
+            />
+     <LinearLayout 
+         android:id="@+id/ll_ensure"
+       android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       android:background="@drawable/xiangce_shape" >
+        
+        <TextView 
+            android:textColor="#0000ff"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:textSize="19sp"
+            android:padding="8dp"
+            />
+        
+    </LinearLayout>
+</LinearLayout>
+    
+</RelativeLayout>

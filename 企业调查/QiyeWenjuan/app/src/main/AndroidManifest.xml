@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youli.qiyewenjuan">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.ComNaireActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.ComListActivity"
+            android:screenOrientation="portrait"></activity><!--企业列表-->
+
+        <activity android:name=".activity.ComPersonListActivity"
+            android:screenOrientation="portrait"></activity><!--企业人员列表-->
+
+        <activity android:name=".activity.ComNaireDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity><!--企业调查里面的问卷-->
+
+    </application>
+
+</manifest>

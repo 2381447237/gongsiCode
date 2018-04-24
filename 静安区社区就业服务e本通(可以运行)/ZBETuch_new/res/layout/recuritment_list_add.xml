@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/list_no"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="编号" />
+
+    <TextView
+        android:id="@+id/list_code"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1.2"
+        android:layout_gravity="center"
+        android:text="岗位编号" />
+
+    <TextView
+        android:id="@+id/list_smart_id"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1.2"
+        android:layout_gravity="center"
+        android:text="招聘会编号" />
+
+    <TextView
+        android:id="@+id/list_idcard"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="身份证" />
+
+    <TextView
+        android:id="@+id/list_create_time"
+        style="@style/gradeate_list_itemtext"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="创建时间" />
+
+</LinearLayout>

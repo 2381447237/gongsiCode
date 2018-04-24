@@ -1,0 +1,206 @@
+package com.example.Seats.beans;
+
+import java.io.Serializable;
+
+public class SeatsInfo implements Serializable{
+	private String SEATNO;
+	private String SEATSTATUS;
+	private String INFUSIONID;
+	private String PATIENTID;
+	private String CARDNO;
+	private String PATIENTNAME;
+	private String GENDER;
+	private String AGE;
+	private String BAGCNTS;
+	private String COMPLETEDBAGCNTS;
+	private String TOTALDURATION;
+	private String TOTALVOLUME;
+	private String INFUSIONDETAILID;
+	private String REMAINDERRATE;
+	private String DRIPCNTSPERMINUTE;
+	private String TUBEID;
+	private String DRIPCNTSPERML;
+	private String TUBENAME;
+	private String INFUSIONSTATUS;
+	private String INFUSIONSTATUSNAME;
+	private String REMAINDERVOLUME;
+	private String REMAINDERTIME;
+	
+
+	public String getSEATNO() {
+		return SEATNO;
+	}
+	public void setSEATNO(String sEATNO) {
+		SEATNO = sEATNO;
+	}
+	public String getSEATSTATUS() {
+		return SEATSTATUS;
+	}
+	public void setSEATSTATUS(String sEATSTATUS) {
+		SEATSTATUS = sEATSTATUS;
+	}
+	public String getINFUSIONID() {
+		return INFUSIONID;
+	}
+	public void setINFUSIONID(String iNFUSIONID) {
+		INFUSIONID = iNFUSIONID;
+	}
+	public String getPATIENTID() {
+		return PATIENTID;
+	}
+	public void setPATIENTID(String pATIENTID) {
+		PATIENTID = pATIENTID;
+	}
+	public String getCARDNO() {
+		return CARDNO;
+	}
+	public void setCARDNO(String cARDNO) {
+		CARDNO = cARDNO;
+	}
+	public String getPATIENTNAME() {
+		return PATIENTNAME;
+	}
+	public void setPATIENTNAME(String pATIENTNAME) {
+		PATIENTNAME = pATIENTNAME;
+	}
+	public String getGENDER() {
+		return GENDER;
+	}
+	public void setGENDER(String gENDER) {
+		GENDER = gENDER;
+	}
+	public String getAGE() {
+		return AGE;
+	}
+	public void setAGE(String aGE) {
+		AGE = aGE;
+	}
+	public String getBAGCNTS() {
+		return BAGCNTS;
+	}
+	public void setBAGCNTS(String bAGCNTS) {
+		BAGCNTS = bAGCNTS;
+	}
+	public String getCOMPLETEDBAGCNTS() {
+		return COMPLETEDBAGCNTS;
+	}
+	public void setCOMPLETEDBAGCNTS(String cOMPLETEDBAGCNTS) {
+		COMPLETEDBAGCNTS = cOMPLETEDBAGCNTS;
+	}
+	public String getTOTALDURATION() {
+		return TOTALDURATION;
+	}
+	public void setTOTALDURATION(String tOTALDURATION) {
+		TOTALDURATION = tOTALDURATION;
+	}
+	public String getTOTALVOLUME() {
+		return TOTALVOLUME;
+	}
+	public void setTOTALVOLUME(String tOTALVOLUME) {
+		TOTALVOLUME = tOTALVOLUME;
+	}
+	public String getINFUSIONDETAILID() {
+		return INFUSIONDETAILID;
+	}
+	public void setINFUSIONDETAILID(String iNFUSIONDETAILID) {
+		INFUSIONDETAILID = iNFUSIONDETAILID;
+	}
+	public String getREMAINDERRATE() {
+		return REMAINDERRATE;
+	}
+	public void setREMAINDERRATE(String rEMAINDERRATE) {
+		REMAINDERRATE = rEMAINDERRATE;
+	}
+	public String getDRIPCNTSPERMINUTE() {
+		return DRIPCNTSPERMINUTE;
+	}
+	public void setDRIPCNTSPERMINUTE(String dRIPCNTSPERMINUTE) {
+		DRIPCNTSPERMINUTE = dRIPCNTSPERMINUTE;
+	}
+	public String getTUBEID() {
+		return TUBEID;
+	}
+	public void setTUBEID(String tUBEID) {
+		TUBEID = tUBEID;
+	}
+	public String getDRIPCNTSPERML() {
+		return DRIPCNTSPERML;
+	}
+	public void setDRIPCNTSPERML(String dRIPCNTSPERML) {
+		DRIPCNTSPERML = dRIPCNTSPERML;
+	}
+	public String getTUBENAME() {
+		return TUBENAME;
+	}
+	public void setTUBENAME(String tUBENAME) {
+		TUBENAME = tUBENAME;
+	}
+	public String getINFUSIONSTATUS() {
+		return INFUSIONSTATUS;
+	}
+	public void setINFUSIONSTATUS(String iNFUSIONSTATUS) {
+		INFUSIONSTATUS = iNFUSIONSTATUS;
+	}
+	public String getINFUSIONSTATUSNAME() {
+		return INFUSIONSTATUSNAME;
+	}
+	public void setINFUSIONSTATUSNAME(String iNFUSIONSTATUSNAME) {
+		INFUSIONSTATUSNAME = iNFUSIONSTATUSNAME;
+	}
+	public String getREMAINDERVOLUME() {
+		return REMAINDERVOLUME;
+	}
+	public void setREMAINDERVOLUME(String rEMAINDERVOLUME) {
+		REMAINDERVOLUME = rEMAINDERVOLUME;
+	}
+	public String getREMAINDERTIME() {
+		return REMAINDERTIME;
+	}
+	public void setREMAINDERTIME(String rEMAINDERTIME) {
+		REMAINDERTIME = rEMAINDERTIME;
+	}
+	public SeatsInfo (String SeatNo,String SeatStatus,String InfusionID,String PatientID
+			,String CardNo,String PatientName,String Gender,String Age,String BagCnts
+			,String CompletedBagCnts,String TotalDuration,String TotalVolume,String InfusionDetailID
+			,String RemainderRate,String dripCntsPerminute,String TubeID,String dripCntsPerml
+			,String TubeName,String InfusionStatus,String InfusionStatusName
+			,String RemainderVolume,String RemainderTime) {
+		super();
+		this.SEATNO=SeatNo;
+		this.SEATSTATUS=SeatStatus;
+		this.INFUSIONID=InfusionID;
+		this.PATIENTID=PatientID;
+		this.CARDNO=CardNo;
+		this.PATIENTNAME=PatientName;
+		this.AGE=Age;
+		this.BAGCNTS=BagCnts;
+		this.COMPLETEDBAGCNTS=CompletedBagCnts;
+		this.TOTALDURATION=TotalDuration;
+		this.TOTALVOLUME=TotalVolume;
+		this.INFUSIONDETAILID=InfusionDetailID;
+		this.REMAINDERRATE=RemainderRate;
+		this.DRIPCNTSPERMINUTE=dripCntsPerminute;
+		this.TUBEID=TubeID;
+		this.DRIPCNTSPERML=dripCntsPerml;
+		this.TUBENAME=TubeName;
+		this.INFUSIONSTATUS=InfusionStatus;
+		this.INFUSIONSTATUSNAME=InfusionStatusName;
+		this.REMAINDERVOLUME=RemainderVolume;
+		this.REMAINDERTIME=RemainderTime;
+	}
+	public SeatsInfo(){
+		super();
+	}
+	@Override
+	public String toString() {
+		return "SeatsInfo [SeatNo=" + SEATNO +", SeatStatus=" + SEATSTATUS +", InfusionID=" + INFUSIONID 
+				 +", PatientID=" + PATIENTID +", CardNo=" + CARDNO+", PatientName=" + PATIENTNAME 
+				 +", Age=" + AGE +", BagCnts=" + BAGCNTS +", CompletedBagCnts=" + COMPLETEDBAGCNTS
+				 +", TotalDuration=" + TOTALDURATION +", TotalVolume=" + TOTALVOLUME 
+				 +", InfusionDetailID=" + INFUSIONDETAILID +", RemainderRate=" 
+				 + REMAINDERRATE+", dripCntsPerminute=" + DRIPCNTSPERMINUTE +", TubeID=" + TUBEID 
+				 +", dripCntsPerml=" + DRIPCNTSPERML +", TubeName=" + TUBENAME 
+				 +", InfusionStatus=" + INFUSIONSTATUS +", InfusionStatusName=" + INFUSIONSTATUSNAME
+				 +", RemainderVolume=" + REMAINDERVOLUME +", RemainderTime=" + REMAINDERTIME+"]";
+	}
+}

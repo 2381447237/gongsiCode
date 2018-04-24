@@ -1,0 +1,257 @@
+package com.example.Seats.views;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.example.Seats.beans.SeatsAdapter;
+import com.example.Seats.beans.SeatsInfo;
+import com.example.companytask.CompanyTask;
+import com.example.helper.IActivity;
+import com.example.ppu_infusion.R;
+import com.example.services.MainServices;
+
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.app.AlertDialog.Builder;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.ActionMode;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.GridView;
+import android.widget.Toast;
+
+public class SeatsActivity extends Activity implements IActivity,
+		OnItemClickListener, OnClickListener {
+	public static final int SEATS = 1;
+	private int StaffID;
+	private GridView gridView;
+	private SeatsAdapter adapter;
+	private List<SeatsInfo> infos = new ArrayList<SeatsInfo>();
+	private DisplayMetrics dm;
+	private Handler mHandler;
+	private ProgressDialog dialog;
+	private Context context = this;
+	private Button btn;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// 设置屏幕无标题
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		// 设置屏幕全屏
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		setContentView(R.layout.activity_seats);
+		Intent intent = getIntent();
+		StaffID = intent.getIntExtra("StaffID", -1);
+		/*
+		 * //得到屏幕的大小 dm = new DisplayMetrics();
+		 * getWindowManager().getDefaultDisplay().getMetrics(dm); Log.i("qwj",
+		 * "dm=="+dm);
+		 */
+		init();
+		initview();
+		// postMsg();
+		showDialog();
+		mHandler = new Handler();
+		mHandler.post(r);
+	}
+
+	Runnable r = new Runnable() {
+
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			postMsg();
+			mHandler.postDelayed(this, 5000);
+		}
+	};
+
+	public void initview() {
+		gridView = (GridView) findViewById(R.id.gridview);
+		btn = (Button) findViewById(R.id.bt_scanning);
+		gridView.setOnItemClickListener(this);
+		btn.setOnClickListener(this);
+	}
+
+	public void postMsg() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.SEATSINFO, params);
+		MainServices.newTask(task);
+
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		MainServices.addActivity(this);
+	}
+
+	@Override
+	public void refresh(Object... params) {
+		// TODO Auto-generated method stub
+		switch (Integer.valueOf(params[0].toString().trim())) {
+		case SeatsActivity.SEATS:
+			if (dialog != null && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			if (params[1] != null) {
+				String value = params[1].toString().trim();
+
+				parseJsonList(value);
+
+			}
+			break;
+
+		default:
+			break;
+		}
+	}
+
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent();
+		intent.putExtra("StaffID", StaffID);
+		intent.putExtra("SeatsInfo", infos.get(position));
+		intent.setClass(SeatsActivity.this, InfusionActivity.class);
+		startActivity(intent);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent();
+		intent.setClass(SeatsActivity.this, CaptureActivity.class);
+		startActivityForResult(intent, 100);
+	}
+	private void parseJsonList(String mtStr) {
+		infos.clear();
+		// List<UnideInfo> list=new ArrayList<UnideInfo>();
+		try {
+			JSONArray jsonArray = new JSONArray(mtStr);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject object = jsonArray.getJSONObject(i);
+				SeatsInfo info = new SeatsInfo();
+				info.setSeatNo(object.getString("SeatNo"));
+				info.setSeatStatus(object.getString("SeatStatus"));
+				info.setInfusionID(object.getString("InfusionID"));
+				info.setPatientID(object.getString("PatientID"));
+				info.setCardNo(object.getString("CardNo"));
+				info.setPatientName(object.getString("PatientName"));
+				info.setGender(object.getString("Gender"));
+				info.setAge(object.getString("Age"));
+				info.setBagCnts(object.getString("BagCnts"));
+				info.setCompletedBagCnts(object.getString("CompletedBagCnts"));
+				info.setTotalDuration(object.getString("TotalDuration"));
+				info.setTotalVolume(object.getString("TotalVolume"));
+				info.setInfusionDetailID(object.getString("InfusionDetailID"));
+				info.setRemainderRate(object.getString("RemainderRate"));
+				info.setDripCntsPerminute(object.getString("dripCntsPerminute"));
+				info.setTubeID(object.getString("TubeID"));
+				info.setDripCntsPerml(object.getString("dripCntsPerml"));
+				info.setTubeName(object.getString("TubeName"));
+				info.setInfusionStatus(object.getString("InfusionStatus"));
+				info.setInfusionStatusName(object
+						.getString("InfusionStatusName"));
+				info.setRemainderVolume(object.getString("RemainderVolume"));
+				info.setRemainderTime(object.getString("RemainderTime"));
+				if (info.getSeatStatus().equals("1")) {
+					infos.add(info);
+				}
+				
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		adapter = new SeatsAdapter(this, infos);
+		gridView.setAdapter(adapter);
+	}
+
+	private void showDialog() {
+		dialog = new ProgressDialog(context);
+		dialog.setCanceledOnTouchOutside(false);
+		dialog.setMessage("正在查询，请稍等...");
+		dialog.show();
+
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == 100) {// 扫描返回的结果
+			if (resultCode == RESULT_OK) {
+				String getValue = data.getStringExtra("extra");
+				Log.i("aaa", "getValue==" + getValue);
+			}
+		}
+
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			AlertDialog.Builder builder = new Builder(SeatsActivity.this);
+			builder.setTitle("关闭提示")
+					.setMessage("您确定要关闭此程序吗?")
+					.setIcon(android.R.drawable.ic_dialog_info)
+					.setCancelable(true)
+					.setPositiveButton("确定",
+							new DialogInterface.OnClickListener() {
+
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
+									mHandler.removeCallbacks(r);
+									Intent intent = new Intent(
+											"com.example.services.MainServices");
+									context.stopService(intent);
+									finish();
+								}
+							}).setNegativeButton("取消", null).show();
+
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+	}
+
+}

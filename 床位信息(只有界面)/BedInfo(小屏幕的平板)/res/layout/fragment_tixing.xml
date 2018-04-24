@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/tixing_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="70dp"
+        android:text="床号:"
+         android:textColor="#ffffff"
+        android:textSize="28sp" />
+
+    <TextView 
+        android:paddingTop="10dp"
+        android:id="@+id/tixing_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="12345"
+         android:textColor="#dc8454"
+        android:textSize="28sp"
+        android:layout_toRightOf="@id/tixing_tv1"
+        />
+    
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/tixing_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tixing_tv1"
+        android:paddingLeft="160dp"
+        android:text="姓名:"
+      android:textColor="#ffffff"
+        android:textSize="28sp" />
+
+    <TextView 
+        android:paddingTop="10dp"
+        android:id="@+id/tixing_info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="任宁"
+          android:textColor="#dc8454"
+        android:textSize="28sp"
+        android:layout_toRightOf="@id/tixing_tv2"
+        />
+    
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/tixing_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tixing_tv2"
+        android:paddingLeft="160dp"
+        android:text="住院号:"
+         android:textColor="#ffffff"
+        android:textSize="28sp" />
+
+    <TextView 
+        android:paddingTop="10dp"
+        android:id="@+id/tixing_info3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="12345"
+          android:textColor="#dc8454"
+        android:textSize="28sp"
+        android:layout_toRightOf="@id/tixing_tv3"
+        />
+    
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="70dp"
+        android:layout_centerVertical="true"
+        >
+    
+    <RelativeLayout
+        android:id="@+id/tixing_rl1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+     >
+
+        <ImageView
+            android:id="@+id/tixing_sqtx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/txfw_sqtx" 
+             android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tixing_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tixing_sqtx"
+             android:layout_centerHorizontal="true"
+            android:paddingTop="60dp"
+            android:text="术前提醒"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tixing_rl2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+ >
+
+        <ImageView
+            android:id="@+id/tixing_shtx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/txfw_shtx"
+             android:layout_centerHorizontal="true" />
+
+        <TextView
+             android:layout_centerHorizontal="true"
+            android:id="@+id/tixing_tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tixing_shtx"
+            android:paddingTop="60dp"
+            android:text="术后提醒"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/tixing_tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:text="滚动提示区"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+     <TextView
+        android:id="@+id/tixing_info4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/tixing_tv6"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="10dp"
+        android:paddingLeft="50dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="尊敬的患者朋友，感谢您选择301医院就诊，为方便您就医，我院推出了银医“一卡通”挂号就诊业务"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+    
+</RelativeLayout>

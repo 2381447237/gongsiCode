@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9f2f4"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#26cfff"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="彭浦新村街道社区卫生服务中心满意度调查"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
+
+        <RelativeLayout
+            android:id="@+id/caidan_rl"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/list_item_bg3"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp" >
+
+            <ImageView
+                android:id="@+id/caidan_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/caidan" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/lv_formlist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null" >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_ly_noNetwork"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/lv_formlist_noNetwork"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null" >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+   <TextView 
+     android:textSize="30sp"
+     android:text="请下载网络数据"
+     android:id="@+id/tvAdvise"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:layout_gravity="center"
+     android:gravity="center"
+     android:visibility="gone"
+     />
+</LinearLayout>

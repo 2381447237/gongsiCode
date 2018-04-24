@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="xuqiu">
+        <item>政策咨询</item>
+        <item>职业介绍</item>
+        <item>职业指导</item>
+        <item>就业见习</item>
+        <item>职业培训</item>
+        <item>职业技能鉴定</item>
+        <item>创业培训</item>
+        <item>创业指导</item>
+        <item>公益性岗位</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="jobtype">
+        <item>家政服务类</item>
+        <item>物流仓储类</item>
+        <item>生产制造类（简单操作性岗位）</item>
+        <item>交通运输类</item>
+        <item>餐饮、娱乐服务类</item>
+        <item>机械技工类（技术性岗位）</item>
+        <item>法律、顾问、中介类</item>
+        <item>行政办公类</item>
+        <item>社会公众服务类</item>
+        <item>工程技术类</item>
+        <item>教育培训类</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="jobprice">
+        <item>请选择</item>
+        <item>2000元以下</item>
+        <item>2000-3000元</item>
+        <item>3000-4000元</item>
+        <item>4000-5000元</item>
+        <item>5000以上</item>
+    </string-array>
+    <string-array name="jobyes">
+        <item>请选择</item>
+        <item>愿意</item>
+        <item>不愿意</item>
+        <item>不确定</item>
+    </string-array>
+    <string-array name="traintype">
+        <item>管理咨询类</item>
+        <item>信息服务类</item>
+        <item>创意设计类</item>
+        <item>工艺美术类</item>
+        <item>文化教育类</item>
+        <item>会展服务类</item>
+        <item>物流服务类</item>
+        <item>商贸服务类</item>
+        <item>旅游服务类</item>
+        <item>生活服务类</item>
+        <item>机电技术类</item>
+        <item>电子通信类</item>
+        <item>能源动力类</item>
+        <item>交通运输类</item>
+        <item>化工环保类</item>
+        <item>纺织服装类</item>
+        <item>食品药品类</item>
+        <item>冶金技术类</item>
+        <item>建筑工程类</item>
+        <item>农林牧渔类</item>
+        <item>其他</item>
+    </string-array>
+
+</resources>

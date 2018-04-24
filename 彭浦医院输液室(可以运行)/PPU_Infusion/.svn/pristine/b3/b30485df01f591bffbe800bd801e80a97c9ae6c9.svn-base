@@ -1,0 +1,42 @@
+package com.example.Seats.beans;
+
+import java.io.Serializable;
+
+public class TubesInfo implements Serializable{
+	private String TubeID;
+	private String TubeName;
+	private String dripCntsPerml;
+	public String getTubeID() {
+		return TubeID;
+	}
+	public void setTubeID(String tubeID) {
+		TubeID = tubeID;
+	}
+	public String getTubeName() {
+		return TubeName;
+	}
+	public void setTubeName(String tubeName) {
+		TubeName = tubeName;
+	}
+	public String getDripCntsPerml() {
+		return dripCntsPerml;
+	}
+	public void setDripCntsPerml(String dripCntsPerml) {
+		this.dripCntsPerml = dripCntsPerml;
+	}
+	
+	public TubesInfo(String TubeID,String TubeName,String dripCntsPerml){
+		super();
+		this.TubeID=TubeID;
+		this.TubeName=TubeName;
+		this.dripCntsPerml=dripCntsPerml;
+	}
+	public TubesInfo(){
+		super();
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return TubeName;
+	}
+}

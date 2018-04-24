@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addpersonlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="@drawable/bt"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:text="启航计划"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text=" 身 份 证 "
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_idcard"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text=" 姓     名  "
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_name"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="文化程度"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_carture"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <requestFocus />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tableRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="户籍地址"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_adress"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="户口街道 "
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_street"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="户口居委"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_juwei"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tableRow4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="服务地地址"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_status"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="服务地街道"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_data"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="服务地居委"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_current_yixiang"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tableRow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/textView100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="目前状况"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_mqzk"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="当前意向"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_dqyx"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="期望月薪"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/qh_qwyx"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tableRow6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/fwxq1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="服务需求1"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etfwxq1"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/fwxq2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="服务需求2"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etfwxq2"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/fwxq3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="服务需求3"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etfwxq3"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tableRow7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/gzlx1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="工作类型1"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etgzlx1"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/gzlx2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="工作类型2"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etgzlx2"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/gzlx3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="工作类型3"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etgzlx3"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tableRow8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/pxlx1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="培训类型1"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etpxlx1"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/pxlx2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="培训类型2"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etpxlx2"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/pxlx3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="培训类型3"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etpxlx3"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textSize="15sp" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tableRow6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/qh_shideng_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_selector"
+                        android:focusable="false"
+                        android:text="点击调查"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/qh_xxzl_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:background="@drawable/btn_selector"
+                        android:focusable="false"
+                        android:text="详细信息"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/no_dc_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:background="@drawable/btn_selector"
+                        android:focusable="false"
+                        android:text="无法调查"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_detail_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="调查日期："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/qh_diaocha_data"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="17sp" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/textView42"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="调查人："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/qh_diaocha_person"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:enabled="false"
+                            android:singleLine="true"
+                            android:textSize="17sp" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="目前状况："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/qh_status_spinner"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="当前意向："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/qh_current_spinner"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="外区就业："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/jobyesno"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="期望月薪："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/price_one_d"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_btn1"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fuwulay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="服务需求："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/xuqiu"
+                            android:layout_width="500dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:textSize="17sp" />
+
+                        <Button
+                            android:id="@+id/xuqiubtn"
+                            android:layout_width="100dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/btn_selector"
+                            android:focusable="false"
+                            android:text="需求"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/joblay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="工作类型："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/jobtype"
+                            android:layout_width="500dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:textSize="17sp" />
+
+                        <Button
+                            android:id="@+id/jobtypebtn"
+                            android:layout_width="100dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/btn_selector"
+                            android:focusable="false"
+                            android:text="类型"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/peixunlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="培训类别："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/traintype"
+                            android:layout_width="500dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:textSize="17sp" />
+
+                        <Button
+                            android:id="@+id/traintypebtn"
+                            android:layout_width="100dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/btn_selector"
+                            android:focusable="false"
+                            android:text="培训"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tableRow12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView42"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="145dp"
+                            android:text="备　　注："
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/qh_diaocha_remark"
+                            android:layout_width="580dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:singleLine="true"
+                            android:textSize="17sp" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tableRow12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@+id/qihang_result_tall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/btn_selector"
+                            android:focusable="false"
+                            android:text="调查结果同上"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/qh_diaocha_btn"
+                            android:layout_width="100dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/btn_selector"
+                            android:focusable="false"
+                            android:text="提交"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

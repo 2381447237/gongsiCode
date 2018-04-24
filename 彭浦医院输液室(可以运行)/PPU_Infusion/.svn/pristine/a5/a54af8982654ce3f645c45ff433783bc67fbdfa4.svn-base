@@ -1,0 +1,102 @@
+package com.example.Seats.beans;
+
+import java.io.Serializable;
+
+public class InfusionInfo implements Serializable{
+	private String HISOrderID;
+	private String CardNo;
+	private String PatientName;
+	private String Gender;
+	private String BirthDate;
+	private String OrderDate;
+	private String OrderDoctorName;
+	private String OrderDeptName;
+	private String DiagInfo;
+	private String HISClinicNo;
+	public String getHISOrderID() {
+		return HISOrderID;
+	}
+	public void setHISOrderID(String hISOrderID) {
+		HISOrderID = hISOrderID;
+	}
+	public String getCardNo() {
+		return CardNo;
+	}
+	public void setCardNo(String cardNo) {
+		CardNo = cardNo;
+	}
+	public String getPatientName() {
+		return PatientName;
+	}
+	public void setPatientName(String patientName) {
+		PatientName = patientName;
+	}
+	public String getGender() {
+		return Gender;
+	}
+	public void setGender(String gender) {
+		Gender = gender;
+	}
+	public String getBirthDate() {
+		return BirthDate;
+	}
+	public void setBirthDate(String birthDate) {
+		BirthDate = birthDate;
+	}
+	public String getOrderDate() {
+		return OrderDate;
+	}
+	public void setOrderDate(String orderDate) {
+		OrderDate = orderDate;
+	}
+	public String getOrderDoctorName() {
+		return OrderDoctorName;
+	}
+	public void setOrderDoctorName(String orderDoctorName) {
+		OrderDoctorName = orderDoctorName;
+	}
+	public String getOrderDeptName() {
+		return OrderDeptName;
+	}
+	public void setOrderDeptName(String orderDeptName) {
+		OrderDeptName = orderDeptName;
+	}
+	public String getDiagInfo() {
+		return DiagInfo;
+	}
+	public void setDiagInfo(String diagInfo) {
+		DiagInfo = diagInfo;
+	}
+	public String getHISClinicNo() {
+		return HISClinicNo;
+	}
+	public void setHISClinicNo(String hISClinicNo) {
+		HISClinicNo = hISClinicNo;
+	}
+	
+	public InfusionInfo(String HISOrderID,String CardNo,String PatientName,String Gender
+			,String BirthDate,String OrderDate,String OrderDoctorName,String OrderDeptName
+			,String DiagInfo,String HISClinicNo){
+		super();
+		this.HISOrderID=HISOrderID;
+		this.CardNo=CardNo;
+		this.PatientName=PatientName;
+		this.Gender=Gender;
+		this.BirthDate=BirthDate;
+		this.OrderDate=OrderDate;
+		this.OrderDoctorName=OrderDoctorName;
+		this.OrderDeptName=OrderDeptName;
+		this.DiagInfo=DiagInfo;
+		this.HISClinicNo=HISClinicNo;
+	}
+	public InfusionInfo(){
+		super();
+	}
+	@Override
+	public String toString() {
+		return "InfusionInfo [HISOrderID=" + HISOrderID +", CardNo=" + CardNo +", PatientName=" + PatientName 
+				 +", Gender=" + Gender +", BirthDate=" + BirthDate+", OrderDate=" + OrderDate 
+				 +", OrderDoctorName=" + OrderDoctorName +", OrderDeptName=" + OrderDeptName 
+				 +", DiagInfo=" + DiagInfo+", HISClinicNo=" + HISClinicNo+"]";
+	}
+}

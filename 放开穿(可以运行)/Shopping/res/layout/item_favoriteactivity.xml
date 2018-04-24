@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/boeder" >
+    
+<ImageView
+        android:id="@+id/img_collect1_favoriteactivity"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/collect" />
+    
+<com.example.cusview.CusviewViewPager
+        android:id="@+id/viewPager_favoriteactivity"
+        android:layout_width="fill_parent"  
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+         android:layout_marginTop="20dp" 
+         android:paddingTop="5dp"
+         android:paddingLeft="1dp"
+         android:paddingRight="1dp"
+        />
+
+<TextView
+        android:id="@+id/tv_ItemName_favoriteactivity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPager_favoriteactivity"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="xxx" />
+
+<LinearLayout 
+    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPager_favoriteactivity"
+         android:layout_marginTop="20dp" 
+         android:orientation="vertical"
+    >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" 
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textView2_favoriteactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="￥"
+            android:textSize="14sp"
+            android:textColor="#ff0000" />
+
+        <TextView
+            android:id="@+id/tv_IsCollect_favoriteactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="xxx"
+             android:textSize="22sp"
+             android:textColor="#ff0000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textView3_favoriteactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="零售 ￥"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_RetailPrice_favoriteactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="xxx"
+            android:visibility="gone" />
+    </LinearLayout>
+    
+</LinearLayout>
+
+</RelativeLayout>

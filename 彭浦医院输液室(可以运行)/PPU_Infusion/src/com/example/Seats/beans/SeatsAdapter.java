@@ -1,0 +1,159 @@
+package com.example.Seats.beans;
+
+import java.util.List;
+
+import com.example.ppu_infusion.R;
+
+
+import android.content.Context;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class SeatsAdapter extends BaseAdapter{
+	private Context context;
+	private List<SeatsInfo> seatsInfos;
+	public SeatsAdapter(Context context,List<SeatsInfo> seatsInfos){
+		super();
+		this.context=context;
+		this.seatsInfos=seatsInfos;
+	}
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return seatsInfos.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return seatsInfos.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		final ItemHodler hodler ;
+		if(convertView==null){
+			convertView=LayoutInflater.from(context).inflate(R.layout.adapter_seats, null);
+			hodler=new ItemHodler();
+			hodler.name=(TextView) convertView.findViewById(R.id.name);
+			hodler.seat=(TextView) convertView.findViewById(R.id.seat);
+			hodler.speed=(TextView) convertView.findViewById(R.id.speed);
+			hodler.surplus=(TextView) convertView.findViewById(R.id.surplus);
+			hodler.img_sex=(ImageView) convertView.findViewById(R.id.img_sex);
+			hodler.img_yao=(ImageView) convertView.findViewById(R.id.img_yao);
+			hodler.layout=(LinearLayout) convertView.findViewById(R.id.Linear_se);
+			convertView.setTag(hodler);
+		}else{
+			hodler = (ItemHodler)convertView.getTag();
+		}
+		SeatsInfo info=seatsInfos.get(position);
+		
+		hodler.name.setText(info.getPATIENTNAME());
+		hodler.seat.setText(info.getSEATNO());
+		if(!TextUtils.equals(info.getDRIPCNTSPERMINUTE(), "-1")){
+			hodler.speed.setVisibility(View.VISIBLE);
+		hodler.speed.setText(info.getDRIPCNTSPERMINUTE()+"/∑÷÷”");
+		}else{
+			hodler.speed.setVisibility(View.GONE);
+		}
+		if(!TextUtils.equals(info.getREMAINDERVOLUME(),"-1")){
+			hodler.surplus.setVisibility(View.VISIBLE);
+		hodler.surplus.setText(info.getREMAINDERVOLUME()+"/ml");
+		}else{
+			hodler.surplus.setVisibility(View.GONE);
+		}
+		if(info.getGENDER().equals("ƒ–")){
+			hodler.img_sex.setImageResource(R.drawable.man);
+		}
+		else if(info.getGENDER().equals("≈Æ")){
+			hodler.img_sex.setImageResource(R.drawable.woman);
+		}
+		
+		
+		if(info.getINFUSIONSTATUSNAME().equals("Œ¥ ‰“∫")||info.getPATIENTNAME().equals("null")){
+			hodler.img_yao.setVisibility(View.GONE);
+		}else{
+			hodler.img_yao.setVisibility(View.VISIBLE);
+		}
+	
+		if(Integer.parseInt(info.getREMAINDERVOLUME())<10&&!info.getINFUSIONSTATUSNAME().equals("Œ¥ ‰“∫")){
+			
+			hodler.layout.setBackgroundResource(R.drawable.hong_kuang);
+			
+		}else{
+			
+			if(info.getINFUSIONSTATUSNAME().equals("Œ¥ ‰“∫")){
+				hodler.layout.setBackgroundResource(R.drawable.kuang);
+			}else if(info.getINFUSIONSTATUSNAME().equals("‘›Õ£ ‰“∫")){
+				hodler.layout.setBackgroundResource(R.drawable.cheng_kuang);
+			}else if(info.getINFUSIONSTATUSNAME().equals("’˝‘⁄ ‰“∫")){
+				hodler.layout.setBackgroundResource(R.drawable.kuang);
+			 
+		}
+		
+		}
+		
+		//if(info.getINFUSIONSTATUSNAME().equals("Œ¥ ‰“∫")||info.getPATIENTNAME().equals("null")){
+			//hodler.img_yao.setVisibility(View.GONE);
+			//hodler.layout.setBackgroundResource(R.drawable.kuang);
+
+		//}
+		//else if(info.getINFUSIONSTATUSNAME().equals("‘›Õ£ ‰“∫")){
+			//hodler.img_yao.setVisibility(View.VISIBLE);
+			//hodler.layout.setBackgroundResource(R.drawable.cheng_kuang);
+		//}
+		int img_index=10;
+		if(info.getREMAINDERRATE()==null||info.getREMAINDERRATE().equals("null")){
+			//hodler.img_yao.setVisibility(View.VISIBLE);
+		}else{
+			//hodler.img_yao.setVisibility(View.VISIBLE);
+			 if (Integer.parseInt(info.getREMAINDERRATE())<10)
+			{
+				img_index=0;
+				if(!info.getINFUSIONSTATUSNAME().equals("Œ¥ ‰“∫")){
+				//hodler.layout.setBackgroundResource(R.drawable.hong_kuang);
+				}
+			}
+			else if(info.getREMAINDERRATE().length()==2&&info.getREMAINDERRATE()!=null)
+			{
+				
+				img_index=Integer.parseInt( info.getREMAINDERRATE().substring(0, 1));
+			}
+			
+		}
+
+		final int imagesid[];
+				imagesid = new int[] 
+				{ 
+					R.drawable.a_0,
+					R.drawable.a_1,	R.drawable.a_2,
+					R.drawable.a_3, R.drawable.a_4,
+					R.drawable.a_5, R.drawable.a_6,
+					R.drawable.a_7, R.drawable.a_8, 
+					R.drawable.a_9, R.drawable.a_10 
+				};
+				hodler.img_yao.setBackgroundResource(imagesid[img_index]);
+				
+		return convertView;
+	}
+	class ItemHodler {
+		TextView name,seat,speed,surplus;
+		ImageView img_sex,img_yao;
+		LinearLayout layout;
+	}
+	
+}

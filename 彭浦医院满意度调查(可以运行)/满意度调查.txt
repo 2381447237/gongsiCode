@@ -1,0 +1,105 @@
+http://192.168.8.187:89/Json/Login.aspx?UserNo=10&UserPwd=10
+
+{"zyzsbm":null,"zjzgmc2":null,"zyzgjbid2":null,"_RecordCount":0,"YGID":1,"YGGH":"10","YGXM":"陈赟","YGSFZH":"","YGXB":"0","YBNL":34,"SFHJ":true,"JBDWRQ":"2016-05-08T00:00:00","LZRQ":"1999-01-01T00:00:00","CJGZNY":"201007","YGCSRQ":"1981-08-23T00:00:00","YGZZMMID":-1,"YGZGXLID":6,"YGZGXWID":-1,"RYLBID":1,"GWLBID":3,"GWDJID":28,"JBZCZGID":23,"PYZCZGID":15,"KGLNX":0,"KGWJTGZNX":0,"PYGWDJID":-1,"GZGWDJID":-1,"XZDJID":121,"XZJE":0.00,"SFQK":false,"SFGPS":false,"SFJZ":false,"SFSJT":false,"SFWSJDY":false,"SFLD":false,"SFZYLD":false,"SSKSID":1056,"LDHTQSRQ":"2016-05-08T00:00:00","LDHTJZRQ":"2099-12-31T00:00:00","NJSYTS":5,"BZ":"在岗","YGZT":0,"XXLRYXM":"系统开发人员","XXLRSJ":"2016-05-08T12:37:18.143","SSKSID2":0,"SFYGZL":"是","GLTZ":0,"ZZGW":"家庭医生","BMTDID":8,"ZYFWID":1,"ZYLBID":4,"BZSXID":1,"MZ":"","JG":"","BYYX":"","ZY":"","ZCZGQDSJ":"","XJZDZ":"","XJZDZYB":"","HKSZDDZ":"","HKSZDDZYB":"","RDTNY":"","SJHM":"","JTDH":"","EMAIL":"","JKZK":"","YYSP":"","JSJSP":"","HYZK":"","KQZWXX":"","SFYQDLDHT":false,"LDHTBH":"","LDHTQDRQ":"","TXTS":30,"JJLXR":null,"YBRGX":null,"LXDH":null,"SFZTX":null,"WSJHDGWID":1,"YSSSKSID":22,"KQXM":"陈赟","ZYZSFZRQ":"2011-04-01T00:00:00","ZJZGMC1":"15","ZYZGJBID1":"3","ZYZGSYSJ1":"2013-05-26T00:00:00","ZGZSBM":"201031142310109198108232543","ZYZSBM":null,"ZGZSFZSJ":"2010-12-15T00:00:00","ZJZGMC2":null,"ZYZGJBID2":null,"ZYZGSYSJ2":"0001-01-01T00:00:00","RecordCount":0,"GWLBMC":"专技","GWDJMC":"十二级","XJMC":"16级","XJMoney":619.0000,"NewXZDJID":0,"NewXJMC":"","NewXJMoney":0.0}
+
+
+YGID是员工ID
+YGGH是员工工号
+YGXM是员工姓名
+
+
+http://192.168.8.187:89/Json/Get_Question_List.aspx
+
+
+http://192.168.8.187:89/Json/Get_Question_Detail.aspx?MasterId=1
+
+http://192.168.0.1:89/Json/Get_Question_Detail.aspx?MasterId=1
+
+http://192.168.8.187:89/Json/Set_Investigator.aspx?YGID=1&Name=%E5%BC%A0%E4%B8%89&Phone=124567785636
+
+http://192.168.8.187:89/Json/Get_Answer_Info.aspx
+
+http://192.168.8.187:89/Json/Set_Investigator.aspx?YGID=1&Name=张三&Phone=124567785636
+
+http://192.168.8.187:89/Json/Set_Investigator.aspx?Name=张三&Phone=124567785636
+
+
+[{"ID":1,"TITLE":"一、您对医院工作环境的评价","PARENTID":0,"MASTERID":1,"CODE":"一\r\n","NUMBER":1.0,"ISANSWER":false,
+"RecordCount":0,"IsCreate":false,"IsUpdate":false,
+"IsDelete":false,"Level":0,"AnswerList":[{"ID":5,"NAME","满意","NUMBER":1,"RecordCount":0},
+{"ID":4,"NAME","较满意","NUMBER":2,"RecordCount":0},{"ID":6,"NAME","一般","NUMBER":3,"RecordCount":0},
+{"ID":2,"NAME","不满意","NUMBER":4,"RecordCount":0},{"ID":3,"NAME","很不满意","NUMBER":5,"RecordCount":0},
+{"ID":1,"NAME","不了解","NUMBER":6,"RecordCount":0}]}
+
+
+提交答案的格式如果是：单选,多选: 6,1599,,|
+                      填空题:6,1599,XXX|
+
+
+http://192.168.8.187:89/Json/Set_User_AnswerInfo.aspx?User_Answer=16,3,5
+
+
+http://192.168.8.187:89/Json/Set_Investigator.aspx?YGID=1&Name=张三&Phone=124567785636
+
+
+http://192.168.8.187:89/Json/Set_User_AnswerInfo.aspx?User_Answer=&MasterId=
+
+
+http://192.168.8.187:89/Json/Set_Investigator.aspx?YGID=1&Name=张三&Phone=124567785636&MasterId=3
+
+http://192.168.11.11:115/Json/Get_Question_List.aspx
+
+陈希军在公司:
+http://192.168.11.205:89/Json/Get_Question_Detail.aspx?MasterId=3
+
+陈希军不在公司:
+http://192.168.11.11:115/Frm_Question_Info.aspx
+
+http://192.168.11.11:115/Json/Get_Question_Detail.aspx?MasterId=1
+
+文件下载地址：http://192.168.11.11:115/Json/Get_Down_Info.aspx
+
+
+答案上传地址:http://192.168.11.11:115/Json/Get_Question_Stream_Info.aspx
+
+http://192.168.11.11:115/Json/GetFiles.aspx
+
+要求：
+
+多选、单选、选择、填空、跳选
+
+单机版答案提交的格式， 用户ID，选项ID，填空的答案|Bayern Munich|
+
+
+有网登录，有网答题存数据库 对 对
+
+有网登录，有网答题存网络   对 对
+
+有网登录，无网答题存数据库 对 对
+
+有网登录，无网答题存网络   对 对
+
+无网登录，有网答题存数据库 对 对
+
+无网登录，有网答题存网络   对 对
+
+无网登录，无网答题存数据库 对 对
+
+无网登录，无网答题存网络   对 对
+
+
+http://192.168.11.11:115/Json/Login.aspx?UserNo=10&UserPwd=10
+
+http://192.168.11.11:115/json/Get_Investigators_Info.aspx?MasterId=3
+
+维护地址：
+http://192.168.11.11:115/Frm_Question_Info.aspx
+
+您最满意的护士:
+请您留下宝贵意见:
+
+,ID,|
+
+http://192.168.11.11:115/Json/Get_Investigator_Id.aspx?MasterId=2&InvestigatorId=74
+
+注意：网络题目更新之前，要把本地的答案先上传上去，以防题目ID改变

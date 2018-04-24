@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+   
+    <TextView
+        android:id="@+id/tv_visit"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_on"
+        android:gravity="center"
+        android:text="详细信息"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+ <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_CardNo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:text="卡号:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_CardNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="卡号:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:orientation="horizontal">
+<LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_PatientName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_PatientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="姓名"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_Gender1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="性別:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:orientation="horizontal">
+<LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_BirthDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="出生日期:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_BirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_Age1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="年龄:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_VisitAddr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="出诊地址:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_VisitAddr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_RCName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="所属居委:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_RCName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_AppointVisitDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="出诊时间:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_AppointVisitDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_Contactor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联系人姓名:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_Contactor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_ContactPhone1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联系人电话:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_ContactPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_RegRemark1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="备注:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_RegRemark"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:text="xx"
+        android:textColor="#000000"
+        android:scrollbars="vertical"   
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/userbox" 
+		android:singleLine="false"
+        android:textSize="22sp" />
+</LinearLayout>
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <Button
+        android:id="@+id/btn_un"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/change_login"
+        android:text="出诊"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:textSize="20sp" />
+</RelativeLayout>
+</LinearLayout>

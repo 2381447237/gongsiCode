@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+    <TextView
+        android:id="@+id/btn_chufang"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_on"
+        android:gravity="center"
+        android:text="处方信息"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+    <ListView
+        android:id="@+id/visit_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_chufang"
+        android:layout_above="@+id/btn_change"
+        android:divider="@drawable/grey"  
+        android:dividerHeight="5dp"
+        android:background="#ffffff" >
+    </ListView>
+
+   <Button 
+       android:id="@+id/btn_change"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/login_on"
+        android:textColor="#ffffff"
+        android:text="重开处方"
+        android:textSize="24sp" />
+  
+
+</RelativeLayout>

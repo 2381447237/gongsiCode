@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- shape="rectangle 形状：长方形
+		corner:圆角 （radius：半径）
+		gradient:渐变 
+		solid:实体（颜色，全部填充这个颜色）和gradient不能同时使用
+		stroke:边框（边框的大小等属性）
+		
+		-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle">
+    <gradient android:centerColor="#fff"
+        android:startColor="#ffffffff"
+        android:endColor="#ffffffff"/>
+     	<stroke android:width="1dp" android:color="#003399" />
+</shape>

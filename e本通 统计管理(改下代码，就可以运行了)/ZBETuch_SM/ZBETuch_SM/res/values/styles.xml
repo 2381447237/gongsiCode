@@ -1,0 +1,864 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <color name="logincolor">#FFFFFF</color>
+    <color name="beijing_color">#66CCFF</color>
+    <color name="spinner_color">#FFFFFF</color>
+    <color name="user_type">#FFFFFF</color>
+    <color name="passwordtype">#FFFFFF</color>
+    <color name="education_bixu">#FF0000</color>
+    <color name="addcolor">#cccccc</color>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="grouplist_item_textview">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="radioButton">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/radiobtn_selector</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="style_ww">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_fw">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_layout2_fw">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textSize">28dip</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_height">35dip</item>
+    </style>
+
+    <style name="style_ff">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="style_ff_layout1">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textSize">30dip</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="style_wf">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="style_layout1_edit">
+        <item name="android:layout_width">300dip</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:editable">false</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_layout2_edit">
+        <item name="android:layout_width">300dip</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:editable">false</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="style_layout3_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_layout5_text">
+        <item name="android:layout_width">250dip</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="groom_tab_bottom">
+        <item name="android:textSize">22sp</item>
+        <item name="android:background">@anim/layou5_rb</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:layout_width">30dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="zc_file_textww">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="zc_file_Linearww">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="zc_file_ww">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="zc_file_ff">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="zc_file_fw">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="zc_file_wf">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <!-- 职位显示列表样式 -->
+    <style name="activity_invite_job_title">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_invite_job_title">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!-- 招聘详细信息样式 -->
+
+    <style name="activity_invite_job_info_tablerow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="activity_invite_job_info_title">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="activity_invite_job_info_longcontent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_span">3</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="activity_invite_job_info_shortcontent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="activity_invite_detail_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:paddingTop">10dip</item>
+    </style>
+
+    <style name="activity_invite_detail_title">
+        <item name="android:layout_width">125dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="activity_invite_detail_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 招聘查询界面样式 -->
+    <style name="activity_zaopin_line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="activity_zaopin_firstline" parent="activity_zaopin_line">
+        <item name="android:layout_marginTop">0dip</item>
+    </style>
+
+    <style name="activity_zaopin_secondline" parent="activity_zaopin_line">
+        <item name="android:layout_marginTop">0dip</item>
+    </style>
+
+    <style name="activity_zaopin_titlestyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">50dip</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="activity_zaopin_title_short" parent="activity_zaopin_titlestyle">
+        <item name="android:layout_width">110dip</item>
+    </style>
+
+    <style name="activity_zaopin_text">
+        <item name="android:layout_height">40.0dip</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:background">@drawable/job_search_textbox</item>
+        <item name="android:ems">9</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">1.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="activity_zaopin_text_long" parent="activity_zaopin_text">
+        <item name="android:inputType">text</item>
+        <item name="android:layout_width">400dip</item>
+    </style>
+
+    <style name="activity_zaopin_text_short" parent="activity_zaopin_text">
+        <item name="android:inputType">text</item>
+        <item name="android:layout_width">250dip</item>
+    </style>
+
+    <style name="activity_zaopin_numtext_short" parent="activity_zaopin_text">
+        <item name="android:inputType">number</item>
+        <item name="android:layout_width">250dip</item>
+    </style>
+
+    <style name="activity_zaopin_numtext_varyshort" parent="activity_zaopin_text">
+        <item name="android:inputType">number</item>
+        <item name="android:layout_width">100dip</item>
+    </style>
+
+    <style name="activity_zaopin_spinner">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:background">@drawable/job_search_spinner</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="activity_zaopin_spinner_long" parent="activity_zaopin_spinner">
+        <item name="android:layout_width">400dip</item>
+    </style>
+
+    <style name="activity_zaopin_spinner_short" parent="activity_zaopin_spinner">
+        <item name="android:layout_width">250dip</item>
+    </style>
+
+    <style name="activity_zaopin_button">
+        <item name="android:layout_width">70dip</item>
+        <item name="android:layout_height">30dip</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:background">@drawable/blue_btn</item>
+    </style>
+
+    <style name="activity_zaopin_font">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!-- 政策问答页面样式 -->
+    <style name="activity_policymain_spinner">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:background">@drawable/spinner_btn1</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="activity_policymain_text">
+        <item name="android:layout_height">40.0dip</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:background">@drawable/login_textbg</item>
+        <item name="android:ems">9</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">1.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">17.0sp</item>
+    </style>
+    <!-- 政策提问页面样式 -->
+    <style name="activity_policyask_titlestyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">40dip</item>
+    </style>
+
+    <style name="activity_policyask_text">
+        <item name="android:layout_height">40.0dip</item>
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:background">@drawable/login_textbg</item>
+        <item name="android:ems">9</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">1.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">17.0sp</item>
+    </style>
+
+    <style name="activity_policyask_spinner">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:background">@drawable/spinner_btn1</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="activity_policyask_button">
+        <item name="android:layout_width">70dip</item>
+        <item name="android:layout_height">30dip</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:background">@drawable/blue_btn</item>
+    </style>
+
+    <style name="activity_policyask_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingBottom">5dip</item>
+    </style>
+
+    <!-- 文件下载页面样式 -->
+    <style name="activity_downloadfile_spinner">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:background">@drawable/spinner_btn1</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="activity_downloadfile_text">
+        <item name="android:layout_height">40.0dip</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:background">@drawable/login_textbg</item>
+        <item name="android:ems">9</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">1.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">17.0sp</item>
+    </style>
+
+    <style name="family_ly">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="family_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingLeft">20dip</item>
+    </style>
+
+    <style name="family_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingLeft">5dip</item>
+    </style>
+
+    <!-- 资源调查页面 -->
+    <style name="resources_main_title">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="resources_main_item">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <!-- 工作信息 -->
+    <style name="workinfo_main_item_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="workinfo_main_item_title">
+        <item name="android:layout_width">130dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="workinfo_main_item_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 修改工作信息 -->
+    <style name="modifyworkinfo_main_item_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="modifyworkinfo_main_item_title">
+        <item name="android:layout_width">130dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="modifyworkinfo_main_item_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 修改工作信息详细 -->
+    <style name="modifyworkinfodetail_main_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dip</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="modifyworkinfodetail_main_title">
+        <item name="android:layout_width">130dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="modifyworkinfodetail_main_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">15</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="personpolicy_tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/home_btn_bg</item>
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">2dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="modifymark" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="gradeate_main_tab">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/tab</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="gradeate_left_tab">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/lefttab</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="gradeate_personinfo_lline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dip</item>
+    </style>
+
+    <style name="gradeate_personinfo_lsub">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="gradeate_personinfo_label">
+        <item name="android:layout_width">120dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_personinfo_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:background">@drawable/login_textbg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">1dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">1dip</item>
+        <item name="android:paddingTop">1dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="gradeate_personinfo_spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:background">@drawable/spinner_btn1</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:prompt">@string/spinner_name</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_personinfo_checkbox">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_list_button">
+        <item name="android:layout_width">70dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:layout_marginLeft">40dip</item>
+        <item name="android:background">@drawable/button_selector</item>
+    </style>
+
+    <style name="gradeate_list_titletext">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="gradeate_list_itemtext">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_apiration_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dip</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">20dip</item>
+    </style>
+
+    <style name="gradeate_editworkmark_mainline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dip</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="gradeate_editworkmark_title">
+        <item name="android:layout_width">160dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="gradeate_editworkmark_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:background">@drawable/txtbg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">1dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">1dip</item>
+        <item name="android:paddingTop">1dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="gradeate_editworkmark_spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:background">@drawable/spinner_btn1</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:prompt">@string/spinner_name</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_item_workmark_mainline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="gradeate_item_workmark_subline">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="gradeate_item_workmark_title">
+        <item name="android:layout_width">160dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_item_workmark_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_item_workmark_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/workinfoline</item>
+    </style>
+
+    <style name="gradeate_item_workmark_button">
+        <item name="android:layout_width">70dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:layout_marginRight">30dip</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_item_jobgride_mainline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="gradeate_item_jobgride_subline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dip</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="gradeate_item_jobgride_title">
+        <item name="android:layout_width">200dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="gradeate_item_jobgride_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="gradeate_item_jobgride_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/workinfoline</item>
+    </style>
+
+    <style name="gradeate_item_jobgride_thirdline">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="gradeate_item_jobgride_button">
+        <item name="android:layout_width">70dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:layout_marginRight">30dip</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_editjobgride_mainline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="gradeate_editjobgride_title">
+        <item name="android:layout_width">200dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="gradeate_editjobgride_spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:background">@drawable/spinner_btn1</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:prompt">@string/spinner_name</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_editjobgride_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:background">@drawable/txtbg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">1dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">1dip</item>
+        <item name="android:paddingTop">1dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="gradeate_editjobgride_button">
+        <item name="android:layout_width">70dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="gradeate_apiration_gridview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/gridebg</item>
+        <item name="android:numColumns">4</item>
+    </style>
+
+    <style name="gradeate_paramsquery_spinner">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/spinner_btn1</item>
+        <item name="android:prompt">@string/spinner_name</item>
+        <item name="android:layout_marginRight">15dip</item>
+    </style>
+
+    <style name="gradeate_paramsquery_button">
+        <item name="android:layout_width">70dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:background">@drawable/button_selector</item>
+    </style>
+
+    <style name="gradeate_item_recuritment_mainline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="gradeate_item_recuritment_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/workinfoline</item>
+    </style>
+    
+    <style name="savemovechecksingle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="activity_meet_detail_title">
+        <item name="android:layout_width">125dip</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="activity_meet_detail_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <!-- <style name="selector">
+    </style> -->
+
+</resources>

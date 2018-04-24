@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来自:"
+            android:textSize="20sp" 
+            android:textColor="@color/blue1"/>
+
+        <TextView
+            android:id="@+id/tv_msgboarddetile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            android:textColor="@color/blue1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text=" "
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发表于:"
+            android:textColor="@color/gray1"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_msgboarddetile_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2013-05-18 13:33:01"
+            android:textColor="@color/gray1"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dip"
+            android:background="@drawable/lx" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_msgboarddetile_doc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doc"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

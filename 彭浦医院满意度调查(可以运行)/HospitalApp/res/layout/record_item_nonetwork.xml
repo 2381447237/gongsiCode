@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/ll_item_record_nonetwork"
+    >
+  
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_bg">
+        
+        <TextView
+            android:visibility="gone"
+    android:id="@+id/tv_number_nonetwork"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+     android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp"/>
+        <TextView
+    android:id="@+id/tv_answer_nonetwork"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+     android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp"/>
+        
+        <TextView 
+     android:id="@+id/tv_phone_nonetwork"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp" />
+        
+        <TextView 
+     android:id="@+id/tv_time_nonetwork"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1.2"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp" />
+        
+        <TextView 
+     android:id="@+id/tv_score_nonetwork"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp" 
+      android:visibility="gone"/>
+<TextView 
+    android:id="@+id/tv_ygxm_nonetwork"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+     android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp"/>
+    </LinearLayout>
+  
+</LinearLayout>

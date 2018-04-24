@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/com/example/httpurl/HttpTool.java=UTF-8
+encoding//src/com/example/httpurl/HttpUrl.java=UTF-8
+encoding//src/com/fc/has/beans/RefreshListView.java=UTF-8
+encoding//src/com/views/refresh/Base_Refresh.java=UTF-8
+encoding//src/com/views/refresh/I_Refresh.java=UTF-8
+encoding//src/com/views/refresh/load/Base_LoadingLayout.java=UTF-8
+encoding//src/com/views/refresh/load/imp/FooterLoadingLayout.java=UTF-8
+encoding//src/com/views/refresh/load/imp/HeaderLoadingLayout.java=UTF-8
+encoding//src/com/views/refresh/load/imp/RotateLoadingLayout.java=UTF-8

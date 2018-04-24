@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:background="#f6f5ec"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_marginLeft="30dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="40dip"
+                android:background="@drawable/tree" />
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="时间" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="40dip"
+                android:background="@drawable/tree" />
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="医疗机构" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="40dip"
+                android:background="@drawable/tree" />
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="诊断" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="40dip"
+                android:background="@drawable/tree" />
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="住院天数" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="40dip"
+                android:background="@drawable/tree" />
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="是否治愈" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/layout5hosp_lv2"
+        style="@style/style_ff"
+        android:layout_weight="0" />
+
+</LinearLayout>

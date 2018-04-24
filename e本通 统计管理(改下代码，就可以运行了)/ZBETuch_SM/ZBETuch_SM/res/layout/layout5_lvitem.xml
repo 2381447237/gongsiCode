@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1100dip"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="1dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_marginLeft="30dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="2013-5-29" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="人民医院" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="癌症" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_layout3_text"
+                android:text="否" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_fw"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView style="@style/style_layout3_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

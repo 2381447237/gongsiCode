@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfdfdf" >
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:id="@+id/relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="收藏夹"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_favoriteactivity_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+             android:background="@drawable/line"  />
+    </RelativeLayout>
+
+    <!--
+    <ImageView
+        android:id="@+id/img_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/white_logo" />
+
+    <TextView
+        android:id="@+id/tv_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_collect"
+        android:layout_centerHorizontal="true"
+        android:text="赶紧登录添加吧~"
+        android:textColor="#808080" />
+    -->
+
+    <GridView
+        android:id="@+id/grid_collect"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="48dp"
+        android:horizontalSpacing="2.0px"
+        android:listSelector="@null"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="2.0px" >
+    </GridView>
+ <LinearLayout 
+        android:id="@+id/layout_favoriteactivity"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+       android:layout_marginTop="90dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageview_favoriteactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/white_logo" />
+
+        <TextView
+            android:id="@+id/textview_favoriteactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview_favoriteactivity"
+             android:layout_gravity="center_horizontal"
+            android:text="收藏夹是空的，赶紧添加喜欢的商品吧~"
+            android:textColor="#808080" />
+
+    </LinearLayout>
+    
+</RelativeLayout>

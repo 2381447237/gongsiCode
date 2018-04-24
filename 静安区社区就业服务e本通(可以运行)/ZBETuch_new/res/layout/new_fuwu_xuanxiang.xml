@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dip"
+    android:layout_height="match_parent"
+    android:background="@drawable/modifyworkinfodetail01"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/gradeate_editworkmark_mainline" >
+
+        <TextView
+            style="@style/gradeate_editworkmark_title"
+            android:text="服务日期：" />
+
+        <EditText
+            android:id="@+id/tv_new_fuwu_time"
+            style="@style/gradeate_editworkmark_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/gradeate_editworkmark_mainline"
+        android:background="@drawable/modifyworkinfodetail02" >
+
+        <TextView
+            style="@style/gradeate_editworkmark_title"
+            android:text="服务内容：" />
+
+        <Spinner
+            android:id="@+id/tv_new_fuwu_content"
+            style="@style/gradeate_editworkmark_spinner" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:orientation="vertical"
+        style="@style/gradeate_editworkmark_mainline" >
+
+        <TextView
+            android:layout_width="160dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:text="备注："
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/tv_new_fuwu_remark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/txtbg"
+            android:gravity="top|left"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="5dip"
+            android:paddingTop="5dip"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_Same"
+                android:layout_width="140dip"
+                android:layout_height="40dip"
+                android:background="@drawable/button_selector"
+                android:text="调查结果同上"
+                android:visibility="gone"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_new_fuwu"
+                style="@style/gradeate_editjobgride_button"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/btn_new_exit"
+                style="@style/gradeate_editjobgride_button"
+                android:layout_marginLeft="30dip"
+                android:text="取消" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

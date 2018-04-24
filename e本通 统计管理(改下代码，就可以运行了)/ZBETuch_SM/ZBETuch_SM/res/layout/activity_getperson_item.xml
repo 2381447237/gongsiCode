@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@android:style/Theme.Translucent"
+    android:paddingLeft="30dip"
+    >
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:theme="@android:style/Theme.Translucent"
+        android:background="@drawable/treeitem_selector"/>
+
+</LinearLayout>

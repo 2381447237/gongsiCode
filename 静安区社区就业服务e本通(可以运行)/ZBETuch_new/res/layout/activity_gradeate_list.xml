@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dip" >
+
+        <TextView
+            android:id="@+id/lblNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:text="共有0人"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="身份证："
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/txtIdCard"
+                android:layout_width="250dip"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/login_textbg"
+                android:ems="9"
+                android:gravity="center_vertical"
+                android:paddingBottom="1.0dip"
+                android:paddingLeft="10dp"
+                android:paddingRight="1.0dip"
+                android:paddingTop="1.0dip"
+                android:textSize="17.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="姓名："
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txt_name"
+                    android:layout_width="130dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/login_textbg"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="1.0dip"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="1.0dip"
+                    android:paddingTop="1.0dip"
+                    android:textSize="17.0sp" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="年度："
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+                
+                <Spinner 
+                    android:layout_width="100dip"
+                    android:layout_height="40.0dip"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn1"
+                    android:id="@+id/year_sp"
+                    />
+
+                <Button
+                    android:id="@+id/btnQuery"
+                    style="@style/gradeate_list_button"
+                    android:text="查询" />
+
+                <Button
+                    android:id="@+id/btnNew"
+                    style="@style/gradeate_list_button"
+                    android:text="新建"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnParamQuery"
+                    style="@style/gradeate_list_button"
+                    android:text="条件查询" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/title2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_bianhao"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:text="编号" />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:text="姓　名" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:text="性　别" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="300dp"
+                android:gravity="center"
+                android:text="身份证" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/gradeate_list_titletext"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="联系电话" />
+        </LinearLayout>
+
+        <com.fc.main.beans.PullDownView
+            android:id="@+id/pdvGradeate"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/listitem_selector" >
+        </com.fc.main.beans.PullDownView>
+    </LinearLayout>
+
+</LinearLayout>

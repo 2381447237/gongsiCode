@@ -1,0 +1,106 @@
+﻿-- 公司svn服务器
+https://192.168.11.11:8888/svn/放开穿IOS/
+
+---------------------------------------主界面
+-- 商品
+http://192.168.11.11:85/Json/Get_tbl_Items_Info.aspx?AcctID=1&Category_Id=20
+-- 后台
+http://192.168.11.11:85/DesktopMain.aspx
+-- 尺寸
+http://192.168.11.11:85/Json/Get_tbl_Size_Dict_Info.aspx
+-- 颜色
+http://192.168.11.11:85/Json/Get_tbl_Color_Dict_Info.aspx
+-- 左菜单
+http://192.168.11.11:85/json/Get_tbl_Category_Info.aspx
+-- 右边菜单数据
+http://192.168.11.11:85/Json/Get_Right_Info.aspx?Category_Id=22
+
+--------------------------------主界面-详情
+PageIndex
+-- 商品的详细内容
+http://192.168.11.11:85/Json/Get_ItemInfoForItemIdAndColorName.aspx?Item_Id=21&ColorName=%E7%99%BD%E8%89%B2
+
+-- 商品收藏
+http://192.168.11.11:85/Json/Set_Favorites_Info.aspx?Item_Id=3&AcctID=1
+-- 取消商品收藏
+http://192.168.11.11:85/Json/Set_Favorites_Info.aspx?Item_Id=3&AcctID=1&IsFavorite=1
+
+--------------------------------收藏夹界面
+-- 收藏夹
+http://192.168.11.11:85/Json/Get_tbl_Items_Info.aspx?AcctID=7&IsCollect=1
+
+--------------------------------精品控制器
+-- 精品
+http://192.168.11.11:85/Json/Get_FeaturedPhotos_Info.aspx
+
+
+--------------------------------购物车控制器
+-- 显示购物车商品
+http://192.168.11.11:85/Json/Get_UserChars_Info.aspx?AcctID=7
+-- 删除购物车的商品
+http://192.168.11.11:85/Json/Set_UserChars_Info.aspx?AcctID=7&CartID=1&IsDelete=1
+-- 修改天数
+http://192.168.11.11:85/Json/Set_UserChars_Info.aspx?AcctID=7&CartID=1&Quantity=2
+
+-- 送货地址管理
+-- 新增
+http://192.168.11.11:85/Json/Set_User_Address_Info.aspx?DistrictID=&AcctID&Address&Name&PhoneNumber
+-- 修改
+http://192.168.11.11:85/Json/Set_User_Address_Info.aspx?AddrID?AcctID=7
+-- 删除
+http://192.168.11.11:85/Json/Set_User_Address_Info.aspx?IsDelete=1&AcctID=7&AddressId=25
+-- 设置地址为默认
+http://192.168.11.11:85/Json/Set_User_Address_Info.aspx?IsDefault=1&AcctID=7&AddressId
+-- 获取单个地址详细内容
+http://192.168.11.11:85/Json/Get_User_Address_Info.aspx?AcctID=7&AddrID=24
+
+-- 选择默认地址(默认地址AddrID=0)
+http://192.168.11.11:85/Json/Get_User_Address_Info.aspx?AddrID=0&AcctID=7
+
+-- 地区详情显示
+http://192.168.11.11:85/Json/Get_Province_City_District_Info.aspx
+
+-- 地区列表
+http://192.168.11.11:85/Json/Get_User_Address_Info.aspx?AcctID=7
+
+-- 
+http://192.168.11.11:85/Json/Get_Pay_Treasure_Info.aspx
+
+-- 交易成功后返回服务端参数
+ @mUserID       int,           --用户ID
+ @mOrderCode    varchar(32),   --订单编号
+ @mDealLSH      varchar(64),   --交易流水号
+ @mDealTime     datetime,      --交易时间
+ @mTotalCost    decimal(10,2), --交易金额
+ @mPayTypeID    tinyint,       --支付方式  3-支付宝
+
+ http://192.168.11.11:85/Json/Get_Pay_Treasure_Info.aspx?AcctID=7&TotalCost=3
+
+发票类型   
+2 公司
+1 个人
+
+
+http://192.168.11.11:8088/json/vw_SeatsInfo.aspx?STAFFID=1
+
+
+http://192.168.11.11:8088/Login.aspx?StaffNo=9999&Pwd=123456
+
+http://web.youli.pw:85/Json/Get_UserChars_Info.aspx?AcctID=80
+
+http://web.youli.pw:85/Json/Set_UserChars_Info.aspx?AcctID=80&Item_Id=650
+&ColorName=%E9%BB%84%2F%E7%99%BD&SizeName=L&Quantity=2&RentalStartDate=2016-12-27
+
+
+http://web.youli.pw:85/Json/images/ShowImageForUser.aspx?AcctID=80
+
+http://192.168.11.11:8088/json/GetStart.aspx
+
+
+http://192.168.11.11:8088/json/usp_do_InfusionFinish.aspx?STAFFID=1&PATIENTID=46&INFUSIONDETAILID=1
+
+http://192.168.11.11:8088/json/GetStart.aspx?STAFFID=1&PATIENTID=45
+
+
+
+

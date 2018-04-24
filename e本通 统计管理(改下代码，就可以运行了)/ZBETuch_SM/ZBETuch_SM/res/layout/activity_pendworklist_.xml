@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pendfirstback"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_pendworktitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dip"
+        android:text="待 办 事 宜"
+        android:textSize="28sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="10dip"
+        android:background="@drawable/pendsecondback"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dip">
+
+            <RadioGroup
+                android:id="@+id/rgpPendWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rdoPendNot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pendnot"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/rdoPend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pend"
+                    android:button="@null" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/img_addpendwork"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="580dip"
+                android:src="@drawable/addpendwork" 
+                />
+        </LinearLayout>
+
+        <com.fc.main.beans.PullDownView2
+            android:id="@+id/pdvShow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/firstpage_more_whitebackgroud" >
+        </com.fc.main.beans.PullDownView2>
+    </LinearLayout>
+
+</LinearLayout>

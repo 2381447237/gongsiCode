@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_newadd_mask"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/rl_newadd_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+>
+
+        <TextView
+            android:id="@+id/tv_newadd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新增"
+            android:textSize="20dp" 
+          />
+
+        <ImageView
+            android:id="@+id/img_newadd_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rl_newadd_title"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:id="@+id/tv_newadd_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_newadd_title"
+        android:paddingBottom="9dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="9dp"
+        android:text="收货人"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_newadd_receiver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_newadd_title"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@id/tv_newadd_receiver"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="9dp"
+        android:paddingRight="5dp"
+        android:paddingTop="9dp"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_newadd_receiver"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:id="@+id/tv_newadd_phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_newadd_receiver"
+        android:paddingBottom="9dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="9dp"
+        android:text="手机号码"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_newadd_phonenumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_newadd_receiver"
+        android:layout_below="@id/tv_newadd_receiver"
+        android:layout_toRightOf="@id/tv_newadd_phonenumber"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="9dp"
+        android:paddingRight="5dp"
+        android:paddingTop="9dp"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_newadd_phonenumber"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:id="@+id/tv_newadd_postcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_newadd_phonenumber"
+        android:background="@null"
+        android:paddingBottom="9dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="9dp"
+        android:text="邮政编码"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_newadd_postcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_newadd_receiver"
+        android:layout_below="@id/tv_newadd_phonenumber"
+        android:layout_toRightOf="@id/tv_newadd_postcode"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="9dp"
+        android:paddingRight="5dp"
+        android:paddingTop="9dp"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_newadd_postcode"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:id="@+id/tv_newadd_province"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_newadd_postcode"
+        android:paddingBottom="9dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="9dp"
+        android:text="省/区/县"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_newadd_chooseprovince"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_newadd_receiver"
+        android:layout_below="@id/tv_newadd_postcode"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="9dp"
+        android:paddingTop="9dp"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_newadd_province"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:id="@+id/tv_newadd_detailedaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_newadd_province"
+        android:paddingBottom="75dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="9dp"
+        android:text="详细地址"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_newadd_detailedaddress"
+        android:layout_alignLeft="@id/et_newadd_receiver"
+        android:layout_below="@id/tv_newadd_chooseprovince"
+        android:paddingTop="9dp" >
+
+        <ScrollView
+            android:id="@+id/sv_newadd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/et_newadd_detailedaddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:paddingRight="5dp"
+                android:textSize="16sp" />
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_newadd_detailedaddress"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/ll_newadd_keep"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/tv_newadd_detailedaddress"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/selector_newadd_ll"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="保    存"
+            android:textColor="@drawable/identity_selector_textcolor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myWheelView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#efeff5"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_newadd_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="取消" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_newadd_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="确认" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <com.example.wheel.WheelView
+                android:id="@+id/id_province"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff" />
+
+            <com.example.wheel.WheelView
+                android:id="@+id/id_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff" />
+
+            <com.example.wheel.WheelView
+                android:id="@+id/id_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

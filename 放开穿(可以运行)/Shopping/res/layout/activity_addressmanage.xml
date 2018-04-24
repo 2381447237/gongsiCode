@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0" >
+
+    <RelativeLayout
+        android:id="@+id/addressmanage_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal" 
+         android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/img_addressmanage_add"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/addressmanage_add" />
+
+        <TextView
+            android:id="@+id/tv_addressmanage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="收货地址管理"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/img_addressmanage_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/line_addressmanage"
+        android:layout_below="@id/addressmanage_title"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/line"
+        />
+
+     <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@id/line_addressmanage"
+        android:id="@+id/my_swipe_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f0f0" >
+    <ListView 
+        android:id="@+id/lv_addressmanage"
+        android:layout_below="@id/line_addressmanage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         ></ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    
+    <LinearLayout 
+        android:id="@+id/layout_addressmanage"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+       android:layout_marginTop="90dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageview_addressmanage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/white_logo" />
+
+        <TextView
+            android:id="@+id/textview_addressmanage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+            android:text="收货地址是空的，赶紧添加吧~"
+            android:textColor="#808080" />
+
+    </LinearLayout>
+    
+</RelativeLayout>

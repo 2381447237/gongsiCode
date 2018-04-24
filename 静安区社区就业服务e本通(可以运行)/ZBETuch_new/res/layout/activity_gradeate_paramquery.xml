@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_query"
+            style="@style/gradeate_paramsquery_button"
+            android:layout_marginRight="25dip"
+            android:layout_marginTop="10dip"
+            android:text="查询" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="街道:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_jiedao"
+                    style="@style/gradeate_paramsquery_spinner" />
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="居委:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_juwei"
+                    style="@style/gradeate_paramsquery_spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="性别:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_sex"
+                    style="@style/gradeate_paramsquery_spinner"
+                    android:entries="@array/gradeate_sex" />
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="文化程度:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_wenhua"
+                    style="@style/gradeate_paramsquery_spinner"
+                    android:entries="@array/gradeate_educationLevel" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="年龄:"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/ed_startage"
+                        android:layout_width="0dip"
+                        android:layout_height="40dip"
+                        android:layout_weight="4"
+                        android:background="@drawable/login_textbg"
+                        android:ems="6"
+                        android:inputType="numberSigned"
+                        android:paddingBottom="10dip"
+                        android:paddingTop="10dip"
+                        android:singleLine="true"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="10dip"
+                        android:paddingTop="10dip"
+                        android:text="至"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/ed_endage"
+                        android:layout_width="0dip"
+                        android:layout_height="40dip"
+                        android:layout_weight="4"
+                        android:background="@drawable/login_textbg"
+                        android:ems="6"
+                        android:inputType="numberSigned"
+                        android:paddingBottom="10dip"
+                        android:paddingTop="10dip"
+                        android:singleLine="true"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dip"
+                    android:text="特殊情况:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_teshu"
+                    style="@style/gradeate_paramsquery_spinner"
+                    android:entries="@array/gradeate_ParamQuery_qingkuangStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="企业类型:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_qiye"
+                    style="@style/gradeate_paramsquery_spinner" />
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="行业类别:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_hangye"
+                    style="@style/gradeate_paramsquery_spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="岗位类别:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_gangwei"
+                    style="@style/gradeate_paramsquery_spinner"
+                    android:entries="@array/gradeate_ParamQuery_jobStyle" />
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="税后薪资:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_xinzi"
+                    style="@style/gradeate_paramsquery_spinner"
+                    android:entries="@array/gradeate_ParamQuery_salaryStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="人员基本情况:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_jiben"
+                    style="@style/gradeate_paramsquery_spinner"
+                    android:entries="@array/gradeate_baseSituation" />
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="人员具体情况:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_juti"
+                    style="@style/gradeate_paramsquery_spinner" 
+                    android:entries="@array/gradeate_empty" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="是否职业指导:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_zhidao"
+                    style="@style/gradeate_paramsquery_spinner"
+                    android:entries="@array/gradeate_idChecked" />
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="是否推荐就业岗位:"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/sp_jiuye"
+                    style="@style/gradeate_paramsquery_spinner"
+                    android:entries="@array/gradeate_idChecked" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

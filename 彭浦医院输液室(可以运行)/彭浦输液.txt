@@ -1,0 +1,22 @@
+座位列表:http://192.168.11.11:8088/json/vw_SeatsInfo.aspx?STAFFID=1
+
+获取药品信息(扫码)http://192.168.11.11:8088/json/GetQrCode.aspx?QRCODE=20170103000008
+
+个人信息(非扫码) ：http://192.168.11.11:8088/json/vw_InfusionOrdersInfo.aspx?STAFFID=1&CARDNO=F00593116
+
+获取输液信息: http://192.168.11.11:8088/json/GetStart.aspx?STAFFID=1&PATIENTID=2
+
+个人信息(扫码) ： http://192.168.11.11:8088/json/GetQrCodeBase.aspx?QRCODE=20170103000008
+
+
+2017年1月9号任务：如果INFUSIONID的状态是输液完成或者即将完成就给界面提示一下，震动一下
+
+登录的地址:http://192.168.11.11:8088/Login.aspx?StaffNo=9999&Pwd=123456
+
+
+
+20170608000022
+
+
+http://192.168.11.11:8088/json/GetQrCode.aspx?QRCODE=20170608000022
+http://192.168.11.11:8088/json/GetQrCode.aspx?QRCODE=20170608000020

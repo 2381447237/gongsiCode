@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/listView_select"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/button_select_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/listView_select"
+        android:layout_marginTop="51dp"
+        android:textColor="#ffffffff"
+        android:background="@drawable/buttonxml"
+        android:text="全选" />
+
+    <Button
+        android:id="@+id/button_select_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_select_all"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonxml"
+        android:textColor="#ffffffff"
+        android:text="全不选" />
+
+    <Button
+        android:id="@+id/button_select_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_select_no"
+        android:layout_alignBottom="@+id/button_select_no"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/buttonxml"
+        android:textColor="#ffffffff"
+        android:text="确定" />
+
+</RelativeLayout>

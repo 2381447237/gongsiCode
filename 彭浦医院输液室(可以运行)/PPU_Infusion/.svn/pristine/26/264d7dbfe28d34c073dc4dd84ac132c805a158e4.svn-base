@@ -1,0 +1,381 @@
+package com.example.Seats.views;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.example.Seats.beans.DripSpeedInfo;
+import com.example.Seats.beans.GetStartInfo;
+import com.example.Seats.beans.SeatsAdapter;
+import com.example.Seats.beans.SeatsInfo;
+import com.example.Seats.beans.TubesInfo;
+import com.example.Seats.beans.TubleAdapter;
+import com.example.companytask.CompanyTask;
+import com.example.helper.IActivity;
+import com.example.ppu_infusion.R;
+import com.example.ppu_infusion.R.id;
+import com.example.ppu_infusion.R.layout;
+import com.example.ppu_infusion.R.menu;
+import com.example.services.MainServices;
+
+import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+public class TubleActivity extends Activity implements IActivity,
+		OnClickListener {
+
+	public static final int INFUSIONSTART = 1;
+	private int StaffID;
+	// private String PatientID;
+	private Spinner spinner_Tubes, spinner_dripSpeed;
+	private Button btn_start;
+	private ListView lsview_tuble;
+	private ArrayList<TubesInfo> tubesInfos = new ArrayList<TubesInfo>();
+	private ArrayList<DripSpeedInfo> speedInfos = new ArrayList<DripSpeedInfo>();
+	ArrayAdapter<TubesInfo> TubesAdapter;
+	ArrayAdapter<DripSpeedInfo> DripSpeedAdapter;
+	private List<GetStartInfo> infos = new ArrayList<GetStartInfo>();
+	private TubleAdapter adapter;
+	private String DetailID = "";
+	private String tubes, speed,infusion;
+	private SeatsInfo seatsInfo;
+	private String str;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// 设置屏幕无标题
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		// 设置屏幕全屏
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		setContentView(R.layout.activity_tuble);
+		Intent intent = getIntent();
+		StaffID = intent.getIntExtra("StaffID", -1);
+		// PatientID = intent.getStringExtra("PatientID");
+		seatsInfo = (SeatsInfo) intent.getSerializableExtra("infos");
+		tubes = intent.getStringExtra("tubes");
+		speed = intent.getStringExtra("speed");
+		infusion=intent.getStringExtra("infusion");
+		init();
+		
+	/*	 postTubs(); postDripseed();
+		 
+		postgetstart();*/
+		initview();
+	}
+
+	public void initview() {
+		spinner_dripSpeed = (Spinner) findViewById(R.id.spinner_dripSpeed);
+		spinner_Tubes = (Spinner) findViewById(R.id.spinner_Tubes);
+		btn_start = (Button) findViewById(R.id.btn_start2);
+		lsview_tuble = (ListView) findViewById(R.id.lsview_tuble);
+		btn_start.setOnClickListener(this);
+		if(!infusion.equals("")||infusion!=null){
+			parseJsonList(infusion);
+		}
+		// 管型
+		if (tubes != null) {
+			TubesList(tubes);
+		}
+		TubesAdapter = new ArrayAdapter<TubesInfo>(this,
+				android.R.layout.simple_spinner_item, tubesInfos);
+		TubesAdapter
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner_Tubes.setAdapter(TubesAdapter);
+		if (seatsInfo.getTubeID() != null) {
+			for (int i = 0; i < tubesInfos.size(); i++) {
+				if (tubesInfos.get(i).getTubeID().equals(seatsInfo.getTubeID())) {
+					spinner_Tubes.setSelection(i);
+					Log.i("qwj", "===tubesInfos.get(i).getTubeID()==="
+							+ tubesInfos.get(i).getTubeID());
+				}
+			}
+		}
+		if (tubesInfos.size() <= 3 && tubesInfos.size() > 1) {
+			spinner_Tubes.setSelection(1);
+		}
+		// 滴数
+		if (speed != null) {
+			DripSpeedList(speed);
+		}
+
+		DripSpeedAdapter = new ArrayAdapter<DripSpeedInfo>(this,
+				android.R.layout.simple_spinner_item, speedInfos);
+		DripSpeedAdapter
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner_dripSpeed.setAdapter(DripSpeedAdapter);
+		if (seatsInfo.getDripCntsPerminute() != null) {
+			for (int i = 0; i < speedInfos.size(); i++) {
+				if (speedInfos.get(i).getDripCntsPerminute()
+						.equals(seatsInfo.getDripCntsPerminute())) {
+					spinner_dripSpeed.setSelection(i);
+					Log.i("qwj",
+							"===speedInfos.get(i).getDripCntsPerminute()==="
+									+ speedInfos.get(i).getDripCntsPerminute());
+				}
+			}
+		}
+		if (speedInfos.size() <= 3 && speedInfos.size() > 1) {
+			spinner_dripSpeed.setSelection(1);
+		}
+
+	}
+
+	public void GetInfo(GetStartInfo info) {
+		Log.i("qwj", "info=" + info);
+		if (info.getInfusionStatus().equals("1")) {
+			Toast.makeText(getApplicationContext(), "该药品正在输液",
+					Toast.LENGTH_LONG).show();
+		} else if (info.getInfusionStatus().equals("2")) {
+			Toast.makeText(getApplicationContext(), "该药品暂停输液",
+					Toast.LENGTH_LONG).show();
+		}
+		else if (info.getInfusionStatus().equals("3")){
+			Toast.makeText(getApplicationContext(), "该药品已完成输液",
+					Toast.LENGTH_LONG).show();
+		}
+		/*
+		 * else
+		 * if(seatsInfo.getInfusionDetailID().equals(info.getInfusionDetailID
+		 * ())){ Toast.makeText(getApplicationContext(), "该药品正在输液或暂停输液",
+		 * Toast.LENGTH_LONG).show(); }
+		 */
+		DetailID = info.getInfusionDetailID();
+
+	}
+
+	/*public void postTubs() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.TUBES, params);
+		MainServices.newTask(task);
+
+	}
+
+	public void postDripseed() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.DRIPSPEED, params);
+		MainServices.newTask(task);
+
+	}
+*/
+	public void poststart() {
+		TubesInfo tubesInfo = (TubesInfo) spinner_Tubes.getSelectedItem();
+		DripSpeedInfo dripSpeedInfo = (DripSpeedInfo) spinner_dripSpeed
+				.getSelectedItem();
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		data.put("PatientID", seatsInfo.getPatientID());
+		data.put("InfusionDetailID", DetailID);
+		data.put("mTubeID", tubesInfo.getTubeID());
+		data.put("mdripCntsPerminute", dripSpeedInfo.getDripCntsPerminute());
+		params.put("data", data);
+		Log.i("qwj", "data==" + data);
+		CompanyTask task = new CompanyTask(CompanyTask.INFUSIONSTART, params);
+		MainServices.newTask(task);
+
+	}
+
+	/*public void postgetstart() {
+		Map<String, String> data = new HashMap<String, String>();
+		Map<String, Object> params = new HashMap<String, Object>();
+		data.put("StaffID", StaffID + "");
+		data.put("PatientID", seatsInfo.getPatientID());
+		params.put("data", data);
+		CompanyTask task = new CompanyTask(CompanyTask.GETSTART, params);
+		MainServices.newTask(task);
+
+	}
+*/
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.btn_start2:
+			if (((TubesInfo) spinner_Tubes.getSelectedItem()).getTubeID()
+					.equals("-1")) {
+				Toast.makeText(getApplicationContext(), "请选择管型",
+						Toast.LENGTH_LONG).show();
+			} else if (((DripSpeedInfo) spinner_dripSpeed.getSelectedItem())
+					.getDripCntsPerminute().equals("-1")) {
+				Toast.makeText(getApplicationContext(), "请选择滴数",
+						Toast.LENGTH_LONG).show();
+			} else if (DetailID.equals("") || DetailID == null) {
+				Toast.makeText(getApplicationContext(), "请选择药品",
+						Toast.LENGTH_LONG).show();
+			} else {
+				poststart();
+				// finish();
+			}
+			break;
+
+		default:
+			break;
+		}
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		MainServices.addActivity(this);
+	}
+
+	@Override
+	public void refresh(Object... params) {
+		// TODO Auto-generated method stub
+		switch (Integer.valueOf(params[0].toString().trim())) {
+		/*
+		 * case TubleActivity.DRIPSPEED: //String speed = ""; if (params[1] !=
+		 * null) { speed = params[1].toString().trim();
+		 * 
+		 * }
+		 * 
+		 * break; case TubleActivity.TUBES: //String tubes = ""; if (params[1]
+		 * != null) { tubes = params[1].toString().trim(); }
+		 * 
+		 * 
+		 * break;
+		 */
+		
+		case TubleActivity.INFUSIONSTART:
+			if (params[1] != null) {
+
+				String value = params[1].toString().trim();
+				if (value.equals("True")) {
+					str = "完成";
+				} else {
+					str = value;
+				}
+				AlertDialog.Builder builder4 = new Builder(TubleActivity.this);
+				builder4.setTitle("提示")
+						.setMessage(str)
+						.setIcon(android.R.drawable.ic_dialog_info)
+						.setCancelable(true)
+						.setPositiveButton("确定",
+								new DialogInterface.OnClickListener() {
+
+									@Override
+									public void onClick(DialogInterface dialog,
+											int which) {
+										Intent intent = new Intent();
+										TubleActivity.this.setResult(RESULT_OK, intent);
+										TubleActivity.this.finish();
+									}
+								}).show();
+			}
+			break;
+		default:
+			break;
+		}
+	}
+
+	private void TubesList(String mtStr) {
+		tubesInfos.clear();
+		tubesInfos.add(new TubesInfo("-1", "请选择", "-1"));
+		try {
+			JSONArray jsonArray = new JSONArray(mtStr);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject object = jsonArray.getJSONObject(i);
+				TubesInfo info = new TubesInfo();
+				info.setTubeID(object.getString("TubeID"));
+				info.setTubeName(object.getString("TubeName"));
+				info.setDripCntsPerml(object.getString("dripCntsPerml"));
+				tubesInfos.add(info);
+
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	private void DripSpeedList(String mtStr) {
+		speedInfos.clear();
+		speedInfos.add(new DripSpeedInfo("请选择", "-1"));
+		try {
+			JSONArray jsonArray = new JSONArray(mtStr);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject object = jsonArray.getJSONObject(i);
+				DripSpeedInfo info = new DripSpeedInfo();
+				info.setSpeedName(object.getString("SpeedName"));
+				info.setDripCntsPerminute(object.getString("dripCntsPerminute"));
+				speedInfos.add(info);
+
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void parseJsonList(String mtStr) {
+		infos.clear();
+		// List<UnideInfo> list=new ArrayList<UnideInfo>();
+		try {
+			JSONArray jsonArray = new JSONArray(mtStr);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject object = jsonArray.getJSONObject(i);
+				GetStartInfo info = new GetStartInfo();
+				info.setInfusionDetailID(object.getString("InfusionDetailID"));
+				info.setInfusionID(object.getString("InfusionID"));
+				info.setDrugName(object.getString("DrugName"));
+				info.setDrugSpec(object.getString("DrugSpec"));
+				info.setDrugTradeName(object.getString("DrugTradeName"));
+				info.setDrugManufacturer(object.getString("DrugManufacturer"));
+				info.setDrugYBCode(object.getString("DrugYBCode"));
+				info.setInfusiongroupno(object.getString("Infusiongroupno"));
+				info.setBagItemName(object.getString("BagItemName"));
+				info.setBagItemYBCode(object.getString("BagItemYBCode"));
+				info.setBagVolume(object.getString("BagVolume"));
+				info.setRemainderVolume(object.getString("RemainderVolume"));
+				info.setDripCntsPerminute(object.getString("dripCntsPerminute"));
+				info.setTubeID(object.getString("TubeID"));
+				info.setDripCntsPerml(object.getString("dripCntsPerml"));
+				info.setDripStartTime(object.getString("dripStartTime"));
+				info.setDripLastStartTime(object.getString("dripLastStartTime"));
+				info.setDripFinishTime(object.getString("dripFinishTime"));
+				info.setInfusionStatus(object.getString("InfusionStatus"));
+				info.setDuration(object.getString("Duration"));
+				info.setTbl_Infusions_Info(object
+						.getString("tbl_Infusions_Info"));
+				infos.add(info);
+
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		adapter = new TubleAdapter(this, infos);
+		lsview_tuble.setAdapter(adapter);
+	}
+
+}

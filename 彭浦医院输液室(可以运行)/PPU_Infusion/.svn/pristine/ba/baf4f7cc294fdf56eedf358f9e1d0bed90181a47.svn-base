@@ -1,0 +1,203 @@
+package com.example.Seats.beans;
+
+import java.io.Serializable;
+
+public class GetStartInfo implements Serializable{
+	private String INFUSIONDETAILID;
+	private String INFUSIONID;
+	private String DRUGNAME;
+	private String DRUGSPEC;
+	private String DRUGTRADENAME;
+	private String DRUGMANUFACTURER;
+	private String DRUGYBCODE;
+	private String INFUSIONGROUPNO;
+	private String BAGITEMNAME;
+	private String BAGITEMYBCODE;
+	private String BAGVOLUME;
+	private String REMAINDERVOLUME;
+	private String DRIPCNTSPERMINUTE;
+	private String TUBEID;
+	private String DRIPCNTSPERML;
+	private String DRIPSTARTTIME;
+	private String DRIPLASTSTARTTIME;
+	private String DRIPFINISHTIME;
+	private String INFUSIONSTATUS;
+	private String DURATION;
+	
+	
+	private String TUBENAME;
+	
+	
+	
+	public String getINFUSIONDETAILID() {
+		return INFUSIONDETAILID;
+	}
+	public void setINFUSIONDETAILID(String iNFUSIONDETAILID) {
+		INFUSIONDETAILID = iNFUSIONDETAILID;
+	}
+	public String getINFUSIONID() {
+		return INFUSIONID;
+	}
+	public void setINFUSIONID(String iNFUSIONID) {
+		INFUSIONID = iNFUSIONID;
+	}
+	public String getDRUGNAME() {
+		return DRUGNAME;
+	}
+	public void setDRUGNAME(String dRUGNAME) {
+		DRUGNAME = dRUGNAME;
+	}
+	public String getDRUGSPEC() {
+		return DRUGSPEC;
+	}
+	public void setDRUGSPEC(String dRUGSPEC) {
+		DRUGSPEC = dRUGSPEC;
+	}
+	public String getDRUGTRADENAME() {
+		return DRUGTRADENAME;
+	}
+	public void setDRUGTRADENAME(String dRUGTRADENAME) {
+		DRUGTRADENAME = dRUGTRADENAME;
+	}
+	public String getDRUGMANUFACTURER() {
+		return DRUGMANUFACTURER;
+	}
+	public void setDRUGMANUFACTURER(String dRUGMANUFACTURER) {
+		DRUGMANUFACTURER = dRUGMANUFACTURER;
+	}
+	public String getDRUGYBCODE() {
+		return DRUGYBCODE;
+	}
+	public void setDRUGYBCODE(String dRUGYBCODE) {
+		DRUGYBCODE = dRUGYBCODE;
+	}
+	public String getINFUSIONGROUPNO() {
+		return INFUSIONGROUPNO;
+	}
+	public void setINFUSIONGROUPNO(String iNFUSIONGROUPNO) {
+		INFUSIONGROUPNO = iNFUSIONGROUPNO;
+	}
+	public String getBAGITEMNAME() {
+		return BAGITEMNAME;
+	}
+	public void setBAGITEMNAME(String bAGITEMNAME) {
+		BAGITEMNAME = bAGITEMNAME;
+	}
+	public String getBAGITEMYBCODE() {
+		return BAGITEMYBCODE;
+	}
+	public void setBAGITEMYBCODE(String bAGITEMYBCODE) {
+		BAGITEMYBCODE = bAGITEMYBCODE;
+	}
+	public String getBAGVOLUME() {
+		return BAGVOLUME;
+	}
+	public void setBAGVOLUME(String bAGVOLUME) {
+		BAGVOLUME = bAGVOLUME;
+	}
+	public String getREMAINDERVOLUME() {
+		return REMAINDERVOLUME;
+	}
+	public void setREMAINDERVOLUME(String rEMAINDERVOLUME) {
+		REMAINDERVOLUME = rEMAINDERVOLUME;
+	}
+	public String getDRIPCNTSPERMINUTE() {
+		return DRIPCNTSPERMINUTE;
+	}
+	public void setDRIPCNTSPERMINUTE(String dRIPCNTSPERMINUTE) {
+		DRIPCNTSPERMINUTE = dRIPCNTSPERMINUTE;
+	}
+	public String getTUBEID() {
+		return TUBEID;
+	}
+	public void setTUBEID(String tUBEID) {
+		TUBEID = tUBEID;
+	}
+	public String getDRIPCNTSPERML() {
+		return DRIPCNTSPERML;
+	}
+	public void setDRIPCNTSPERML(String dRIPCNTSPERML) {
+		DRIPCNTSPERML = dRIPCNTSPERML;
+	}
+	public String getDRIPSTARTTIME() {
+		return DRIPSTARTTIME;
+	}
+	public void setDRIPSTARTTIME(String dRIPSTARTTIME) {
+		DRIPSTARTTIME = dRIPSTARTTIME;
+	}
+	public String getDRIPLASTSTARTTIME() {
+		return DRIPLASTSTARTTIME;
+	}
+	public void setDRIPLASTSTARTTIME(String dRIPLASTSTARTTIME) {
+		DRIPLASTSTARTTIME = dRIPLASTSTARTTIME;
+	}
+	public String getDRIPFINISHTIME() {
+		return DRIPFINISHTIME;
+	}
+	public void setDRIPFINISHTIME(String dRIPFINISHTIME) {
+		DRIPFINISHTIME = dRIPFINISHTIME;
+	}
+	public String getINFUSIONSTATUS() {
+		return INFUSIONSTATUS;
+	}
+	public void setINFUSIONSTATUS(String iNFUSIONSTATUS) {
+		INFUSIONSTATUS = iNFUSIONSTATUS;
+	}
+	public String getDURATION() {
+		return DURATION;
+	}
+	public void setDURATION(String dURATION) {
+		DURATION = dURATION;
+	}
+	
+	public String getTUBENAME() {
+		return TUBENAME;
+	}
+	public void setTUBENAME(String tUBENAME) {
+		TUBENAME = tUBENAME;
+	}
+	public GetStartInfo(String InfusionDetailID, String InfusionID,String DrugName
+			,String DrugSpec, String DrugTradeName,String DrugManufacturer,String DrugYBCode
+			,String Infusiongroupno, String BagItemName,String BagItemYBCode, String BagVolume
+			,String RemainderVolume, String dripCntsPerminute, String TubeID,String dripCntsPerml
+			, String dripStartTime, String dripLastStartTime, String dripFinishTime,String InfusionStatus
+			,String Duration, String tbl_Infusions_Info){
+		super();
+		this.INFUSIONDETAILID=InfusionDetailID;
+		this.INFUSIONID=InfusionID;
+		this.DRUGNAME=DrugName;
+		this.DRUGSPEC=DrugSpec;
+		this.DRUGTRADENAME=DrugTradeName;
+		this.DRUGMANUFACTURER=DrugManufacturer;
+		this.DRUGYBCODE=DrugYBCode;
+		this.INFUSIONGROUPNO=Infusiongroupno;
+		this.BAGITEMNAME=BagItemName;
+		this.BAGITEMYBCODE=BagItemYBCode;
+		this.BAGVOLUME=BagVolume;
+		this.REMAINDERVOLUME=RemainderVolume;
+		this.DRIPCNTSPERMINUTE=dripCntsPerminute;
+		this.TUBEID=TubeID;
+		this.DRIPCNTSPERML=dripCntsPerml;
+		this.DRIPSTARTTIME=dripStartTime;
+		this.DRIPLASTSTARTTIME=dripLastStartTime;
+		this.DRIPFINISHTIME=dripFinishTime;
+		this.INFUSIONSTATUS=InfusionStatus;
+		this.DURATION=Duration;
+	}
+	public GetStartInfo(){
+		super();
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "GetStartInfo [InfusionDetailID=" + INFUSIONDETAILID +", InfusionID=" + INFUSIONID +", DrugName=" + DRUGNAME 
+				 +", DrugSpec=" + DRUGSPEC +", DrugTradeName=" + DRUGTRADENAME+", DrugManufacturer=" + DRUGMANUFACTURER 
+				 +", DrugYBCode=" + DRUGYBCODE +", Infusiongroupno=" +INFUSIONGROUPNO +", BagItemName=" + BAGITEMNAME
+				 +", BagItemYBCode=" + BAGITEMYBCODE +", BagVolume=" + BAGVOLUME 
+				 +", RemainderVolume=" + REMAINDERVOLUME +", dripCntsPerminute=" 
+				 + DRIPCNTSPERMINUTE+", TubeID=" + TUBEID +", dripCntsPerml=" + DRIPCNTSPERML 
+				 +", dripStartTime=" + DRIPSTARTTIME +", dripLastStartTime=" + DRIPLASTSTARTTIME 
+				 +", dripFinishTime=" + DRIPFINISHTIME +", InfusionStatus=" + INFUSIONSTATUS
+				 +", Duration=" + DURATION +"]";
+	}
+}

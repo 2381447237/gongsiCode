@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background1_repater" 
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_marginTop="6dip"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            style="@style/style_ff"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_ww"
+                android:layout_centerVertical="true"
+                android:text="健康状况:" />
+
+            <Spinner
+                android:id="@+id/layout5_health"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dip"
+                android:background="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/style_fw"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_ww"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:text="是否残疾" />
+
+            <Spinner
+                android:id="@+id/layout5_deformity"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dip"
+                android:background="@null" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_marginTop="6dip"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            style="@style/style_ff"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_ww"
+                android:layout_centerVertical="true"
+                android:text="色弱:" />
+
+            <Spinner
+                android:id="@+id/layout5_hypochromatopsia"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dip"
+                android:background="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/style_fw"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_ww"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:text="慢病:" />
+
+            <Spinner
+                android:id="@+id/layout5_disease"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dip"
+                android:background="@null"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_marginTop="6dip"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            style="@style/style_ff"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_ww"
+                android:text="身        高:" />
+
+            <EditText
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="163dip"
+                android:background="@null"
+                android:editable="false"
+                android:text="170cm" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/style_ff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_ww"
+                android:layout_marginLeft="10dip"
+                android:text="体      重:" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="163dip"
+                android:background="@null"
+                android:editable="false"
+                android:text="80kg" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_marginTop="6dip"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            style="@style/style_ff"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_ww"
+                android:text="视力(左眼):" />
+
+            <EditText
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="163dip"
+                android:background="@null"
+                android:editable="false"
+                android:text="2.0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/style_fw"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/style_ww"
+                android:layout_marginLeft="10dip"
+                android:text="视力(右眼):" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="163dip"
+                android:background="@null"
+                android:editable="false"
+                android:text="2.7" />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    
+    
+    
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="350dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="9dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_weight="0"
+            android:background="@drawable/lt"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/layout5_groom_rg"
+                android:layout_width="300dip"
+                android:layout_height="50dip"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/layout5_rb1"
+                    style="@style/groom_tab_bottom"
+                    android:checked="true"
+                    android:background="@anim/layou5_rb"
+                    android:text="门诊记录" />
+
+                <RadioButton
+                    android:id="@+id/layout5_rb2"
+                    style="@style/groom_tab_bottom"
+                    android:background="@anim/layou5_rb"
+                    android:text="住院门诊记录" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp" >
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </RadioGroup>
+
+</LinearLayout>

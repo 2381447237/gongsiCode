@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bj4"
+    android:orientation="horizontal"
+    tools:context="com.youli.bedinfo.MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <RadioGroup
+        android:layout_width="110dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="-25dp"
+            android:drawableTop="@drawable/selector_cwxx"
+            android:gravity="center"
+            android:onClick="onGoTo"
+            android:text="床位信息"
+            android:textColor="@drawable/selector_radiobutton_textcolor"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="-25dp"
+            android:drawableTop="@drawable/selector_hlgz"
+            android:gravity="center"
+            android:onClick="onGoTo"
+            android:text="护理跟踪"
+            android:textColor="@drawable/selector_radiobutton_textcolor"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="-25dp"
+            android:drawableTop="@drawable/selector_zzfw"
+            android:gravity="center"
+            android:onClick="onGoTo"
+            android:text="自助服务"
+            android:textColor="@drawable/selector_radiobutton_textcolor"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="-25dp"
+            android:drawableTop="@drawable/selector_txfw"
+            android:gravity="center"
+            android:onClick="onGoTo"
+            android:text="提醒服务"
+            android:textColor="@drawable/selector_radiobutton_textcolor"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_5"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="-25dp"
+            android:drawableTop="@drawable/selector_jkxj"
+            android:gravity="center"
+            android:onClick="onGoTo"
+            android:text="健康宣教"
+            android:textColor="@drawable/selector_radiobutton_textcolor"
+            android:textSize="14sp"/>
+    </RadioGroup>
+
+</LinearLayout>

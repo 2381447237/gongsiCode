@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/f"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/g" >
+
+        <LinearLayout
+            android:id="@+id/llDownLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="文件下载中..." />
+
+            <ProgressBar
+                android:id="@+id/pbDownLoad"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dip"
+                android:layout_height="2dip"
+                android:max="100" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSet"
+            android:layout_width="77dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/btncreatexml"
+            android:onClick="btnSetOnClick" />
+
+        <TextView
+            android:id="@+id/textView_filelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="上海市静安区人力资源和社会保障局会务文档管理平台"
+            android:textColor="#ffffffff"
+            android:textSize="25dp" />
+        <Button 
+            android:id="@+id/btnDelete"
+            android:layout_width="77dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnSet"
+            android:layout_marginRight="10dip"
+            android:onClick="btnDeleteOnClick"
+            android:visibility="gone"
+            android:background="@drawable/btn_delete"
+            />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridView_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4" >
+    </GridView>
+
+</LinearLayout>

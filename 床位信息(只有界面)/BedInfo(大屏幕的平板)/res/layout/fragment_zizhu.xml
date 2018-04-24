@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+   <TextView
+       android:paddingTop="10dp"
+        android:id="@+id/zizhu_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="90dp"
+        android:text="床号:"
+         android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <TextView 
+        android:paddingTop="10dp"
+        android:id="@+id/zizhu_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="12345"
+          android:textColor="#dc8454"
+        android:textSize="40sp"
+        android:layout_toRightOf="@id/zizhu_tv1"
+        />
+    
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/zizhu_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/zizhu_tv1"
+        android:paddingLeft="220dp"
+        android:text="姓名:"
+      android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <TextView 
+        android:paddingTop="10dp"
+        android:id="@+id/zizhu_info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="任宁"
+       android:textColor="#dc8454"
+        android:textSize="40sp"
+        android:layout_toRightOf="@id/zizhu_tv2"
+        />
+    
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/zizhu_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/zizhu_tv2"
+        android:paddingLeft="230dp"
+        android:text="住院号:"
+         android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <TextView 
+        android:paddingTop="10dp"
+        android:id="@+id/zizhu_info3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="12345"
+         android:textColor="#dc8454"
+        android:textSize="40sp"
+        android:layout_toRightOf="@id/zizhu_tv3"
+        />
+
+    <RelativeLayout
+        android:id="@+id/zizhu_rl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="150dp" >
+
+        <ImageView
+            android:id="@+id/zizhu_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zzfw_dcfw" />
+
+        <TextView
+            android:id="@+id/zizhu_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/zizhu_iv1"
+            android:paddingLeft="50dp"
+            android:text="订餐服务"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/zizhu_rl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="150dp"
+        android:layout_toRightOf="@id/zizhu_rl1" >
+
+        <ImageView
+            android:id="@+id/zizhu_iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zzfw_zyfy" />
+
+        <TextView
+            android:id="@+id/zizhu_tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/zizhu_iv2"
+            android:paddingLeft="50dp"
+            android:text="住院费用"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/zizhu_rl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zizhu_rl1"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp" >
+
+        <ImageView
+            android:id="@+id/zizhu_iv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zzfw_yrq" />
+
+        <TextView
+            android:id="@+id/zizhu_tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/zizhu_iv3"
+            android:paddingLeft="50dp"
+            android:text="一日清"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/zizhu_rl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/zizhu_rl2"
+        android:layout_below="@id/zizhu_rl2"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/zizhu_rl3" >
+
+        <ImageView
+            android:id="@+id/zizhu_iv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zzfw_jybg" />
+
+        <TextView
+            android:id="@+id/zizhu_tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/zizhu_iv4"
+            android:paddingLeft="50dp"
+            android:text="检验报告"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/zizhu_tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:text="滚动提示区"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/zizhu_info4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/zizhu_tv8"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="尊敬的患者朋友，感谢您选择301医院就诊，为方便您就医，我院推出了银医“一卡通”挂号就诊业务"
+        android:textColor="#ffffff"
+        android:textSize="35sp" />
+    
+</RelativeLayout>

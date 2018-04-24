@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/invitedetailback"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_weight="9"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/navigation_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/current_path_pane"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:background="@drawable/path_pane_bg"
+                        android:gravity="center_vertical"
+                        android:maxWidth="300dip" >
+
+                        <LinearLayout
+                            android:id="@+id/current_path_scroller"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/current_path_view"
+                                style="?android:attr/textAppearanceMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="start"
+                                android:paddingLeft="10dip"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/path_pane_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/arrow_down" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/path_pane_up_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginLeft="5dip"
+                    android:src="@drawable/path_up_level" />
+            </LinearLayout>
+            <!-- end path -->
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/invitedetailcontentback" >
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_view"
+                    android:cacheColorHint="#00000000"
+                    android:paddingLeft="3dip"
+                    android:paddingRight="3dip" />
+
+                <TextView
+                    android:id="@+id/empty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/invitedetailcontentback"
+                    android:gravity="center"
+                    android:text="空文件夹" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="75dip"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    style="?android:attr/textAppearanceMedium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="2dip"
+                    android:text="上传文件列表"
+                    android:textSize="30dip" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/file_list"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/list_view"
+                android:cacheColorHint="@android:color/transparent"
+                android:paddingLeft="3dip"
+                android:paddingRight="3dip" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ywclbtn_selector"
+            android:text="确定"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:background="@drawable/ywclbtn_selector"
+            android:text="取消"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/total_filesize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dip"
+            android:textSize="30dip" />
+    </LinearLayout>
+
+</LinearLayout>

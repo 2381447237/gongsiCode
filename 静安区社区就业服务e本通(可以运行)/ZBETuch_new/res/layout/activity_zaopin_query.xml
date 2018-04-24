@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jiugonggeditu"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="900dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+      
+            android:orientation="vertical" >
+
+            <FrameLayout
+                style="@style/activity_zaopin_line"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/job_search_h" >
+    		
+            </FrameLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" 
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/activity_zaopin_firstline" 
+                        android:background="@drawable/job_search_back">
+
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="单位名称：" />
+
+                        <EditText
+                            android:id="@+id/txtComName"
+                            style="@style/activity_zaopin_text"
+                            android:layout_width="570dip" />
+
+                        <Button
+                            android:id="@+id/btnCheck"
+                            style="@style/activity_zaopin_button"
+                            android:background="@drawable/button_selector"
+                            android:text="查询" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+					android:background="@drawable/job_search_back">
+
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                       
+                            android:text="单位性质：" />
+
+                        <Spinner 
+                            android:id="@+id/cboComProperty"
+                            android:textColor="@color/white"
+                            style="@style/activity_zaopin_spinner_short" />
+
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="岗位编号：" />
+
+                        <EditText 
+                            android:id="@+id/txtJobNo"
+                            style="@style/activity_zaopin_text_short" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+					android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="岗位名称：" />
+
+                        <EditText 
+                            android:id="@+id/txtJobName"
+                            style="@style/activity_zaopin_text_short" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="15dip"
+                            android:text="或（常见工种）:"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <Spinner 
+                            android:id="@+id/cboTypeOfWork"
+                
+                            style="@style/activity_zaopin_spinner_short"
+                             />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+					android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="月收入：" />
+
+                        <EditText 
+                            android:id="@+id/txtStartSalary"
+                            style="@style/activity_zaopin_numtext_varyshort" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="15dip"
+                            android:text="-"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/txtEndSalary"
+                            style="@style/activity_zaopin_numtext_varyshort"
+                            android:layout_width="96dp" />
+
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="文化程度：" />
+
+                        <Spinner 
+                            android:id="@+id/cboCaltureLevel"
+                            style="@style/activity_zaopin_spinner_short" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+					android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="年龄：" />
+
+                        <EditText 
+                            android:id="@+id/txtAge"
+                            style="@style/activity_zaopin_numtext_short" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline"
+android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="行业分类：" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+					android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="大类：" />
+
+                        <Spinner 
+                            android:id="@+id/cboIndustryBigStyle"
+                            style="@style/activity_zaopin_spinner_short" />
+
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="小类：" />
+
+                        <Spinner 
+                            android:id="@+id/cboIndustrySmallStyle"
+                            style="@style/activity_zaopin_spinner_short" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="职业分类：" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="大类：" />
+
+                        <Spinner 
+                            android:id="@+id/cboJobBigStyle"
+                            style="@style/activity_zaopin_spinner_short" />
+
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="小类：" />
+
+                        <Spinner 
+                            android:id="@+id/cboJobSmallStyle"
+                            style="@style/activity_zaopin_spinner_short" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="工作性质：" />
+
+                        <Spinner 
+                            android:id="@+id/cboJobKind"
+                            style="@style/activity_zaopin_spinner_short" />
+
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="工作班时：" />
+
+                        <Spinner 
+                            android:id="@+id/cboWorkTime"
+                            style="@style/activity_zaopin_spinner_short" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline"
+android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="工作地区：" />
+
+                        <Spinner
+                            android:id="@+id/cboWorkArea1"
+                            style="@style/activity_zaopin_spinner_short"
+                            android:layout_width="190dip" />
+
+                        <TextView
+                            style="@style/activity_zaopin_font"
+                            android:text="或" />
+
+                        <Spinner
+                            android:id="@+id/cboWorkArea2"
+                            style="@style/activity_zaopin_spinner_short"
+                            android:layout_width="190dip" />
+
+                        <TextView
+                            style="@style/activity_zaopin_font"
+                            android:text="或" />
+
+                        <Spinner
+                            android:id="@+id/cboWorkArea3"
+                            style="@style/activity_zaopin_spinner_short"
+                            android:layout_width="190dip" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline"
+android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="更新日期：" />
+
+                        <RadioGroup
+                            android:id="@+id/rdogroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rdono"
+                                style="@style/activity_zaopin_font"
+                                android:layout_marginLeft="30dip"
+                                android:textColor="@android:color/black"
+                                android:text="无要求" />
+
+                            <RadioButton
+                                android:id="@+id/rdotoday"
+                                style="@style/activity_zaopin_font"
+                                android:layout_marginLeft="30dip"
+                                android:textColor="@android:color/black"
+                                android:text="当天" />
+
+                            <RadioButton
+                                android:id="@+id/rdothreeday"
+                                style="@style/activity_zaopin_font"
+                                android:layout_marginLeft="30dip"
+                                android:textColor="@android:color/black"
+                                android:text="最近3天" />
+
+                            <RadioButton
+                                android:id="@+id/rdoweek"
+                                style="@style/activity_zaopin_font"
+                                android:layout_marginLeft="30dip"
+                                android:textColor="@android:color/black"
+                                android:text="最近一周" />
+
+                            <RadioButton
+                                android:id="@+id/rdomonth"
+                                style="@style/activity_zaopin_font"
+                                android:layout_marginLeft="30dip"
+                                android:textColor="@android:color/black"
+                                android:text="最近一月" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/activity_zaopin_secondline" 
+android:background="@drawable/job_search_back">
+                        <TextView
+                            style="@style/activity_zaopin_title_short"
+                            android:text="面试要求：" />
+
+                        <CheckBox
+                            android:id="@+id/cboIsDirectInterview"
+                            style="@style/activity_zaopin_font"
+                            android:layout_marginLeft="30dip"
+                            android:textColor="@android:color/black"
+                            android:text="直接面试" />
+
+                        <CheckBox
+                            android:id="@+id/cboIsNewGraduates"
+                            style="@style/activity_zaopin_font"
+                            android:layout_marginLeft="10dip"
+                            android:textColor="@android:color/black"
+                            android:text="应届生" />
+
+                        <CheckBox
+                            android:id="@+id/cboIsDisabledPerson"
+                            style="@style/activity_zaopin_font"
+                            android:layout_marginLeft="10dip"
+                            android:textColor="@android:color/black"
+                            android:text="残疾人" />
+                        <CheckBox
+                            android:id="@+id/cboIsAssurance"
+                            style="@style/activity_zaopin_font"
+                            android:layout_marginLeft="10dip"
+                            android:textColor="@android:color/black"
+                            android:text="协保人员" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="15dip" />
+                </LinearLayout>
+                
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

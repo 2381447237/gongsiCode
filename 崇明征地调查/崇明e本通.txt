@@ -1,0 +1,98 @@
+SVN账号：zhengbin 密码：5ds28,r5e8
+
+https://web.youli.pw:8888/svn/%E5%B4%87%E6%98%8Ee%E6%9C%AC%E9%80%9A/
+
+http://localhost:92/FrmLogin.aspx
+
+http://192.168.11.11:92/FrmLogin.aspx
+
+http://server:91/JSON/Json_Get_Question_Master.aspx?PageIndex=0&PageSize=10&MasterId=4
+
+http://server:91/JSON/Json_Get_Question_Master.aspx?MasterId=4
+
+http://192.168.11.11:91/JSON/Json_Get_Question_Master.aspx?MasterId=4
+
+用这个：
+http://192.168.11.11:91/JSON/Json_Get_Question_Master.aspx?PageIndex=0&PageSize=10
+
+http://192.168.11.11:91/JSON/Json_GetLand_Respnedents.aspx?PageIndex=0&PageSize=10&Is_ApplyLand=1&
+Is_Complete=0&SCID=0
+
+
+登录(完成)
+http://server:91/JSON/Login/Json_Login.aspx?LoginNo=admin&LoginPwd=123
+
+http://192.168.11.11:91/JSON/Login/Json_Login.aspx?LoginNo=admin&LoginPwd=123
+
+查看问卷信息：(完成)
+http://server:91/JSON/Json_Get_Question_Master.aspx
+PageIndex:当页索引（由0开始）
+PageSize:当页显示数据
+MasterId:问卷主表编号
+
+
+查看已答的结果：
+http://server:91/JSON/Json_Get_Question_Results.aspx?	
+RespondentId=1
+
+
+
+被调查人的信息：(完成)
+http://server:91/JSON/Json_GetLand_Respnedents.aspx
+PageIndex:当页索引（由0开始）
+PageSize:当页显示数据
+Is_ApplyLand:是否申请征地补贴
+Is_Complete:调查状态
+SCID=0
+
+http://server:91/JSON/Json_GetLand_Respnedents.aspx?PageInde=0&PageSize=15&Is_ApplyLand=1&Is_Complete=0&SCID=0
+
+创建：
+http://server:91/JSON/Json_Set_Land_Respnedents.aspx
+IdCard:证件号码
+当从Json_GetLand_Respnedents获取到的被调查人编号是null 时启用
+
+
+提交答题结果：
+http://server:91/JSON/Json_Set_Question_Results.aspx	
+RespondentId:被调查人编号
+
+
+
+http://192.168.11.11:91/JSON/Json_Set_Question_Results.aspx?	
+RespondentId=1
+
+
+FormBody RequestBody
+
+樊云英
+Q1:5               9            
+Q2:9               19
+Q3:2               22
+Q4:4               27
+Q5:4               35
+Q6:2               38
+Q9:8               68
+Q10:3              74
+Q11-1:4            93
+Q11-2:3            98
+Q11-3:2            103
+Q11-4:4            111  
+Q11-5:2            115  
+Q11-6:4            123  
+Q11-7:1            126  
+Q12:3              134  
+Q13:2              139  
+Q18:2              200  
+Q19:3              205  
+
+
+电脑IP：172.20.65.1
+
+手机IP：172.20.65.2
+
+
+jsonArray==[{"json":"PersonInfo{photoImg=[-119, 80, 78, 71, 13, 10, 26
+
+
+bspx

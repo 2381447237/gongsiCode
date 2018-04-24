@@ -1,0 +1,2877 @@
+com.fc.baobiao.views.QueryFirstActivity -> com.fc.baobiao.views.QueryFirstActivity:
+    android.widget.ListView lvResources -> d
+    android.app.ProgressDialog progressDialog -> a
+    java.util.List items -> b
+    com.fc.resources.beans.ResourcesMainAdapter adapter -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+com.fc.baobiao.views.QueryFirstActivity$MyOnItemClickListener -> com.fc.baobiao.views.a:
+    com.fc.baobiao.views.QueryFirstActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.company.beans.CompanyItem -> com.fc.company.a.a:
+    int comid -> a
+    java.lang.String comcode -> b
+    java.lang.String comname -> c
+    java.lang.String contactor -> d
+    java.lang.String telephone -> e
+    java.lang.String address -> f
+    java.lang.String comintroduction -> g
+    int getComid() -> a
+    java.lang.String getComcode() -> b
+    java.lang.String getComname() -> c
+    java.lang.String getContactor() -> d
+    java.lang.String getTelephone() -> e
+    java.lang.String getAddress() -> f
+    java.lang.String getComintroduction() -> g
+com.fc.company.beans.CompanyItemAdapter -> com.fc.company.a.b:
+    android.content.Context context -> a
+    java.util.List items -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.company.beans.CompanyItemExpandAdapter -> com.fc.company.a.c:
+    android.content.Context context -> a
+    java.util.List items -> b
+    java.lang.Object getChild(int,int) -> getChild
+    long getChildId(int,int) -> getChildId
+    android.view.View getChildView(int,int,boolean,android.view.View,android.view.ViewGroup) -> getChildView
+    int getChildrenCount(int) -> getChildrenCount
+    java.lang.Object getGroup(int) -> getGroup
+    int getGroupCount() -> getGroupCount
+    long getGroupId(int) -> getGroupId
+    android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup) -> getGroupView
+    boolean hasStableIds() -> hasStableIds
+    boolean isChildSelectable(int,int) -> isChildSelectable
+com.fc.company.beans.CompanyItemExpandAdapter$1 -> com.fc.company.a.d:
+    com.fc.company.beans.CompanyItemExpandAdapter this$0 -> a
+    int val$arg0 -> b
+    void onClick(android.view.View) -> onClick
+com.fc.company.beans.CompanyTask -> com.fc.company.a.e:
+    int taskId -> a
+    java.util.Map params -> b
+    int getTaskId() -> a
+    java.util.Map getParams() -> b
+com.fc.company.beans.JobItem -> com.fc.company.a.f:
+    int jobid -> a
+    java.lang.String comname -> b
+    java.lang.String jobname -> c
+    java.lang.String jobno -> d
+    java.lang.String eduname -> e
+    java.lang.String startage -> f
+    java.lang.String endage -> g
+    java.lang.String recruitnums -> h
+    java.lang.String modifydate -> i
+    java.lang.String startsalary -> j
+    java.lang.String endsalary -> k
+    java.lang.String max_row -> l
+    java.lang.String getMax_row() -> a
+    int getJobid() -> b
+    java.lang.String getComname() -> c
+    java.lang.String getJobname() -> d
+    java.lang.String getJobno() -> e
+    java.lang.String getEduname() -> f
+    java.lang.String getStartage() -> g
+    java.lang.String getEndage() -> h
+    java.lang.String getRecruitnums() -> i
+    java.lang.String getModifydate() -> j
+    java.lang.String getStartsalary() -> k
+    java.lang.String getEndsalary() -> l
+    java.lang.String toString() -> toString
+com.fc.company.beans.JobListdAdapter -> com.fc.company.a.g:
+    android.content.Context context -> a
+    java.util.List jobList -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.company.beans.JobListdAdapter$JobItemHodler -> com.fc.company.a.h:
+    android.widget.TextView lblComName -> a
+    android.widget.TextView lblJobName -> b
+    android.widget.TextView lblJobNo -> c
+    android.widget.TextView lblEduName -> d
+    android.widget.TextView lblAge -> e
+    android.widget.TextView lblRecruitNums -> f
+    android.widget.TextView lblModifyDate -> g
+    android.widget.TextView lblSalary -> h
+    com.fc.company.beans.JobListdAdapter this$0 -> i
+com.fc.company.views.CompanyQueryActivity -> com.fc.company.views.CompanyQueryActivity:
+    android.widget.EditText txtCompanyName -> e
+    android.widget.EditText txtCompanyNo -> f
+    android.widget.Spinner cboCompanyType -> g
+    android.widget.Spinner cboLinkMan -> h
+    android.widget.Button btnCheck -> i
+    com.fc.main.beans.PullDownExpandView lvCompany1 -> j
+    android.widget.ExpandableListView mListView1 -> k
+    java.util.List items -> a
+    com.fc.company.beans.CompanyItemAdapter adapter -> b
+    com.fc.company.beans.CompanyItemExpandAdapter adapter1 -> c
+    android.app.ProgressDialog progressDialog -> d
+    int index -> l
+    java.lang.String companyName -> m
+    java.lang.String companyNo -> n
+    int companyType -> o
+    int linkMan -> p
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    void onMore() -> a
+    void getCompanyList(int,java.lang.String,java.lang.String,int,int) -> a
+    void access$0$2fc60b08(com.fc.company.views.CompanyQueryActivity) -> a
+    android.widget.EditText access$1(com.fc.company.views.CompanyQueryActivity) -> b
+    void access$2(com.fc.company.views.CompanyQueryActivity,java.lang.String) -> a
+    android.widget.EditText access$3(com.fc.company.views.CompanyQueryActivity) -> c
+    void access$4(com.fc.company.views.CompanyQueryActivity,java.lang.String) -> b
+    android.widget.Spinner access$5(com.fc.company.views.CompanyQueryActivity) -> d
+    void access$6(com.fc.company.views.CompanyQueryActivity,int) -> a
+    android.widget.Spinner access$7(com.fc.company.views.CompanyQueryActivity) -> e
+    void access$8(com.fc.company.views.CompanyQueryActivity,int) -> b
+    int access$9(com.fc.company.views.CompanyQueryActivity) -> f
+    java.lang.String access$10(com.fc.company.views.CompanyQueryActivity) -> g
+    java.lang.String access$11(com.fc.company.views.CompanyQueryActivity) -> h
+    int access$12(com.fc.company.views.CompanyQueryActivity) -> i
+    int access$13(com.fc.company.views.CompanyQueryActivity) -> j
+com.fc.company.views.CompanyQueryActivity$MyOnClickListener -> com.fc.company.views.a:
+    com.fc.company.views.CompanyQueryActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.company.views.CompanyQueryActivity$MyOnItemClickListener -> com.fc.company.views.b:
+    com.fc.company.views.CompanyQueryActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.download.beans.DownLoadFileAdapter -> com.fc.download.a.a:
+    android.content.Context context -> a
+    java.util.List items -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.download.beans.DownLoadItem -> com.fc.download.a.b:
+    int id -> a
+    java.lang.String title -> b
+    java.lang.String filePath -> c
+    int getId() -> a
+    void setId(int) -> a
+    java.lang.String getTitle() -> b
+    void setTitle(java.lang.String) -> a
+    java.lang.String getFilePath() -> c
+    void setFilePath(java.lang.String) -> b
+com.fc.download.views.FileDownloadActivity -> com.fc.download.views.FileDownloadActivity:
+    android.widget.Spinner cboPolicyType -> d
+    android.widget.EditText txtPolicyKeyWord -> e
+    android.widget.Button btnQuery -> f
+    com.fc.main.beans.PullDownView lvPolicy -> g
+    android.widget.ListView mListView -> h
+    java.util.List items -> a
+    com.fc.download.beans.DownLoadFileAdapter adapter -> b
+    android.app.ProgressDialog progressDialog -> c
+    int index -> i
+    java.lang.String code -> j
+    java.lang.String type -> k
+    java.lang.String currentFile -> l
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    void onMore() -> a
+    void getFileList(int,java.lang.String,java.lang.String) -> b
+    java.util.List fretchStrToList(java.lang.String) -> a
+    void showDialog() -> b
+    void access$0(com.fc.download.views.FileDownloadActivity,java.lang.String) -> a
+    void access$1$67db17ca(com.fc.download.views.FileDownloadActivity) -> a
+    android.widget.EditText access$2(com.fc.download.views.FileDownloadActivity) -> b
+    void access$3(com.fc.download.views.FileDownloadActivity,java.lang.String) -> b
+    android.widget.Spinner access$4(com.fc.download.views.FileDownloadActivity) -> c
+    void access$5(com.fc.download.views.FileDownloadActivity,java.lang.String) -> c
+    int access$6(com.fc.download.views.FileDownloadActivity) -> d
+    java.lang.String access$7(com.fc.download.views.FileDownloadActivity) -> e
+    java.lang.String access$8(com.fc.download.views.FileDownloadActivity) -> f
+    void access$9$1c6545b6(int,java.lang.String,java.lang.String) -> a
+com.fc.download.views.FileDownloadActivity$MyOnClickListener -> com.fc.download.views.a:
+    com.fc.download.views.FileDownloadActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.download.views.FileDownloadActivity$MyOnItemClickListener -> com.fc.download.views.b:
+    com.fc.download.views.FileDownloadActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.beans.Base_Static_Data -> com.fc.first.a.a:
+com.fc.first.beans.Center -> com.fc.first.a.b:
+    java.lang.String QxuHao -> a
+    java.lang.String Qname -> b
+    java.lang.String Qsex -> c
+    java.lang.String Qcardtype -> d
+    java.lang.String Qcardnum -> e
+    java.lang.String Qnational -> f
+    java.lang.String Qborn -> g
+    java.lang.String Qeducation -> h
+    java.lang.String Qaddress -> i
+    java.lang.String QcurretnStatus -> j
+    java.lang.String Qcurrentintention -> k
+    java.lang.String Qcanjiren -> l
+    java.lang.String Qischeck -> m
+    java.lang.String Qstreet -> n
+    java.lang.String Qjuweihui -> o
+    java.lang.String Qpersontype -> p
+    java.lang.String Qcreatdate -> q
+    java.lang.String Qcreatperson -> r
+    java.lang.String Qhujidizhi -> s
+    java.lang.String getQhujidizhi() -> a
+    void setQhujidizhi(java.lang.String) -> a
+    void setQcardtype(java.lang.String) -> b
+    void setQcardnum(java.lang.String) -> c
+    java.lang.String getQaddress() -> b
+    void setQaddress(java.lang.String) -> d
+    void setQcurretnStatus(java.lang.String) -> e
+    void setQcurrentintention(java.lang.String) -> f
+    java.lang.String getQstreet() -> c
+    void setQstreet(java.lang.String) -> g
+    java.lang.String getQjuweihui() -> d
+    void setQjuweihui(java.lang.String) -> h
+    java.lang.String toString() -> toString
+com.fc.first.beans.CommitteeInformation -> com.fc.first.a.c:
+    java.lang.String committeeId -> a
+    java.lang.String committeeName -> b
+    java.lang.String streetId -> c
+    java.lang.String getCommitteeId() -> a
+    void setCommitteeId(java.lang.String) -> a
+    java.lang.String getCommitteeName() -> b
+    void setCommitteeName(java.lang.String) -> b
+    void setStreetId(java.lang.String) -> c
+    java.lang.String toString() -> toString
+com.fc.first.beans.GetJobs -> com.fc.first.a.d:
+    java.lang.String Jobid -> a
+    java.lang.String Comname -> b
+    java.lang.String Jobname -> c
+    java.lang.String Jobno -> d
+    java.lang.String Eduname -> e
+    java.lang.String Startage -> f
+    java.lang.String Endage -> g
+    java.lang.String Recruitnums -> h
+    java.lang.String Modifydate -> i
+    java.lang.String Startsalary -> j
+    java.lang.String Endsalary -> k
+    java.lang.String Max_row -> l
+    void setJobid(java.lang.String) -> a
+    void setComname(java.lang.String) -> b
+    java.lang.String getJobname() -> a
+    void setJobname(java.lang.String) -> c
+    java.lang.String getJobno() -> b
+    void setJobno(java.lang.String) -> d
+    void setEduname(java.lang.String) -> e
+    void setStartage(java.lang.String) -> f
+    void setEndage(java.lang.String) -> g
+    void setRecruitnums(java.lang.String) -> h
+    java.lang.String getModifydate() -> c
+    void setModifydate(java.lang.String) -> i
+    void setStartsalary(java.lang.String) -> j
+    void setEndsalary(java.lang.String) -> k
+    void setMax_row(java.lang.String) -> l
+    java.lang.String toString() -> toString
+com.fc.first.beans.GetMsgBoardDetile -> com.fc.first.a.e:
+    java.lang.String Id -> a
+    java.lang.String Master_id -> b
+    java.lang.String Create_staff -> c
+    java.lang.String Update_date -> d
+    java.lang.String Doc -> e
+    java.lang.String Staff -> f
+    void setId(java.lang.String) -> a
+    void setMaster_id(java.lang.String) -> b
+    void setCreate_staff(java.lang.String) -> c
+    java.lang.String getUpdate_date() -> a
+    void setUpdate_date(java.lang.String) -> d
+    java.lang.String getDoc() -> b
+    void setDoc(java.lang.String) -> e
+    java.lang.String getStaff() -> c
+    void setStaff(java.lang.String) -> f
+    java.lang.String toString() -> toString
+com.fc.first.beans.GetMsgBoardMaster -> com.fc.first.a.f:
+    java.lang.String Id -> a
+    java.lang.String Title -> b
+    java.lang.String Create_time -> c
+    java.lang.String Create_staff -> d
+    java.lang.String Update_time -> e
+    java.lang.String Update_staff -> f
+    java.lang.String Staff -> g
+    java.lang.String getId() -> a
+    void setId(java.lang.String) -> a
+    java.lang.String getTitle() -> b
+    void setTitle(java.lang.String) -> b
+    java.lang.String getCreate_time() -> c
+    void setCreate_time(java.lang.String) -> c
+    void setCreate_staff(java.lang.String) -> d
+    void setUpdate_time(java.lang.String) -> e
+    void setUpdate_staff(java.lang.String) -> f
+    void setStaff(java.lang.String) -> g
+    java.lang.String toString() -> toString
+com.fc.first.beans.GetNews -> com.fc.first.a.g:
+    java.lang.String Id -> a
+    java.lang.String Title -> b
+    java.lang.String Doc -> c
+    java.lang.String Create_Time -> d
+    java.lang.String Create_Staff -> e
+    java.lang.String RecordCount -> f
+    void setId(java.lang.String) -> a
+    java.lang.String getTitle() -> a
+    void setTitle(java.lang.String) -> b
+    java.lang.String getDoc() -> b
+    void setDoc(java.lang.String) -> c
+    java.lang.String getCreate_Time() -> c
+    void setCreate_Time(java.lang.String) -> d
+    void setCreate_Staff(java.lang.String) -> e
+    void setRecordCount(java.lang.String) -> f
+    java.lang.String toString() -> toString
+com.fc.first.beans.GetNewsAdapter -> com.fc.first.a.h:
+    android.content.Context context -> a
+    java.util.ArrayList getnewslist -> b
+    java.lang.String toString() -> toString
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.first.beans.GetNewsAdapter$QueryItemHodler -> com.fc.first.a.i:
+    android.widget.TextView tv_getnews_first_title -> a
+    android.widget.TextView tv_getnews_first_createtime -> b
+    com.fc.first.beans.GetNewsAdapter this$0 -> c
+com.fc.first.beans.GetUsrInformation -> com.fc.first.a.j:
+    java.lang.String Id -> a
+    java.lang.String Name -> b
+    java.lang.String Input_Code -> c
+    java.lang.String Pwd -> d
+    java.lang.String Phone -> e
+    java.lang.String Email -> f
+    java.lang.String Photo -> g
+    java.lang.String Create_Date -> h
+    java.lang.String Create_Staff -> i
+    java.lang.String Update_Date -> j
+    java.lang.String Update_Staff -> k
+    java.lang.String Stop -> l
+    java.lang.String Enable -> m
+    void setId(java.lang.String) -> a
+    java.lang.String getName() -> a
+    void setName(java.lang.String) -> b
+    java.lang.String getInput_Code() -> b
+    void setInput_Code(java.lang.String) -> c
+    void setPwd(java.lang.String) -> d
+    void setPhone(java.lang.String) -> e
+    void setEmail(java.lang.String) -> f
+    void setPhoto(java.lang.String) -> g
+    void setCreate_Date(java.lang.String) -> h
+    void setCreate_Staff(java.lang.String) -> i
+    void setUpdate_Date(java.lang.String) -> j
+    void setUpdate_Staff(java.lang.String) -> k
+    void setStop(java.lang.String) -> l
+    void setEnable(java.lang.String) -> m
+    java.lang.String toString() -> toString
+com.fc.first.beans.JobsAdapter -> com.fc.first.a.k:
+    android.content.Context context -> a
+    java.util.ArrayList getjobslist -> b
+    java.lang.String toString() -> toString
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.first.beans.JobsAdapter$QueryItemHodler -> com.fc.first.a.l:
+    android.widget.TextView tv_jobs_first_jobname -> a
+    android.widget.TextView tv_jobs_first_modifydate -> b
+    com.fc.first.beans.JobsAdapter this$0 -> c
+com.fc.first.beans.LocationInformation -> com.fc.first.a.m:
+    java.lang.String id -> a
+    java.lang.String staff -> b
+    java.lang.String mark -> c
+    double longitude -> d
+    double latitude -> e
+    double height -> f
+    java.lang.String create_date -> g
+    void setLongitude(double) -> a
+    void setLatitude(double) -> b
+    void setHeight(double) -> c
+    java.lang.String toString() -> toString
+com.fc.first.beans.MsgBoardDetileAdapter -> com.fc.first.a.n:
+    android.content.Context context -> a
+    java.util.ArrayList msgboarddetile_list -> b
+    java.lang.String toString() -> toString
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.first.beans.MsgBoardDetileAdapter$QueryItemHodler -> com.fc.first.a.o:
+    android.widget.TextView tv_msgboarddetile_name -> a
+    android.widget.TextView tv_msgboarddetile_time -> b
+    android.widget.TextView tv_msgboarddetile_doc -> c
+    com.fc.first.beans.MsgBoardDetileAdapter this$0 -> d
+com.fc.first.beans.MsgBoardMasterAdapter -> com.fc.first.a.p:
+    android.content.Context context -> a
+    java.util.ArrayList msgboardmasterlist -> b
+    java.lang.String toString() -> toString
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.first.beans.MsgBoardMasterAdapter$QueryItemHodler -> com.fc.first.a.q:
+    android.widget.TextView tv_msgboardmaster_first_title -> a
+    android.widget.TextView tv_msgboardmaster_first_createtime -> b
+    com.fc.first.beans.MsgBoardMasterAdapter this$0 -> c
+com.fc.first.beans.ParseXmlService -> com.fc.first.a.r:
+    java.util.HashMap parseXml(java.io.InputStream) -> a
+com.fc.first.beans.PendWorkAdapter -> com.fc.first.a.s:
+    android.content.Context context -> a
+    java.util.List pendwork_list -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.first.beans.PendWorkAdapter$QueryItemHodler -> com.fc.first.a.t:
+    android.widget.TextView tv_pendwork_first_title -> a
+    android.widget.TextView tv_pendwork_first_createtime -> b
+    com.fc.first.beans.PendWorkAdapter this$0 -> c
+com.fc.first.beans.PendWorkAdapter2 -> com.fc.first.a.u:
+    android.content.Context context -> a
+    java.util.List pendwork_list -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.first.beans.PendWorkAdapter2$QueryItemHodler -> com.fc.first.a.v:
+    android.widget.TextView tv_pendwork_first_title -> a
+    android.widget.TextView tv_pendwork_first_createtime -> b
+    com.fc.first.beans.PendWorkAdapter2 this$0 -> c
+com.fc.first.beans.PendingWorkInformation -> com.fc.first.a.w:
+    java.lang.String Id -> a
+    java.lang.String Start_Time -> b
+    java.lang.String End_Time -> c
+    java.lang.String Title -> d
+    java.lang.String Doc -> e
+    java.lang.String Work_Staff -> f
+    java.lang.String Create_Staff -> g
+    java.lang.String Create_Time -> h
+    java.lang.String Type -> i
+    java.lang.String Update_time -> j
+    java.lang.String Max -> k
+    java.lang.String getId() -> a
+    void setId(java.lang.String) -> a
+    java.lang.String getStart_Time() -> b
+    void setStart_Time(java.lang.String) -> b
+    java.lang.String getEnd_Time() -> c
+    void setEnd_Time(java.lang.String) -> c
+    java.lang.String getTitle() -> d
+    void setTitle(java.lang.String) -> d
+    java.lang.String getDoc() -> e
+    void setDoc(java.lang.String) -> e
+    java.lang.String getWork_Staff() -> f
+    void setWork_Staff(java.lang.String) -> f
+    java.lang.String getCreate_Staff() -> g
+    void setCreate_Staff(java.lang.String) -> g
+    java.lang.String getCreate_Time() -> h
+    void setCreate_Time(java.lang.String) -> h
+    java.lang.String getType() -> i
+    void setType(java.lang.String) -> i
+    java.lang.String getUpdate_time() -> j
+    void setUpdate_time(java.lang.String) -> j
+    java.lang.String getMax() -> k
+    void setMax(java.lang.String) -> k
+    java.lang.String toString() -> toString
+com.fc.first.beans.UpdateManager -> com.fc.first.a.x:
+    java.util.HashMap mHashMap -> a
+    java.lang.String mSavePath -> b
+    int progress -> c
+    boolean cancelUpdate -> d
+    android.content.Context mContext -> e
+    android.widget.ProgressBar mProgress -> f
+    android.app.Dialog mDownloadDialog -> g
+    android.os.Handler mHandler -> h
+    void checkUpdate() -> a
+    boolean isUpdate() -> b
+    int getVersionCode(android.content.Context) -> a
+    android.widget.ProgressBar access$0(com.fc.first.beans.UpdateManager) -> a
+    int access$1(com.fc.first.beans.UpdateManager) -> b
+    void access$2(com.fc.first.beans.UpdateManager) -> c
+    void access$3(com.fc.first.beans.UpdateManager,java.lang.String) -> a
+    java.lang.String access$4(com.fc.first.beans.UpdateManager) -> d
+    void access$5(com.fc.first.beans.UpdateManager,int) -> a
+    android.os.Handler access$6(com.fc.first.beans.UpdateManager) -> e
+    boolean access$7(com.fc.first.beans.UpdateManager) -> f
+    android.app.Dialog access$8(com.fc.first.beans.UpdateManager) -> g
+    void access$9(com.fc.first.beans.UpdateManager) -> h
+    void access$10$239964fb(com.fc.first.beans.UpdateManager) -> i
+com.fc.first.beans.UpdateManager$1 -> com.fc.first.a.y:
+    com.fc.first.beans.UpdateManager this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.first.beans.UpdateManager$2 -> com.fc.first.a.z:
+    com.fc.first.beans.UpdateManager this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.first.beans.UpdateManager$3 -> com.fc.first.a.aa:
+    com.fc.first.beans.UpdateManager this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.first.beans.UpdateManager$4 -> com.fc.first.a.ab:
+    com.fc.first.beans.UpdateManager this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.first.beans.UpdateManager$downloadApkThread -> com.fc.first.a.ac:
+    com.fc.first.beans.UpdateManager this$0 -> a
+    void run() -> run
+com.fc.first.views.Add_MsgBoardDetileActivity -> com.fc.first.views.Add_MsgBoardDetileActivity:
+    android.widget.EditText et_msgboarddetil_titleeadd -> a
+    android.widget.EditText et_msgboarddetile_docadd -> b
+    android.widget.Button btn_msgdetilesave -> c
+    android.widget.Button btn_msgdetileback -> d
+    java.lang.String masterid -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.Add_MsgBoardDetileActivity$MyThread -> com.fc.first.views.a:
+    com.fc.first.views.Add_MsgBoardDetileActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.Add_PendworkActivity -> com.fc.first.views.Add_PendworkActivity:
+    android.widget.EditText et_pendworkstarttimeadd -> a
+    android.widget.EditText et_pendworkendtimeadd -> b
+    android.widget.EditText et_pendworktitleadd -> c
+    android.widget.EditText et_pendworkdocadd -> d
+    android.widget.EditText et_pendworkstartdateadd -> e
+    android.widget.EditText et_pendworkenddateadd -> f
+    android.widget.Button btn_pendworksave -> g
+    android.widget.Button bt_pendworkback -> h
+    java.util.ArrayList pendworkInfo_list -> i
+    java.lang.String type -> j
+    int mYear -> k
+    int mMonth -> l
+    int mDay -> m
+    int timeFlag -> n
+    int dateFlag -> o
+    int mHour -> p
+    int mMinute -> q
+    android.app.TimePickerDialog$OnTimeSetListener mTimeSetListener -> r
+    android.app.DatePickerDialog$OnDateSetListener mDateSetListener -> s
+    void onCreate(android.os.Bundle) -> onCreate
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void access$0(com.fc.first.views.Add_PendworkActivity,android.view.View) -> a
+com.fc.first.views.Add_PendworkActivity$1 -> com.fc.first.views.b:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onTimeSet(android.widget.TimePicker,int,int) -> onTimeSet
+com.fc.first.views.Add_PendworkActivity$10 -> com.fc.first.views.c:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+com.fc.first.views.Add_PendworkActivity$11 -> com.fc.first.views.d:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+com.fc.first.views.Add_PendworkActivity$12 -> com.fc.first.views.e:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+com.fc.first.views.Add_PendworkActivity$2 -> com.fc.first.views.f:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
+com.fc.first.views.Add_PendworkActivity$3 -> com.fc.first.views.g:
+    com.fc.first.beans.PendingWorkInformation pendworkinfo -> a
+    com.fc.first.views.Add_PendworkActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.Add_PendworkActivity$4 -> com.fc.first.views.h:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.Add_PendworkActivity$5 -> com.fc.first.views.i:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.Add_PendworkActivity$6 -> com.fc.first.views.j:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.Add_PendworkActivity$7 -> com.fc.first.views.k:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.Add_PendworkActivity$8 -> com.fc.first.views.l:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.Add_PendworkActivity$9 -> com.fc.first.views.m:
+    com.fc.first.views.Add_PendworkActivity this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+com.fc.first.views.FirstPageActivity -> com.fc.first.views.FirstPageActivity:
+    double GPSLOCATION_LAT -> a
+    double GPSLOCATION_LNG -> b
+    double GPSLOCATION_ALT -> c
+    java.util.Date gps_date -> d
+    android.widget.Button bt_personal_message -> r
+    android.widget.Button btn_mainimage -> s
+    android.widget.Button tv_firstpage_more1 -> t
+    android.widget.Button tv_firstpage_more2 -> u
+    android.widget.Button tv_firstpage_more3 -> v
+    android.widget.Button tv_firstpage_more4 -> w
+    android.widget.ListView pendwork_list -> e
+    android.widget.ListView getnews_list -> f
+    android.widget.ListView msgboardmaster_list -> g
+    android.widget.ListView jobs_list -> h
+    android.widget.TextView tv_jobnumberinput -> i
+    android.widget.TextView tv_officername -> j
+    android.location.LocationManager locationManager -> k
+    android.widget.TextView latLocationText -> l
+    android.widget.TextView lngLocationText -> m
+    android.widget.TextView altLocationText -> n
+    com.fc.first.beans.PendWorkAdapter pendworkadapter -> x
+    com.fc.first.beans.GetNewsAdapter getnewsadapter -> y
+    com.fc.first.beans.MsgBoardMasterAdapter msgboardmasteradapter -> z
+    com.fc.first.beans.JobsAdapter jobsadapter -> A
+    int page -> o
+    int rows -> p
+    android.widget.ImageView imgvw_ownphoto -> q
+    java.util.ArrayList locationinfoJson -> B
+    java.util.ArrayList pendworklist -> C
+    java.util.ArrayList msgboardmasterlist -> D
+    java.util.ArrayList newslist -> E
+    java.util.ArrayList jobslist -> F
+    android.app.ProgressDialog progressDialog -> G
+    long exittime -> H
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+    java.lang.String GetGpsInfo() -> a
+    void updateView(android.location.Location) -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    void refreshNewsList(java.lang.String) -> a
+    void refreshMsgboardList(java.lang.String) -> b
+    void refreshJobsList(java.lang.String) -> c
+    void access$0(com.fc.first.views.FirstPageActivity,android.location.Location) -> a
+    java.util.ArrayList access$1(com.fc.first.views.FirstPageActivity) -> a
+    java.util.ArrayList access$2(com.fc.first.views.FirstPageActivity) -> b
+    java.util.ArrayList access$3(com.fc.first.views.FirstPageActivity) -> c
+    java.util.ArrayList access$4(com.fc.first.views.FirstPageActivity) -> d
+com.fc.first.views.FirstPageActivity$1 -> com.fc.first.views.n:
+    com.fc.first.views.FirstPageActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.FirstPageActivity$2 -> com.fc.first.views.o:
+    com.fc.first.views.FirstPageActivity this$0 -> a
+    void onLocationChanged(android.location.Location) -> onLocationChanged
+    void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
+    void onProviderEnabled(java.lang.String) -> onProviderEnabled
+    void onProviderDisabled(java.lang.String) -> onProviderDisabled
+com.fc.first.views.FirstPageActivity$3 -> com.fc.first.views.p:
+    com.fc.first.views.FirstPageActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.FirstPageActivity$4 -> com.fc.first.views.q:
+    com.fc.first.views.FirstPageActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.FirstPageActivity$5 -> com.fc.first.views.r:
+    com.fc.first.views.FirstPageActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.FirstPageActivity$6 -> com.fc.first.views.s:
+    com.fc.first.views.FirstPageActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.GetNewsListActivity -> com.fc.first.views.GetNewsListActivity:
+    java.util.ArrayList newslist -> b
+    com.fc.first.beans.GetNewsAdapter getnewsadapter -> c
+    android.os.Handler firstpageHandler -> d
+    java.lang.Runnable getnewsinfo_thread -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.ArrayList access$0(com.fc.first.views.GetNewsListActivity) -> a
+    void access$1(com.fc.first.views.GetNewsListActivity,com.fc.first.beans.GetNewsAdapter) -> a
+    com.fc.first.beans.GetNewsAdapter access$2(com.fc.first.views.GetNewsListActivity) -> b
+    void access$3(com.fc.first.views.GetNewsListActivity,java.util.ArrayList) -> a
+    android.os.Handler access$4(com.fc.first.views.GetNewsListActivity) -> c
+com.fc.first.views.GetNewsListActivity$1 -> com.fc.first.views.t:
+    com.fc.first.views.GetNewsListActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.first.views.GetNewsListActivity$2 -> com.fc.first.views.u:
+    com.fc.first.views.GetNewsListActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.GetNewsListActivity$3 -> com.fc.first.views.v:
+    com.fc.first.views.GetNewsListActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.GroupsActivity -> com.fc.first.views.GroupsActivity:
+    java.util.ArrayList pendworklist -> c
+    com.fc.first.beans.PendWorkAdapter pendworkadapter -> d
+    java.lang.String typecd -> a
+    android.os.Handler firstpageHandler -> e
+    java.lang.Runnable pendwork_thread -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.ArrayList access$0(com.fc.first.views.GroupsActivity) -> a
+    void access$1(com.fc.first.views.GroupsActivity,com.fc.first.beans.PendWorkAdapter) -> a
+    com.fc.first.beans.PendWorkAdapter access$2(com.fc.first.views.GroupsActivity) -> b
+    void access$3(com.fc.first.views.GroupsActivity,java.util.ArrayList) -> a
+    android.os.Handler access$4(com.fc.first.views.GroupsActivity) -> c
+com.fc.first.views.GroupsActivity$1 -> com.fc.first.views.w:
+    com.fc.first.views.GroupsActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.first.views.GroupsActivity$2 -> com.fc.first.views.x:
+    com.fc.first.views.GroupsActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.GroupsActivity$3 -> com.fc.first.views.y:
+    com.fc.first.views.GroupsActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.LoadActivity -> com.fc.first.views.LoadActivity:
+    android.widget.ImageView img_load -> b
+    java.lang.String des -> c
+    android.os.Handler handler_load -> d
+    java.lang.Runnable thread_load -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    java.lang.String access$0(com.fc.first.views.LoadActivity) -> a
+    void access$1(com.fc.first.views.LoadActivity,java.lang.String) -> a
+    android.os.Handler access$2(com.fc.first.views.LoadActivity) -> b
+com.fc.first.views.LoadActivity$1 -> com.fc.first.views.z:
+    com.fc.first.views.LoadActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.first.views.LoadActivity$2 -> com.fc.first.views.aa:
+    com.fc.first.views.LoadActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.LoginActivity -> com.fc.first.views.LoginActivity:
+    android.widget.EditText et_user -> d
+    android.widget.EditText et_pwd -> e
+    android.widget.TextView tv_about -> f
+    android.widget.TextView tv_versions -> g
+    android.widget.ImageButton btn_login -> h
+    android.location.LocationManager locationManager -> a
+    android.content.Context context -> b
+    java.lang.String userName -> i
+    java.lang.String userPwd -> j
+    java.lang.String loginJudgment -> k
+    android.widget.PopupWindow popupWindow -> l
+    android.view.LayoutInflater mLayoutInflater -> m
+    android.view.View aboutview -> n
+    java.lang.String version -> o
+    android.os.Handler handler_judgment -> p
+    java.lang.Runnable judgment_thread -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+    java.lang.String access$0(com.fc.first.views.LoginActivity) -> a
+    java.lang.String access$1(com.fc.first.views.LoginActivity) -> b
+    java.lang.String access$2(com.fc.first.views.LoginActivity) -> c
+    void access$3(com.fc.first.views.LoginActivity,java.lang.String) -> a
+    android.os.Handler access$4(com.fc.first.views.LoginActivity) -> d
+com.fc.first.views.LoginActivity$1 -> com.fc.first.views.ab:
+    com.fc.first.views.LoginActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+    com.fc.first.views.LoginActivity access$0(com.fc.first.views.LoginActivity$1) -> a
+com.fc.first.views.LoginActivity$1$1 -> com.fc.first.views.ac:
+    com.fc.first.views.LoginActivity$1 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.first.views.LoginActivity$2 -> com.fc.first.views.ad:
+    com.fc.first.views.LoginActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.MsgBoardDetitle_MoreActivity -> com.fc.first.views.MsgBoardDetitle_MoreActivity:
+    com.fc.first.beans.MsgBoardMasterAdapter msgboardmasteradapter -> d
+    java.util.ArrayList msgboardmasterlist -> e
+    android.widget.ListView msgboardmaster_list -> a
+    android.widget.ImageView img_addmsgboarddetitle -> b
+    android.os.Handler msgboarddetitilehHandler -> f
+    java.lang.Runnable msgboardmaster_thread -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    java.util.ArrayList access$0(com.fc.first.views.MsgBoardDetitle_MoreActivity) -> a
+    void access$1(com.fc.first.views.MsgBoardDetitle_MoreActivity,com.fc.first.beans.MsgBoardMasterAdapter) -> a
+    com.fc.first.beans.MsgBoardMasterAdapter access$2(com.fc.first.views.MsgBoardDetitle_MoreActivity) -> b
+    void access$3(com.fc.first.views.MsgBoardDetitle_MoreActivity,java.util.ArrayList) -> a
+    android.os.Handler access$4(com.fc.first.views.MsgBoardDetitle_MoreActivity) -> c
+com.fc.first.views.MsgBoardDetitle_MoreActivity$1 -> com.fc.first.views.ae:
+    com.fc.first.views.MsgBoardDetitle_MoreActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.first.views.MsgBoardDetitle_MoreActivity$2 -> com.fc.first.views.af:
+    com.fc.first.views.MsgBoardDetitle_MoreActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.MsgBoardDetitle_MoreActivity$3 -> com.fc.first.views.ag:
+    com.fc.first.views.MsgBoardDetitle_MoreActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.MsgBoardDetitle_MoreActivity$4 -> com.fc.first.views.ah:
+    com.fc.first.views.MsgBoardDetitle_MoreActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.MsgboarddetitleActivity -> com.fc.first.views.MsgboarddetitleActivity:
+    java.util.ArrayList msgboarddetilelist -> d
+    java.lang.String masterid -> e
+    android.app.ProgressDialog progressDialog -> f
+    com.fc.first.beans.MsgBoardDetileAdapter msgboarddetileadapter -> g
+    android.widget.ListView lsview_msgdetitle -> h
+    android.widget.EditText tv_msgboarddetilecallback_doc -> a
+    android.os.Handler msgboardhandler -> b
+    java.lang.Runnable msgboarddetitle_thread -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void DismissDialog() -> a
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    java.util.ArrayList access$0(com.fc.first.views.MsgboarddetitleActivity) -> a
+    void access$1(com.fc.first.views.MsgboarddetitleActivity,com.fc.first.beans.MsgBoardDetileAdapter) -> a
+    android.widget.ListView access$2(com.fc.first.views.MsgboarddetitleActivity) -> b
+    com.fc.first.beans.MsgBoardDetileAdapter access$3(com.fc.first.views.MsgboarddetitleActivity) -> c
+    java.lang.String access$4(com.fc.first.views.MsgboarddetitleActivity) -> d
+    void access$5(com.fc.first.views.MsgboarddetitleActivity,java.util.ArrayList) -> a
+com.fc.first.views.MsgboarddetitleActivity$1 -> com.fc.first.views.ai:
+    com.fc.first.views.MsgboarddetitleActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.first.views.MsgboarddetitleActivity$2 -> com.fc.first.views.aj:
+    com.fc.first.views.MsgboarddetitleActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.MsgboarddetitleActivity$3 -> com.fc.first.views.ak:
+    com.fc.first.views.MsgboarddetitleActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.first.views.MsgboarddetitleActivity$4 -> com.fc.first.views.al:
+    com.fc.first.views.MsgboarddetitleActivity this$0 -> a
+    void onDismiss(android.content.DialogInterface) -> onDismiss
+com.fc.first.views.MsgboarddetitleActivity$MyThread -> com.fc.first.views.am:
+    com.fc.first.views.MsgboarddetitleActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.PendWorkActivity_ -> com.fc.first.views.PendWorkActivity_:
+    android.widget.RadioGroup rgpPendWork -> a
+    android.widget.RadioButton rdoPendNot -> b
+    android.widget.RadioButton rdoPend -> c
+    com.fc.main.beans.PullDownView pdvShow -> d
+    android.widget.ListView lvShow -> e
+    android.widget.ImageView img_addpendwork -> f
+    java.util.List pendworklist -> i
+    com.fc.first.beans.PendWorkAdapter2 pendworkadapter -> j
+    android.widget.TextView tv_pendworktitle -> g
+    int Flag -> h
+    int index -> k
+    java.util.Map data -> l
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void onClick(android.view.View) -> onClick
+    void onDestroy() -> onDestroy
+    void refresh(java.lang.Object[]) -> a
+    void onMore() -> a
+    void getPageList(int) -> a
+    java.util.List refreshPendworkList(java.lang.String) -> a
+    java.util.List access$0(com.fc.first.views.PendWorkActivity_) -> a
+    void access$1$36d8d9ef(com.fc.first.views.PendWorkActivity_) -> b
+    com.fc.first.beans.PendWorkAdapter2 access$2(com.fc.first.views.PendWorkActivity_) -> c
+    void access$3(com.fc.first.views.PendWorkActivity_,java.util.Map) -> a
+    java.util.Map access$4(com.fc.first.views.PendWorkActivity_) -> d
+    int access$5(com.fc.first.views.PendWorkActivity_) -> e
+    void access$6(com.fc.first.views.PendWorkActivity_,int) -> a
+com.fc.first.views.PendWorkActivity_$MyOnCheckedChangedListener -> com.fc.first.views.an:
+    com.fc.first.views.PendWorkActivity_ this$0 -> a
+    void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+com.fc.first.views.PendWorkActivity_$MyOnItemClickListener -> com.fc.first.views.ao:
+    com.fc.first.views.PendWorkActivity_ this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.PendWorkActivity_$MyOnItemLongClickListener -> com.fc.first.views.ap:
+    com.fc.first.views.PendWorkActivity_ this$0 -> a
+    boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long) -> onItemLongClick
+    com.fc.first.views.PendWorkActivity_ access$1(com.fc.first.views.PendWorkActivity_$MyOnItemLongClickListener) -> a
+com.fc.first.views.PendWorkActivity_$MyOnItemLongClickListener$1 -> com.fc.first.views.aq:
+    com.fc.first.views.PendWorkActivity_$MyOnItemLongClickListener this$1 -> a
+    int val$position -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.first.views.TrendsActivity -> com.fc.first.views.TrendsActivity:
+    java.util.ArrayList pendworklist -> e
+    com.fc.first.beans.PendingWorkInformation pendworkInfo -> a
+    com.fc.first.beans.PendWorkAdapter pendworkadapter -> f
+    java.lang.String typecd -> b
+    java.lang.String type -> c
+    int index -> g
+    android.os.Handler firstpageHandler -> h
+    java.lang.Runnable pendwork_thread -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void showDialog_pendwork$faab20d() -> a
+    java.util.ArrayList access$0(com.fc.first.views.TrendsActivity) -> a
+    void access$1(com.fc.first.views.TrendsActivity,com.fc.first.beans.PendWorkAdapter) -> a
+    com.fc.first.beans.PendWorkAdapter access$2(com.fc.first.views.TrendsActivity) -> b
+    void access$3(com.fc.first.views.TrendsActivity,java.util.ArrayList) -> a
+    android.os.Handler access$4(com.fc.first.views.TrendsActivity) -> c
+    void access$5(com.fc.first.views.TrendsActivity,int) -> a
+    int access$6(com.fc.first.views.TrendsActivity) -> d
+com.fc.first.views.TrendsActivity$1 -> com.fc.first.views.ar:
+    com.fc.first.views.TrendsActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.first.views.TrendsActivity$2 -> com.fc.first.views.as:
+    com.fc.first.views.TrendsActivity this$0 -> a
+    void run() -> run
+com.fc.first.views.TrendsActivity$3 -> com.fc.first.views.at:
+    com.fc.first.views.TrendsActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.first.views.TrendsActivity$4 -> com.fc.first.views.au:
+    com.fc.first.views.TrendsActivity this$0 -> a
+    boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long) -> onItemLongClick
+com.fc.first.views.TrendsActivity$5 -> com.fc.first.views.av:
+    com.fc.first.views.TrendsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+    com.fc.first.views.TrendsActivity access$0(com.fc.first.views.TrendsActivity$5) -> a
+com.fc.first.views.TrendsActivity$5$1 -> com.fc.first.views.aw:
+    com.fc.first.views.TrendsActivity$5 this$1 -> a
+    void run() -> run
+com.fc.invite.views.InviteJobDetailActivity -> com.fc.invite.views.InviteJobDetailActivity:
+    android.widget.TextView lblComName -> a
+    android.widget.TextView lblJobName -> b
+    android.widget.TextView lblJobNo -> c
+    android.widget.TextView lblComPropertyName -> d
+    android.widget.TextView lblComScope -> e
+    android.widget.TextView lblComIntroduction -> f
+    android.widget.TextView lblSalary -> g
+    android.widget.TextView lblWelfare -> h
+    android.widget.TextView lblProbSalary -> i
+    android.widget.TextView lblProbMonth -> j
+    android.widget.TextView lblRecruitNums -> k
+    android.widget.TextView lblAge -> l
+    android.widget.TextView lblEduName -> m
+    android.widget.TextView lblAreaName -> n
+    android.widget.TextView lblGZBSName -> o
+    android.widget.TextView lblGZXZName -> p
+    android.widget.TextView lblLanguageName -> q
+    android.widget.TextView lblLanguageProficiencyName -> r
+    android.widget.TextView lblProfessionalRequirementName -> s
+    android.widget.TextView lblProfessionalLevelName -> t
+    android.widget.TextView lblQualifiedCertId -> u
+    android.widget.TextView lblQualifiedLevelName -> v
+    android.widget.TextView lblResponsibilities -> w
+    android.widget.TextView lblQualifications -> x
+    android.widget.TextView lblOthers -> y
+    android.widget.TextView lblIsOther -> z
+    android.widget.TextView lblTimeInfo -> A
+    android.widget.TextView lblLinkMan -> B
+    android.widget.Button btnCheck -> C
+    android.widget.ScrollView srRight -> D
+    java.lang.String jobNo -> E
+    java.lang.String jobId -> F
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    java.lang.String changeNum(java.lang.String) -> a
+    java.lang.String access$0(com.fc.invite.views.InviteJobDetailActivity) -> a
+com.fc.invite.views.InviteJobDetailActivity$1 -> com.fc.invite.views.a:
+    com.fc.invite.views.InviteJobDetailActivity this$0 -> a
+    void run() -> run
+com.fc.invite.views.InviteJobDetailActivity$MyOnClickListener -> com.fc.invite.views.b:
+    com.fc.invite.views.InviteJobDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.invite.views.InviteJobListActivity -> com.fc.invite.views.InviteJobListActivity:
+    android.widget.ListView jobListView -> a
+    com.fc.main.beans.PullDownView mPullDownView -> b
+    java.util.List jobList -> c
+    com.fc.company.beans.JobListdAdapter adapter -> d
+    android.widget.TextView lblAllNum -> e
+    int index -> f
+    java.util.Map data -> g
+    int currentSty -> h
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    void onMore() -> a
+    void getPageList(int) -> a
+    com.fc.company.beans.JobListdAdapter access$0(com.fc.invite.views.InviteJobListActivity) -> a
+com.fc.invite.views.InviteJobListActivity$MyOnItemClickListener -> com.fc.invite.views.c:
+    com.fc.invite.views.InviteJobListActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.invite.views.ZaoPinQueryActivity -> com.fc.invite.views.ZaoPinQueryActivity:
+    android.widget.EditText txtComName -> a
+    android.widget.EditText txtJobNo -> b
+    android.widget.EditText txtJobName -> c
+    android.widget.EditText txtStartSalary -> d
+    android.widget.EditText txtEndSalary -> e
+    android.widget.EditText txtAge -> f
+    android.widget.Button btnCheck -> g
+    android.widget.Spinner cboComProperty -> h
+    android.widget.Spinner cboTypeOfWork -> i
+    android.widget.Spinner cboCaltureLevel -> j
+    android.widget.Spinner cboIndustryBigStyle -> k
+    android.widget.Spinner cboIndustrySmallStyle -> l
+    android.widget.Spinner cboJobBigStyle -> m
+    android.widget.Spinner cboJobSmallStyle -> n
+    android.widget.Spinner cboJobKind -> o
+    android.widget.Spinner cboWorkTime -> p
+    android.widget.Spinner cboWorkArea1 -> q
+    android.widget.Spinner cboWorkArea2 -> r
+    android.widget.Spinner cboWorkArea3 -> s
+    android.widget.RadioGroup radiogroup -> t
+    android.widget.RadioButton rdono -> u
+    android.widget.RadioButton rdotoday -> v
+    android.widget.RadioButton rdothreeday -> w
+    android.widget.RadioButton rdoweek -> x
+    android.widget.RadioButton rdomonth -> y
+    android.widget.CheckBox cboIsDirectInterview -> z
+    android.widget.CheckBox cboIsNewGraduates -> A
+    android.widget.CheckBox cboIsDisabledPerson -> B
+    android.widget.CheckBox cboIsAssurance -> C
+    android.app.ProgressDialog progressDialog -> D
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+com.fc.invite.views.ZaoPinQueryActivity$MyOnClickListener -> com.fc.invite.views.d:
+    com.fc.invite.views.ZaoPinQueryActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.invite.views.ZaoPinQueryActivity$MyOnItemSelectedListener -> com.fc.invite.views.e:
+    com.fc.invite.views.ZaoPinQueryActivity this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.fc.main.beans.CheckBoxAdapter -> com.fc.main.beans.a:
+    android.content.Context context -> a
+    java.util.List boxs -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.main.beans.GridAdapter -> com.fc.main.beans.b:
+    android.content.Context context -> a
+    java.util.List list -> b
+    android.view.LayoutInflater mInflater -> c
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.main.beans.GridAdapter$GridHolder -> com.fc.main.beans.c:
+    android.widget.ImageView imgview -> b
+    com.fc.main.beans.GridAdapter this$0 -> a
+    void access$1(com.fc.main.beans.GridAdapter$GridHolder,android.widget.ImageView) -> a
+    android.widget.ImageView access$2(com.fc.main.beans.GridAdapter$GridHolder) -> a
+com.fc.main.beans.GridInfo -> com.fc.main.beans.d:
+    int imgId -> a
+    int getImgId() -> a
+    java.lang.String toString() -> toString
+com.fc.main.beans.IActivity -> com.fc.main.beans.e:
+    void refresh(java.lang.Object[]) -> a
+com.fc.main.beans.LineLevelItem -> com.fc.main.beans.f:
+    int id -> a
+    java.lang.String name -> b
+    int parent_id -> c
+    int getId() -> a
+    void setId(int) -> a
+    java.lang.String getName() -> b
+    void setName(java.lang.String) -> a
+    int getParent_id() -> c
+    void setParent_id(int) -> b
+    java.lang.String toString() -> toString
+com.fc.main.beans.MainPageAdapter -> com.fc.main.beans.MainPageAdapter:
+    java.util.ArrayList view_list -> a
+    int getCount() -> getCount
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> isViewFromObject
+    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> destroyItem
+    void finishUpdate(android.view.ViewGroup) -> finishUpdate
+    int getItemPosition(java.lang.Object) -> getItemPosition
+    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> instantiateItem
+com.fc.main.beans.MainTask -> com.fc.main.beans.g:
+    int taskId -> a
+    java.util.Map params -> b
+    int getTaskId() -> a
+    java.util.Map getParams() -> b
+com.fc.main.beans.MyViewPage -> com.fc.main.beans.MyViewPage:
+    java.util.ArrayList view_list -> a
+    int getCount() -> getCount
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> isViewFromObject
+    java.lang.Object instantiateItem(android.view.View,int) -> instantiateItem
+    void destroyItem(android.view.View,int,java.lang.Object) -> destroyItem
+    void startUpdate(android.view.View) -> startUpdate
+    java.lang.CharSequence getPageTitle(int) -> getPageTitle
+com.fc.main.beans.My_ExpandableListView -> com.fc.main.beans.h:
+    int mLastY -> c
+    int mBottomPosition -> d
+    android.view.LayoutInflater inflater -> e
+    android.widget.LinearLayout headView -> f
+    android.widget.TextView tipsTextview -> g
+    android.widget.TextView lastUpdatedTextView -> h
+    android.widget.ImageView arrowImageView -> i
+    android.widget.ProgressBar progressBar -> j
+    android.view.animation.RotateAnimation animation -> k
+    android.view.animation.RotateAnimation reverseAnimation -> l
+    boolean isRecored -> m
+    int headContentHeight -> n
+    int startY -> o
+    int firstItemIndex -> p
+    int state -> q
+    boolean isBack -> r
+    boolean showRefresh -> a
+    boolean canRefleash -> b
+    com.fc.main.beans.My_ExpandableListView$MYOnScrollOverListener mOnScrollOverListener -> s
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void setBottomPosition$13462e() -> a
+    void setOnScrollOverListener(com.fc.main.beans.My_ExpandableListView$MYOnScrollOverListener) -> a
+    void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
+    void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
+    void onRefreshComplete() -> b
+    void changeHeaderViewByState() -> c
+com.fc.main.beans.My_ExpandableListView$1 -> com.fc.main.beans.i:
+    com.fc.main.beans.My_ExpandableListView this$0 -> a
+    boolean onListViewBottomAndPullUp$134632() -> a
+    boolean onMotionDown(android.view.MotionEvent) -> a
+    boolean onMotionMove$2ba31efd(android.view.MotionEvent) -> b
+    boolean onMotionUp$53fcfd4e() -> b
+com.fc.main.beans.My_ExpandableListView$MYOnScrollOverListener -> com.fc.main.beans.j:
+    boolean onListViewBottomAndPullUp$134632() -> a
+    boolean onMotionDown(android.view.MotionEvent) -> a
+    boolean onMotionMove$2ba31efd(android.view.MotionEvent) -> b
+    boolean onMotionUp$53fcfd4e() -> b
+com.fc.main.beans.PersonItem -> com.fc.main.beans.k:
+    int staff_id -> a
+    java.lang.String name -> b
+    int line_id -> c
+    java.lang.String getName() -> a
+    java.lang.String toString() -> toString
+com.fc.main.beans.PullDownExpandView -> com.fc.main.beans.PullDownExpandView:
+    android.widget.RelativeLayout mFooterView -> a
+    android.widget.TextView mFooterTextView -> b
+    android.widget.ProgressBar mFooterLoadingView -> c
+    com.fc.main.beans.My_ExpandableListView mListView -> d
+    com.fc.main.beans.PullDownExpandView$mOnPullDownListener mOnPullDownListener -> e
+    float mMotionDownLastY -> f
+    boolean mIsFetchMoreing -> g
+    boolean mIsPullUpDone -> h
+    boolean mEnableAutoFetchMore -> i
+    android.os.Handler mUIHandler -> j
+    void notifyDidMore() -> c
+    void setOnPullDownListener(com.fc.main.beans.PullDownExpandView$mOnPullDownListener) -> a
+    android.widget.ExpandableListView getListView() -> d
+    void initHeaderViewAndFooterViewAndListView(android.content.Context) -> a
+    boolean onListViewBottomAndPullUp$134632() -> a
+    boolean onMotionDown(android.view.MotionEvent) -> a
+    boolean onMotionMove$2ba31efd(android.view.MotionEvent) -> b
+    boolean onMotionUp$53fcfd4e() -> b
+    void setHideHeader() -> e
+    void setShowFooter() -> f
+    com.fc.main.beans.My_ExpandableListView access$0(com.fc.main.beans.PullDownExpandView) -> a
+    void access$1(com.fc.main.beans.PullDownExpandView,boolean) -> a
+    android.widget.TextView access$2(com.fc.main.beans.PullDownExpandView) -> b
+    android.widget.ProgressBar access$3(com.fc.main.beans.PullDownExpandView) -> c
+    boolean access$4(com.fc.main.beans.PullDownExpandView) -> d
+    com.fc.main.beans.PullDownExpandView$mOnPullDownListener access$5(com.fc.main.beans.PullDownExpandView) -> e
+com.fc.main.beans.PullDownExpandView$1 -> com.fc.main.beans.l:
+    com.fc.main.beans.PullDownExpandView this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.main.beans.PullDownExpandView$2 -> com.fc.main.beans.m:
+    com.fc.main.beans.PullDownExpandView this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.main.beans.PullDownExpandView$3 -> com.fc.main.beans.n:
+    com.fc.main.beans.PullDownExpandView this$0 -> a
+    void onMore() -> a
+com.fc.main.beans.PullDownExpandView$mOnPullDownListener -> com.fc.main.beans.o:
+    void onMore() -> a
+com.fc.main.beans.PullDownView -> com.fc.main.beans.PullDownView:
+    android.widget.RelativeLayout mFooterView -> a
+    android.widget.TextView mFooterTextView -> b
+    android.widget.ProgressBar mFooterLoadingView -> c
+    com.fc.main.beans.ScrollOverListView mListView -> d
+    com.fc.main.beans.PullDownView$OnPullDownListener mOnPullDownListener -> e
+    float mMotionDownLastY -> f
+    boolean mIsFetchMoreing -> g
+    boolean mIsPullUpDone -> h
+    boolean mEnableAutoFetchMore -> i
+    android.os.Handler mUIHandler -> j
+    void notifyDidMore() -> a
+    void setOnPullDownListener(com.fc.main.beans.PullDownView$OnPullDownListener) -> a
+    android.widget.ListView getListView() -> b
+    void initHeaderViewAndFooterViewAndListView(android.content.Context) -> a
+    boolean onListViewBottomAndPullUp$134632() -> c
+    boolean onMotionDown(android.view.MotionEvent) -> a
+    boolean onMotionMove$2ba31efd(android.view.MotionEvent) -> b
+    boolean onMotionUp$53fcfd4e() -> d
+    void setHideHeader() -> e
+    void setShowFooter() -> f
+    com.fc.main.beans.ScrollOverListView access$0(com.fc.main.beans.PullDownView) -> a
+    void access$1(com.fc.main.beans.PullDownView,boolean) -> a
+    android.widget.TextView access$2(com.fc.main.beans.PullDownView) -> b
+    android.widget.ProgressBar access$3(com.fc.main.beans.PullDownView) -> c
+    boolean access$4(com.fc.main.beans.PullDownView) -> d
+    com.fc.main.beans.PullDownView$OnPullDownListener access$5(com.fc.main.beans.PullDownView) -> e
+com.fc.main.beans.PullDownView$1 -> com.fc.main.beans.p:
+    com.fc.main.beans.PullDownView this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.main.beans.PullDownView$2 -> com.fc.main.beans.q:
+    com.fc.main.beans.PullDownView this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.main.beans.PullDownView$3 -> com.fc.main.beans.r:
+    com.fc.main.beans.PullDownView this$0 -> a
+    void onMore() -> a
+com.fc.main.beans.PullDownView$OnPullDownListener -> com.fc.main.beans.s:
+    void onMore() -> a
+com.fc.main.beans.ScrollOverListView -> com.fc.main.beans.t:
+    int mLastY -> c
+    int mBottomPosition -> d
+    android.view.LayoutInflater inflater -> e
+    android.widget.LinearLayout headView -> f
+    android.widget.TextView tipsTextview -> g
+    android.widget.TextView lastUpdatedTextView -> h
+    android.widget.ImageView arrowImageView -> i
+    android.widget.ProgressBar progressBar -> j
+    android.view.animation.RotateAnimation animation -> k
+    android.view.animation.RotateAnimation reverseAnimation -> l
+    boolean isRecored -> m
+    int headContentHeight -> n
+    int startY -> o
+    int firstItemIndex -> p
+    int state -> q
+    boolean isBack -> r
+    boolean showRefresh -> a
+    boolean canRefleash -> b
+    com.fc.main.beans.ScrollOverListView$OnScrollOverListener mOnScrollOverListener -> s
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void setBottomPosition$13462e() -> a
+    void setOnScrollOverListener(com.fc.main.beans.ScrollOverListView$OnScrollOverListener) -> a
+    void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
+    void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
+    void onRefreshComplete() -> b
+    void changeHeaderViewByState() -> c
+com.fc.main.beans.ScrollOverListView$1 -> com.fc.main.beans.u:
+    com.fc.main.beans.ScrollOverListView this$0 -> a
+    boolean onListViewBottomAndPullUp$134632() -> c
+    boolean onMotionDown(android.view.MotionEvent) -> a
+    boolean onMotionMove$2ba31efd(android.view.MotionEvent) -> b
+    boolean onMotionUp$53fcfd4e() -> d
+com.fc.main.beans.ScrollOverListView$OnScrollOverListener -> com.fc.main.beans.v:
+    boolean onListViewBottomAndPullUp$134632() -> c
+    boolean onMotionDown(android.view.MotionEvent) -> a
+    boolean onMotionMove$2ba31efd(android.view.MotionEvent) -> b
+    boolean onMotionUp$53fcfd4e() -> d
+com.fc.main.beans.SpinnerItem -> com.fc.main.beans.w:
+    int id -> a
+    java.lang.String name -> b
+    java.lang.String code -> c
+    java.lang.String getCode() -> a
+    void setCode(java.lang.String) -> a
+    java.lang.String toString() -> toString
+    int getId() -> b
+    void setId(int) -> a
+    java.lang.String getName() -> c
+    void setName(java.lang.String) -> b
+com.fc.main.dao.CompanyDao -> com.fc.main.a.a:
+    java.lang.String getJobListByPage(int) -> a
+    java.lang.String getJobListByPage(int,java.util.Map) -> a
+    java.lang.String getJobListByPage(java.util.Map) -> a
+    java.lang.String getJobListByPeople(java.util.Map) -> b
+    java.lang.String getJobDetail(java.lang.String) -> a
+    java.lang.String getLinkMan(java.lang.String) -> b
+    java.lang.String getCompanyList(java.util.Map) -> c
+    java.lang.String getLineLevel() -> a
+    java.lang.String getPersonByLevel(java.util.Map) -> d
+com.fc.main.dao.FileDownLoadDao -> com.fc.main.a.b:
+    java.lang.String getDownLoadItems(int,java.lang.String,java.lang.String) -> a
+    java.lang.String downLoadFile(java.lang.String) -> a
+com.fc.main.dao.FirstDao -> com.fc.main.a.c:
+    java.lang.String getPendWordList(java.util.Map) -> a
+    java.lang.String getNewsList(java.util.Map) -> b
+    java.lang.String getMsgboardList(java.util.Map) -> c
+    java.lang.String getJobList(java.util.Map) -> d
+    java.lang.String getStaff() -> a
+    byte[] getStaffImg() -> b
+    java.lang.String finishPendWork(java.util.Map) -> e
+com.fc.main.dao.MainDao -> com.fc.main.a.d:
+    java.lang.String getCompanyProperty() -> a
+    java.lang.String getEdu() -> b
+    java.lang.String getZyfl() -> c
+    java.lang.String getZyflChild(int) -> a
+    java.lang.String getIndustryClass() -> d
+    java.lang.String getIndustryChild(int) -> b
+    java.lang.String getGzxz() -> e
+    java.lang.String getGzbs() -> f
+    java.lang.String getAreaInfo() -> g
+    java.lang.String getPolicyInfo() -> h
+    java.lang.String getLinkMan() -> i
+com.fc.main.dao.PersonDao -> com.fc.main.a.e:
+    java.lang.String getRegionStr() -> a
+    java.lang.String getStreetStr(int) -> a
+    java.lang.String getJuweihuiStr(int) -> b
+    java.lang.String getFamilyStr(java.lang.String) -> a
+    java.lang.String getHousesStr(java.lang.String) -> b
+    byte[] getPersonImage(java.lang.String) -> c
+    java.lang.String getPersonListStrByParams(java.util.Map) -> a
+    java.lang.String getPersonsListStrByCompany(java.util.Map) -> b
+    java.lang.String getPersonsListStrByResources(java.util.Map) -> c
+    java.lang.String getPersonBase(java.lang.String) -> d
+    java.lang.String getPersonLevel(java.lang.String) -> e
+    java.lang.String getWorkInfoList(java.util.Map) -> d
+    java.lang.String updateWorkInfo(java.util.Map) -> e
+com.fc.main.dao.PolicyDao -> com.fc.main.a.f:
+    java.lang.String getPolicy(java.lang.String,java.lang.String) -> a
+    java.lang.String setAsk(java.util.Map) -> a
+com.fc.main.dao.ResourcesDao -> com.fc.main.a.g:
+    java.lang.String getResourcesList() -> a
+com.fc.main.myviews.GetPersonActivity -> com.fc.main.myviews.GetPersonActivity:
+    android.widget.LinearLayout llDuty -> a
+    android.widget.LinearLayout llPerson -> b
+    android.widget.Button btnOk -> c
+    android.widget.Button btnCancle -> d
+    android.widget.CheckBox cbxAll -> e
+    android.widget.GridView gvPerson -> f
+    java.util.List allLevels -> g
+    java.util.List allPersons -> h
+    java.util.List boxs -> i
+    com.fc.main.beans.CheckBoxAdapter adapter -> j
+    java.util.Map data -> k
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    java.util.List getTopItem() -> a
+    boolean isTop(com.fc.main.beans.LineLevelItem) -> a
+    void fretchTree(android.widget.LinearLayout,com.fc.main.beans.LineLevelItem) -> a
+    void fretchBoxs() -> b
+com.fc.main.myviews.GetPersonActivity$1 -> com.fc.main.myviews.a:
+    com.fc.main.myviews.GetPersonActivity this$0 -> a
+    com.fc.main.beans.LineLevelItem val$item -> b
+    void onClick(android.view.View) -> onClick
+com.fc.main.myviews.GetPersonActivity$MyOnClickListener -> com.fc.main.myviews.b:
+    com.fc.main.myviews.GetPersonActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.main.myviews.GetPersonActivity$MyOnItemCheckedChangeListener -> com.fc.main.myviews.c:
+    com.fc.main.myviews.GetPersonActivity this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.fc.main.service.CompanyService -> com.fc.main.service.CompanyService:
+    java.util.List allActivity -> a
+    java.util.List allTasks -> b
+    boolean isrun -> i
+    com.fc.main.dao.CompanyDao companyDao -> c
+    com.fc.main.dao.PolicyDao policyDao -> d
+    com.fc.main.dao.FileDownLoadDao fileDownLoadDao -> e
+    com.fc.main.dao.ResourcesDao resourcesDao -> f
+    com.fc.main.dao.FirstDao firstDao -> g
+    android.os.Handler handler -> h
+    android.app.Activity getActivityByName(java.lang.String) -> a
+    void addActivity(android.app.Activity) -> a
+    void newTask(com.fc.company.beans.CompanyTask) -> a
+    void run() -> run
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onCreate() -> onCreate
+    void onDestroy() -> onDestroy
+com.fc.main.service.CompanyService$1 -> com.fc.main.service.a:
+    com.fc.main.service.CompanyService this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.main.service.MainService -> com.fc.main.service.MainService:
+    java.util.List allServices -> a
+    java.util.List allActivity -> b
+    java.util.List allTasks -> c
+    boolean isrun -> f
+    com.fc.main.dao.MainDao mainDao -> d
+    android.os.Handler handler -> e
+    android.app.Activity getActivityByName(java.lang.String) -> a
+    void addActivity(android.app.Activity) -> a
+    void newTask(com.fc.main.beans.MainTask) -> a
+    void run() -> run
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onCreate() -> onCreate
+    void onDestroy() -> onDestroy
+com.fc.main.service.MainService$1 -> com.fc.main.service.b:
+    com.fc.main.service.MainService this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.main.service.PersonService -> com.fc.main.service.PersonService:
+    java.util.List allActivity -> a
+    java.util.List allTasks -> b
+    boolean isrun -> e
+    com.fc.main.dao.PersonDao personDao -> c
+    android.os.Handler handler -> d
+    android.app.Activity getActivityByName(java.lang.String) -> a
+    void addActivity(android.app.Activity) -> a
+    void newTask(com.fc.person.beans.PersonTask) -> a
+    void run() -> run
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onCreate() -> onCreate
+    void onDestroy() -> onDestroy
+com.fc.main.service.PersonService$1 -> com.fc.main.service.c:
+    com.fc.main.service.PersonService this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.main.tools.CheckNet -> com.fc.main.b.a:
+    com.fc.main.tools.CheckNet instance -> a
+    void checkNetwork(com.fc.first.views.LoadActivity) -> a
+com.fc.main.tools.CheckNet$1 -> com.fc.main.b.b:
+    com.fc.first.views.LoadActivity val$context -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.main.tools.CheckNet$2 -> com.fc.main.b.c:
+    com.fc.first.views.LoadActivity val$context -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.main.tools.Fc_Helper -> com.fc.main.b.d:
+    java.lang.String public_key -> a
+    java.lang.String EncryptDES(java.lang.String,java.lang.String) -> a
+com.fc.main.tools.HttpUrls_ -> com.fc.main.b.e:
+    com.fc.main.tools.HttpUrls_ instance -> b
+    java.lang.String staffName -> a
+    java.net.HttpURLConnection GetConnection(java.lang.String) -> g
+    java.lang.String login(com.fc.first.views.LoginActivity,java.lang.String,java.lang.String) -> a
+    java.lang.String getDes(com.fc.first.views.LoadActivity) -> a
+    java.util.ArrayList getCommitteeJson$14ee7ba9(java.lang.String) -> a
+    java.util.ArrayList getPersoninfoJson$14ee7ba9(java.lang.String) -> b
+    java.util.ArrayList getPersonMarkJson$14ee7ba9(java.lang.String) -> c
+    java.lang.String postJson1$2657ffeb() -> a
+    java.lang.String postImgJson$2f8da35(java.util.ArrayList) -> a
+    java.util.ArrayList getPendingWorkJson$10dc8409$4e139f79(java.lang.String) -> d
+    android.graphics.Bitmap getPersonImage$95b9725(java.lang.String) -> e
+    java.lang.String postPersonJson(java.util.ArrayList) -> b
+    java.lang.String PendWorkPostJson(java.util.ArrayList) -> c
+    java.util.ArrayList getNewsJson$64d8a613$60dab9ef() -> b
+    java.util.ArrayList getmsgboardmasterJson$64d8a613$60dab9ef() -> c
+    java.util.ArrayList getmsgboarddetileJson$452450b6(int) -> a
+    java.lang.String postResumeJson(java.util.ArrayList) -> d
+    java.util.ArrayList getPersonResumeJson$14ee7ba9(java.lang.String) -> f
+    java.lang.String postMarJson(java.util.ArrayList) -> e
+com.fc.main.tools.HttpUrls_$2 -> com.fc.main.b.f:
+    java.lang.StringBuilder val$builder -> a
+    java.util.HashMap val$map -> b
+    void run() -> run
+com.fc.main.tools.HttpUtil -> com.fc.main.b.g:
+    java.lang.String getRequest(java.lang.String) -> a
+    java.lang.String postRequest(java.lang.String,java.util.Map) -> a
+    byte[] getImage(java.lang.String) -> b
+com.fc.main.tools.IOUtil -> com.fc.main.b.h:
+    byte[] getBytesByStream(java.io.InputStream) -> a
+com.fc.main.tools.MainTools -> com.fc.main.b.i:
+    int getbackground1(int) -> a
+    void fetchSpinner(android.content.Context,android.widget.Spinner,java.lang.String,java.lang.String,java.lang.String) -> a
+    void fetchSpinner$450948af(android.content.Context,android.widget.Spinner,java.lang.String,java.lang.String,java.lang.String) -> b
+    void fetchSpinner$14c870b9(android.content.Context,android.widget.Spinner,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    android.content.Intent getAudioFileIntent(java.lang.String) -> a
+    int getSpinnerIndex(java.lang.String,java.lang.String[]) -> a
+    int getSpinnerhangyeIndex(java.lang.String,java.util.List) -> a
+com.fc.main.views.MainActivity -> com.fc.main.views.MainActivity:
+    android.widget.GridView gridview -> a
+    com.fc.main.beans.GridAdapter adapter -> b
+    java.util.ArrayList locationlist -> c
+    int[] imgIds -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    void onResume() -> onResume
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+com.fc.main.views.MainPageActivity -> com.fc.main.views.MainPageActivity:
+    android.support.v4.view.ViewPager viewPager -> a
+    java.util.ArrayList view_list -> b
+    android.view.ViewGroup main -> c
+    android.view.ViewGroup group -> d
+    android.widget.ImageView[] img -> e
+    android.widget.ImageView iv -> f
+    java.util.ArrayList locationInfolist -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    void onPageScrollStateChanged(int) -> onPageScrollStateChanged
+    void onPageScrolled(int,float,int) -> onPageScrolled
+    void onPageSelected(int) -> onPageSelected
+com.fc.main.views.MainPageOne -> com.fc.main.views.MainPageOne:
+    android.widget.GridView gridview -> a
+    com.fc.main.beans.GridAdapter adapter -> b
+    int[] imgIds -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+com.fc.person.beans.AutoFocusCallback -> com.fc.person.a.a:
+    java.lang.String TAG -> a
+    android.os.Handler autoFocusHandler -> b
+    int autoFocusMessage -> c
+    void setHandler(android.os.Handler,int) -> a
+    void onAutoFocus(boolean,android.hardware.Camera) -> onAutoFocus
+com.fc.person.beans.CameraConfigurationManager -> com.fc.person.a.b:
+    java.lang.String TAG -> a
+    java.util.regex.Pattern COMMA_PATTERN -> b
+    android.content.Context context -> c
+    android.graphics.Point screenResolution -> d
+    android.graphics.Point cameraResolution -> e
+    int previewFormat -> f
+    java.lang.String previewFormatString -> g
+    void initFromCameraParameters(android.hardware.Camera) -> a
+    void setDesiredCameraParameters(android.hardware.Camera) -> b
+    android.graphics.Point getCameraResolution() -> a
+    android.graphics.Point getScreenResolution() -> b
+    int getPreviewFormat() -> c
+    java.lang.String getPreviewFormatString() -> d
+    android.graphics.Point findBestPreviewSizeValue(java.lang.CharSequence,android.graphics.Point) -> a
+    int findBestMotZoomValue(java.lang.CharSequence,int) -> a
+com.fc.person.beans.CameraManager -> com.fc.person.a.c:
+    java.lang.String TAG -> b
+    com.fc.person.beans.CameraManager cameraManager -> c
+    int SDK_INT -> a
+    android.content.Context context -> d
+    com.fc.person.beans.CameraConfigurationManager configManager -> e
+    android.hardware.Camera camera -> f
+    android.graphics.Rect framingRect -> g
+    android.graphics.Rect framingRectInPreview -> h
+    boolean initialized -> i
+    boolean previewing -> j
+    boolean useOneShotPreviewCallback -> k
+    com.fc.person.beans.PreviewCallback previewCallback -> l
+    com.fc.person.beans.AutoFocusCallback autoFocusCallback -> m
+    void init(android.content.Context) -> a
+    com.fc.person.beans.CameraManager get() -> a
+    void openDriver(android.view.SurfaceHolder) -> a
+    void closeDriver() -> b
+    void startPreview() -> c
+    void stopPreview() -> d
+    void requestPreviewFrame$2a8797e(android.os.Handler) -> a
+    void requestAutoFocus$2a8797e(android.os.Handler) -> b
+    android.graphics.Rect getFramingRect() -> e
+    com.fc.person.beans.PlanarYUVLuminanceSource buildLuminanceSource(byte[],int,int) -> a
+com.fc.person.beans.CaptureActivityHandler -> com.fc.person.a.d:
+    java.lang.String TAG -> a
+    com.fc.person.views.CaptureActivity activity -> b
+    com.fc.person.beans.DecodeThread decodeThread -> c
+    com.fc.person.beans.CaptureActivityHandler$State state -> d
+    void handleMessage(android.os.Message) -> handleMessage
+    void quitSynchronously() -> a
+    void restartPreviewAndDecode() -> b
+com.fc.person.beans.CaptureActivityHandler$State -> com.fc.person.a.e:
+    com.fc.person.beans.CaptureActivityHandler$State PREVIEW -> a
+    com.fc.person.beans.CaptureActivityHandler$State SUCCESS -> b
+    com.fc.person.beans.CaptureActivityHandler$State DONE -> c
+    com.fc.person.beans.CaptureActivityHandler$State[] ENUM$VALUES -> d
+    com.fc.person.beans.CaptureActivityHandler$State[] values() -> values
+    com.fc.person.beans.CaptureActivityHandler$State valueOf(java.lang.String) -> valueOf
+com.fc.person.beans.DecodeFormatManager -> com.fc.person.a.f:
+    java.util.regex.Pattern COMMA_PATTERN -> e
+    java.util.Vector PRODUCT_FORMATS -> a
+    java.util.Vector ONE_D_FORMATS -> b
+    java.util.Vector QR_CODE_FORMATS -> c
+    java.util.Vector DATA_MATRIX_FORMATS -> d
+com.fc.person.beans.DecodeHandler -> com.fc.person.a.g:
+    java.lang.String TAG -> a
+    com.fc.person.views.CaptureActivity activity -> b
+    com.google.zxing.MultiFormatReader multiFormatReader -> c
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.person.beans.DecodeThread -> com.fc.person.a.h:
+    com.fc.person.views.CaptureActivity activity -> a
+    java.util.Hashtable hints -> b
+    android.os.Handler handler -> c
+    java.util.concurrent.CountDownLatch handlerInitLatch -> d
+    android.os.Handler getHandler() -> a
+    void run() -> run
+com.fc.person.beans.FamilyAdapter -> com.fc.person.a.i:
+    java.util.List groupList -> a
+    java.util.List childList -> b
+    android.content.Context context -> c
+    java.lang.Object getChild(int,int) -> getChild
+    long getChildId(int,int) -> getChildId
+    android.view.View getChildView(int,int,boolean,android.view.View,android.view.ViewGroup) -> getChildView
+    int getChildrenCount(int) -> getChildrenCount
+    java.lang.Object getGroup(int) -> getGroup
+    int getGroupCount() -> getGroupCount
+    long getGroupId(int) -> getGroupId
+    android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup) -> getGroupView
+    boolean hasStableIds() -> hasStableIds
+    boolean isChildSelectable(int,int) -> isChildSelectable
+com.fc.person.beans.FamilyInfo -> com.fc.person.a.j:
+    int id -> a
+    java.lang.String name -> b
+    java.lang.String sex -> c
+    java.lang.String sfz -> d
+    java.lang.String birth_date -> e
+    byte[] imagedata -> f
+    int getId() -> a
+    void setId(int) -> a
+    java.lang.String getName() -> b
+    void setName(java.lang.String) -> a
+    java.lang.String getSex() -> c
+    void setSex(java.lang.String) -> b
+    java.lang.String getSfz() -> d
+    void setSfz(java.lang.String) -> c
+    java.lang.String getBirth_date() -> e
+    void setBirth_date(java.lang.String) -> d
+    byte[] getImagedata() -> f
+    void setImagedata(byte[]) -> a
+    java.lang.String toString() -> toString
+com.fc.person.beans.FinishListener -> com.fc.person.a.k:
+    android.app.Activity activityToFinish -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+    void onClick(android.content.DialogInterface,int) -> onClick
+    void run() -> run
+com.fc.person.beans.FlashlightManager -> com.fc.person.a.l:
+    java.lang.String TAG -> a
+    java.lang.Object iHardwareService -> b
+    java.lang.reflect.Method setFlashEnabledMethod -> c
+    java.lang.Class maybeForName(java.lang.String) -> a
+    java.lang.reflect.Method maybeGetMethod(java.lang.Class,java.lang.String,java.lang.Class[]) -> a
+    java.lang.Object invoke(java.lang.reflect.Method,java.lang.Object,java.lang.Object[]) -> a
+    void enableFlashlight() -> a
+    void disableFlashlight() -> b
+    void setFlashlight(boolean) -> a
+com.fc.person.beans.InactivityTimer -> com.fc.person.a.m:
+    java.util.concurrent.ScheduledExecutorService inactivityTimer -> a
+    android.app.Activity activity -> b
+    java.util.concurrent.ScheduledFuture inactivityFuture -> c
+    void onActivity() -> a
+    void cancel() -> c
+    void shutdown() -> b
+com.fc.person.beans.InactivityTimer$DaemonThreadFactory -> com.fc.person.a.n:
+    java.lang.Thread newThread(java.lang.Runnable) -> newThread
+com.fc.person.beans.Layout3_listAdapter -> com.fc.person.a.o:
+    android.content.Context context -> a
+    android.view.LayoutInflater inflater -> b
+    java.lang.String[] str -> c
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.person.beans.Layout5_listAdapter -> com.fc.person.a.p:
+    android.content.Context context -> a
+    android.view.LayoutInflater inflater -> b
+    java.lang.String activityname -> c
+    java.lang.String[] str -> d
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.person.beans.ModifyWorkInfoAdapter -> com.fc.person.a.q:
+    java.util.List workInfoList -> a
+    android.content.Context context -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    android.content.Context access$0(com.fc.person.beans.ModifyWorkInfoAdapter) -> a
+com.fc.person.beans.ModifyWorkInfoAdapter$1 -> com.fc.person.a.r:
+    com.fc.person.beans.ModifyWorkInfoAdapter this$0 -> a
+    com.fc.person.beans.WorkInfo val$info -> b
+    void onClick(android.view.View) -> onClick
+com.fc.person.beans.ModifyWorkInfoAdapter$1$1 -> com.fc.person.a.s:
+    com.fc.person.beans.ModifyWorkInfoAdapter$1 this$1 -> a
+    com.fc.person.beans.WorkInfo val$info -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.beans.PersonInfoList -> com.fc.person.a.t:
+    java.lang.String personlistName -> a
+    java.lang.String personlistBorn -> b
+    java.lang.String personlistSex -> c
+    java.lang.String personlistCurrentStatus -> d
+    java.lang.String personlistEducation -> e
+    java.lang.String personlistSFZ -> f
+    java.lang.String personlistType -> g
+    java.lang.String pesonlistModi -> h
+    java.lang.String getPersonlistType() -> a
+    void setPersonlistType(java.lang.String) -> a
+    java.lang.String getPersonlistSFZ() -> b
+    void setPersonlistSFZ(java.lang.String) -> b
+    java.lang.String getPersonlistName() -> c
+    void setPersonlistName(java.lang.String) -> c
+    java.lang.String getPersonlistBorn() -> d
+    void setPersonlistBorn(java.lang.String) -> d
+    java.lang.String getPersonlistSex() -> e
+    void setPersonlistSex(java.lang.String) -> e
+    void setPersonlistCurrentStatus(java.lang.String) -> f
+    void setPersonlistEducation(java.lang.String) -> g
+    java.lang.String getPesonlistModi() -> f
+    void setPesonlistModi(java.lang.String) -> h
+    java.lang.String toString() -> toString
+com.fc.person.beans.PersonMark -> com.fc.person.a.u:
+    java.lang.String personMarkId -> a
+    java.lang.String personSFZ -> b
+    java.lang.String personMarkName -> c
+    java.lang.String personMarkCreatdate -> d
+    java.lang.String personMarkSoure -> e
+    java.lang.String getPersonMarkId() -> a
+    void setPersonMarkId(java.lang.String) -> a
+    java.lang.String getPersonSFZ() -> b
+    void setPersonSFZ(java.lang.String) -> b
+    java.lang.String getPersonMarkName() -> c
+    void setPersonMarkName(java.lang.String) -> c
+    java.lang.String getPersonMarkCreatdate() -> d
+    void setPersonMarkCreatdate(java.lang.String) -> d
+    java.lang.String getPersonMarkSoure() -> e
+    void setPersonMarkSoure(java.lang.String) -> e
+    java.lang.String toString() -> toString
+com.fc.person.beans.PersonMarkAdapter -> com.fc.person.a.v:
+    java.util.ArrayList personmark_list -> a
+    android.content.Context context -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    java.util.ArrayList access$0(com.fc.person.beans.PersonMarkAdapter) -> a
+com.fc.person.beans.PersonMarkAdapter$1 -> com.fc.person.a.w:
+    com.fc.person.beans.PersonMarkAdapter this$0 -> a
+    int val$position -> b
+    void onClick(android.view.View) -> onClick
+com.fc.person.beans.PersonMarkAdapter$MarkHodler -> com.fc.person.a.x:
+    android.widget.TextView tv_bianhao -> a
+    android.widget.TextView tv_markname -> b
+    android.widget.Button tv_markbeizhu -> c
+    com.fc.person.beans.PersonMarkAdapter this$0 -> d
+com.fc.person.beans.PersonResume -> com.fc.person.a.y:
+    java.lang.String personComputerSkills -> a
+    java.lang.String personComputerZhengshu -> b
+    java.lang.String personForeignLanguages1 -> c
+    java.lang.String personForeignLanguages2 -> d
+    java.lang.String personShunian1 -> e
+    java.lang.String personShunian2 -> f
+    java.lang.String personForeignZhengshu -> g
+    java.lang.String personQitazhengshu -> h
+    java.lang.String personAssessment -> i
+    java.lang.String personFuGangwei1 -> j
+    java.lang.String personFuGangwei2 -> k
+    java.lang.String personZigangwei1 -> l
+    java.lang.String personZigangwei2 -> m
+    java.lang.String personGanwei -> n
+    java.lang.String personExpectedSalarylow -> o
+    java.lang.String personExpectedSalaryUp -> p
+    java.lang.String personNatureEmployment -> q
+    java.lang.String personWorktime -> r
+    java.lang.String personWorkaddress1 -> s
+    java.lang.String personWorkaddress2 -> t
+    java.lang.String personWorkaddress3 -> u
+    java.lang.String personworkyears -> v
+    java.lang.String personSFZ -> w
+    java.lang.String getPersonForeignZhengshu() -> a
+    void setPersonForeignZhengshu(java.lang.String) -> a
+    java.lang.String getPersonSFZ() -> b
+    void setPersonSFZ(java.lang.String) -> b
+    java.lang.String getPersonComputerSkills() -> c
+    void setPersonComputerSkills(java.lang.String) -> c
+    java.lang.String getPersonComputerZhengshu() -> d
+    void setPersonComputerZhengshu(java.lang.String) -> d
+    java.lang.String getPersonForeignLanguages1() -> e
+    void setPersonForeignLanguages1(java.lang.String) -> e
+    java.lang.String getPersonForeignLanguages2() -> f
+    void setPersonForeignLanguages2(java.lang.String) -> f
+    java.lang.String getPersonShunian1() -> g
+    void setPersonShunian1(java.lang.String) -> g
+    java.lang.String getPersonShunian2() -> h
+    void setPersonShunian2(java.lang.String) -> h
+    java.lang.String getPersonQitazhengshu() -> i
+    void setPersonQitazhengshu(java.lang.String) -> i
+    java.lang.String getPersonAssessment() -> j
+    void setPersonAssessment(java.lang.String) -> j
+    java.lang.String getPersonFuGangwei1() -> k
+    void setPersonFuGangwei1(java.lang.String) -> k
+    java.lang.String getPersonFuGangwei2() -> l
+    void setPersonFuGangwei2(java.lang.String) -> l
+    java.lang.String getPersonZigangwei1() -> m
+    void setPersonZigangwei1(java.lang.String) -> m
+    java.lang.String getPersonZigangwei2() -> n
+    void setPersonZigangwei2(java.lang.String) -> n
+    java.lang.String getPersonGanwei() -> o
+    void setPersonGanwei(java.lang.String) -> o
+    java.lang.String getPersonExpectedSalarylow() -> p
+    void setPersonExpectedSalarylow(java.lang.String) -> p
+    java.lang.String getPersonExpectedSalaryUp() -> q
+    void setPersonExpectedSalaryUp(java.lang.String) -> q
+    java.lang.String getPersonNatureEmployment() -> r
+    void setPersonNatureEmployment(java.lang.String) -> r
+    java.lang.String getPersonWorktime() -> s
+    void setPersonWorktime(java.lang.String) -> s
+    java.lang.String getPersonWorkaddress1() -> t
+    void setPersonWorkaddress1(java.lang.String) -> t
+    java.lang.String getPersonWorkaddress2() -> u
+    void setPersonWorkaddress2(java.lang.String) -> u
+    java.lang.String getPersonWorkaddress3() -> v
+    void setPersonWorkaddress3(java.lang.String) -> v
+    java.lang.String getPersonworkyears() -> w
+    void setPersonworkyears(java.lang.String) -> w
+    java.lang.String toString() -> toString
+com.fc.person.beans.PersonTask -> com.fc.person.a.z:
+    int taskId -> a
+    java.util.Map params -> b
+    int getTaskId() -> a
+    java.util.Map getParams() -> b
+com.fc.person.beans.PersonUpdataImg -> com.fc.person.a.aa:
+    java.lang.String personSfz -> a
+    byte[] personheadImg -> b
+    void setPersonSfz(java.lang.String) -> a
+    void setPersonheadImg(byte[]) -> a
+    java.lang.String toString() -> toString
+com.fc.person.beans.PersonalBaseInformation -> com.fc.person.a.ab:
+    java.lang.String personName -> a
+    java.lang.String personBorn -> b
+    java.lang.String personSex -> c
+    java.lang.String personCardId -> d
+    java.lang.String personEducation -> e
+    byte[] personHead -> f
+    java.lang.String personNational -> g
+    java.lang.String personNativePlace -> h
+    java.lang.String personCurrentStatus -> i
+    java.lang.String personMobilePhone -> j
+    java.lang.String personCurrentAddress -> k
+    java.lang.String personStreet -> l
+    java.lang.String personjuweihui -> m
+    java.lang.String personIntention -> n
+    com.fc.first.beans.Center center -> o
+    java.lang.String personLevelmsg -> p
+    java.lang.String personType -> q
+    java.lang.String personBeizhu -> r
+    java.lang.String personRoad -> s
+    java.lang.String personNong -> t
+    java.lang.String personNumber -> u
+    java.lang.String personRoom -> v
+    java.lang.String personNowRoad -> w
+    java.lang.String personNowNong -> x
+    java.lang.String personNowNumber -> y
+    java.lang.String personNowRoom -> z
+    java.lang.String updateTime -> A
+    java.lang.String getUpdateTime() -> a
+    void setUpdateTime(java.lang.String) -> a
+    java.lang.String getPersonBeizhu() -> b
+    void setPersonBeizhu(java.lang.String) -> b
+    java.lang.String getPersonNowRoad() -> c
+    void setPersonNowRoad(java.lang.String) -> c
+    java.lang.String getPersonNowNong() -> d
+    void setPersonNowNong(java.lang.String) -> d
+    java.lang.String getPersonNowNumber() -> e
+    void setPersonNowNumber(java.lang.String) -> e
+    java.lang.String getPersonNowRoom() -> f
+    void setPersonNowRoom(java.lang.String) -> f
+    java.lang.String getPersonRoad() -> g
+    void setPersonRoad(java.lang.String) -> g
+    java.lang.String getPersonNong() -> h
+    void setPersonNong(java.lang.String) -> h
+    java.lang.String getPersonNumber() -> i
+    void setPersonNumber(java.lang.String) -> i
+    java.lang.String getPersonRoom() -> j
+    void setPersonRoom(java.lang.String) -> j
+    java.lang.String getPersonType() -> k
+    void setPersonType(java.lang.String) -> k
+    java.lang.String getPersonName() -> l
+    void setPersonName(java.lang.String) -> l
+    java.lang.String getPersonBorn() -> m
+    void setPersonBorn(java.lang.String) -> m
+    java.lang.String getPersonSex() -> n
+    void setPersonSex(java.lang.String) -> n
+    java.lang.String getPersonCardId() -> o
+    void setPersonCardId(java.lang.String) -> o
+    java.lang.String getPersonEducation() -> p
+    void setPersonEducation(java.lang.String) -> p
+    java.lang.String getPersonNational() -> q
+    void setPersonNational(java.lang.String) -> q
+    java.lang.String getPersonNativePlace() -> r
+    void setPersonNativePlace(java.lang.String) -> r
+    java.lang.String getPersonCurrentStatus() -> s
+    void setPersonCurrentStatus(java.lang.String) -> s
+    java.lang.String getPersonMobilePhone() -> t
+    void setPersonMobilePhone(java.lang.String) -> t
+    void setPersonStreet(java.lang.String) -> u
+    void setPersonjuweihui(java.lang.String) -> v
+    java.lang.String getPersonIntention() -> u
+    void setPersonIntention(java.lang.String) -> w
+    com.fc.first.beans.Center getCenter() -> v
+    void setCenter(com.fc.first.beans.Center) -> a
+    void setPersonLevelmsg(java.lang.String) -> x
+    java.lang.String toString() -> toString
+com.fc.person.beans.PersonqueryAdapter -> com.fc.person.a.ac:
+    android.content.Context context -> a
+    java.util.ArrayList personinfo_list -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.person.beans.PersonqueryAdapter$QueryItemHodler -> com.fc.person.a.ad:
+    android.widget.TextView tv_personqueryName -> a
+    android.widget.TextView tv_personqueryBorn -> b
+    android.widget.TextView tv_personquerySex -> c
+    android.widget.TextView tv_personqueryCurrentStatus -> d
+    android.widget.TextView tv_personquerynum -> e
+    android.widget.TextView tv_modiqk -> f
+    com.fc.person.beans.PersonqueryAdapter this$0 -> g
+com.fc.person.beans.PlanarYUVLuminanceSource -> com.fc.person.a.ae:
+    byte[] yuvData -> a
+    int dataWidth -> b
+    int dataHeight -> c
+    int left -> d
+    int top -> e
+    byte[] getRow(int,byte[]) -> getRow
+    byte[] getMatrix() -> getMatrix
+    boolean isCropSupported() -> isCropSupported
+    android.graphics.Bitmap renderCroppedGreyscaleBitmap() -> a
+com.fc.person.beans.PreviewCallback -> com.fc.person.a.af:
+    java.lang.String TAG -> a
+    com.fc.person.beans.CameraConfigurationManager configManager -> b
+    boolean useOneShotPreviewCallback -> c
+    android.os.Handler previewHandler -> d
+    int previewMessage -> e
+    void setHandler(android.os.Handler,int) -> a
+    void onPreviewFrame(byte[],android.hardware.Camera) -> onPreviewFrame
+com.fc.person.beans.RegionInformation -> com.fc.person.a.ag:
+    java.lang.String regionId -> a
+    java.lang.String regionName -> b
+    java.lang.String cityId -> c
+    java.lang.String getRegioId() -> a
+    void setRegioId(java.lang.String) -> a
+    void setRegionName(java.lang.String) -> b
+    void setCityId(java.lang.String) -> c
+    java.lang.String toString() -> toString
+com.fc.person.beans.StreetInformation -> com.fc.person.a.ah:
+    java.lang.String streetId -> a
+    java.lang.String streetName -> b
+    java.lang.String regionId -> c
+    java.lang.String getStreetId() -> a
+    void setStreetId(java.lang.String) -> a
+    java.lang.String getStreetName() -> b
+    void setStreetName(java.lang.String) -> b
+    void setRegionId(java.lang.String) -> c
+    java.lang.String toString() -> toString
+com.fc.person.beans.WorkInfo -> com.fc.person.a.ai:
+    int id -> a
+    java.lang.String sfz -> b
+    java.lang.String dw_name -> c
+    java.lang.String start_date -> d
+    java.lang.String end_date -> e
+    java.lang.String dw_type -> f
+    java.lang.String trade -> g
+    java.lang.String dept -> h
+    java.lang.String position -> i
+    java.lang.String create_date -> j
+    java.lang.String create_staff -> k
+    java.lang.String update_date -> l
+    java.lang.String update_staff -> m
+    java.lang.String type -> n
+    int getId() -> a
+    void setId(int) -> a
+    void setSfz(java.lang.String) -> a
+    java.lang.String getDw_name() -> b
+    void setDw_name(java.lang.String) -> b
+    java.lang.String getStart_date() -> c
+    void setStart_date(java.lang.String) -> c
+    java.lang.String getEnd_date() -> d
+    void setEnd_date(java.lang.String) -> d
+    java.lang.String getDw_type() -> e
+    void setDw_type(java.lang.String) -> e
+    java.lang.String getTrade() -> f
+    void setTrade(java.lang.String) -> f
+    java.lang.String getDept() -> g
+    void setDept(java.lang.String) -> g
+    java.lang.String getPosition() -> h
+    void setPosition(java.lang.String) -> h
+    void setCreate_date(java.lang.String) -> i
+    void setCreate_staff(java.lang.String) -> j
+    void setUpdate_date(java.lang.String) -> k
+    void setUpdate_staff(java.lang.String) -> l
+    void setType(java.lang.String) -> m
+com.fc.person.beans.WorkInfoAdapter -> com.fc.person.a.aj:
+    java.util.List workInfoList -> a
+    android.content.Context context -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.person.beans.Zihangye -> com.fc.person.a.ak:
+    java.lang.String Zihangename -> a
+    java.lang.String ZihangyeCode -> b
+    java.lang.String hangyeCode -> c
+    java.lang.String getZihangename() -> a
+    java.lang.String getHangyeCode() -> b
+    java.lang.String toString() -> toString
+com.fc.person.beans.hangye -> com.fc.person.a.al:
+    java.lang.String hangyeName -> a
+    java.lang.String hangyeCode -> b
+    java.lang.String getName() -> a
+    java.lang.String getCode() -> b
+    java.lang.String toString() -> toString
+com.fc.person.views.AddPersonInfoActivity -> com.fc.person.views.AddPersonInfoActivity:
+    android.widget.EditText tv_personaname -> g
+    android.widget.EditText tv_personsex -> h
+    android.widget.EditText tv_personborn -> i
+    android.widget.EditText tv_personnational -> j
+    android.widget.EditText tv_personNative -> k
+    android.widget.EditText tv_tye -> l
+    android.widget.EditText tv_cardnum -> m
+    android.widget.EditText tv_education -> n
+    android.widget.EditText tv_status -> o
+    android.widget.EditText tv_intention -> p
+    android.widget.EditText tv_phone -> q
+    android.widget.EditText tv_personaddress -> r
+    android.widget.EditText tv_personstreet -> s
+    android.widget.EditText tv_juweihui -> t
+    android.widget.EditText tv_hukoudizhi -> u
+    android.widget.TextView tv_personMark -> v
+    android.widget.TextView tv_markname -> w
+    android.widget.TextView tv_marksource -> x
+    android.widget.TextView tv_marktime -> y
+    android.widget.TextView tv_personbeizhu -> z
+    android.widget.TextView tv_updateTime -> A
+    android.widget.ImageView img_student -> B
+    android.widget.ImageView img_qihang -> C
+    android.widget.ImageView img_lingjiuye -> D
+    android.widget.ImageView img_jiuyekunnan -> E
+    android.widget.ImageView img_jiedu -> F
+    android.widget.ImageView img_xingjie -> G
+    android.view.View markview -> H
+    java.lang.String personSFZ -> I
+    java.lang.String personmarkName -> J
+    java.lang.String query_sfz -> K
+    java.lang.String personjson -> L
+    android.graphics.Bitmap personImage -> M
+    boolean SFZCheck -> N
+    boolean markShow -> O
+    com.fc.first.beans.Center center -> P
+    java.util.ArrayList personinfoJson -> Q
+    java.util.ArrayList personmark -> R
+    boolean hasShootPic -> a
+    java.lang.String SDCARD_ROOT_PATH -> b
+    android.widget.PopupWindow popupWindow -> S
+    com.fc.person.views.AddPersonInfoActivity$MyReceiver myReceiver -> T
+    java.lang.Runnable personimg_thread -> c
+    android.os.Handler handler_baseinfo -> U
+    java.lang.Runnable thread_mark -> d
+    java.util.HashMap HM_mark -> e
+    java.util.Map Map_MarkName -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+    void showPersonMark(java.util.ArrayList) -> b
+    void onDestroy() -> onDestroy
+    java.util.ArrayList ParsePersonJson(java.lang.String) -> a
+    boolean access$0(com.fc.person.views.AddPersonInfoActivity) -> a
+    java.lang.String access$1(com.fc.person.views.AddPersonInfoActivity) -> b
+    void access$2(com.fc.person.views.AddPersonInfoActivity,android.graphics.Bitmap) -> a
+    java.lang.String access$3(com.fc.person.views.AddPersonInfoActivity) -> c
+    android.graphics.Bitmap access$4(com.fc.person.views.AddPersonInfoActivity) -> d
+    android.os.Handler access$5(com.fc.person.views.AddPersonInfoActivity) -> e
+    java.util.ArrayList access$6(com.fc.person.views.AddPersonInfoActivity) -> f
+    void access$7(com.fc.person.views.AddPersonInfoActivity,java.lang.String) -> a
+    java.lang.String access$8(com.fc.person.views.AddPersonInfoActivity) -> g
+    void access$9(com.fc.person.views.AddPersonInfoActivity,java.util.ArrayList) -> a
+    void access$10(com.fc.person.views.AddPersonInfoActivity,java.util.ArrayList) -> b
+    void access$11(com.fc.person.views.AddPersonInfoActivity,boolean) -> a
+    void access$12(com.fc.person.views.AddPersonInfoActivity,java.lang.String) -> b
+    void access$13(com.fc.person.views.AddPersonInfoActivity,java.lang.String) -> c
+    void access$14(com.fc.person.views.AddPersonInfoActivity,java.lang.String) -> d
+    java.lang.String access$15(com.fc.person.views.AddPersonInfoActivity) -> h
+    void access$16(java.util.ArrayList) -> a
+    void access$17(com.fc.person.views.AddPersonInfoActivity) -> i
+    void access$18$1ec7b468(com.fc.person.views.AddPersonInfoActivity,android.view.View) -> a
+com.fc.person.views.AddPersonInfoActivity$1 -> com.fc.person.views.a:
+    com.fc.person.views.AddPersonInfoActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.AddPersonInfoActivity$2 -> com.fc.person.views.b:
+    com.fc.person.views.AddPersonInfoActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.person.views.AddPersonInfoActivity$3 -> com.fc.person.views.c:
+    com.fc.person.views.AddPersonInfoActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.AddPersonInfoActivity$4 -> com.fc.person.views.d:
+    com.fc.person.views.AddPersonInfoActivity this$0 -> a
+    java.util.ArrayList val$personmarks -> b
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.AddPersonInfoActivity$MyReceiver -> com.fc.person.views.AddPersonInfoActivity$MyReceiver:
+    com.fc.person.views.AddPersonInfoActivity this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.fc.person.views.CaptureActivity -> com.fc.person.views.CaptureActivity:
+    com.fc.person.beans.CaptureActivityHandler handler -> a
+    com.fc.person.views.ViewfinderView viewfinderView -> b
+    boolean hasSurface -> c
+    java.util.Vector decodeFormats -> d
+    java.lang.String characterSet -> e
+    android.widget.TextView txtResult -> f
+    com.fc.person.beans.InactivityTimer inactivityTimer -> g
+    android.media.MediaPlayer mediaPlayer -> h
+    boolean playBeep -> i
+    boolean vibrate -> j
+    android.media.MediaPlayer$OnCompletionListener beepListener -> k
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onDestroy() -> onDestroy
+    void initCamera(android.view.SurfaceHolder) -> a
+    void surfaceChanged(android.view.SurfaceHolder,int,int,int) -> surfaceChanged
+    void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
+    void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
+    com.fc.person.views.ViewfinderView getViewfinderView() -> a
+    android.os.Handler getHandler() -> b
+    void drawViewfinder() -> c
+    void handleDecode(com.google.zxing.Result,android.graphics.Bitmap) -> a
+com.fc.person.views.CaptureActivity$1 -> com.fc.person.views.e:
+    com.fc.person.views.CaptureActivity this$0 -> a
+    void onCompletion(android.media.MediaPlayer) -> onCompletion
+com.fc.person.views.ERecordActivity -> com.fc.person.views.ERecordActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.fc.person.views.FamilyActivity2 -> com.fc.person.views.FamilyActivity2:
+    android.widget.ExpandableListView lvFamily -> g
+    java.util.List groupList -> a
+    java.util.List childList -> b
+    java.util.List familys -> c
+    com.fc.person.beans.FamilyAdapter adapter -> d
+    java.util.List houses -> e
+    java.lang.String sfz -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    void onStop() -> onStop
+    java.util.ArrayList fetchStrToList(java.lang.String) -> a
+    android.widget.ExpandableListView access$0(com.fc.person.views.FamilyActivity2) -> a
+com.fc.person.views.FamilyActivity2$MyOnGroupExpandListener -> com.fc.person.views.f:
+    com.fc.person.views.FamilyActivity2 this$0 -> a
+    void onGroupExpand(int) -> onGroupExpand
+com.fc.person.views.FamilyActivity2$MyOnItemLongClickListener -> com.fc.person.views.g:
+    com.fc.person.views.FamilyActivity2 this$0 -> a
+    boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long) -> onItemLongClick
+    com.fc.person.views.FamilyActivity2 access$1(com.fc.person.views.FamilyActivity2$MyOnItemLongClickListener) -> a
+com.fc.person.views.FamilyActivity2$MyOnItemLongClickListener$1 -> com.fc.person.views.h:
+    com.fc.person.views.FamilyActivity2$MyOnItemLongClickListener this$1 -> a
+    int val$groupPos -> b
+    int val$childPos -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.FiveActivity -> com.fc.person.views.FiveActivity:
+    android.widget.TabHost tabhost -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    android.widget.TabHost access$0(com.fc.person.views.FiveActivity) -> a
+com.fc.person.views.FiveActivity$MyOnCheckedChangeListener -> com.fc.person.views.i:
+    com.fc.person.views.FiveActivity this$0 -> a
+    void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+com.fc.person.views.HospitalizedActivity -> com.fc.person.views.HospitalizedActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.fc.person.views.ModifyPersonInfoActivity -> com.fc.person.views.ModifyPersonInfoActivity:
+    android.widget.EditText tv_personNative -> i
+    android.widget.EditText tv_personaname -> j
+    android.widget.EditText tv_personborn -> k
+    android.widget.EditText tv_phone -> l
+    android.widget.EditText tv_cardnum -> m
+    android.widget.EditText tv_road -> n
+    android.widget.EditText tv_nong -> o
+    android.widget.EditText tv_number -> p
+    android.widget.EditText tv_room -> q
+    android.widget.EditText tv_hujiroad -> r
+    android.widget.EditText tv_hujinong -> s
+    android.widget.EditText tv_hujinumber -> t
+    android.widget.EditText tv_hujiroom -> u
+    android.widget.EditText tv_remark -> v
+    android.widget.Spinner tv_personsex -> w
+    android.widget.Spinner tv_personnational -> x
+    android.widget.Spinner tv_tye -> y
+    android.widget.Spinner tv_education -> z
+    android.widget.Spinner tv_status -> A
+    android.widget.Spinner tv_intention -> B
+    android.widget.Spinner tv_personstreet -> C
+    android.widget.Spinner tv_juweihui -> D
+    android.widget.TextView tv_personMark -> E
+    android.widget.LinearLayout ll_juzhu -> F
+    android.widget.LinearLayout ll_huji -> G
+    android.widget.CheckBox boxjuzhu -> H
+    android.widget.CheckBox boxhuji -> I
+    android.widget.ImageView img_personHead -> J
+    android.widget.ImageView img_student -> K
+    android.widget.ImageView img_qihang -> L
+    android.widget.ImageView img_lingjiuye -> M
+    android.widget.ImageView img_jiuyekunnan -> N
+    android.widget.ImageView img_jiedu -> O
+    android.widget.ImageView img_xingjie -> P
+    android.widget.Button btn_paizhao -> Q
+    android.widget.Button btn_shangchuan -> R
+    android.widget.Button btn_save -> S
+    android.widget.Button btn_modifymark -> T
+    java.lang.String personName -> U
+    java.lang.String persongender -> V
+    java.lang.String personBorn -> W
+    java.lang.String personCardId -> X
+    java.lang.String personType -> Y
+    java.lang.String personMobilePhone -> Z
+    java.lang.String personStreet -> aa
+    java.lang.String personJuweihui -> ab
+    java.lang.String personintention -> ac
+    java.lang.String personeducationLevel -> ad
+    java.lang.String personcurrentStatus -> ae
+    java.lang.String personNative -> af
+    java.lang.String personnational -> ag
+    java.lang.String personjuweihui -> ah
+    java.lang.String personroad -> ai
+    java.lang.String personnong -> aj
+    java.lang.String personnumber -> ak
+    java.lang.String personroom -> al
+    java.lang.String personhujilu -> am
+    java.lang.String personhujinong -> an
+    java.lang.String personhujinumber -> ao
+    java.lang.String personhujiroom -> ap
+    java.lang.String personBeizhu -> aq
+    java.lang.String personSFZ -> ar
+    java.lang.String streetId -> as
+    java.lang.String postImgJson -> at
+    java.lang.String postPersonJson -> au
+    android.graphics.Bitmap bitmap -> av
+    android.graphics.Bitmap personImage -> aw
+    java.lang.String address -> ax
+    int maxH -> ay
+    java.lang.String[] spinnersex -> az
+    java.lang.String[] spinnernational -> aA
+    java.lang.String[] spinneredu -> aB
+    java.lang.String[] spinnerstatus -> aC
+    java.lang.String[] spinnerintention -> aD
+    java.lang.String[] spinnermodi -> aE
+    android.content.BroadcastReceiver myModifyReceiver -> aF
+    java.util.ArrayList personinfoJson -> aG
+    java.util.ArrayList personmark -> aH
+    java.util.ArrayList list_update -> aI
+    java.util.List streetList -> aJ
+    java.util.ArrayList jiuwei_list -> aK
+    java.util.ArrayList jiedaoList -> aL
+    com.fc.person.beans.PersonalBaseInformation personbase -> aM
+    boolean isclickphoto -> aN
+    java.lang.String SDCARD_ROOT_PATH -> a
+    android.app.ProgressDialog progressDialog -> aO
+    java.util.ArrayList locationlist -> aP
+    java.util.ArrayList committeelist -> aQ
+    java.util.HashMap HM_mark -> aR
+    java.lang.String personmarkName -> aS
+    java.lang.Runnable personbase_thread -> b
+    java.lang.Runnable personmark_thread -> c
+    java.lang.Runnable personimg_thread -> d
+    android.os.Handler handler_baseinfo -> aT
+    java.lang.Runnable thread_setUpdate -> e
+    java.lang.Runnable thread_BasesetUpdate -> f
+    byte[] drawableToByte -> g
+    java.lang.Runnable thread_committee -> h
+    void onCreate(android.os.Bundle) -> onCreate
+    void initSpinnerData() -> a
+    void initPersonInfo() -> b
+    int getSpinnerIndex(java.lang.String,java.lang.String[]) -> a
+    int getSpinnerIndex(java.lang.String,java.util.ArrayList) -> a
+    void onClick(android.view.View) -> onClick
+    void showPersonMark() -> c
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void showBaseUpdialog(android.content.Context) -> a
+    void showUpdialog(android.content.Context) -> b
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onStop() -> onStop
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    java.lang.String access$0(com.fc.person.views.ModifyPersonInfoActivity) -> a
+    void access$1(com.fc.person.views.ModifyPersonInfoActivity,java.util.ArrayList) -> a
+    java.util.ArrayList access$2(com.fc.person.views.ModifyPersonInfoActivity) -> b
+    android.os.Handler access$3(com.fc.person.views.ModifyPersonInfoActivity) -> c
+    void access$4(com.fc.person.views.ModifyPersonInfoActivity,java.util.ArrayList) -> b
+    java.util.ArrayList access$5(com.fc.person.views.ModifyPersonInfoActivity) -> d
+    void access$6(com.fc.person.views.ModifyPersonInfoActivity,android.graphics.Bitmap) -> a
+    android.graphics.Bitmap access$7(com.fc.person.views.ModifyPersonInfoActivity) -> e
+    android.widget.ImageView access$8(com.fc.person.views.ModifyPersonInfoActivity) -> f
+    void access$9(com.fc.person.views.ModifyPersonInfoActivity,java.lang.String) -> a
+    java.lang.String access$10(com.fc.person.views.ModifyPersonInfoActivity) -> g
+    void access$11(com.fc.person.views.ModifyPersonInfoActivity) -> h
+    android.app.ProgressDialog access$12(com.fc.person.views.ModifyPersonInfoActivity) -> i
+    void access$13$35fa60f3(com.fc.person.views.ModifyPersonInfoActivity) -> j
+    java.lang.String access$14(com.fc.person.views.ModifyPersonInfoActivity) -> k
+    java.util.ArrayList access$15(com.fc.person.views.ModifyPersonInfoActivity) -> l
+    android.widget.Spinner access$16(com.fc.person.views.ModifyPersonInfoActivity) -> m
+    java.lang.String access$17(com.fc.person.views.ModifyPersonInfoActivity) -> n
+    java.lang.String access$18(com.fc.person.views.ModifyPersonInfoActivity) -> o
+    void access$19(com.fc.person.views.ModifyPersonInfoActivity) -> p
+    java.util.ArrayList access$20(com.fc.person.views.ModifyPersonInfoActivity) -> q
+    java.util.ArrayList access$21(com.fc.person.views.ModifyPersonInfoActivity) -> r
+    void access$22(com.fc.person.views.ModifyPersonInfoActivity,java.lang.String) -> b
+    void access$23(com.fc.person.views.ModifyPersonInfoActivity,java.lang.String) -> c
+    java.lang.String access$24(com.fc.person.views.ModifyPersonInfoActivity) -> s
+    void access$25(com.fc.person.views.ModifyPersonInfoActivity,java.util.ArrayList) -> c
+    void access$26(com.fc.person.views.ModifyPersonInfoActivity,java.util.ArrayList) -> d
+    java.util.ArrayList access$27(com.fc.person.views.ModifyPersonInfoActivity) -> t
+    java.util.List access$28(com.fc.person.views.ModifyPersonInfoActivity) -> u
+    void access$29(com.fc.person.views.ModifyPersonInfoActivity,java.lang.String) -> d
+    java.util.ArrayList access$30(com.fc.person.views.ModifyPersonInfoActivity) -> v
+    void access$31(com.fc.person.views.ModifyPersonInfoActivity,java.lang.String) -> e
+com.fc.person.views.ModifyPersonInfoActivity$1 -> com.fc.person.views.j:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonInfoActivity$10 -> com.fc.person.views.k:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.ModifyPersonInfoActivity$11 -> com.fc.person.views.l:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.ModifyPersonInfoActivity$12 -> com.fc.person.views.m:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void onDismiss(android.content.DialogInterface) -> onDismiss
+com.fc.person.views.ModifyPersonInfoActivity$2 -> com.fc.person.views.n:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonInfoActivity$3 -> com.fc.person.views.o:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonInfoActivity$4 -> com.fc.person.views.p:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.person.views.ModifyPersonInfoActivity$5 -> com.fc.person.views.q:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonInfoActivity$6 -> com.fc.person.views.r:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonInfoActivity$7 -> com.fc.person.views.s:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonInfoActivity$8 -> com.fc.person.views.t:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.ModifyPersonInfoActivity$9 -> com.fc.person.views.u:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.ModifyPersonInfoActivity$mySelectedListener -> com.fc.person.views.v:
+    com.fc.person.views.ModifyPersonInfoActivity this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.fc.person.views.ModifyPersonMarkActivity -> com.fc.person.views.ModifyPersonMarkActivity:
+    android.widget.Spinner sp_personmark -> b
+    android.widget.Button btn_addmark -> c
+    android.widget.Button btn_markok -> d
+    android.widget.Button btn_markno -> e
+    java.util.ArrayList personmark -> f
+    android.widget.ListView listview_mark -> g
+    com.fc.person.beans.PersonMarkAdapter mark_adapter -> h
+    java.lang.String[] array -> i
+    java.lang.String markname -> j
+    java.lang.String personmarksource -> k
+    int flag -> l
+    java.lang.String personSFZ -> m
+    java.lang.String postMarJson -> n
+    android.app.ProgressDialog progressDialog -> o
+    java.util.ArrayList personinfoJson -> p
+    java.lang.Runnable thread_setmark -> a
+    android.os.Handler handler_setmark -> q
+    void onCreate(android.os.Bundle) -> onCreate
+    void showBaseUpdialog(android.content.Context) -> a
+    boolean judmentPersonmark(java.util.ArrayList,java.lang.String) -> a
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onStop() -> onStop
+    void onDestroy() -> onDestroy
+    java.util.ArrayList access$0(com.fc.person.views.ModifyPersonMarkActivity) -> a
+    void access$1(com.fc.person.views.ModifyPersonMarkActivity,java.lang.String) -> a
+    java.lang.String access$2(com.fc.person.views.ModifyPersonMarkActivity) -> b
+    android.os.Handler access$3(com.fc.person.views.ModifyPersonMarkActivity) -> c
+    android.app.ProgressDialog access$4(com.fc.person.views.ModifyPersonMarkActivity) -> d
+    void access$5$39f1e80e(com.fc.person.views.ModifyPersonMarkActivity) -> e
+    java.lang.String access$6(com.fc.person.views.ModifyPersonMarkActivity) -> f
+    java.lang.String access$7() -> a
+    java.lang.String access$8(com.fc.person.views.ModifyPersonMarkActivity) -> g
+    com.fc.person.beans.PersonMarkAdapter access$9(com.fc.person.views.ModifyPersonMarkActivity) -> h
+    java.lang.String[] access$10(com.fc.person.views.ModifyPersonMarkActivity) -> i
+    void access$11(com.fc.person.views.ModifyPersonMarkActivity,java.lang.String) -> b
+    void access$12(com.fc.person.views.ModifyPersonMarkActivity,java.lang.String,java.lang.String) -> a
+    java.util.ArrayList access$13(com.fc.person.views.ModifyPersonMarkActivity) -> j
+com.fc.person.views.ModifyPersonMarkActivity$1 -> com.fc.person.views.w:
+    com.fc.person.views.ModifyPersonMarkActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonMarkActivity$2 -> com.fc.person.views.x:
+    com.fc.person.views.ModifyPersonMarkActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.person.views.ModifyPersonMarkActivity$3 -> com.fc.person.views.y:
+    com.fc.person.views.ModifyPersonMarkActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.ModifyPersonMarkActivity$4 -> com.fc.person.views.z:
+    com.fc.person.views.ModifyPersonMarkActivity this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.fc.person.views.ModifyPersonMarkActivity$5 -> com.fc.person.views.aa:
+    com.fc.person.views.ModifyPersonMarkActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.ModifyPersonMarkActivity$6 -> com.fc.person.views.ab:
+    com.fc.person.views.ModifyPersonMarkActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.ModifyPersonMarkActivity$7 -> com.fc.person.views.ac:
+    com.fc.person.views.ModifyPersonMarkActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.ModifyPersonMarkActivity$8 -> com.fc.person.views.ad:
+    com.fc.person.views.ModifyPersonMarkActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.ModifyPersonResumeActivity -> com.fc.person.views.ModifyPersonResumeActivity:
+    android.widget.Spinner sp_computerSkills -> d
+    android.widget.Spinner sp_language1 -> e
+    android.widget.Spinner sp_chengdu1 -> f
+    android.widget.Spinner sp_language2 -> g
+    android.widget.Spinner sp_chengdu2 -> h
+    android.widget.Spinner sp_xinzi -> i
+    android.widget.Spinner sp_workxingzhi -> j
+    android.widget.Spinner sp_worktime -> k
+    android.widget.Spinner sp_workaddress1 -> l
+    android.widget.Spinner sp_workaddress2 -> m
+    android.widget.Spinner sp_workaddress3 -> n
+    android.widget.Spinner sp_fugangwei1 -> o
+    android.widget.Spinner sp_fugangwei2 -> p
+    android.widget.Spinner sp_zigangwei1 -> q
+    android.widget.Spinner sp_zigangwei2 -> r
+    android.widget.EditText et_computerzhengshu -> s
+    android.widget.EditText et_languagezhengshu -> t
+    android.widget.EditText et_otherzhengshu -> u
+    android.widget.EditText et_selfpingjia -> v
+    android.widget.EditText et_othergangwei -> w
+    android.widget.EditText et_workyear -> x
+    android.widget.Button btn_tijiaojianli -> y
+    java.lang.String[] chendu -> z
+    java.lang.String[] languang -> A
+    java.lang.String[] workxingzi -> B
+    java.lang.String[] worktime -> C
+    java.lang.String[] xingzi -> D
+    java.lang.String[] workaddress -> E
+    android.app.ProgressDialog progressDialog -> F
+    java.util.List list -> G
+    java.util.List list_zihangye -> H
+    java.lang.String code -> I
+    java.lang.String personSFZ -> J
+    java.lang.String workyear -> K
+    android.widget.ArrayAdapter adapter_zihangye -> L
+    java.lang.String resumeJson -> M
+    java.util.ArrayList personresumeJson -> N
+    java.lang.String computerSkills -> O
+    java.lang.String computerzhengshu -> P
+    java.lang.String language1 -> Q
+    java.lang.String chendu1 -> R
+    java.lang.String language2 -> S
+    java.lang.String chendu2 -> T
+    java.lang.String languagezhengshu -> U
+    java.lang.String otherzhengshu -> V
+    java.lang.String ziwopingjia -> W
+    java.lang.String xinzi -> X
+    java.lang.String workxingz -> Y
+    java.lang.String workshijian -> Z
+    java.lang.String workdidian1 -> aa
+    java.lang.String workdidian2 -> ab
+    java.lang.String workdidian3 -> ac
+    java.lang.String fugangwei1 -> ad
+    java.lang.String fugangwei2 -> ae
+    java.lang.String zigangwei1 -> af
+    java.lang.String zigangwei2 -> ag
+    java.lang.String othergangwei -> ah
+    java.lang.String xinzilow -> ai
+    java.lang.String xinziup -> aj
+    java.util.ArrayList list_resume -> ak
+    android.os.Handler handler_resume -> a
+    java.lang.Runnable thread_getResume -> b
+    java.lang.Runnable thread_Resume -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void getZigangwei(int) -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+    void onClick(android.view.View) -> onClick
+    void showBaseUpdialog(android.content.Context) -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    android.app.ProgressDialog access$0(com.fc.person.views.ModifyPersonResumeActivity) -> a
+    void access$1$5f76c52e(com.fc.person.views.ModifyPersonResumeActivity) -> b
+    java.lang.String access$2(com.fc.person.views.ModifyPersonResumeActivity) -> c
+    java.util.ArrayList access$3(com.fc.person.views.ModifyPersonResumeActivity) -> d
+    void access$4(com.fc.person.views.ModifyPersonResumeActivity) -> e
+    java.lang.String access$5(com.fc.person.views.ModifyPersonResumeActivity) -> f
+    void access$6(com.fc.person.views.ModifyPersonResumeActivity,java.util.ArrayList) -> a
+    java.util.ArrayList access$7(com.fc.person.views.ModifyPersonResumeActivity) -> g
+    void access$8(com.fc.person.views.ModifyPersonResumeActivity,java.lang.String) -> a
+com.fc.person.views.ModifyPersonResumeActivity$1 -> com.fc.person.views.ae:
+    com.fc.person.views.ModifyPersonResumeActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.person.views.ModifyPersonResumeActivity$2 -> com.fc.person.views.af:
+    com.fc.person.views.ModifyPersonResumeActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonResumeActivity$3 -> com.fc.person.views.ag:
+    com.fc.person.views.ModifyPersonResumeActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.ModifyPersonResumeActivity$4 -> com.fc.person.views.ah:
+    com.fc.person.views.ModifyPersonResumeActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.ModifyPersonResumeActivity$5 -> com.fc.person.views.ai:
+    com.fc.person.views.ModifyPersonResumeActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.ModifyWorkInfoActivity -> com.fc.person.views.ModifyWorkInfoActivity:
+    android.widget.ListView lvWorkInfo -> a
+    android.widget.Button btnNew -> b
+    java.lang.String sfz -> c
+    java.util.List workinfoList -> d
+    com.fc.person.beans.ModifyWorkInfoAdapter adapter -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void refreshWorkInfo() -> a
+    void onDestroy() -> onDestroy
+    void refresh(java.lang.Object[]) -> a
+    java.util.List fretchWorkInfo(java.lang.String) -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+com.fc.person.views.ModifyWorkInfoActivity$MyOnClickListener -> com.fc.person.views.aj:
+    com.fc.person.views.ModifyWorkInfoActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.ModifyWorkInfoDetailActivity -> com.fc.person.views.ModifyWorkInfoDetailActivity:
+    android.widget.EditText txtDwName -> a
+    android.widget.EditText txtDwType -> b
+    android.widget.EditText txtTrade -> c
+    android.widget.EditText txtDetp -> d
+    android.widget.EditText txtPosition -> e
+    android.widget.EditText txtStartDate -> f
+    android.widget.EditText txtEndDate -> g
+    android.widget.Button btnOk -> h
+    android.widget.Button btnCancle -> i
+    int flag -> j
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+    void refresh(java.lang.Object[]) -> a
+    void access$0(com.fc.person.views.ModifyWorkInfoDetailActivity,android.widget.EditText) -> a
+com.fc.person.views.ModifyWorkInfoDetailActivity$1 -> com.fc.person.views.ak:
+    com.fc.person.views.ModifyWorkInfoDetailActivity this$0 -> a
+    android.widget.EditText val$txt -> b
+    java.text.SimpleDateFormat val$format -> c
+    void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
+com.fc.person.views.ModifyWorkInfoDetailActivity$MyOnClickListener -> com.fc.person.views.al:
+    com.fc.person.views.ModifyWorkInfoDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.ModifyWorkInfoDetailActivity$MyOnFocusChangeListener -> com.fc.person.views.am:
+    com.fc.person.views.ModifyWorkInfoDetailActivity this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+com.fc.person.views.OutpatientActivity -> com.fc.person.views.OutpatientActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.fc.person.views.PersonResumeActivity -> com.fc.person.views.PersonResumeActivity:
+    android.widget.TextView tv_language1 -> d
+    android.widget.TextView tv_language2 -> e
+    android.widget.TextView tv_computerskills -> f
+    android.widget.TextView tv_computerzhengshhu -> g
+    android.widget.TextView tv_chendu1 -> h
+    android.widget.TextView tv_chendu2 -> i
+    android.widget.TextView tv_languagezhengshu -> j
+    android.widget.TextView tv_otherzhengshu -> k
+    android.widget.TextView tv_selfpingjia -> l
+    android.widget.TextView tv_gzxz -> m
+    android.widget.TextView tv_xinzi -> n
+    android.widget.TextView tv_gzbs -> o
+    android.widget.TextView tv_address1 -> p
+    android.widget.TextView tv_address2 -> q
+    android.widget.TextView tv_address3 -> r
+    android.widget.TextView tv_fugangwei1 -> s
+    android.widget.TextView tv_zigangwei1 -> t
+    android.widget.TextView tv_fugangwei2 -> u
+    android.widget.TextView tv_zigangwei2 -> v
+    android.widget.TextView tv_othergangwei -> w
+    android.widget.TextView tv_workyear -> x
+    android.widget.Button btnSearch -> y
+    com.fc.person.views.PersonResumeActivity$MyReceiver myReceiver -> z
+    java.util.ArrayList personResumeJson -> A
+    java.lang.String personSFZ -> a
+    java.lang.String[] xinziStrings -> B
+    java.lang.String sfz -> C
+    android.os.Handler handler_resume -> b
+    java.lang.Runnable thread_Resume -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void initinfo() -> a
+    void onDestroy() -> onDestroy
+    java.util.ArrayList access$0(com.fc.person.views.PersonResumeActivity) -> a
+    void access$1(com.fc.person.views.PersonResumeActivity,java.util.ArrayList) -> a
+    java.lang.String access$2(com.fc.person.views.PersonResumeActivity) -> b
+com.fc.person.views.PersonResumeActivity$1 -> com.fc.person.views.an:
+    com.fc.person.views.PersonResumeActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.fc.person.views.PersonResumeActivity$2 -> com.fc.person.views.ao:
+    com.fc.person.views.PersonResumeActivity this$0 -> a
+    void run() -> run
+com.fc.person.views.PersonResumeActivity$MyOnClickListener -> com.fc.person.views.ap:
+    com.fc.person.views.PersonResumeActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.PersonResumeActivity$MyReceiver -> com.fc.person.views.PersonResumeActivity$MyReceiver:
+    com.fc.person.views.PersonResumeActivity this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.fc.person.views.PersoninfoActivity2 -> com.fc.person.views.PersoninfoActivity2:
+    android.widget.EditText et_cardnum -> b
+    android.widget.EditText et_personName -> c
+    android.widget.EditText et_agelow -> d
+    android.widget.EditText et_ageup -> e
+    android.widget.EditText ed -> f
+    android.widget.Button btn_scan -> g
+    android.widget.Button btn_query -> h
+    android.widget.Button btn_query2 -> i
+    android.widget.Button[] btn -> j
+    android.widget.Spinner spinner_country -> k
+    android.widget.Spinner spinner_street -> l
+    android.widget.Spinner spinner_juweihui -> m
+    android.widget.Spinner spinner_sex -> n
+    android.widget.PopupWindow popupwindow -> o
+    android.view.View mykeyview -> p
+    android.app.ProgressDialog progressDialog -> a
+    java.util.ArrayList locationlist -> q
+    java.util.ArrayList regionList -> r
+    java.util.ArrayList streetList -> s
+    java.util.ArrayList juweihuiList -> t
+    java.lang.String[] spinnersex -> u
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void onResume() -> onResume
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    void tranceStrToStreetList(java.lang.String) -> a
+    void tranceStrToJuweihuiList(java.lang.String) -> b
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onStop() -> onStop
+    android.widget.EditText access$0(com.fc.person.views.PersoninfoActivity2) -> a
+    java.util.ArrayList access$1(com.fc.person.views.PersoninfoActivity2) -> b
+    android.widget.EditText access$2(com.fc.person.views.PersoninfoActivity2) -> c
+    android.widget.EditText access$3(com.fc.person.views.PersoninfoActivity2) -> d
+    android.widget.EditText access$4(com.fc.person.views.PersoninfoActivity2) -> e
+    android.widget.Spinner access$5(com.fc.person.views.PersoninfoActivity2) -> f
+    android.widget.Spinner access$6(com.fc.person.views.PersoninfoActivity2) -> g
+    android.widget.Spinner access$7(com.fc.person.views.PersoninfoActivity2) -> h
+    android.widget.Spinner access$8(com.fc.person.views.PersoninfoActivity2) -> i
+    void access$9(com.fc.person.views.PersoninfoActivity2,android.widget.EditText) -> a
+    void access$10(com.fc.person.views.PersoninfoActivity2,android.view.View) -> a
+com.fc.person.views.PersoninfoActivity2$1 -> com.fc.person.views.aq:
+    com.fc.person.views.PersoninfoActivity2 this$0 -> a
+    int val$j -> b
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.PersoninfoActivity2$2 -> com.fc.person.views.ar:
+    com.fc.person.views.PersoninfoActivity2 this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.PersoninfoActivity2$3 -> com.fc.person.views.as:
+    com.fc.person.views.PersoninfoActivity2 this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.PersoninfoActivity2$4 -> com.fc.person.views.at:
+    com.fc.person.views.PersoninfoActivity2 this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.PersoninfoActivity2$MyButtonClickListener -> com.fc.person.views.au:
+    com.fc.person.views.PersoninfoActivity2 this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.person.views.PersoninfoActivity2$MyOnTouchListener -> com.fc.person.views.av:
+    com.fc.person.views.PersoninfoActivity2 this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.fc.person.views.PersoninfoActivity2$MySpinnerItemSeletedListener -> com.fc.person.views.aw:
+    com.fc.person.views.PersoninfoActivity2 this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.fc.person.views.PersoninfoMainActivity -> com.fc.person.views.PersoninfoMainActivity:
+    android.widget.HorizontalScrollView mHorizontalScrollView -> d
+    android.widget.RadioGroup mRadioGroup -> e
+    android.widget.RadioButton mRadioButton1 -> f
+    android.widget.RadioButton mRadioButton5 -> g
+    android.widget.RadioButton mRadioButton4 -> h
+    android.widget.RadioButton mRadioButton3 -> i
+    android.widget.RadioButton mRadioButton2 -> j
+    android.widget.RadioButton mRadioButton6 -> k
+    android.widget.ImageView mImageView -> l
+    android.widget.Button btn_cehua -> m
+    android.widget.Button btn_shouye -> n
+    android.widget.Button btn_zhuye -> o
+    android.widget.Button btn_modify -> p
+    android.widget.TextView tv_personname -> q
+    android.widget.TextView tv_personsex -> r
+    android.widget.TextView tv_zt -> s
+    android.widget.TextView tv_sfz -> t
+    android.widget.ImageView img_personHead -> u
+    android.support.v4.view.ViewPager mViewPager -> v
+    java.util.List mListView -> w
+    float mCurrentCheckRadioLeft -> x
+    java.lang.String personSFZ -> y
+    java.lang.String query_sfz -> z
+    boolean SFZCheck -> A
+    java.lang.String personBase -> B
+    java.util.ArrayList personinfoJson -> C
+    android.app.ProgressDialog progressDialog -> D
+    android.widget.LinearLayout llxinxi -> E
+    android.widget.LinearLayout llcontent -> F
+    android.view.animation.Animation showAnim -> G
+    android.view.animation.Animation hideAnim -> H
+    boolean flagXinxiShow -> I
+    java.util.Map map_check -> J
+    java.lang.String checkPersoninfo -> K
+    java.lang.String mysfz -> L
+    boolean isDetailOver -> a
+    boolean isFamilyOver -> b
+    java.lang.String[] names -> M
+    java.lang.String[] values -> N
+    java.util.List usefulButtons -> O
+    java.util.Map data -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+    float getCurrentCheckRadioLeft() -> b
+    void onClick(android.view.View) -> onClick
+    void switchModifyActivity() -> a
+    void DismissDialog() -> c
+    void onDestroy() -> onDestroy
+    void refresh(java.lang.Object[]) -> a
+    java.util.List access$0(com.fc.person.views.PersoninfoMainActivity) -> a
+    java.util.List access$1(com.fc.person.views.PersoninfoMainActivity) -> b
+com.fc.person.views.PersoninfoMainActivity$1 -> com.fc.person.views.ax:
+    com.fc.person.views.PersoninfoMainActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.PersoninfoMainActivity$2 -> com.fc.person.views.ay:
+    com.fc.person.views.PersoninfoMainActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fc.person.views.PersoninfoMainActivity$3 -> com.fc.person.views.az:
+    com.fc.person.views.PersoninfoMainActivity this$0 -> a
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> isViewFromObject
+    int getCount() -> getCount
+    java.lang.Object instantiateItem(android.view.View,int) -> instantiateItem
+    void destroyItem(android.view.View,int,java.lang.Object) -> destroyItem
+com.fc.person.views.PersoninfoMainActivity$MyOnPageChangerListener -> com.fc.person.views.ba:
+    com.fc.person.views.PersoninfoMainActivity this$0 -> a
+    void onPageScrollStateChanged(int) -> onPageScrollStateChanged
+    void onPageScrolled(int,float,int) -> onPageScrolled
+    void onPageSelected(int) -> onPageSelected
+com.fc.person.views.PersonqueryListActivity2 -> com.fc.person.views.PersonqueryListActivity2:
+    android.widget.ListView personquery_listview -> b
+    java.util.ArrayList personinlist -> c
+    com.fc.main.beans.PullDownView mPullDownView -> d
+    com.fc.person.beans.PersonqueryAdapter personAdapter -> e
+    int currentSty -> a
+    int index -> f
+    java.util.Map data -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    void onMore() -> a
+    void getPageList(int) -> a
+    java.util.ArrayList parseStrToList(java.lang.String) -> a
+    void onStop() -> onStop
+    java.util.ArrayList access$0(com.fc.person.views.PersonqueryListActivity2) -> a
+com.fc.person.views.PersonqueryListActivity2$MyOnItemClickListener -> com.fc.person.views.bb:
+    com.fc.person.views.PersonqueryListActivity2 this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fc.person.views.ThreeActivity -> com.fc.person.views.ThreeActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.fc.person.views.ViewfinderResultPointCallback -> com.fc.person.views.bc:
+    com.fc.person.views.ViewfinderView viewfinderView -> a
+    void foundPossibleResultPoint(com.google.zxing.ResultPoint) -> foundPossibleResultPoint
+com.fc.person.views.ViewfinderView -> com.fc.person.views.ViewfinderView:
+    int[] SCANNER_ALPHA -> a
+    android.graphics.Paint paint -> b
+    android.graphics.Bitmap resultBitmap -> c
+    int maskColor -> d
+    int resultColor -> e
+    int frameColor -> f
+    int laserColor -> g
+    int resultPointColor -> h
+    int scannerAlpha -> i
+    java.util.Collection possibleResultPoints -> j
+    java.util.Collection lastPossibleResultPoints -> k
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void drawViewfinder() -> a
+    void drawResultBitmap(android.graphics.Bitmap) -> a
+    void addPossibleResultPoint(com.google.zxing.ResultPoint) -> a
+com.fc.person.views.WorkInfoActivity -> com.fc.person.views.WorkInfoActivity:
+    android.widget.ListView lvWorkInfo -> a
+    java.lang.String sfz -> b
+    java.util.List workinfoList -> c
+    com.fc.person.beans.WorkInfoAdapter adapter -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    java.util.List fretchWorkInfo(java.lang.String) -> a
+com.fc.policy.beans.PolicyAdapter -> com.fc.policy.a.a:
+    java.util.List questions -> a
+    java.util.List answers -> b
+    android.content.Context context -> c
+    java.lang.Object getChild(int,int) -> getChild
+    long getChildId(int,int) -> getChildId
+    android.view.View getChildView(int,int,boolean,android.view.View,android.view.ViewGroup) -> getChildView
+    int getChildrenCount(int) -> getChildrenCount
+    java.lang.Object getGroup(int) -> getGroup
+    int getGroupCount() -> getGroupCount
+    long getGroupId(int) -> getGroupId
+    android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup) -> getGroupView
+    boolean hasStableIds() -> hasStableIds
+    boolean isChildSelectable(int,int) -> isChildSelectable
+com.fc.policy.views.MainPolicyActivity -> com.fc.policy.views.MainPolicyActivity:
+    android.widget.Spinner cboPolicyStyle -> a
+    android.widget.EditText txtPolicyKeywords -> b
+    android.widget.Button btnQuery -> c
+    android.widget.Button btnAsk -> d
+    android.widget.ExpandableListView lvPolicy -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    android.widget.Spinner access$0(com.fc.policy.views.MainPolicyActivity) -> a
+    android.widget.EditText access$1(com.fc.policy.views.MainPolicyActivity) -> b
+com.fc.policy.views.MainPolicyActivity$MyOnclickListener -> com.fc.policy.views.a:
+    com.fc.policy.views.MainPolicyActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.policy.views.PolicyAskActivity -> com.fc.policy.views.PolicyAskActivity:
+    android.widget.Spinner cboType -> a
+    android.widget.TextView txtQuestionName -> b
+    android.widget.TextView txtQuestionValue -> c
+    android.widget.Button btnAsk -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void onDestroy() -> onDestroy
+    boolean access$0(com.fc.policy.views.PolicyAskActivity) -> a
+    android.widget.Spinner access$1(com.fc.policy.views.PolicyAskActivity) -> b
+    android.widget.TextView access$2(com.fc.policy.views.PolicyAskActivity) -> c
+    android.widget.TextView access$3(com.fc.policy.views.PolicyAskActivity) -> d
+com.fc.policy.views.PolicyAskActivity$MyOnClickListener -> com.fc.policy.views.b:
+    com.fc.policy.views.PolicyAskActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.resources.beans.ResourcesExpandAdapter -> com.fc.resources.a.a:
+    java.util.List groupItems -> a
+    java.util.List subItems -> b
+    android.content.Context context -> c
+    java.lang.Object getChild(int,int) -> getChild
+    long getChildId(int,int) -> getChildId
+    android.view.View getChildView(int,int,boolean,android.view.View,android.view.ViewGroup) -> getChildView
+    int getChildrenCount(int) -> getChildrenCount
+    java.lang.Object getGroup(int) -> getGroup
+    int getGroupCount() -> getGroupCount
+    long getGroupId(int) -> getGroupId
+    android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup) -> getGroupView
+    boolean hasStableIds() -> hasStableIds
+    boolean isChildSelectable(int,int) -> isChildSelectable
+com.fc.resources.beans.ResourcesItem -> com.fc.resources.a.b:
+    int sum_value_man -> a
+    int sum_value_woman -> b
+    java.lang.String type -> c
+    java.lang.String committee_id -> d
+    java.lang.String name -> e
+    int order_id -> f
+    int all -> g
+    int getSum_value_man() -> a
+    int getSum_value_woman() -> b
+    java.lang.String getType() -> c
+    java.lang.String getCommittee_id() -> d
+    java.lang.String getName() -> e
+    int getOrder_id() -> f
+    int getAll() -> g
+    java.lang.String toString() -> toString
+com.fc.resources.beans.ResourcesMainAdapter -> com.fc.resources.a.c:
+    java.util.List items -> a
+    android.content.Context context -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.resources.views.ResourcesMainActivity -> com.fc.resources.views.ResourcesMainActivity:
+    android.widget.ExpandableListView lvResources -> g
+    android.widget.EditText txtIdentity -> h
+    android.widget.Button btnScanning -> i
+    android.widget.Button btnQuery -> j
+    android.app.ProgressDialog progressDialog -> a
+    java.util.List items -> b
+    java.util.List groupItems -> c
+    java.util.List subItems -> d
+    java.util.Map itemMap -> e
+    com.fc.resources.beans.ResourcesExpandAdapter adapter -> f
+    android.widget.PopupWindow popupwindow -> k
+    android.view.View mykeyview -> l
+    android.widget.Button[] btn -> m
+    void onCreate(android.os.Bundle) -> onCreate
+    void refresh(java.lang.Object[]) -> a
+    void fretchGroupItems(java.util.List) -> a
+    void fretchSubItems(java.util.List) -> b
+    void onDestroy() -> onDestroy
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    android.widget.EditText access$0(com.fc.resources.views.ResourcesMainActivity) -> a
+    void access$1(com.fc.resources.views.ResourcesMainActivity,android.view.View) -> a
+com.fc.resources.views.ResourcesMainActivity$1 -> com.fc.resources.views.a:
+    com.fc.resources.views.ResourcesMainActivity this$0 -> a
+    int val$j -> b
+    void onClick(android.view.View) -> onClick
+com.fc.resources.views.ResourcesMainActivity$2 -> com.fc.resources.views.b:
+    com.fc.resources.views.ResourcesMainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.resources.views.ResourcesMainActivity$3 -> com.fc.resources.views.c:
+    com.fc.resources.views.ResourcesMainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.resources.views.ResourcesMainActivity$4 -> com.fc.resources.views.d:
+    com.fc.resources.views.ResourcesMainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.resources.views.ResourcesMainActivity$MyButtonClickListener -> com.fc.resources.views.e:
+    com.fc.resources.views.ResourcesMainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fc.resources.views.ResourcesMainActivity$MyOnSubItemClickListener -> com.fc.resources.views.f:
+    com.fc.resources.views.ResourcesMainActivity this$0 -> a
+    boolean onChildClick(android.widget.ExpandableListView,android.view.View,int,int,long) -> onChildClick
+com.fc.resources.views.ResourcesMainActivity$MyOnTouchListener -> com.fc.resources.views.g:
+    com.fc.resources.views.ResourcesMainActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.fc.summary.beans.MyWorkSummaryFile -> com.fc.summary.a.a:
+    java.lang.String fileName -> a
+    java.lang.String fileSize -> b
+    java.lang.String fileFormat -> c
+    android.graphics.Bitmap fileBitmap -> d
+    java.lang.String filePath -> e
+    java.lang.String toString() -> toString
+com.fc.summary.beans.WorkSummaryAdapter -> com.fc.summary.a.b:
+    android.content.Context context -> a
+    java.util.ArrayList list_myfile -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fc.summary.beans.WorkSummaryAdapter$WorkSummaryHodler -> com.fc.summary.a.c:
+    android.widget.ImageView img_work -> a
+    android.widget.TextView tv_workname -> b
+    android.widget.TextView tv_worksize -> c
+    com.fc.summary.beans.WorkSummaryAdapter this$0 -> d
+com.fc.summary.views.MyVideoPalyer -> com.fc.summary.views.MyVideoPalyer:
+    android.widget.VideoView myvideo -> a
+    android.widget.MediaController mMediaController -> b
+    int progress -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onStop() -> onStop
+    void onDestroy() -> onDestroy
+    void onPause() -> onPause
+com.fc.summary.views.WorkSummaryActivity -> com.fc.summary.views.WorkSummaryActivity:
+    com.fc.summary.beans.MyWorkSummaryFile myfile -> b
+    java.util.ArrayList list_file -> c
+    android.widget.ListView listView_work -> d
+    com.fc.summary.beans.WorkSummaryAdapter workSummaryAdapter -> e
+    java.lang.String rootPath -> f
+    android.app.AlertDialog progressDialog -> g
+    java.io.FileInputStream fis -> h
+    java.lang.String[][] FILE_MapTable -> i
+    java.lang.Runnable workvideo_thread -> a
+    android.os.Handler handler_workvideo -> j
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.ArrayList getFileDir(java.lang.String) -> a
+    void DismissDialog() -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    java.lang.String access$0(com.fc.summary.views.WorkSummaryActivity) -> a
+    java.util.ArrayList access$1(com.fc.summary.views.WorkSummaryActivity,java.lang.String) -> a
+    void access$2(com.fc.summary.views.WorkSummaryActivity,java.util.ArrayList) -> a
+    java.util.ArrayList access$3(com.fc.summary.views.WorkSummaryActivity) -> b
+    android.os.Handler access$4(com.fc.summary.views.WorkSummaryActivity) -> c
+    void access$5(com.fc.summary.views.WorkSummaryActivity,com.fc.summary.beans.WorkSummaryAdapter) -> a
+    android.widget.ListView access$6(com.fc.summary.views.WorkSummaryActivity) -> d
+    com.fc.summary.beans.WorkSummaryAdapter access$7(com.fc.summary.views.WorkSummaryActivity) -> e
+com.fc.summary.views.WorkSummaryActivity$1 -> com.fc.summary.views.a:
+    com.fc.summary.views.WorkSummaryActivity this$0 -> a
+    void run() -> run
+com.fc.summary.views.WorkSummaryActivity$2 -> com.fc.summary.views.b:
+    com.fc.summary.views.WorkSummaryActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage

@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_on"
+        android:gravity="center"
+        android:text="待诊病人"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <!-- <ListView
+        android:id="@+id/lsview_unident"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/grey"  
+        android:dividerHeight="5dp"
+        android:background="#ffffff" >
+    </ListView> -->
+     <!-- <com.fc.has.views.MyListViewPullDownAndUp
+        android:id="@+id/lsview_unident"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/grey"  
+        android:dividerHeight="5dp"
+        android:background="#ffffff" /> -->
+     <com.fc.unidentified.beans.RTPullListView
+   		  android:id="@+id/lsview_unident"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/grey"  
+        android:dividerHeight="5dp"
+        android:background="#ffffff" />
+   <!--   <com.fc.unidentified.beans.XListView
+          android:id="@+id/lsview_unident"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/grey"  
+        android:dividerHeight="5dp"
+        android:background="#ffffff"/> -->
+
+</LinearLayout>

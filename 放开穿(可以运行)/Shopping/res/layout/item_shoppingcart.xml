@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#ffffff">
+    
+      <ImageView
+            android:src="@drawable/ic_launcher"
+            android:id="@+id/img_gouwuche_item"
+            android:layout_width="63dp"
+            android:layout_height="119dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_itemname_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_alignTop="@id/img_gouwuche_item"
+            android:layout_toRightOf="@id/img_gouwuche_item"
+            android:text="xx"
+            android:textSize="14sp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/img_shopcartdelete_item"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/shoppingcartcha" />
+
+        <View 
+            android:id="@+id/view_shopcartdelete_item"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="#e6e6e6"
+            android:layout_toLeftOf="@id/img_shopcartdelete_item"
+            android:layout_marginRight="10dp"
+            />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_gouwuche_item"
+            android:orientation="vertical" 
+            android:layout_below="@id/tv_itemname_item" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+               >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="尺寸:"
+                    android:textSize="14sp" />
+                <TextView 
+                    android:text="XXL"
+                    android:id="@+id/tv_shopcartsize_item"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="顔色:"
+                    android:textSize="14sp" />
+                <TextView 
+                    android:text="X色"
+                    android:id="@+id/tv_shopcartcolor_item"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+       <LinearLayout 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@id/img_gouwuche_item"
+            android:layout_alignBottom="@id/img_gouwuche_item"
+            android:orientation="horizontal">
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#ff0000"
+                android:text="租赁价￥"/>
+            <TextView 
+                android:text="XX"
+                android:id="@+id/tv_shopcartprice_item"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#ff0000"
+                android:textSize="14sp"/>        
+        </LinearLayout>
+
+       <LinearLayout 
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:orientation="horizontal"
+           android:layout_alignBottom="@id/img_gouwuche_item"
+           android:layout_toLeftOf="@id/view_shopcartdelete_item"
+           android:layout_marginBottom="20dp"
+           android:paddingRight="10dp">
+           
+              <ImageView
+                  android:id="@+id/iv_minus_item" 
+               android:layout_width="15dp"
+               android:layout_height="15dp"
+               android:src="@drawable/minus"
+               android:layout_marginRight="8dp"/>
+           
+           <TextView 
+               android:id="@+id/tv_daynum_item"
+                android:textSize="14sp"
+                android:textColor="#ff0000"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="X天"
+              android:paddingRight="8dp" 
+              />
+           
+           <ImageView 
+               android:id="@+id/iv_plus_item"
+               android:layout_width="15dp"
+               android:layout_height="15dp"
+               android:src="@drawable/plus"
+               />
+           
+       </LinearLayout>
+       
+</RelativeLayout>

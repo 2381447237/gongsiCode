@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/ll_item_record"
+    >
+    
+  
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_bg">
+        
+        <TextView
+    android:id="@+id/tv_answer"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+     android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp"/>
+        
+        <TextView 
+     android:id="@+id/tv_phone"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp" />
+        
+        <TextView 
+     android:id="@+id/tv_time"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1.2"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp" />
+        
+        <TextView 
+            android:visibility="gone"
+     android:id="@+id/tv_score"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp" />
+<TextView 
+    android:id="@+id/tv_ygxm"
+    android:text="测试"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+     android:gravity="center"
+     android:padding="5dp"
+      android:textSize="20sp"/>
+    </LinearLayout>
+  
+</LinearLayout>

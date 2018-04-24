@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pendworkdbj"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.2"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_centerInParent="true"
+            android:text="待 办 事 宜"
+            android:textSize="28sp" />
+ 
+    </RelativeLayout>
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.2"
+        android:background="@drawable/firstpage_more_title"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_pendworkyes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/pendwork_xzq1" />
+
+        <ImageView
+            android:id="@+id/img_pendworkno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+           android:layout_toRightOf="@id/img_pendworkyes"
+            android:src="@drawable/pendwork_xzq2" />
+
+        <ImageView
+            android:id="@+id/img_addpendwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/addpendwork" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.8" 
+        android:orientation="vertical"
+        android:background="@drawable/firstpage_more_whitebackgroud1">
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" >
+
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

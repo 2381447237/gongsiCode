@@ -1,0 +1,286 @@
+http://web.youli.pw:89/frmlogin.aspx
+
+http://192.168.11.11:89/Json/Get_Qa_Master.aspx?page=0&rows=15
+
+http://192.168.11.11:89/Json/Get_Qa_history.aspx?sfz=31010
+http://192.168.11.205:92/Json/Get_Qa_Master.aspx?page=0&rows=15
+
+http://192.168.11.11:89/Json/Set_Home.aspx?TYPE=1&NAME=CS&SFZ=222&LXR=1&LXDF=2&JZNUM=3&NAN=4&NV=5&XSQ=6&XZJD=7&SQJWC=8&ADRESS=9&QUESTIONMASTERID=5
+
+http://192.168.11.11:89/Json/Get_Qa_history.aspx?sfz=310112197904256419(重要)
+
+http://192.168.11.11:89/FrmLogin.aspx
+
+http://192.168.11.11:89/login.aspx?username=admin&password=123&versionCode=36
+
+http://192.168.11.205:92/Json/Get_Qa_Master.aspx?page=0&rows=15  问卷调查
+
+http://192.168.11.11:89/Json/Get_Qa_Master_Special.aspx?page=0&rows=15 高校问卷调查
+
+http://192.168.11.11:89/Json/Set_Home.aspx?TYPE=2
+
+
+http://192.168.11.11:89/Json/Get_Home.aspx?TYPE=3&SFZ=123 家庭成员的数量
+
+http://192.168.11.11:89/Json/Get_Home.aspx?TYPE=1&SFZ=310108195603162490
+
+http://192.168.11.11:89/Json/Get_Home.aspx?TYPE=1&SFZ=310108198809052629
+
+http://192.168.11.11:89/Json/Get_Qa_UpLoad_Personnel.aspx?master_id=5&page=0&rows=15&type=1
+
+http://192.168.11.11:89/Json/Get_Qa_Receiv_Special.aspx?Personnel_id=217
+
+重要类:ShiYeDetailActivity
+
+签名密码4006603260
+
+2017年2月15日 记  
+http://192.168.11.11:89/login.aspx?username=admin&password=123&versionCode=37
+
+
+http://www.fcxx.net.cn:89/FrmLogin.aspx
+代办事宜
+
+http://192.168.11.11:89/Json/Get_PendingWork.aspx?page=0&rows=15&type=未完成;
+
+要改的bug
+1、全部换成静安 清单文件里面的versionName     完成
+2、电话号码的显示 资源调查-失业-万志强        完成    
+3、按钮是否可以点击  政策问答里面的查询按钮   完成
+新版本
+4、问卷调查的布局
+5、1张图片       完成
+
+要注意的地方：
+
+目前最新版本的e本通是36的
+资源调查-失业（无业）-未查-点击调查-调查结果同上和提交
+
+http://192.168.11.11:89/Json/Get_Work_News.aspx?page=0&rows=15
+
+http://192.168.11.11:89/Json/Get_Resource_Survey_Detil_WY.aspx?page=0&rows=15&Master_id=1&typeName=无业
+
+http://192.168.11.11:89/Json/Get_TB_Staff_Mark_Type.aspx?sfz=310108198802272864
+
+http://192.168.11.11:89/Json/Get_TB_Staff_Marks.aspx?sfz=310108198802272864
+
+http://192.168.11.11:89/Json/Set_TB_Staff_Pad_File.aspx 报错500
+
+
+http://192.168.11.11:89/Json/Get_Work_Notice_Read.aspx  报错  工作通知更多
+
+
+http://192.168.11.11:92/Json/Get_Resources_Query.aspx 失业统计
+
+http://192.168.11.11:89/Json/Get_TB_Staff_Pad_File.aspx?page=0&staff=2&rows=15  个人数据中心 报错500
+
+http://192.168.11.11:89/Json/GetStaffPedingWork.aspx?end_date=2017-02-20&staffs=&type=未完成&page=0&start_date=2017-02-20&rows=15  员工代办事宜 报错500
+
+http://192.168.11.11:89/version.xml
+
+1、doc
+5、ppt
+7、ppt
+xlsx
+
+http://192.168.11.11:89/Json/Get_Qa_UpLoad_Personnel.aspx?type=1&page=0&rows=15&master_id=5
+
+http://192.168.11.11:89/json/Get_Qa_Master_Text_Special.aspx?master_id=1
+
+http://192.168.11.11:89/Json/Get_Qa_Receiv.aspx?Personnel_id=
+
+http://192.168.11.11:89/Json/Get_Qa_Master.aspx?qa_master=1
+
+2017/2/23
+任务：多选，下拉选时间(Spinner),结束答题
+
+PARENT_ID为0的是问题
+PARENT_ID不为0的是选项
+MULTISELECT大于1是多选题
+MULTISELECT不大于1是单选题
+INPUT为true的是填空
+INPUT为false的不是填空
+
+
+关于答题的流程:
+
+一、高校问卷调查:注意它是一题一题提交答案的，点上一题，下一题，重新答题，提交答案都会提交
+一次答案的
+
+1、btn_star（开始答题)-->getQuestionByParent()(添加问题)-->fretchTree()(数据填充)
+
+2、btn_next_question(下一题)-->getAnswerByParentId()-->checkRadioIsChecked()
+
+-->makeEdit()-->makeEdit_checkBox()-->getAnswerInfo2()-->parseAnswerInfo()
+
+-->CheckRemoveCode()-->fretchTree()
+
+3、btn_up_question(上一题)-->getAnswerByParentId()-->CheckRemoveCode()
+
+-->fretchTree()
+
+4、btn_all(查看全部)-->getQuestionByParent()-->fretchTree()
+
+5、btn_star(重新答题)-->getQuestionByParent()(添加问题)-->fretchTree()(数据填充)
+
+-->重新答题的网络请求
+
+6、btn_upload(提交答案)-->getAnswerByParentId()-->checkRadioIsChecked()
+
+-->makeEdit()-->getAnswerInfo2()-->parseAnswerInfo()
+
+getQuestionByParent():往里面添加问题的信息，过滤掉选项的信息
+fretchTree()(数据填充)-->getAnswerByParentId()-->fretchTreeByQuestionMultiSelect()(多选题选项布局)
+fretchTree()(数据填充)-->getAnswerByParentId()-->fretchTreeByQuestion()(单选题选项布局)
+getAnswerByParentId():用问题的PARENT_ID得到选项的信息
+checkRadioIsChecked():检查多选题或单选题是否被答完
+makeEdit():检查单选题被选中的选项的填空是否填空了
+makeEdit_checkBox():检查多选题被选中的选项的填空是否填空了
+getAnswerInfo2():获得上一题题目的NO和选中选项的ID及填空答案
+parseAnswerInfo():在组装答案
+CheckRemoveCode():检查REMOVE_CODE的值
+
+
+二、问卷调查:注意它是一次性提交答案的，只有点提交答案才会提交答案的
+
+1、btn_star(开始答题)-->getQuestionByParent()(添加问题)-->fretchTree()(数据填充)
+
+2、btn_next_question(下一题)-->getAnswerByParentId()-->checkRadioIsChecked()
+
+-->makeEdit()-->fretchTree()
+
+3、btn_up_question(上一题)-->getAnswerByParentId()-->fretchTree()
+
+4、btn_all(查看全部)-->getQuestionByParent()-->fretchTree()
+
+5、btn_star(重新答题)-->getQuestionByParent()(添加问题)-->fretchTree()(数据填充)
+
+-->开始答题的网络请求
+
+6、btn_upload(提交答案)-->getAnswerInfo()-->parseAnswerInfo()-->fretchTree()
+
+getQuestionByParent():往里面添加问题的信息，过滤掉选项的信息
+fretchTree()(数据填充)-->getAnswerByParentId()-->fretchTreeByQuestion()(单选题布局)
+getAnswerByParentId():用问题的PARENT_ID得到选项的信息
+checkRadioIsChecked():检查单选题是否被答完
+makeEdit():检查单选题被选中的选项的填空是否填空了
+getAnswerInfo():获得所选答案的信息-->getQuestionByParent()
+parseAnswerInfo():在组装答案
+
+任务：(2017-2-27)
+
+
+J12，J13，Q7，Q9，Q12，Q2，
+
+1、多选 (完成)
+2、选时间(完成)
+3、结束答题(完成)
+4、布局
+5、一个户口的可以循环答题
+
+
+/Json/Get_Qa_UpLoad_Personnel.aspx
+=NAME=张振卯(测试)=SFZ=310108198710202615=LXR=iii
+
+
+
+2017/3/6
+答题一题一题的答：
+http://192.168.11.11:89/Json/Set_Tb_Home_Answer_Info.aspx
+
+TYPE=1是下一题，TYPE=2是上一题
+HOMEID    --调查人ID
+QUESTION_ID  --答案编号
+INPUT_VALUE --输入值
+QUESTIONMASTERID --调查表ID
+
+http://192.168.11.11:89/Json/Get_Tb_Home_Answer_Info.aspx?HOMEID=89
+
+2017/3/7 注意
+
+提交答案的接口有两个不同的
+查看答案的接口有两个不同的
+
+F1 ppp
+F2 1
+F3
+F4 1
+F6 1
+F7 1
+F8 1
+F11 1
+F12 1
+F13 1
+F14 
+
+http://192.168.11.11:89/Json/Get_JobsInfo.aspx?PageIndex=0&PageRecCnts=15&sfz=310108198802272864
+
+http://192.168.11.11:89/Json/Get_Graduate_Master.aspx?year=2014&sfz=&page=0&rows=15&name=陆欣
+
+http://192.168.11.11:89/Json/GetJobs_Search.aspx?AreaId1=1&PageIndex=0&PageRecCnts=15
+
+http://192.168.11.11:89/Json/GetCheckLineLevel.aspx?module_name=服务记录
+
+http://192.168.11.11:89/Json/Get_BASIC_INFORMATION.aspx?sfz=310108198802272864
+
+http://192.168.11.11:89/Json/Get_Educational_Information.aspx?SFZ=310108198802272864//教育信息
+
+http://192.168.11.11:89/Json/Get_Sfz_Service.aspx?SFZ=310108198802272864//服务记录
+
+
+http://192.168.11.11:89/Json/Get_Resumes_Info.aspx?sfz=310108198802272864
+
+http://192.168.11.11:89/Json/Json/Get_Meeting_Master.aspx?State=true&page=0&rows=15
+http://192.168.11.11:89/Json/Get_Meeting_Read.aspx?State=true&page=0&rows=15
+？
+http://192.168.11.11:89/Json/Get_Qa_UpLoad_Personnel.aspx?type=1&page=0&rows=15&master_id=5
+
+
+http://192.168.11.11:89/Json/GetResourceSurvey.aspx?page=0&rows=15
+
+http://192.168.11.11:89/Json/Get_Work_News_Msg.aspx?Master_id=0
+
+http://192.168.11.11:89/Chart/JobFairQuery.aspx?staff=2
+
+Name nvarchar(50),--姓名
+Sfz nvarchar(18),--身份证
+LxR nvarchar(50),--联系人
+LxDf nvarchar(50),--联系电话
+JzNum int,--居住人数
+Nan int,--男人数
+Nv int,--女人数
+XSQ nvarchar(50),--县、市、区
+XZJD nvarchar(50),--乡、镇、街道
+SQJWC nvarchar(50),--社区、村居委
+Adress nvarchar(50),--详细地址
+QuestionMasterId int, --调查表Id
+Create_Staff int--创建人
+
+
+2017年3月30号 e本通APP
+1、员工待办事宜里面要先选择人员才能添加事项SearchPendWorkActivity
+2、民族数量ModifyPersonInfoActivity
+
+
+2017年3月31号 e本通网页版
+
+存在的问题：
+1、工作交流 列表顺序
+
+
+Error:Execution failed for task ':app:mergeDebugResources'.
+> [declare-styleable/RoundImageView] D:\android\e\asworkspace\app\src\main\res\values\attr.xml	[declare-styleable/RoundImageView] D:\android\e\asworkspace\app\src\main\res\values\attrs.xml: Error: Duplicate resources
+
+
+http://192.168.11.11:89/Json/Get_Resumes_Info.aspx?sfz=422201197209204223
+
+310108198912231019
+
+http://web.youli.pw:89/Json/Get_policy_Type.aspx
+
+
+http://192.168.11.11:89/Json/Get_Policy_File.aspx?page=0&rows=15
+
+
+
+/upload/ATP-TCA.ppt

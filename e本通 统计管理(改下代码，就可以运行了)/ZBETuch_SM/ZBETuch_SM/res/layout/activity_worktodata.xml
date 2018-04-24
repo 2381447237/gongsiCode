@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/addpendwork_backgroud"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题："
+                android:textColor="@android:color/black"
+                android:textSize="22dip" 
+                />
+
+            <EditText
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入标题"
+                android:textSize="20sp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片："
+                android:textColor="@android:color/black"
+                android:textSize="22dip" 
+              />
+            <LinearLayout 
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <ImageView
+                android:id="@+id/imgPhoto"
+                android:layout_width="120dip"
+                android:layout_height="150dip"
+              
+                android:scaleType="fitXY"/>
+            </LinearLayout>
+
+            
+             <Button
+                 android:id="@+id/btnPhoto"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/button_selector"
+                 android:layout_gravity="bottom"
+                 android:text="拍照" />
+
+             <Button
+                 android:id="@+id/btnSelect"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                 android:layout_marginLeft="20dip"
+                  android:layout_gravity="bottom"
+               
+                 android:text="选择" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/addpendwork_doc"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="内容"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/txtContent"
+                android:layout_width="fill_parent"
+                android:layout_height="230dip"
+                android:background="@drawable/addpendwork_docwhite"
+                android:ems="10"
+                android:gravity="top"
+                android:padding="10dp"
+                android:textSize="20sp" />
+        </LinearLayout>
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+             <Button
+                 android:id="@+id/btnOk"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/button_selector"
+                 android:text="保存" />
+
+             <Button
+                 android:id="@+id/btnCancle"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                 android:layout_marginLeft="20dip"
+                 android:text="取消" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

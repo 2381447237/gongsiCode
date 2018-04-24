@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/huli_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="90dp"
+        android:text="床号:"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/huli_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/huli_tv1"
+        android:paddingLeft="5dp"
+        android:text="12345"
+         android:textColor="#dc8454"
+        android:textSize="40sp" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/huli_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/huli_tv1"
+        android:paddingLeft="220dp"
+        android:text="姓名:"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/huli_info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/huli_tv2"
+        android:paddingLeft="5dp"
+        android:text="任宁"
+         android:textColor="#dc8454"
+        android:textSize="40sp" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/huli_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/huli_tv2"
+        android:paddingLeft="230dp"
+        android:text="住院号:"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/huli_info3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/huli_tv3"
+        android:paddingLeft="5dp"
+        android:text="12345"
+         android:textColor="#dc8454"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:id="@+id/huli_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal"
+        android:paddingBottom="70dp" >
+
+        <RelativeLayout
+            android:id="@+id/huli_rl1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/huli_iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/hlgz_twjl" />
+
+            <TextView
+                android:id="@+id/huli_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/huli_iv1"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="60dp"
+                android:text="体温记录"
+                android:textColor="#ffffff"
+                android:textSize="35sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/huli_rl2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/huli_iv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/hlgz_fsjl" />
+
+            <TextView
+                android:id="@+id/huli_tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/huli_iv2"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="60dp"
+                android:text="翻身记录"
+                android:textColor="#ffffff"
+                android:textSize="35sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/huli_rl3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/huli_iv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/hlgz_pnjl" />
+
+            <TextView
+                android:id="@+id/huli_tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/huli_iv3"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="60dp"
+                android:text="排尿记录"
+                android:textColor="#ffffff"
+                android:textSize="35sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/huli_tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:text="滚动提示区"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:visibility="gone" />
+    
+    <TextView
+        android:id="@+id/huli_info4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/huli_tv7"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="尊敬的患者朋友，感谢您选择301医院就诊，为方便您就医，我院推出了银医“一卡通”挂号就诊业务"
+        android:textColor="#ffffff"
+        android:textSize="35sp" />
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="3dip"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gridebg"
+        android:orientation="vertical" >
+
+        <LinearLayout style="@style/gradeate_item_workmark_mainline" >
+
+            <LinearLayout style="@style/gradeate_item_workmark_subline" >
+
+                <TextView
+                    style="@style/gradeate_item_workmark_title"
+                    android:text="人员基本情况：" />
+
+                <TextView
+                    android:id="@+id/lblBaseSituation"
+                    style="@style/gradeate_item_workmark_content" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/gradeate_item_workmark_subline" >
+
+                <TextView
+                    style="@style/gradeate_item_workmark_title"
+                    android:text="人员具体情况：" />
+
+                <TextView
+                    android:id="@+id/lblDetailSituation"
+                    style="@style/gradeate_item_workmark_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/gradeate_item_workmark_line" />
+
+        <LinearLayout style="@style/gradeate_item_workmark_mainline" >
+
+            <LinearLayout style="@style/gradeate_item_workmark_subline" >
+
+                <TextView
+                    style="@style/gradeate_item_workmark_title"
+                    android:text="调查走访日期：" />
+
+                <TextView
+                    android:id="@+id/lblVisitDate"
+                    style="@style/gradeate_item_workmark_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDetailCompany"
+                style="@style/gradeate_item_workmark_subline" >
+
+                <TextView
+                    style="@style/gradeate_item_workmark_title"
+                    android:text="单位：" />
+
+                <TextView
+                    android:id="@+id/lblDetailCompany"
+                    style="@style/gradeate_item_workmark_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/gradeate_item_workmark_line" />
+
+        <LinearLayout style="@style/gradeate_item_workmark_mainline" >
+
+            <LinearLayout style="@style/gradeate_item_workmark_subline" >
+
+                <TextView
+                    style="@style/gradeate_item_workmark_title"
+                    android:text="调查人：" />
+
+                <TextView
+                    android:id="@+id/lblInquirer"
+                    style="@style/gradeate_item_workmark_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/gradeate_item_workmark_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="160dip"
+                    android:layout_height="50dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:text="备注："
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/lblRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dip"
+                    android:lineSpacingExtra="15dip"
+                    android:paddingTop="15dip"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/gradeate_item_workmark_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="right|center_vertical" >
+
+            <Button
+                android:id="@+id/btnEdit"
+                style="@style/gradeate_item_workmark_button"
+                android:text="修改" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                style="@style/gradeate_item_workmark_button"
+                android:text="删除" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
